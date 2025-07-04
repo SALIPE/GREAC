@@ -1,0 +1,2644 @@
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['GGTGATG', 'AGGCTCA', 'GGTATGA', 'CCACTTT', 'TTTATCC', 'CGGTTCT', 'GGGATGC', 'CCATTAG', 'TCCAATT', 'TCTCTGT', 'TGCACAC', 'GTGATAT', 'TTTATAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.97      0.97        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.90      0.93      0.91        28
+      HIV1_G       0.97      0.94      0.95        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947291666666666
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GGCTCAA', 'CGGTTCT', 'TCATCTG', 'GTCATGG', 'ATTGTGG', 'AGTGACA', 'GGCGCAA', 'GGGTCAT', 'TGCCCCA', 'GGCAGTC', 'TTCCCAT', 'TTTGATC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.96      0.96        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       1.00      0.96      0.98        26
+      HIV1_F       0.86      0.89      0.88        28
+      HIV1_G       0.94      0.94      0.94        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992061991998984
+Length of k = 7
+Number of k-mers = 10
+Extracted k-mers = ['TCCAATT', 'CGGTTCT', 'GGTGATG', 'TGGCATA', 'AATGCAC', 'CCATGCT', 'TCCCTTA', 'CCTCTCT', 'GGTATGA', 'AGGCTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.97      0.97        70
+      HIV1_B       0.98      0.97      0.98        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.88      1.00      0.93        28
+      HIV1_G       1.00      0.90      0.95        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.97      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920421613964922
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['GGTGATG', 'TGGCATA', 'TTAAATG', 'ATTGTGG', 'CACACAT', 'CCCGAAG', 'GTGATAT', 'GAGTCTC', 'CTGTCCA', 'ATGGTAT', 'CGGTTCT', 'TTTCATT', 'TTTCCCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       0.98      0.97      0.98        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.93      0.96      0.94        26
+      HIV1_F       1.00      0.96      0.98        28
+      HIV1_G       0.97      1.00      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['AGTGACA', 'GCGCAAC', 'CCTCTAG', 'GGTGATG', 'TCCAATT', 'TGATCAG', 'CGGTTCT', 'GGTTAAA', 'CCATGCT', 'TTCATTG', 'CTGGCAT', 'ATGGTAT', 'GAGTCTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.99      0.99        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      0.96      0.98        26
+      HIV1_F       1.00      1.00      1.00        28
+      HIV1_G       0.97      1.00      0.98        31
+
+    accuracy                           0.99       289
+   macro avg       0.99      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947088280631587
+Length of k = 7
+Number of k-mers = 15
+Extracted k-mers = ['GGCATAG', 'GTGATAT', 'ATTGTGG', 'TTTGATT', 'TAGGCTT', 'CACACAT', 'AGCTCAC', 'CTCATCT', 'CGGTTCT', 'ATGGTAT', 'CCACTTT', 'AGGCTCA', 'GATGATT', 'GAGTCTC', 'AACGATT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      1.00      1.00        70
+      HIV1_B       1.00      0.96      0.98        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.90      1.00      0.95        26
+      HIV1_F       1.00      1.00      1.00        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921025256314078
+Length of k = 7
+Number of k-mers = 15
+Extracted k-mers = ['CGGTTCT', 'CACTCTG', 'GGTGATG', 'TGCCCCA', 'GTGATAT', 'CCGCCTT', 'GTCTGAC', 'TCCTGAC', 'TGGGTTG', 'AGGCGCA', 'GATCTTT', 'ATTGTGG', 'GAGCCGA', 'GAGTCTC', 'CACTAGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.97      0.96        70
+      HIV1_B       0.98      0.96      0.97        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.93      0.96      0.94        26
+      HIV1_F       0.90      0.96      0.93        28
+      HIV1_G       0.97      0.90      0.93        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920414867496401
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['GGTGATG', 'AGGCTCA', 'GGCGCAA', 'ATGGTAT', 'CGGTTCT', 'CTGGCAT', 'TCCAATT', 'AGTGACA', 'TCTACTG', 'GTGATAT', 'AATGCAC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.97      0.97        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       0.96      0.96      0.96        26
+      HIV1_F       0.90      1.00      0.95        28
+      HIV1_G       1.00      0.94      0.97        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920619919989838
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['CGGTTCT', 'CACTCTG', 'GGTGATG', 'CCTCTAG', 'TACTTGG', 'TTTCCCT', 'AGCCTGT', 'CCCTCCT', 'GGCATAG', 'AACCCCC', 'GTTCTTT', 'CACAGTC', 'AGGCTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.99      0.99        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       0.91      0.97      0.94        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920625
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['TCCAATT', 'CGGTTCT', 'GGTGATG', 'GAGTCTC', 'ATTTACC', 'AGCCTGT', 'GGGGTAT', 'GAGACCC', 'GGCGCAA', 'TCCTATA', 'GTGACAT', 'GTGATGC', 'GTTCTTT', 'TCACGGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.93      1.00      0.97        70
+      HIV1_B       0.99      0.99      0.99        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       1.00      0.89      0.94        28
+      HIV1_G       1.00      0.94      0.97        31
+
+    accuracy                           0.97       289
+   macro avg       0.97      0.96      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947076612903226
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GGTGATG', 'AGGCTCA', 'GGTATGA', 'CCACTTT', 'GGGTCAT', 'TCCAATT', 'AATGCAC', 'GTGATAT', 'TGATCAG', 'CGGTTCT', 'GTTCTTT', 'CTGGCAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.97      0.97        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       0.98      0.97      0.98        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.92      0.86      0.89        28
+      HIV1_G       0.86      0.97      0.91        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['GTCATGG', 'AGGCTCA', 'CACTCTG', 'TCCAATT', 'CGGTTCT', 'TAGGCTT', 'TTTATCC', 'GGCATAG', 'TCCTATA', 'AGCCTGT', 'GAGACCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      1.00      1.00        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       1.00      0.89      0.94        28
+      HIV1_G       0.91      1.00      0.95        31
+
+    accuracy                           0.99       289
+   macro avg       0.99      0.98      0.98       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920184567249215
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['TTAAATG', 'GGCTCAA', 'CGGTTCT', 'GGTGATG', 'CTTCAGG', 'CTGTCCA', 'GGGGTAT', 'CAAGTTT', 'GAGTCTC', 'TCTGCCC', 'TGCCCTG', 'CGGTTAA', 'CCCTTAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.94      0.97        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.97      1.00      0.98        28
+      HIV1_G       0.91      1.00      0.95        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.99      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920416533954761
+Length of k = 7
+Number of k-mers = 10
+Extracted k-mers = ['CGGTTCT', 'GGTCATG', 'AGTGACA', 'CACTCTG', 'TCCAATT', 'CTCATCT', 'TTTCCCT', 'TCCTATA', 'GTTCTTT', 'TCATAGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.97      0.99        70
+      HIV1_B       0.97      0.97      0.97        67
+      HIV1_C       1.00      0.96      0.98        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.84      0.93      0.88        28
+      HIV1_G       0.84      0.84      0.84        31
+
+    accuracy                           0.95       289
+   macro avg       0.93      0.94      0.94       289
+weighted avg       0.95      0.95      0.95       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['GGCTCAA', 'CGGTTCT', 'CACTCTG', 'GGTGATG', 'TGCCAAG', 'AATGCAC', 'GGGTCAT', 'TGCACTG', 'ATGGTAT', 'GGCGCAA', 'TCCTGAC', 'GACTGCA', 'CCTCCCT', 'CACCTCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.94      0.97        70
+      HIV1_B       0.96      0.99      0.97        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.96      0.88      0.92        26
+      HIV1_F       0.97      1.00      0.98        28
+      HIV1_G       0.91      1.00      0.95        31
+
+    accuracy                           0.97       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920841561471482
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['CGGTTCT', 'TACTTGG', 'CTTCAGG', 'GGTGATG', 'GGCTCAA', 'GATTTAG', 'ATTGTGG', 'GTGATAT', 'TTTCTAC', 'TAGGCTT', 'ATGGTAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.97      0.98        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.87      0.93      0.90        28
+      HIV1_G       0.88      0.94      0.91        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.97      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920836640211639
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['CCACTTT', 'CGGTTCT', 'CACTCTG', 'GCAACTC', 'GGTGATG', 'TCATCTG', 'TTTATCC', 'GTGATAT', 'TGATCAG', 'TCAGATG', 'TTCCCAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.97      0.97        70
+      HIV1_B       1.00      0.97      0.98        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.88      1.00      0.93        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920624841249682
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['ATTGTGG', 'GCTCAAC', 'TGGGTTG', 'TTAGGCT', 'CGGTTCT', 'TAGGCTT', 'CCCGGCT', 'GATGATT', 'CACTCTG', 'GGGATGC', 'GTGATAT', 'AGCCTGT', 'CTGGGCG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.96      0.97        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.89      0.89      0.89        28
+      HIV1_G       0.94      0.97      0.95        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.97      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['AGGCTCA', 'CGGTTCT', 'GGTGATG', 'GTTTAAG', 'CCACTTT', 'CTCCCTT', 'GTGATAT', 'TTCATAA', 'TCCAATT', 'ATTTACC', 'TTCTTGG', 'GGCTATA', 'GGGTCAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.99      0.98        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       0.97      0.97      0.97        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.93      0.93      0.93        28
+      HIV1_G       0.94      0.94      0.94        31
+
+    accuracy                           0.97       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920416533954761
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['GTGATAT', 'GCTCAAC', 'CGGTTCT', 'TAGGCTT', 'CCACTTT', 'GGTGATG', 'AGGCTCA', 'AGCTCAC', 'TGGGTTG', 'TTCAGGT', 'TCCAATT', 'AGCCTGT', 'GCAACTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.97      0.99        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.90      1.00      0.95        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 10
+Extracted k-mers = ['GGTGATG', 'GCCTGTC', 'GCTCAAC', 'CCTCTAG', 'TCATCTG', 'CGGTTCT', 'TCCAATT', 'CCTCTCT', 'GGTCATG', 'ATTTACC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.96      0.96        70
+      HIV1_B       0.96      0.96      0.96        67
+      HIV1_C       0.98      0.96      0.97        67
+      HIV1_D       0.90      1.00      0.95        26
+      HIV1_F       0.85      1.00      0.92        28
+      HIV1_G       1.00      0.81      0.89        31
+
+    accuracy                           0.95       289
+   macro avg       0.94      0.95      0.94       289
+weighted avg       0.95      0.95      0.95       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9946871560409788
+Length of k = 7
+Number of k-mers = 16
+Extracted k-mers = ['GGTGATG', 'AGGCTCA', 'GGCATAG', 'CCTCTAG', 'CACTCTG', 'GTCATGG', 'GTGATAT', 'AGTGGAA', 'GATGATT', 'TCTATGT', 'GTGATGC', 'GTCACTT', 'ATGGTAT', 'CCGGTTC', 'AGCTCAC', 'AAGCACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.99      0.98        70
+      HIV1_B       0.98      0.96      0.97        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       0.92      0.92      0.92        26
+      HIV1_F       0.93      0.96      0.95        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.97       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947086614173227
+Length of k = 7
+Number of k-mers = 16
+Extracted k-mers = ['TAGGCTT', 'GCATGAG', 'CGGTTCT', 'GTGATAT', 'AACGATT', 'TGGGTTG', 'ACTTGGG', 'GTGATGC', 'GCTTCGG', 'TTGAGGC', 'CTCCCTT', 'TGATCAG', 'GGTATGT', 'ATGCGAT', 'TCTCTGT', 'AGGCTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       0.97      1.00      0.99        67
+      HIV1_C       0.98      0.97      0.98        67
+      HIV1_D       1.00      0.96      0.98        26
+      HIV1_F       0.97      1.00      0.98        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920416533954761
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['GGTGATG', 'GATTTAG', 'TTCTGGG', 'TCCAATT', 'CGGTTCT', 'AGGCTCA', 'GCAGGGT', 'GGCAGAC', 'TAGGCTT', 'GTGATAT', 'GAGACCC', 'CCTCTCT', 'GGCGCAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       0.99      1.00      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       1.00      0.93      0.96        28
+      HIV1_G       0.94      0.97      0.95        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['TCCCTTA', 'TGGGTTG', 'CGGTTCT', 'GTGATAT', 'GAACGAT', 'TCCAATT', 'CCTGAAT', 'CACACAT', 'CCACTTT', 'CCAGACC', 'TAGTCAT', 'GTTTCCC', 'CTCATCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.96      0.98        70
+      HIV1_B       0.98      0.97      0.98        67
+      HIV1_C       0.90      0.99      0.94        67
+      HIV1_D       0.96      0.92      0.94        26
+      HIV1_F       0.93      0.93      0.93        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.96       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.96      0.96      0.96       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 19
+Extracted k-mers = ['GGCGCAA', 'CACTCTG', 'GCTGATT', 'ATGGTAT', 'TGAGGCG', 'AATGCAC', 'GGGTCAT', 'AGGCTCA', 'CGGTTCT', 'TCCAATT', 'GACTATG', 'GAGTCTC', 'TCCTATA', 'TTAAGTG', 'GCTTCGG', 'TTGCACA', 'TTATGAA', 'TTAGCTT', 'CTATCTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      1.00      0.99        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       0.99      1.00      0.99        67
+      HIV1_D       1.00      0.92      0.96        26
+      HIV1_F       0.90      0.96      0.93        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.97      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992061991998984
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['GGTGATG', 'CCATTTA', 'CCCGAAG', 'TCCAATT', 'CTGGCAT', 'CGGTTCT', 'GGCAGAC', 'GGCGCAA', 'GAGTCTC', 'GTGATAT', 'GCAGGGT', 'ATTTACC', 'GCTTCGG', 'GATCTTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.97      0.98        70
+      HIV1_B       0.97      1.00      0.99        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       1.00      0.92      0.96        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       0.94      1.00      0.97        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.97      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920414867496401
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['GATTTAG', 'CTGTCCA', 'TAGGCTT', 'GGCTCAA', 'CGGTTCT', 'AGTGACA', 'CCTCTCT', 'TCCAATT', 'AGGCGCA', 'GAGACCC', 'GGTTCTA', 'TGGGTTG', 'GGGTCAT', 'CTCCCTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.99      0.99        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       1.00      1.00      1.00        28
+      HIV1_G       0.97      1.00      0.98        31
+
+    accuracy                           1.00       289
+   macro avg       0.99      1.00      1.00       289
+weighted avg       1.00      1.00      1.00       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920416533954761
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GGTGATG', 'AGGCTCA', 'GTATGAA', 'GCCCCAG', 'TGGCAAG', 'CGGTTCT', 'TCCAATT', 'TTTATCC', 'TCCTATA', 'GGCAGAC', 'ATTTACC', 'CTGGCAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.96      0.97        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       0.89      0.92      0.91        26
+      HIV1_F       0.93      0.96      0.95        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.99206315877182
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['AGGCTCA', 'CACTCTG', 'GGCGCAA', 'GGTGATG', 'GTGATAT', 'GGCAGAC', 'AGTGACA', 'AATGCAC', 'GGCAGTC', 'TGCCCCA', 'CTTTCAT', 'TTCATCT', 'CGGTTCT', 'TGTTTTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.96      0.97        70
+      HIV1_B       1.00      0.97      0.98        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.85      1.00      0.92        28
+      HIV1_G       0.97      0.94      0.95        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['TCCAATT', 'CGGTTCT', 'AGTGACA', 'CACTCTG', 'GAGGCGC', 'AGCCTGT', 'CTACTCT', 'TGGACTA', 'CCTCTCT', 'GTGATGC', 'GAGACCC', 'GTGATAT', 'TTTATAT', 'GTCTGGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.96      0.96        70
+      HIV1_B       0.96      0.99      0.97        67
+      HIV1_C       1.00      0.91      0.95        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.84      0.93      0.88        28
+      HIV1_G       0.94      0.94      0.94        31
+
+    accuracy                           0.95       289
+   macro avg       0.94      0.95      0.94       289
+weighted avg       0.95      0.95      0.95       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947086614173227
+Length of k = 7
+Number of k-mers = 16
+Extracted k-mers = ['GGTGATG', 'CACTCTG', 'TCCAATT', 'CACAGTC', 'CGGTTCT', 'AAATATG', 'GTGATAT', 'TGATCAG', 'GGCAGAC', 'TCCTATA', 'CTGGCAT', 'CTGGGCG', 'GAGACCC', 'GTGATGC', 'CCAGACC', 'ATGGTAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.96      0.98        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.93      1.00      0.97        28
+      HIV1_G       0.97      1.00      0.98        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['CGGTTCT', 'ATTGTGG', 'CTCATCT', 'TTTCCCT', 'GGTGATG', 'CTACGCC', 'ATTTCCG', 'AACCCCT', 'AGTTTGA', 'TGCCAGG', 'TCCCATT', 'CCGGCTG', 'GGTATGT', 'AGCTCAC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.99      0.99        70
+      HIV1_B       1.00      0.96      0.98        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       1.00      0.96      0.98        28
+      HIV1_G       0.91      1.00      0.95        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920625
+Length of k = 7
+Number of k-mers = 18
+Extracted k-mers = ['GGTGATG', 'CACTCTG', 'AGGCTCA', 'CGGTTCT', 'ATTGTGG', 'GTGATAT', 'GGCATAG', 'TTCCCAT', 'GTGACAG', 'TTCATCT', 'ACACTCC', 'AGCTCAC', 'ATGGTAT', 'GAGTCTC', 'CCGGCTG', 'CTGGGCG', 'TCCTATA', 'GAGACCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      1.00      0.99        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       1.00      0.96      0.98        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           1.00       289
+   macro avg       1.00      0.99      1.00       289
+weighted avg       1.00      1.00      1.00       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920414867496401
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['GGTGATG', 'GGCATAG', 'TCATCTG', 'GCGCAAC', 'CCCGAAG', 'TCCAATT', 'AGGCTCA', 'GAGACCC', 'GTGATAT', 'CCACTTT', 'CTGTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.97      0.98        70
+      HIV1_B       0.99      0.99      0.99        67
+      HIV1_C       0.99      1.00      0.99        67
+      HIV1_D       0.90      1.00      0.95        26
+      HIV1_F       0.92      0.86      0.89        28
+      HIV1_G       0.97      0.94      0.95        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920841561471482
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GTCATGG', 'AGCCTGT', 'TGATCAG', 'GATTATG', 'TCCAATT', 'CGGTTCT', 'GGCATAG', 'AGGCTCA', 'GCGCAAC', 'TAGGCTT', 'GCTGATT', 'AGTGGAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.99      0.99        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.90      1.00      0.95        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947089947089947
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['CGGTTCT', 'GGCAGAC', 'CACTCTG', 'GGCGCAA', 'GTGATGC', 'GGCTATA', 'CTTCAGG', 'TGGGTTG', 'GTGATAT', 'GTATGAA', 'GTTCTTT', 'TTCTTGG', 'TCCTATA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.94      0.97      0.96        70
+      HIV1_B       0.97      1.00      0.99        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.92      0.82      0.87        28
+      HIV1_G       0.97      0.94      0.95        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.95      0.96       289
+weighted avg       0.97      0.97      0.96       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992061991998984
+Length of k = 7
+Number of k-mers = 10
+Extracted k-mers = ['CGGTTCT', 'GAGGCGC', 'GTCATGG', 'TACTTGG', 'GATTTAG', 'GTGATAT', 'AGGCTCA', 'GGGGTAT', 'ACACTCC', 'TTGAGGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      1.00      1.00        70
+      HIV1_B       0.99      0.99      0.99        67
+      HIV1_C       0.97      0.96      0.96        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.96      0.93      0.95        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['GGTGATG', 'CCTCTCT', 'GTGATAT', 'AAGACCC', 'CGGTTCT', 'GGGTCAT', 'TCCAATT', 'TGGCATA', 'TCCCTTA', 'AGGCGCA', 'CCACTTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.94      0.93      0.94        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       0.96      0.97      0.96        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       0.94      0.94      0.94        31
+
+    accuracy                           0.97       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GGCTCAA', 'CTCATCT', 'CACTCTG', 'GGCAGAC', 'GCAACTC', 'GGGTCAT', 'CTGTCCA', 'GTGATGC', 'GTGATAT', 'GGCGCAA', 'CCTCTCT', 'CCGAGAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.91      0.96        70
+      HIV1_B       0.98      0.97      0.98        67
+      HIV1_C       0.97      1.00      0.99        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.96      0.89      0.93        28
+      HIV1_G       0.86      1.00      0.93        31
+
+    accuracy                           0.96       289
+   macro avg       0.95      0.96      0.96       289
+weighted avg       0.96      0.96      0.96       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['CGGTTCT', 'CTGTCCA', 'AATGTGA', 'CACTCTG', 'TAGGCTT', 'TCCAATT', 'CCAGACC', 'CTCATCT', 'GTGATGC', 'TTTGATC', 'GATGATT', 'CTGGCAT', 'GTTCTTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      1.00      0.99        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       1.00      1.00      1.00        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           1.00       289
+   macro avg       1.00      0.99      1.00       289
+weighted avg       1.00      1.00      1.00       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['TCCTATA', 'CCATGCT', 'GGCTATA', 'CGGTTCT', 'GATGATT', 'TTTATCC', 'TGGGTTG', 'CCTCTAG', 'AGTTTGA', 'CTGGCAT', 'GTGATGC', 'CCCGGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.94      0.97      0.96        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       0.98      0.96      0.97        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.93      0.96      0.95        28
+      HIV1_G       0.97      0.90      0.93        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.97      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992061991998984
+Length of k = 7
+Number of k-mers = 15
+Extracted k-mers = ['GGCGCAA', 'GGCAGAC', 'GGCTCAA', 'GGCATAG', 'GGTGATG', 'GGTATGA', 'AATGCAC', 'TTAAATG', 'CGGTTCT', 'GAGTCTC', 'TCCTATA', 'TGGTATC', 'GTTGCAA', 'CTGTCCA', 'AGTTCAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       0.97      0.99      0.98        67
+      HIV1_D       1.00      0.88      0.94        26
+      HIV1_F       0.90      0.96      0.93        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.96      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 16
+Extracted k-mers = ['TCCCTTA', 'CGGTTCT', 'GTCATGG', 'GGTATGA', 'GTGATAT', 'GGCGCAA', 'ATGGTAT', 'TGCACTG', 'CCCCACT', 'CCATGCT', 'TTCCCAT', 'GACTTAC', 'CCTGAAT', 'GCAGGGT', 'TTCTTGG', 'CCCGGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      1.00      1.00        70
+      HIV1_B       1.00      0.96      0.98        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.93      1.00      0.97        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.99      0.98       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992083497375328
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['GTCATGG', 'CTGTCCA', 'AGGCTCA', 'GGGGTAT', 'ATTTACC', 'CGGTTCT', 'CTCATCT', 'GTGATAT', 'GGCAGTC', 'GGTGATG', 'GCAGCTC', 'ATGGTAT', 'TTTATAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       1.00      0.97      0.98        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.90      1.00      0.95        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GCAACTC', 'GTGATGC', 'CCTCTCT', 'GTGATAT', 'GGGTCAT', 'TCATCTG', 'ATTTACC', 'TGGTATC', 'GTCTGGC', 'ATTGTGG', 'TCATAGG', 'GGTATGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      1.00      0.98        70
+      HIV1_B       0.98      0.93      0.95        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       0.89      0.96      0.93        26
+      HIV1_F       0.90      0.96      0.93        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GGCTCAA', 'CGGTTCT', 'GGTGATG', 'TTAAATG', 'CTGTCCA', 'GCAACTC', 'GAGTCTC', 'GAGACCC', 'CCTCTCT', 'CGGTTAA', 'CCCGGCT', 'TTTCCCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      1.00      0.99        70
+      HIV1_B       1.00      0.96      0.98        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       0.87      1.00      0.93        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.99206315877182
+Length of k = 7
+Number of k-mers = 15
+Extracted k-mers = ['CGGTTCT', 'CACACAT', 'GTGATAT', 'CCACTTT', 'TAGGCTT', 'CCTCTCT', 'TGGGTTG', 'AAGACCC', 'AGCTCAC', 'GTGATGC', 'CTATAGA', 'TGATCAG', 'AATGCAC', 'GGCAATC', 'GCACATA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      1.00      1.00        70
+      HIV1_B       1.00      0.97      0.98        67
+      HIV1_C       0.97      1.00      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.97      1.00      0.98        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.99       289
+   macro avg       0.99      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921240310077518
+Length of k = 7
+Number of k-mers = 17
+Extracted k-mers = ['TCATCTG', 'GGCGCAA', 'GGTGATG', 'TGATCAG', 'CCACTTT', 'CTATAGA', 'TGGGTTG', 'CGGTTCT', 'GTTCTTT', 'GCTTCGG', 'AGGCTCA', 'GTGATAT', 'ATTGTGG', 'TTATGAA', 'CATGGTA', 'TCCTATA', 'ACACCAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.99      0.98        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.97      1.00      0.98        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.99       289
+   macro avg       0.99      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920834973753281
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GGGGTAT', 'CGGTTCT', 'AAGACCC', 'ATTTCCT', 'CCTCTCT', 'TCCAATT', 'TCCTATA', 'GTGATGC', 'GTGATAT', 'TTATGGG', 'ATTGTGG', 'GCGCAAC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       0.98      0.97      0.98        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.93      0.96      0.95        28
+      HIV1_G       0.97      0.90      0.93        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920629921259843
+Length of k = 7
+Number of k-mers = 19
+Extracted k-mers = ['GTCATGG', 'TCCTATA', 'TGGGTTG', 'CGGTTCT', 'GTGATAT', 'GTATGAA', 'ATTGTGG', 'CTCCCTT', 'TAGGCTT', 'TTCTTGG', 'ATGGTAT', 'AGCTCAC', 'GGCAATC', 'CCTGTCC', 'TGGTATC', 'TCCAATT', 'TTCATCT', 'TACCAGG', 'GGTATGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.99      0.98        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921025256314078
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['TCATCTG', 'CCACTTT', 'CACAGTC', 'TCCTATA', 'CGGTTCT', 'GGGATGC', 'TCCAATT', 'GAGACCC', 'CCTCTCT', 'CACTAGA', 'TAGAACG', 'GTTCTTT', 'CTGTCCA', 'TCTGATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.96      0.97        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.93      1.00      0.97        28
+      HIV1_G       1.00      0.97      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992061991998984
+Length of k = 7
+Number of k-mers = 17
+Extracted k-mers = ['CGGTTCT', 'GGCAGAC', 'GTCATGG', 'TGATCAG', 'CCACTTT', 'GAGGCTC', 'ACCATAT', 'TTCATCT', 'GCTGATT', 'TGCACAC', 'TACCAGG', 'CCGGCTG', 'AGCTCAC', 'GTGATGC', 'AATGCAC', 'GTTGCTT', 'TCCTATA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.97      0.98        70
+      HIV1_B       1.00      0.96      0.98        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       0.90      1.00      0.95        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       0.91      1.00      0.95        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.98      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947086614173227
+Length of k = 7
+Number of k-mers = 15
+Extracted k-mers = ['GGTGATG', 'GCTCAAC', 'CACTCTG', 'CGGTTCT', 'TCCAATT', 'TCCTATA', 'GTGATAT', 'GGTCATG', 'ATTGTGG', 'GGCAGAC', 'CCTGTCC', 'TTCTTGG', 'GTTCTTT', 'GCTTCGG', 'CGATTCG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.96      0.98        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       0.97      1.00      0.99        67
+      HIV1_D       1.00      0.96      0.98        26
+      HIV1_F       0.90      0.93      0.91        28
+      HIV1_G       0.90      0.90      0.90        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947086614173227
+Length of k = 7
+Number of k-mers = 16
+Extracted k-mers = ['CCACTTT', 'CGGTTCT', 'CTTCAGG', 'TCCTATA', 'CTCATCT', 'GTTCTTT', 'TGGGTTG', 'GTGATGC', 'TGCACTG', 'ACCATAT', 'CCATCCA', 'TGATCAG', 'TTTCCCT', 'AGCTCAC', 'GGCATAG', 'CGATTCG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.99      0.99        70
+      HIV1_B       1.00      0.91      0.95        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       0.84      1.00      0.91        26
+      HIV1_F       0.93      1.00      0.97        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.98      0.97       289
+weighted avg       0.98      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.99206315877182
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['CCACTTT', 'CTTCAGG', 'GGGGTAT', 'CGGTTCT', 'GTGATAT', 'ATGGTAT', 'CTTTCAT', 'TGCACAC', 'GTTCTTT', 'ACTTGGG', 'AGTTTGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.92      0.94      0.93        70
+      HIV1_B       1.00      0.94      0.97        67
+      HIV1_C       0.97      0.99      0.98        67
+      HIV1_D       0.90      1.00      0.95        26
+      HIV1_F       0.96      0.86      0.91        28
+      HIV1_G       0.91      0.94      0.92        31
+
+    accuracy                           0.95       289
+   macro avg       0.94      0.94      0.94       289
+weighted avg       0.95      0.95      0.95       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947086614173227
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['GGCGCAA', 'TAGAACG', 'GGGTTGG', 'ATTGTGG', 'GGTGATG', 'CCTCTAG', 'TGTTCCT', 'GTTTCCC', 'CTGTCCA', 'CCGGCTG', 'AGCTCAC', 'GTATGGT', 'TTTATAT', 'CGTGATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.90      0.95        70
+      HIV1_B       0.98      0.97      0.98        67
+      HIV1_C       0.99      1.00      0.99        67
+      HIV1_D       0.79      1.00      0.88        26
+      HIV1_F       0.96      0.93      0.95        28
+      HIV1_G       0.94      0.97      0.95        31
+
+    accuracy                           0.96       289
+   macro avg       0.94      0.96      0.95       289
+weighted avg       0.96      0.96      0.96       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.99206315877182
+Length of k = 7
+Number of k-mers = 9
+Extracted k-mers = ['CGGTTCT', 'GATTTAG', 'GGTGATG', 'TCCAATT', 'TCCCTTA', 'CTGTCCA', 'TGGGTTG', 'AGGCTCA', 'GAGACCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.97      0.96        70
+      HIV1_B       0.97      1.00      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      0.96      0.98        26
+      HIV1_F       0.93      0.96      0.95        28
+      HIV1_G       0.96      0.87      0.92        31
+
+    accuracy                           0.97       289
+   macro avg       0.97      0.96      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920421613964922
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['AGGCTCA', 'CGGTTCT', 'CACTCTG', 'GGTGATG', 'CTGTCCA', 'TGCTGTT', 'GGCAGAC', 'GTGATAT', 'TTCTGGG', 'GTCTGGC', 'GGGGTAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.94      0.93      0.94        70
+      HIV1_B       1.00      0.97      0.98        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.90      1.00      0.95        26
+      HIV1_F       1.00      0.96      0.98        28
+      HIV1_G       0.88      0.90      0.89        31
+
+    accuracy                           0.96       289
+   macro avg       0.95      0.96      0.96       289
+weighted avg       0.96      0.96      0.96       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920841561471482
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['AGGCTCA', 'CGGTTCT', 'CTGTCCA', 'GGCATAG', 'TACTTGG', 'TCATCTG', 'ATTGTGG', 'GATGATT', 'AGGCGCA', 'GATTTAG', 'ATGGTAT', 'GTGATAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.99      0.99        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.93      1.00      0.97        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.99       289
+   macro avg       0.99      0.99      0.99       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947089947089947
+Length of k = 7
+Number of k-mers = 15
+Extracted k-mers = ['AGGCTCA', 'CGGTTCT', 'GGTGATG', 'TCCAATT', 'CCTCTCT', 'CTGGCAT', 'ATTGTGG', 'TGGGTTG', 'GTGATAT', 'AAGCTTC', 'GCTGATT', 'TTAAATG', 'GGTCTCC', 'TTCACTT', 'CCCCTTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.97      0.98        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       0.98      0.97      0.98        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.87      0.93      0.90        28
+      HIV1_G       0.97      0.97      0.97        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947076612903225
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['AGGCTCA', 'CGGTTCT', 'GGTGATG', 'GTCATGG', 'GGCATAG', 'GCAACTC', 'CCACTTT', 'GTGATAT', 'GGCAGCC', 'ATTTACC', 'TTCTGGG', 'TCCAATT', 'GAGTCTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       1.00      0.97      0.98        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       0.97      1.00      0.98        31
+
+    accuracy                           0.99       289
+   macro avg       0.98      0.99      0.98       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947291666666666
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['CGGTTCT', 'GGCATAG', 'GGGTCAT', 'GGTGATG', 'CCTCTCT', 'GTGATAT', 'GTTATGA', 'GTTTCCC', 'ATTGTGG', 'ATTTACC', 'AGTGACA', 'CTCCCTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.95      0.99      0.97        70
+      HIV1_B       0.98      0.90      0.94        67
+      HIV1_C       0.96      1.00      0.98        67
+      HIV1_D       0.93      0.96      0.94        26
+      HIV1_F       0.89      0.89      0.89        28
+      HIV1_G       0.97      0.94      0.95        31
+
+    accuracy                           0.95       289
+   macro avg       0.95      0.95      0.94       289
+weighted avg       0.95      0.95      0.95       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992083497375328
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['GGCTCAA', 'TTAGGCT', 'GGCAGAC', 'CGGTTCT', 'TTTATCC', 'CTCATCT', 'GTGATAT', 'GGTGATG', 'GGAAGCT', 'CCTCTCT', 'TGCACTG', 'GAGACCC', 'CCCGGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.97      0.99        70
+      HIV1_B       1.00      0.94      0.97        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.87      1.00      0.93        26
+      HIV1_F       1.00      1.00      1.00        28
+      HIV1_G       0.94      1.00      0.97        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.99      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['CCACTTT', 'CGGTTCT', 'GCTCAAC', 'GGGTCAT', 'CCTCTAG', 'AGGCTCA', 'GCAACTC', 'CTGGCAT', 'GGCGCAA', 'GATGATT', 'ATGGTAT', 'GTGATGC', 'CCCGGCT', 'TCCCTTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.99      0.99        70
+      HIV1_B       1.00      0.96      0.98        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       0.90      1.00      0.95        26
+      HIV1_F       0.97      1.00      0.98        28
+      HIV1_G       0.97      0.97      0.97        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947291666666666
+Length of k = 7
+Number of k-mers = 11
+Extracted k-mers = ['CGGTTCT', 'TCTTTTT', 'TACTTGG', 'AGTGACA', 'ATTGTGG', 'GATTTAG', 'CCTCTCT', 'AGCCTGT', 'TCCAATT', 'GGAGCTG', 'CATAGTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.91      0.96        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       0.93      0.96      0.94        26
+      HIV1_F       0.92      0.86      0.89        28
+      HIV1_G       0.78      1.00      0.87        31
+
+    accuracy                           0.96       289
+   macro avg       0.94      0.95      0.94       289
+weighted avg       0.96      0.96      0.96       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.992083497375328
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['TCATCTG', 'CGGTTCT', 'CCACTTT', 'CTTCAGG', 'GGGGTAT', 'GGAGCTG', 'TTTCCCT', 'TCCAATT', 'GCTGATT', 'ACTCTGT', 'TGCACTG', 'TGAGGCG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.99      0.96      0.97        70
+      HIV1_B       0.99      0.99      0.99        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.93      1.00      0.97        28
+      HIV1_G       0.94      0.97      0.95        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920624841249682
+Length of k = 7
+Number of k-mers = 9
+Extracted k-mers = ['AGGCTCA', 'CGGTTCT', 'TGGGTTG', 'GTCATGG', 'GGTGATG', 'GGCGCAA', 'CCACTTT', 'TTGAGGC', 'TTAAATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.93      0.94      0.94        70
+      HIV1_B       1.00      0.96      0.98        67
+      HIV1_C       0.98      0.97      0.98        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.81      0.93      0.87        28
+      HIV1_G       1.00      0.90      0.95        31
+
+    accuracy                           0.95       289
+   macro avg       0.94      0.95      0.94       289
+weighted avg       0.95      0.95      0.95       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.99206315877182
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['GTCATGG', 'CACTCTG', 'AGTGACA', 'TCCAATT', 'CGGTTCT', 'GGTGATG', 'TGTGACA', 'TAAGGCA', 'TTGAGGC', 'ACACTCC', 'CCACTTT', 'GCAGGGT', 'CTCATCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.97      0.96        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       0.97      0.94      0.95        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920633254176561
+Length of k = 7
+Number of k-mers = 10
+Extracted k-mers = ['GGTGATG', 'GGCAGAC', 'GGCGCAA', 'GGGTCAT', 'GGCATAG', 'TCCAATT', 'GGTATGA', 'CCTCTCT', 'AGGCTCA', 'GCTATGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.96      0.96        70
+      HIV1_B       0.97      0.99      0.98        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       1.00      0.96      0.98        26
+      HIV1_F       0.93      0.89      0.91        28
+      HIV1_G       0.91      0.94      0.92        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.96      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947291666666666
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['GCAACTC', 'CGGTTCT', 'TTAAATG', 'ATTGTGG', 'GAGTCTC', 'CCACTTT', 'GCTTGTC', 'GTATGAA', 'TTATGGG', 'GTGATAT', 'GGGATGC', 'TGCACAC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.95      0.99      0.97        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      0.94      0.97        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       1.00      0.96      0.98        28
+      HIV1_G       0.94      0.97      0.95        31
+
+    accuracy                           0.97       289
+   macro avg       0.97      0.97      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947076612903226
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['AGGCTCA', 'TGGGGCC', 'CGGTTCT', 'GGTGATG', 'CCCTCCT', 'TGGACTA', 'CTGGCAT', 'CCACTTT', 'CTGGTTT', 'CCAGACC', 'CTCATCT', 'GTTCTTT', 'CTGTCCA', 'TTATCCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.96      0.98        70
+      HIV1_B       1.00      0.97      0.98        67
+      HIV1_C       0.99      1.00      0.99        67
+      HIV1_D       0.96      0.96      0.96        26
+      HIV1_F       0.90      1.00      0.95        28
+      HIV1_G       0.97      1.00      0.98        31
+
+    accuracy                           0.98       289
+   macro avg       0.97      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947089947089947
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['AGGCTCA', 'GGCGCAA', 'GTGATAT', 'GGCATAG', 'TGTTTTT', 'TGCCCCA', 'GGGGTAT', 'GTTCTTT', 'ATGGTAT', 'GAGACCC', 'TGCTGTT', 'TCTACTG', 'GCTTCGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.99      0.97        70
+      HIV1_B       0.97      0.99      0.98        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       0.96      0.96      0.96        26
+      HIV1_F       1.00      0.93      0.96        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.97      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 12
+Extracted k-mers = ['CGGTTCT', 'CACTCTG', 'GGTGATG', 'TCCAATT', 'AGCCTGT', 'ATTTACC', 'TCTGCCA', 'TTCTGGG', 'GTTGCTT', 'TCCTGAC', 'TCCTATA', 'GAGACCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.97      0.97      0.97        70
+      HIV1_B       0.99      1.00      0.99        67
+      HIV1_C       1.00      0.97      0.98        67
+      HIV1_D       1.00      0.96      0.98        26
+      HIV1_F       0.97      1.00      0.98        28
+      HIV1_G       0.94      0.97      0.95        31
+
+    accuracy                           0.98       289
+   macro avg       0.98      0.98      0.98       289
+weighted avg       0.98      0.98      0.98       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920629921259841
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['AGGCTCA', 'GGCGCAA', 'GAGTCTC', 'TGCCCCA', 'AAGCTTC', 'TTTCATT', 'TCCCTTA', 'AATGCAC', 'TTCTTGG', 'GTTCTTT', 'ACCATAT', 'CTGTCCA', 'GCTTCGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.93      0.96        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       0.99      1.00      0.99        67
+      HIV1_D       0.96      1.00      0.98        26
+      HIV1_F       1.00      0.89      0.94        28
+      HIV1_G       0.84      1.00      0.91        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.97      0.97       289
+weighted avg       0.98      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921240310077519
+Length of k = 7
+Number of k-mers = 10
+Extracted k-mers = ['AGGCTCA', 'TGGGAGG', 'GGCGCAA', 'TTAGGCT', 'GGGGTAT', 'GTGATAT', 'GGCATAG', 'GGGTCAT', 'TCCAATT', 'GTGATGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.93      0.94        70
+      HIV1_B       0.97      0.99      0.98        67
+      HIV1_C       1.00      0.99      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       0.90      0.96      0.93        28
+      HIV1_G       0.94      0.94      0.94        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.97      0.96       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9920841561471482
+Length of k = 7
+Number of k-mers = 17
+Extracted k-mers = ['GGTGATG', 'AGGCTCA', 'GGCATAG', 'CCACTTT', 'TTAGCTT', 'TTCTGGG', 'CGGTTCT', 'ATGGTAT', 'AGGCGCA', 'GTTCTTT', 'TCCTGAC', 'CTGTCCA', 'AACCCCC', 'CCGGCTG', 'GAGACCC', 'TTAAGTG', 'GCTTCGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.97      0.99        70
+      HIV1_B       1.00      1.00      1.00        67
+      HIV1_C       0.97      1.00      0.99        67
+      HIV1_D       1.00      1.00      1.00        26
+      HIV1_F       1.00      1.00      1.00        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.99       289
+   macro avg       1.00      1.00      1.00       289
+weighted avg       0.99      0.99      0.99       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9946871560409788
+Length of k = 7
+Number of k-mers = 14
+Extracted k-mers = ['AGCCTGT', 'CCTCTAG', 'GGTGATG', 'GGGTCAT', 'TGGTATC', 'TCCAATT', 'AATGCAC', 'GGCGCAA', 'TAGGCTT', 'CTTTCAT', 'CTGTCCA', 'GTTCTTT', 'GCAGGGT', 'TCCCTTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.96      0.96      0.96        70
+      HIV1_B       1.00      0.99      0.99        67
+      HIV1_C       1.00      1.00      1.00        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.96      0.96      0.96        28
+      HIV1_G       0.93      0.90      0.92        31
+
+    accuracy                           0.97       289
+   macro avg       0.96      0.97      0.97       289
+weighted avg       0.97      0.97      0.97       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9946871560409788
+Length of k = 7
+Number of k-mers = 13
+Extracted k-mers = ['CTGTCCA', 'CGGTTCT', 'TGGGTTG', 'TCCCTTA', 'GGGGTAT', 'TAGGCTT', 'TGTTCCT', 'TCATCTG', 'TCCTATA', 'TGCTGTT', 'TTTGATC', 'GGCAGCC', 'GGCAGTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       0.93      0.97      0.95        70
+      HIV1_B       0.97      0.93      0.95        67
+      HIV1_C       0.97      0.97      0.97        67
+      HIV1_D       0.89      0.96      0.93        26
+      HIV1_F       0.96      0.89      0.93        28
+      HIV1_G       1.00      1.00      1.00        31
+
+    accuracy                           0.96       289
+   macro avg       0.95      0.95      0.95       289
+weighted avg       0.96      0.96      0.95       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973543307086614
+Length of k = 7
+Number of k-mers = 17
+Extracted k-mers = ['CGGTTCT', 'GCTCAAC', 'GTGATAT', 'CTTCAGG', 'CCTCTAG', 'GGTGATG', 'GTTTCCC', 'ATTGTGG', 'GCTTGTC', 'TCCAATT', 'TCTCTGT', 'GGCGCAA', 'AGGCATC', 'ATGGTAT', 'TGCTGGC', 'CTCCCTT', 'CCCGGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+      HIV1_A       1.00      0.91      0.96        70
+      HIV1_B       0.99      0.99      0.99        67
+      HIV1_C       0.99      0.99      0.99        67
+      HIV1_D       0.93      1.00      0.96        26
+      HIV1_F       0.93      0.96      0.95        28
+      HIV1_G       0.85      0.94      0.89        31
+
+    accuracy                           0.96       289
+   macro avg       0.95      0.96      0.95       289
+weighted avg       0.96      0.96      0.96       289
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 7-mers

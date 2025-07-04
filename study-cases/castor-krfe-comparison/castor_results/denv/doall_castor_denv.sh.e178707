@@ -1,0 +1,903 @@
+rm: cannot remove ‘/tmp2/felipe/castor/output’: No such file or directory
+┌ Error: Non directory to remove
+└ @ Main.FastaSplitter ~/Fasta-splitter/FastaSplitter/src/FastaSplitter.jl:38
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2

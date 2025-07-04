@@ -1,0 +1,2849 @@
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.997752738061421
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['AATTCTCCT', 'TGTCTGGTT', 'ACAAACTTA', 'CAACCAGAA', 'TCGCAATGG', 'CCTCCTACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.73      0.95      0.82       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       1.00      0.98      0.99       627
+  SARS-CoV-2|Gamma       0.89      0.99      0.94      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.07      1.00      0.13        38
+ SARS-CoV-2|Lambda       0.98      0.99      0.98       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.86      0.99      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.995511683447485
+Length of k = 9
+Number of k-mers = 5
+Extracted k-mers = ['CTCCTCGGC', 'TGACACCTT', 'AACCCACTT', 'GGTTTTAAG', 'TGCTACCGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.38      0.98      0.54       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.98      0.98      0.98       627
+  SARS-CoV-2|Gamma       0.99      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.05      0.97      0.09        38
+ SARS-CoV-2|Lambda       0.47      1.00      0.64       339
+SARS-CoV-2|Omicron       0.99      0.99      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.78      0.99      0.82    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966291070921314
+Length of k = 9
+Number of k-mers = 5
+Extracted k-mers = ['TCCTCGGCG', 'ATCTCTATC', 'TACCGCAAT', 'CCACTTATG', 'GGGGAATTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.99      0.96      0.97       606
+  SARS-CoV-2|Delta       0.98      0.98      0.98      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.95      0.99      0.97       627
+  SARS-CoV-2|Gamma       0.99      0.98      0.98      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.03      0.92      0.06        38
+ SARS-CoV-2|Lambda       0.84      1.00      0.91       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.88      0.98      0.89    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TATGGTGTT', 'TTTTAAGCT', 'ACAAACTTA', 'TCATAGCGC', 'TGAAGCTAA', 'TGTTGAAGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.85      0.97      0.90       606
+  SARS-CoV-2|Delta       0.94      0.98      0.96      9319
+SARS-CoV-2|Epsilon       0.99      1.00      0.99     14585
+    SARS-CoV-2|Eta       0.54      0.98      0.70       627
+  SARS-CoV-2|Gamma       0.89      0.99      0.94      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.15      1.00      0.26        38
+ SARS-CoV-2|Lambda       0.51      0.98      0.67       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.79      0.99      0.84    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TCTGGTTTT', 'TTTCTCCTG', 'CAAACTTAA', 'GATAATGGA', 'ATTTGACAT', 'TGCTACCGC', 'CTACGCAAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.97      0.96      0.97       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.80      1.00      0.89       627
+  SARS-CoV-2|Gamma       0.95      1.00      0.97      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.09      1.00      0.16        38
+ SARS-CoV-2|Lambda       0.97      0.99      0.98       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.88      0.99      0.90    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TTCTCCTCG', 'GGTTTTAAG', 'GAAAGATTG', 'TTAAATGTC', 'ATTGCTACC', 'ATCATAACT', 'GCTTTACAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.53      0.99      0.69       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       0.89      1.00      0.94       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.07      0.97      0.12        38
+ SARS-CoV-2|Lambda       0.53      0.99      0.69       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.80      0.99      0.84    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['AGCAGTAGG', 'GGTTTTAAG', 'CCTCCTACG', 'ACAAATCTC', 'TGGAAAGAT', 'GCTACCGCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.93      0.99      0.96       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       0.97      1.00      0.99     14585
+    SARS-CoV-2|Eta       0.92      0.99      0.96       627
+  SARS-CoV-2|Gamma       0.97      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.07      0.97      0.13        38
+ SARS-CoV-2|Lambda       0.99      0.99      0.99       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.89      0.99      0.90    334066
+      weighted avg       1.00      0.99      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TAATTACCG', 'CTGAATATG', 'TTCATAGCG', 'TAAATGTCT', 'GAAGGTTTT', 'ACCTGTATA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.65      0.98      0.78       606
+  SARS-CoV-2|Delta       0.99      0.97      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.15      1.00      0.26       627
+  SARS-CoV-2|Gamma       0.99      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      0.98      0.99     19185
+  SARS-CoV-2|Kappa       0.20      1.00      0.33        38
+ SARS-CoV-2|Lambda       0.43      1.00      0.60       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.98    334066
+         macro avg       0.74      0.99      0.79    334066
+      weighted avg       0.99      0.98      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['CATCTTCAA', 'GGTTTTAAG', 'AAATGGACC', 'ATCATAACT', 'ATTGCTACC', 'ATGGTGTTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.61      0.96      0.75       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.98      0.99     14585
+    SARS-CoV-2|Eta       0.81      1.00      0.89       627
+  SARS-CoV-2|Gamma       1.00      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.67      1.00      0.80        38
+ SARS-CoV-2|Lambda       0.22      1.00      0.36       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TCTCCTCGG', 'CCTGTATAG', 'GGGGAATTT', 'ATCATAACT', 'AAATGGACC', 'ACACCTTGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.95      0.97      0.96       606
+  SARS-CoV-2|Delta       0.93      0.99      0.96      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.98      0.98      0.98       627
+  SARS-CoV-2|Gamma       0.97      0.99      0.98      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.04      0.97      0.07        38
+ SARS-CoV-2|Lambda       0.73      1.00      0.85       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.86      0.99      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9943875239765702
+Length of k = 9
+Number of k-mers = 5
+Extracted k-mers = ['GAACTTCTC', 'CTTAAATGT', 'TTTGAAGCT', 'TGTTGAAGG', 'GTTTTTCAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.97      0.99    175123
+   SARS-CoV-2|Beta       0.81      0.99      0.89       606
+  SARS-CoV-2|Delta       0.96      0.97      0.96      9319
+SARS-CoV-2|Epsilon       0.97      1.00      0.98     14585
+    SARS-CoV-2|Eta       0.18      0.99      0.30       627
+  SARS-CoV-2|Gamma       0.91      0.93      0.92      8040
+   SARS-CoV-2|Iota       0.94      0.99      0.96     19185
+  SARS-CoV-2|Kappa       0.13      1.00      0.23        38
+ SARS-CoV-2|Lambda       0.18      1.00      0.30       339
+SARS-CoV-2|Omicron       1.00      0.98      0.99    106204
+
+          accuracy                           0.98    334066
+         macro avg       0.71      0.98      0.75    334066
+      weighted avg       0.99      0.98      0.98    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9932574692053245
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TAGCGCTTC', 'TTGTCTGGT', 'CTCCTCGGC', 'TATGTCAAC', 'CTCCTACGC', 'AACCCACTT', 'ATAGCGCTT', 'TGGTGTTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.73      0.99      0.84       606
+  SARS-CoV-2|Delta       0.96      0.98      0.97      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.60      1.00      0.75       627
+  SARS-CoV-2|Gamma       1.00      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.26      1.00      0.42        38
+ SARS-CoV-2|Lambda       0.94      0.99      0.96       339
+SARS-CoV-2|Omicron       0.99      1.00      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.85      0.99      0.89    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9932451574398722
+Length of k = 9
+Number of k-mers = 5
+Extracted k-mers = ['TAATTCTCC', 'CACTTATGG', 'TAATTACCT', 'AACCTTGTA', 'CCTTCAATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       0.99      1.00      0.99    175123
+   SARS-CoV-2|Beta       0.89      0.97      0.93       606
+  SARS-CoV-2|Delta       0.86      0.99      0.92      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.82      0.97      0.89       627
+  SARS-CoV-2|Gamma       0.98      0.98      0.98      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.05      0.97      0.10        38
+ SARS-CoV-2|Lambda       0.84      0.99      0.91       339
+SARS-CoV-2|Omicron       1.00      0.97      0.98    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.84      0.98      0.87    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TAATTACCT', 'CTACGCAAT', 'CAGTAGGGG', 'ATCATAACT', 'TCTGATAAT', 'AGTTGTATG', 'CTGAATATG', 'GTTTACCTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.88      0.97      0.92       606
+  SARS-CoV-2|Delta       0.94      0.98      0.96      9319
+SARS-CoV-2|Epsilon       1.00      0.98      0.99     14585
+    SARS-CoV-2|Eta       0.77      0.99      0.86       627
+  SARS-CoV-2|Gamma       0.90      1.00      0.95      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.33      1.00      0.50        38
+ SARS-CoV-2|Lambda       0.98      0.99      0.99       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.88      0.99      0.92    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TTCTCCTCG', 'TTTCTCCTG', 'CAAACTTAA', 'TTGCTACCG', 'GGGAACTTC', 'GTGCAGAAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.91      0.99      0.95       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       1.00      0.99      0.99       627
+  SARS-CoV-2|Gamma       0.97      0.99      0.98      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.08      0.97      0.16        38
+ SARS-CoV-2|Lambda       0.56      1.00      0.72       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.85      0.99      0.88    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['GAAGGTTTT', 'GGGAACTTC', 'AAATGGACC', 'TTACGCAAT', 'ACCACAAAC', 'GTGCAGAAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.86      0.99      0.92       606
+  SARS-CoV-2|Delta       0.99      0.98      0.98      9319
+SARS-CoV-2|Epsilon       0.96      0.99      0.97     14585
+    SARS-CoV-2|Eta       0.47      0.97      0.63       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.13      1.00      0.23        38
+ SARS-CoV-2|Lambda       0.87      1.00      0.93       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.86    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['CTCCTCGGC', 'TAATTACCT', 'AAGATTGCT', 'AACAAACTT', 'CTGATAATG', 'GCTGAATAT', 'TGGTGTTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.89      0.97      0.93       606
+  SARS-CoV-2|Delta       0.95      0.98      0.97      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.89      0.98      0.93       627
+  SARS-CoV-2|Gamma       1.00      0.98      0.99      8040
+   SARS-CoV-2|Iota       0.98      1.00      0.99     19185
+  SARS-CoV-2|Kappa       0.34      1.00      0.51        38
+ SARS-CoV-2|Lambda       0.56      1.00      0.72       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.86      0.99      0.90    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['CTCCTCGGC', 'AGATTGCTG', 'AAATGGACC', 'ATCATAACT', 'ACATCTTCA', 'CAACCAGAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.81      0.99      0.89       606
+  SARS-CoV-2|Delta       0.97      0.98      0.98      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.93      0.99      0.96       627
+  SARS-CoV-2|Gamma       1.00      0.98      0.99      8040
+   SARS-CoV-2|Iota       1.00      0.98      0.99     19185
+  SARS-CoV-2|Kappa       0.05      1.00      0.09        38
+ SARS-CoV-2|Lambda       0.59      0.99      0.74       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.86    334066
+      weighted avg       1.00      0.99      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TTACCGGTA', 'CCTTCAATG', 'GGCTGAATA', 'TTGCTACCG', 'AACAAACTT', 'GAAAGATTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.73      0.99      0.84       606
+  SARS-CoV-2|Delta       1.00      0.97      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.82      0.98      0.89       627
+  SARS-CoV-2|Gamma       0.97      0.99      0.98      8040
+   SARS-CoV-2|Iota       0.93      1.00      0.96     19185
+  SARS-CoV-2|Kappa       0.21      1.00      0.34        38
+ SARS-CoV-2|Lambda       0.36      1.00      0.53       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.80      0.99      0.85    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['GTAGGGGAA', 'GGTTTTAAG', 'CTCCTACGC', 'CAAACTTAA', 'GAAAGATTG', 'AAATGGACC', 'GTTGAAGGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.92      0.98      0.95       606
+  SARS-CoV-2|Delta       0.95      0.98      0.96      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       0.76      1.00      0.86       627
+  SARS-CoV-2|Gamma       0.97      1.00      0.98      8040
+   SARS-CoV-2|Iota       0.97      1.00      0.98     19185
+  SARS-CoV-2|Kappa       0.25      0.97      0.40        38
+ SARS-CoV-2|Lambda       0.99      0.99      0.99       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.88      0.99      0.91    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.997752738061421
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['GGGAATTTC', 'CTCCTTTAG', 'ACAAACTAA', 'TATGTCAAC', 'TTTTCATAG', 'ATCGGCGGG', 'GGGGAATTT', 'TGTTGAAGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.88      0.98      0.93       606
+  SARS-CoV-2|Delta       0.96      0.97      0.97      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.94      0.99      0.96       627
+  SARS-CoV-2|Gamma       1.00      0.99      1.00      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.17      1.00      0.28        38
+ SARS-CoV-2|Lambda       0.17      0.99      0.29       339
+SARS-CoV-2|Omicron       0.99      1.00      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.81      0.99      0.84    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966291425558029
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TGTCTGGTT', 'AATTCTCCT', 'ACAAACTAA', 'TACCGCAAT', 'ATTACCTCC', 'CATCTAAAC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.96      0.98    175123
+   SARS-CoV-2|Beta       0.10      0.99      0.18       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       0.99      1.00      0.99     14585
+    SARS-CoV-2|Eta       0.84      0.99      0.91       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      0.97      0.98     19185
+  SARS-CoV-2|Kappa       0.05      1.00      0.09        38
+ SARS-CoV-2|Lambda       0.43      0.99      0.60       339
+SARS-CoV-2|Omicron       0.99      1.00      0.99    106204
+
+          accuracy                           0.97    334066
+         macro avg       0.74      0.99      0.77    334066
+      weighted avg       0.99      0.97      0.98    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966288942832356
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['GTTTGTCTG', 'ATTTCTCCT', 'TTACGCAAT', 'TTGCTACCG', 'ATCTCTATC', 'GGCTGAATA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.84      0.97      0.90       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.90      1.00      0.95       627
+  SARS-CoV-2|Gamma       0.95      0.99      0.97      8040
+   SARS-CoV-2|Iota       0.99      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.07      1.00      0.13        38
+ SARS-CoV-2|Lambda       0.98      0.99      0.99       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.87      0.99      0.89    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966282557221784
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['ATAGCGCTT', 'GTCTGGTTT', 'TATGTCAAC', 'TTGCTACCG', 'ATCATAACT', 'TGATAATGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.68      0.97      0.80       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.93      0.99      0.96       627
+  SARS-CoV-2|Gamma       0.96      1.00      0.98      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.07      1.00      0.14        38
+ SARS-CoV-2|Lambda       0.51      0.99      0.67       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.81      0.99      0.85    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9977463179278823
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['GAAGGTTTT', 'ATTTGACAT', 'ACCGGTATA', 'CAAACTTAA', 'CCGCAATGG', 'CTTATGGTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.25      0.98      0.39       606
+  SARS-CoV-2|Delta       1.00      0.96      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.83      0.99      0.91       627
+  SARS-CoV-2|Gamma       0.90      0.99      0.95      8040
+   SARS-CoV-2|Iota       0.99      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.12      1.00      0.22        38
+ SARS-CoV-2|Lambda       0.14      1.00      0.24       339
+SARS-CoV-2|Omicron       1.00      0.98      0.99    106204
+
+          accuracy                           0.98    334066
+         macro avg       0.72      0.99      0.77    334066
+      weighted avg       0.99      0.98      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9955114706385892
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TGACACCTT', 'GAAGGTTTT', 'AATTGCTAC', 'ACTTAAATG', 'CTCCTACGC', 'TGTATAGAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.36      1.00      0.53       606
+  SARS-CoV-2|Delta       0.99      0.98      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.87      0.98      0.92       627
+  SARS-CoV-2|Gamma       0.91      0.99      0.95      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.07      0.97      0.13        38
+ SARS-CoV-2|Lambda       1.00      0.99      1.00       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.85    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TAATTCTCC', 'TACCGGTAT', 'GCTGAATAT', 'CCTCTATCA', 'AAATGGACC', 'CACTAATGG', 'TATCTTAAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.49      0.98      0.65       606
+  SARS-CoV-2|Delta       0.99      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.72      1.00      0.84       627
+  SARS-CoV-2|Gamma       0.95      0.99      0.97      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.72      1.00      0.84        38
+ SARS-CoV-2|Lambda       0.37      1.00      0.54       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['CCGGTATAG', 'TAGGGGAAT', 'CAAACTTAA', 'ATATGTCAA', 'TGCTACCGC', 'TGTATAGAT', 'ATTGAGAAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.88      0.98      0.93       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.87      0.99      0.93       627
+  SARS-CoV-2|Gamma       0.94      1.00      0.97      8040
+   SARS-CoV-2|Iota       0.98      1.00      0.99     19185
+  SARS-CoV-2|Kappa       0.16      1.00      0.27        38
+ SARS-CoV-2|Lambda       0.31      1.00      0.47       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.81      0.99      0.85    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9955033472274851
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['CGAACTTCT', 'CATAGCGCT', 'CCTCCTACG', 'GTGTTAAAG', 'TCTGGTTTT', 'ATCATAACT', 'ATTGCTACC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.65      1.00      0.79       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.94      1.00      0.97       627
+  SARS-CoV-2|Gamma       0.96      0.97      0.97      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.01      1.00      0.02        38
+ SARS-CoV-2|Lambda       0.91      0.99      0.95       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.85      0.99      0.87    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TCTCCTCGG', 'TGTCTGGTT', 'CAAACTAAA', 'AAAGATTGC', 'AAATGGACC', 'AATATGTCA', 'TTATCTTAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.95      0.98      0.96       606
+  SARS-CoV-2|Delta       0.97      0.98      0.97      9319
+SARS-CoV-2|Epsilon       0.98      1.00      0.99     14585
+    SARS-CoV-2|Eta       0.92      0.99      0.95       627
+  SARS-CoV-2|Gamma       1.00      0.99      0.99      8040
+   SARS-CoV-2|Iota       0.97      0.99      0.98     19185
+  SARS-CoV-2|Kappa       0.73      1.00      0.84        38
+ SARS-CoV-2|Lambda       0.46      1.00      0.63       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.90      0.99      0.93    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9977528089887641
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['GGTATAGAT', 'CCTTCAATG', 'ATCGGCGGG', 'CTACCGCAA', 'ACAAACTTA', 'CCTCCTACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.29      1.00      0.45       606
+  SARS-CoV-2|Delta       1.00      0.97      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.80      0.99      0.89       627
+  SARS-CoV-2|Gamma       0.87      0.99      0.93      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.23      1.00      0.37        38
+ SARS-CoV-2|Lambda       0.93      0.99      0.96       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.81      0.99      0.86    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TAAATGTCT', 'TGGGAACTT', 'ACAAACTAA', 'CTGATAATG', 'GAACATGTC', 'ACACCTTGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.97      0.99    175123
+   SARS-CoV-2|Beta       0.76      0.99      0.86       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       0.98      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.16      0.99      0.27       627
+  SARS-CoV-2|Gamma       0.98      1.00      0.99      8040
+   SARS-CoV-2|Iota       0.99      0.98      0.99     19185
+  SARS-CoV-2|Kappa       0.04      0.97      0.08        38
+ SARS-CoV-2|Lambda       0.53      1.00      0.69       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.98    334066
+         macro avg       0.74      0.99      0.78    334066
+      weighted avg       1.00      0.98      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966282557221785
+Length of k = 9
+Number of k-mers = 5
+Extracted k-mers = ['TGTTGAAGG', 'ATCATAACT', 'AAATGGACC', 'ATTTGACAT', 'GTTTGTCTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.76      0.97      0.85       606
+  SARS-CoV-2|Delta       0.99      0.98      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.46      0.98      0.62       627
+  SARS-CoV-2|Gamma       0.97      0.99      0.98      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.21      1.00      0.34        38
+ SARS-CoV-2|Lambda       0.33      1.00      0.50       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.77      0.99      0.83    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TTCATAGCG', 'TCTGGTTTT', 'AACTAAAAT', 'AAATGCACC', 'TGACACCTT', 'ATCATAACT', 'GGCTGAATA', 'CACACCTTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.74      0.97      0.84       606
+  SARS-CoV-2|Delta       0.94      0.99      0.96      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.99      1.00      1.00       627
+  SARS-CoV-2|Gamma       0.79      1.00      0.88      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.12      1.00      0.22        38
+ SARS-CoV-2|Lambda       0.38      0.99      0.55       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.80      0.99      0.84    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TAATTCTCC', 'AAAGATTGC', 'TCGCAATGG', 'ACAAACTTA', 'ACGAACTTC', 'TAATTACCT', 'ATTTCTCCT', 'ATGTTTATC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.70      0.98      0.82       606
+  SARS-CoV-2|Delta       0.95      1.00      0.97      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.93      1.00      0.96       627
+  SARS-CoV-2|Gamma       0.97      0.97      0.97      8040
+   SARS-CoV-2|Iota       0.84      1.00      0.91     19185
+  SARS-CoV-2|Kappa       0.88      1.00      0.94        38
+ SARS-CoV-2|Lambda       0.49      1.00      0.66       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.98    334066
+         macro avg       0.88      0.99      0.92    334066
+      weighted avg       0.99      0.98      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.996609736632083
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['AATTCTCCT', 'CACTTATGG', 'TCGCAATGG', 'ATCATAACT', 'TCTGGTTTT', 'GAACATGTC', 'CACACCTTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.83      0.98      0.89       606
+  SARS-CoV-2|Delta       0.99      1.00      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.99      1.00      1.00       627
+  SARS-CoV-2|Gamma       0.97      1.00      0.98      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.14      0.97      0.25        38
+ SARS-CoV-2|Lambda       0.33      1.00      0.50       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.86    334066
+      weighted avg       1.00      0.99      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['AATTCTCCT', 'TAATTACCT', 'CAAACTTAA', 'TATCGCAAT', 'ACCTCCTAC', 'AGCAGTAGG', 'AACTAAAAT', 'GTAGCACAC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.84      0.99      0.91       606
+  SARS-CoV-2|Delta       0.93      0.99      0.96      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       0.99      1.00      0.99       627
+  SARS-CoV-2|Gamma       0.79      1.00      0.88      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.10      1.00      0.18        38
+ SARS-CoV-2|Lambda       1.00      0.99      1.00       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.86      0.99      0.89    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['GTTGAAGGT', 'TGTATAGAT', 'AACTTCTCC', 'ACAAACTTA', 'GGAACTTCT', 'GGAAAGATT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.86      0.99      0.92       606
+  SARS-CoV-2|Delta       0.97      0.97      0.97      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.66      0.99      0.79       627
+  SARS-CoV-2|Gamma       0.97      0.98      0.98      8040
+   SARS-CoV-2|Iota       0.98      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.15      1.00      0.26        38
+ SARS-CoV-2|Lambda       0.88      1.00      0.93       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.85      0.99      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TTCTCCTCG', 'TAATTACCT', 'TGACACCTT', 'ATATGTCAA', 'TCGCAATGG', 'ACCTCCTAC', 'GTGTTGAAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.38      0.98      0.55       606
+  SARS-CoV-2|Delta       0.91      0.99      0.95      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.98      1.00      0.99       627
+  SARS-CoV-2|Gamma       0.96      1.00      0.98      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.12      1.00      0.21        38
+ SARS-CoV-2|Lambda       0.91      1.00      0.95       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.86    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.995511683447485
+Length of k = 9
+Number of k-mers = 5
+Extracted k-mers = ['TGTTGAAGG', 'AATTTCTCC', 'TTAAGCTAA', 'TCTCATCGG', 'ATTTGACAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.92      0.97      0.95       606
+  SARS-CoV-2|Delta       0.85      0.99      0.91      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.98      0.97      0.98       627
+  SARS-CoV-2|Gamma       0.96      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.09      1.00      0.16        38
+ SARS-CoV-2|Lambda       0.35      0.99      0.52       339
+SARS-CoV-2|Omicron       0.99      0.98      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.81      0.99      0.85    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TAATTCTCC', 'TAATTACCT', 'AACAAACTT', 'AAACTAAAA', 'TCGCAATGG', 'ATATGTCAA', 'TTCTCCTCG', 'GAGGATTAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.22      0.99      0.35       606
+  SARS-CoV-2|Delta       0.95      0.99      0.97      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       1.00      1.00      1.00       627
+  SARS-CoV-2|Gamma       1.00      0.99      1.00      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.21      0.97      0.35        38
+ SARS-CoV-2|Lambda       0.56      1.00      0.72       339
+SARS-CoV-2|Omicron       0.99      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.79      0.99      0.84    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.997758945386064
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['AGTTTGTCT', 'CTACGCAAT', 'ATTGCTACC', 'ACTTAAATG', 'AAATGGACC', 'AGTTGTATG', 'ATAACCCTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.70      1.00      0.83       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.95      1.00      0.97       627
+  SARS-CoV-2|Gamma       0.91      1.00      0.95      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.07      0.97      0.13        38
+ SARS-CoV-2|Lambda       1.00      0.99      1.00       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.86      0.99      0.89    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9955054761228419
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['ATCTTCAAT', 'TCTGGTTTT', 'AATGTCTGA', 'GGAAAGATT', 'AATTGCTAC', 'ATCATAACT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.84      0.96      0.90       606
+  SARS-CoV-2|Delta       1.00      0.97      0.99      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.93      0.99      0.96       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.98      8040
+   SARS-CoV-2|Iota       0.97      0.99      0.98     19185
+  SARS-CoV-2|Kappa       0.08      1.00      0.14        38
+ SARS-CoV-2|Lambda       0.44      0.99      0.61       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.85    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['ATTCTCCTC', 'GCTGAACAT', 'TTCATAGCG', 'TTGTCTGGT', 'TCGCAATGG', 'ATCATAACT', 'TCTGATAAT', 'GTTGAAGGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.77      0.95      0.85       606
+  SARS-CoV-2|Delta       0.99      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.57      1.00      0.73       627
+  SARS-CoV-2|Gamma       0.99      0.99      0.99      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.16      1.00      0.27        38
+ SARS-CoV-2|Lambda       0.40      0.99      0.58       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.79      0.99      0.84    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966288942832356
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TTCTCCTCG', 'GGTATAGAT', 'ATCATAACT', 'TTGCTACCG', 'GAACATGTC', 'ACAAACTTA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.65      0.99      0.79       606
+  SARS-CoV-2|Delta       1.00      0.97      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.84      1.00      0.91       627
+  SARS-CoV-2|Gamma       0.96      1.00      0.98      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.19      1.00      0.32        38
+ SARS-CoV-2|Lambda       0.51      1.00      0.68       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.81      0.99      0.86    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TCGCAATGG', 'AATTTCTCC', 'ATCATAACT', 'CTGTATAGA', 'AAATGGACC', 'ACAAACTTA', 'CCTCCTACG', 'ATCTTACAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.94      0.98      0.96       606
+  SARS-CoV-2|Delta       1.00      0.97      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.57      1.00      0.73       627
+  SARS-CoV-2|Gamma       0.93      1.00      0.96      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.12      1.00      0.21        38
+ SARS-CoV-2|Lambda       1.00      0.99      1.00       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.86      0.99      0.88    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.997752738061421
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['CAGTAGGGG', 'TCGCAATGG', 'CTTAAATGT', 'TTACGCAAT', 'ACCTTAAAC', 'AATTCTCCT', 'GGTTTGCTA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       1.00      0.99      0.99       606
+  SARS-CoV-2|Delta       0.95      0.99      0.97      9319
+SARS-CoV-2|Epsilon       0.98      1.00      0.99     14585
+    SARS-CoV-2|Eta       0.90      1.00      0.95       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.99      8040
+   SARS-CoV-2|Iota       0.99      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.13      1.00      0.23        38
+ SARS-CoV-2|Lambda       0.54      1.00      0.70       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.85      1.00      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TTTCAGAGC', 'AATATGTCA', 'ATGGGAACT', 'AGTTGTATG', 'AATTCTCCT', 'CCTCCTACG', 'TGATAATGG', 'GTTTATCTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.54      1.00      0.70       606
+  SARS-CoV-2|Delta       1.00      0.99      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.88      0.99      0.93       627
+  SARS-CoV-2|Gamma       0.99      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.84      1.00      0.92        38
+ SARS-CoV-2|Lambda       0.92      1.00      0.96       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.92      0.99      0.95    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966288942832356
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['CATAGCGCT', 'AGTTTGTCT', 'TACCTCCTA', 'GCACACCTT', 'TTGTTTTAA', 'AATTCTCCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       0.99      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.73      0.96      0.83       606
+  SARS-CoV-2|Delta       0.98      0.99      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.74      1.00      0.85       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.08      1.00      0.14        38
+ SARS-CoV-2|Lambda       0.85      0.99      0.91       339
+SARS-CoV-2|Omicron       0.99      0.98      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.87    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9954990559893032
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TAATTACCT', 'ATTTGACAT', 'CTACCGCAA', 'TAATTCTCC', 'AACATGTCA', 'ACCTCCTAC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.23      0.98      0.37       606
+  SARS-CoV-2|Delta       0.99      0.99      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.99      0.99      0.99       627
+  SARS-CoV-2|Gamma       0.96      0.99      0.97      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.06      1.00      0.11        38
+ SARS-CoV-2|Lambda       0.88      0.99      0.93       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.81      0.99      0.83    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9954985203120795
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['CTGTATAGA', 'GAATTTCTC', 'CAAACTTAA', 'CCTTCAATG', 'TCATCGGCG', 'ACACCTTGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.85      0.98      0.91       606
+  SARS-CoV-2|Delta       0.98      0.99      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.93      0.97      0.95       627
+  SARS-CoV-2|Gamma       0.90      0.98      0.94      8040
+   SARS-CoV-2|Iota       0.93      0.99      0.96     19185
+  SARS-CoV-2|Kappa       0.10      1.00      0.18        38
+ SARS-CoV-2|Lambda       0.55      1.00      0.71       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.86    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TCTCCTCGG', 'AGGGGAATT', 'TCGCAATGG', 'CAAACTTAA', 'AGAGTTCTT', 'ATGTTTATC', 'AACCCACTA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.89      1.00      0.94       606
+  SARS-CoV-2|Delta       0.95      1.00      0.97      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.96      0.99      0.97       627
+  SARS-CoV-2|Gamma       0.99      0.99      0.99      8040
+   SARS-CoV-2|Iota       0.98      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.78      1.00      0.87        38
+ SARS-CoV-2|Lambda       0.83      1.00      0.91       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.94      0.99      0.96    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TAATTACCT', 'CTCATCGGC', 'TTACGCAAT', 'TGCTACCGC', 'ATTTGACAT', 'TCTGATAAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.89      0.98      0.93       606
+  SARS-CoV-2|Delta       1.00      0.97      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.96      0.99      0.97       627
+  SARS-CoV-2|Gamma       0.84      0.99      0.91      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.11      1.00      0.20        38
+ SARS-CoV-2|Lambda       0.81      1.00      0.89       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.86      0.99      0.89    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['CCTTCAATG', 'TGGGAACTT', 'AACTAAAAT', 'GCTGAATAT', 'TAATTACCT', 'ACCTCCTAC', 'TCTCATCGG', 'ACACCTTGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.90      0.99      0.94       606
+  SARS-CoV-2|Delta       1.00      0.99      0.99      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       0.18      0.98      0.30       627
+  SARS-CoV-2|Gamma       1.00      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.52      0.97      0.68        38
+ SARS-CoV-2|Lambda       0.69      1.00      0.82       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.87    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9932701003319239
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TCTGGTTTT', 'ACAAACTTA', 'CCGCAATGG', 'AATTTCTCC', 'CTCCTCGGC', 'CTTATGGTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.84      0.97      0.90       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.96      0.98      0.97       627
+  SARS-CoV-2|Gamma       0.99      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.09      1.00      0.16        38
+ SARS-CoV-2|Lambda       0.86      1.00      0.92       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.87      0.99      0.89    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TAATTACCG', 'ATTTCTCCT', 'GGGCTGAAT', 'ATCGGCGGG', 'TTGCTACCG', 'AGTTGTATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.77      0.99      0.87       606
+  SARS-CoV-2|Delta       1.00      0.97      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.98      0.99     14585
+    SARS-CoV-2|Eta       0.87      1.00      0.93       627
+  SARS-CoV-2|Gamma       0.93      0.99      0.96      8040
+   SARS-CoV-2|Iota       0.93      1.00      0.96     19185
+  SARS-CoV-2|Kappa       0.12      1.00      0.22        38
+ SARS-CoV-2|Lambda       0.76      0.99      0.86       339
+SARS-CoV-2|Omicron       1.00      0.99      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.84      0.99      0.88    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9977463179278823
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['ATATGTCAA', 'TTCATAGCG', 'TACCGCAAT', 'GGTATAGAT', 'ACAAACTTA', 'GATAATGGA', 'CCTCCTACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.73      0.99      0.84       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.86      0.98      0.92       627
+  SARS-CoV-2|Gamma       0.94      1.00      0.97      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.07      1.00      0.13        38
+ SARS-CoV-2|Lambda       0.86      0.99      0.92       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.85      0.99      0.88    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['GGTATAGAT', 'TTAAATGTC', 'CCGCAATGG', 'CCCACTAAT', 'GTAGGGGAA', 'TCTCATCGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.68      0.98      0.80       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.94      0.99      0.97       627
+  SARS-CoV-2|Gamma       0.93      0.99      0.96      8040
+   SARS-CoV-2|Iota       0.99      1.00      0.99     19185
+  SARS-CoV-2|Kappa       0.22      0.97      0.36        38
+ SARS-CoV-2|Lambda       0.37      1.00      0.54       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.81      0.99      0.86    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TAATTACCT', 'AATTTCTCC', 'CAAACTTAA', 'ACATCTTCA', 'TATGTCAAC', 'CTCATCGGC', 'CACACCTTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.85      0.95      0.90       606
+  SARS-CoV-2|Delta       0.98      0.99      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.84      0.97      0.90       627
+  SARS-CoV-2|Gamma       1.00      0.99      0.99      8040
+   SARS-CoV-2|Iota       0.97      0.99      0.98     19185
+  SARS-CoV-2|Kappa       0.02      1.00      0.05        38
+ SARS-CoV-2|Lambda       0.55      1.00      0.71       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.85    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['TACCGGTAT', 'CCTTCAATG', 'ATCATAACT', 'TTGCTACCG', 'AAATGGACC', 'AGTTGTATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.29      1.00      0.45       606
+  SARS-CoV-2|Delta       1.00      0.97      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.98      0.99     14585
+    SARS-CoV-2|Eta       0.95      1.00      0.97       627
+  SARS-CoV-2|Gamma       0.89      0.99      0.94      8040
+   SARS-CoV-2|Iota       0.99      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.12      1.00      0.21        38
+ SARS-CoV-2|Lambda       0.77      0.99      0.87       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.80      0.99      0.84    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['GTAGGGGAA', 'TTTAAGCTA', 'ATCATAACT', 'AGATTGCTG', 'TCCTACGCA', 'TGTTTATCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.93      0.99      0.96       606
+  SARS-CoV-2|Delta       0.94      0.99      0.96      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       0.71      1.00      0.83       627
+  SARS-CoV-2|Gamma       0.96      0.99      0.97      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.26      1.00      0.42        38
+ SARS-CoV-2|Lambda       0.66      0.99      0.79       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.85      0.99      0.89    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966353144167744
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['AATTCTCCT', 'ATTACCGGT', 'ATATGTCAA', 'ACAAATCTC', 'GCTACCGCA', 'CTACGCAAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.67      0.99      0.80       606
+  SARS-CoV-2|Delta       0.99      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.88      0.99      0.93       627
+  SARS-CoV-2|Gamma       0.91      1.00      0.95      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.26      0.97      0.41        38
+ SARS-CoV-2|Lambda       0.62      1.00      0.76       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9954923129874366
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TTCTCCTCG', 'TGTCTGGTT', 'AGATTGCTG', 'ACGAACTTC', 'AAATGGACC', 'TTACGCAAT', 'TATCTTAAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.50      0.99      0.66       606
+  SARS-CoV-2|Delta       0.97      0.99      0.98      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.93      0.99      0.96       627
+  SARS-CoV-2|Gamma       0.98      0.97      0.97      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.69      1.00      0.82        38
+ SARS-CoV-2|Lambda       0.80      0.96      0.87       339
+SARS-CoV-2|Omicron       1.00      0.99      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.88      0.99      0.92    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['CTTATGGTG', 'GTCTGGTTT', 'ATTTGACAT', 'TTGCTACCG', 'ATCATAACT', 'CTGATAATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.24      0.95      0.39       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.94      0.99      0.96       627
+  SARS-CoV-2|Gamma       0.95      0.99      0.97      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.09      1.00      0.16        38
+ SARS-CoV-2|Lambda       0.30      1.00      0.46       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.75      0.99      0.79    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9977525252525252
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['CCTGTATAG', 'TAGCGCTTC', 'GGCTGAATA', 'TTACCTCTT', 'TCTCATCGG', 'ACACCTTGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.60      0.98      0.75       606
+  SARS-CoV-2|Delta       0.97      0.99      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.40      0.96      0.57       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.10      1.00      0.17        38
+ SARS-CoV-2|Lambda       0.74      1.00      0.85       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.78      0.99      0.83    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TCATAGCGC', 'GTTTGTCTG', 'CTTAAATGT', 'ACCCACTAA', 'ATATGTCAA', 'AGTTTGTCT', 'TACCTCCTA', 'TACAACCAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.86      0.95      0.90       606
+  SARS-CoV-2|Delta       0.98      0.97      0.98      9319
+SARS-CoV-2|Epsilon       0.99      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.59      0.98      0.74       627
+  SARS-CoV-2|Gamma       0.94      1.00      0.97      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.06      1.00      0.11        38
+ SARS-CoV-2|Lambda       1.00      0.99      1.00       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.84      0.99      0.87    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['CGAACTTCT', 'TAGGGGAAT', 'CCTACGCAA', 'AAACTAAAA', 'AATTGCTAT', 'ACAAACTTA', 'TTTAAGCTA', 'ACACCTTGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.97      0.98    175123
+   SARS-CoV-2|Beta       0.98      0.98      0.98       606
+  SARS-CoV-2|Delta       1.00      1.00      1.00      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       1.00      0.99      0.99       627
+  SARS-CoV-2|Gamma       0.79      1.00      0.88      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.01      1.00      0.02        38
+ SARS-CoV-2|Lambda       0.78      0.99      0.87       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.98    334066
+         macro avg       0.85      0.99      0.87    334066
+      weighted avg       0.99      0.98      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9977525252525252
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['CGAACTTCT', 'TTTTAAGCT', 'AAATGGACC', 'ATCATAACT', 'TTGCTACCG', 'GGGAACTTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.93      0.95      0.94       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       0.99      1.00      0.99     14585
+    SARS-CoV-2|Eta       0.93      1.00      0.96       627
+  SARS-CoV-2|Gamma       0.97      0.97      0.97      8040
+   SARS-CoV-2|Iota       1.00      0.97      0.99     19185
+  SARS-CoV-2|Kappa       0.05      1.00      0.10        38
+ SARS-CoV-2|Lambda       0.34      0.96      0.51       339
+SARS-CoV-2|Omicron       1.00      0.99      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.98      0.84    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.996641206048688
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['AATTCTCCT', 'CTGTATAGA', 'TACCGCAAT', 'ACAAACTTA', 'TTACGCAAT', 'AATTTCTCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.82      0.98      0.89       606
+  SARS-CoV-2|Delta       0.99      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.99      0.98      0.99       627
+  SARS-CoV-2|Gamma       0.98      0.99      0.99      8040
+   SARS-CoV-2|Iota       0.99      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.06      1.00      0.11        38
+ SARS-CoV-2|Lambda       0.94      0.99      0.97       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.88      0.99      0.89    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TCTGGTTTT', 'ATCATAACT', 'TACCGCAAT', 'CCTCCTACG', 'ACTTGGTGC', 'AATATGTCA', 'CATCTTCAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      0.99    175123
+   SARS-CoV-2|Beta       0.42      1.00      0.59       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       0.96      0.99      0.97     14585
+    SARS-CoV-2|Eta       0.85      0.99      0.91       627
+  SARS-CoV-2|Gamma       0.96      1.00      0.98      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.07      1.00      0.13        38
+ SARS-CoV-2|Lambda       0.78      0.99      0.87       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.80      0.99      0.84    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9955175750793986
+Length of k = 9
+Number of k-mers = 6
+Extracted k-mers = ['ATTCTCCTC', 'GTGTTGAAG', 'GGTGCAGAA', 'GGTTTTAAG', 'GACTAATTC', 'TTTTCGGAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.98      0.99    175123
+   SARS-CoV-2|Beta       0.43      0.99      0.60       606
+  SARS-CoV-2|Delta       0.93      0.98      0.96      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.83      1.00      0.91       627
+  SARS-CoV-2|Gamma       0.90      0.99      0.94      8040
+   SARS-CoV-2|Iota       1.00      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.18      1.00      0.30        38
+ SARS-CoV-2|Lambda       0.59      0.99      0.74       339
+SARS-CoV-2|Omicron       0.99      0.99      0.99    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.78      0.99      0.84    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 8
+Extracted k-mers = ['TCCTCGGCG', 'CAAACTTAA', 'AAATGGACC', 'CTGGAAAGA', 'ATTACCTGT', 'CTCCTCGGC', 'ATATGTCAA', 'ATCTTACAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.91      0.98      0.94       606
+  SARS-CoV-2|Delta       0.97      0.98      0.97      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.92      0.99      0.96       627
+  SARS-CoV-2|Gamma       1.00      0.99      1.00      8040
+   SARS-CoV-2|Iota       1.00      0.99      1.00     19185
+  SARS-CoV-2|Kappa       0.03      0.97      0.06        38
+ SARS-CoV-2|Lambda       0.57      1.00      0.73       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.84      0.99      0.86    334066
+      weighted avg       1.00      0.99      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9988763690307104
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['CTCCTCGGC', 'AAAGATTGC', 'TACCGGTAT', 'AACTTAAAT', 'AAATGGACC', 'ATTTGACAT', 'CCGCAATGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.94      0.98      0.96       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      0.99     14585
+    SARS-CoV-2|Eta       0.93      1.00      0.96       627
+  SARS-CoV-2|Gamma       0.97      0.99      0.98      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.05      1.00      0.09        38
+ SARS-CoV-2|Lambda       0.44      1.00      0.62       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.86    334066
+      weighted avg       1.00      0.99      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9966288942832358
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TTTTCAGAG', 'ATATGTCAA', 'TATGGGAAC', 'GCTACCGCA', 'CCCACTAAT', 'AACTTAAAT', 'TAATTACCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.55      0.99      0.71       606
+  SARS-CoV-2|Delta       1.00      0.98      0.99      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.85      0.99      0.92       627
+  SARS-CoV-2|Gamma       0.94      1.00      0.97      8040
+   SARS-CoV-2|Iota       0.99      1.00      0.99     19185
+  SARS-CoV-2|Kappa       0.26      0.97      0.41        38
+ SARS-CoV-2|Lambda       0.69      1.00      0.82       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.83      0.99      0.88    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 9
+Extracted k-mers = ['TCTTCAATG', 'GGTTTTAAG', 'TAAATGTCT', 'TCTCCTCGG', 'TGATAATGG', 'TGTATAGAT', 'AACAAACTT', 'GCAGTAGGG', 'GCACACCTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      1.00      1.00    175123
+   SARS-CoV-2|Beta       0.59      0.99      0.74       606
+  SARS-CoV-2|Delta       1.00      0.99      0.99      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       0.95      0.97      0.96       627
+  SARS-CoV-2|Gamma       0.99      0.99      0.99      8040
+   SARS-CoV-2|Iota       1.00      0.98      0.99     19185
+  SARS-CoV-2|Kappa       0.45      1.00      0.62        38
+ SARS-CoV-2|Lambda       0.73      1.00      0.85       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           1.00    334066
+         macro avg       0.87      0.99      0.91    334066
+      weighted avg       1.00      1.00      1.00    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['TAATTCTCC', 'TAATTACCT', 'ACTTCTCCT', 'ACAAACTTA', 'AATTGCTAT', 'GGAACTTCT', 'TGTTGAAGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.63      0.98      0.76       606
+  SARS-CoV-2|Delta       0.93      0.98      0.95      9319
+SARS-CoV-2|Epsilon       1.00      1.00      1.00     14585
+    SARS-CoV-2|Eta       0.86      0.99      0.92       627
+  SARS-CoV-2|Gamma       0.98      0.98      0.98      8040
+   SARS-CoV-2|Iota       0.98      0.99      0.99     19185
+  SARS-CoV-2|Kappa       0.14      1.00      0.25        38
+ SARS-CoV-2|Lambda       0.70      1.00      0.82       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.87    334066
+      weighted avg       0.99      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9977525252525252
+Length of k = 9
+Number of k-mers = 7
+Extracted k-mers = ['ACTTATGGT', 'ATTTGACAT', 'AAATGGACC', 'CAAACTTAA', 'CTGTATAGA', 'TCGCAATGG', 'GATTTCATC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+                     precision    recall  f1-score   support
+
+  SARS-CoV-2|Alpha       1.00      0.99      1.00    175123
+   SARS-CoV-2|Beta       0.98      0.98      0.98       606
+  SARS-CoV-2|Delta       1.00      0.97      0.98      9319
+SARS-CoV-2|Epsilon       1.00      0.99      1.00     14585
+    SARS-CoV-2|Eta       0.57      1.00      0.73       627
+  SARS-CoV-2|Gamma       0.92      0.99      0.95      8040
+   SARS-CoV-2|Iota       1.00      1.00      1.00     19185
+  SARS-CoV-2|Kappa       0.10      1.00      0.18        38
+ SARS-CoV-2|Lambda       0.59      1.00      0.75       339
+SARS-CoV-2|Omicron       1.00      1.00      1.00    106204
+
+          accuracy                           0.99    334066
+         macro avg       0.82      0.99      0.86    334066
+      weighted avg       1.00      0.99      0.99    334066
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv

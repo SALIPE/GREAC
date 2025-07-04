@@ -1,0 +1,55 @@
+name: Release Compiled Executable and Source
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: ./GREAC
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make the script files executable
+        run: chmod +x build.sh
+
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: "1.11.5"
+
+      - name: Build project
+        run: |
+          ./build.sh
+
+      - name: Create compiled app tarball
+        run: |
+          tar -czf greac.tar.gz ./build/greac/
+          echo "Listing content after tar:"
+          ls -l 
+          ls -l build/greac/
+
+      - name: Move tarball to repository root
+        run: mv greac.tar.gz ../
+        working-directory: ./GREAC
+
+      - name: Verify tarball in repository root (for debugging)
+        run: |
+          echo "--- Contents of repository root after moving tarball ---"
+          ls -l
+
+      - name: Upload compiled app to GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: greac.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

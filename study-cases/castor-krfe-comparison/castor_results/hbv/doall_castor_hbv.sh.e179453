@@ -1,0 +1,1303 @@
+rm: cannot remove ‘/tmp2/felipe/castor/output’: No such file or directory
+┌ Error: Non directory to remove
+└ @ Main.FastaSplitter ~/Fasta-splitter/FastaSplitter/src/FastaSplitter.jl:38
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F

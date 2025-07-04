@@ -1,0 +1,1426 @@
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+[ Info: Collecting A
+[ Info: Collecting B
+[ Info: Collecting C
+[ Info: Collecting D
+[ Info: Collecting E
+[ Info: Collecting F
+[ Info: Min Sequence Amount F - 187
+[ Info: Exporting file: B
+[ Info: Exporting file: A
+[ Info: Exporting file: C
+[ Info: Exporting file: D
+[ Info: Exporting file: E
+[ Info: Exporting file: F

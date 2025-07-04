@@ -1,0 +1,1529 @@
+rm: cannot remove ‘/tmp2/felipe/kevolve/output’: No such file or directory
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+[ Info: Collecting HIV1_A
+[ Info: Collecting HIV1_B
+[ Info: Collecting HIV1_C
+[ Info: Collecting HIV1_D
+[ Info: Collecting HIV1_F
+[ Info: Collecting HIV1_G
+[ Info: Min Sequence Amount HIV1_D - 89
+[ Info: Exporting file: HIV1_F
+[ Info: Exporting file: HIV1_C
+[ Info: Exporting file: HIV1_D
+[ Info: Exporting file: HIV1_B
+[ Info: Exporting file: HIV1_G
+[ Info: Exporting file: HIV1_A
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))

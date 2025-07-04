@@ -1,0 +1,33 @@
+name = "GREAC"
+uuid = "89730fe7-fd85-4e0c-8219-5cbad89a3abb"
+authors = ["SALIPE"]
+version = "0.1.0"
+
+[deps]
+AbstractFFTs = "621f4979-c628-5d54-868e-fcf4e3e8185c"
+ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
+DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
+Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
+FASTX = "c2308a5c-f048-11e8-3e8a-31650f418d12"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+FLoops = "cc61a311-1640-44b5-9fba-1b764f453329"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Normalization = "be38d6a3-8366-4a42-ad57-222272b5bbe7"
+Optimisers = "3bd65402-5787-11e9-1adc-39752487f4e2"
+PackageCompiler = "9b87118b-4619-50d2-8e1e-99f35a4d4d9d"
+Pickle = "fbb45041-c46e-462f-888f-7c521cafbc2c"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
+Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+
+[compat]
+BenchmarkTools = "1.6.0"
+LinearAlgebra = "1.10.6"
+PackageCompiler = "2.2.0"
+Plots = "1.40.13"
+Serialization = "1.10.6"
+Statistics = "1.10.0"

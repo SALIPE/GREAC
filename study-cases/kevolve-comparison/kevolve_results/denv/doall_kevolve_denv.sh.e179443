@@ -1,0 +1,1026 @@
+┌ Error: Non directory to remove
+└ @ Main.FastaSplitter ~/Fasta-splitter/FastaSplitter/src/FastaSplitter.jl:38
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/KEVOLVE/algorithm.py:118: RuntimeWarning: divide by zero encountered in double_scalars
+  try: n_attempts =  math.ceil(1 / (objective_score - (max_global_weighted_score + max_global_unweighted_score) / 2))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/a61491/.venv/lib64/python3.6/site-packages/sklearn/metrics/_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
+[ Info: Collecting type1
+[ Info: Collecting type2
+[ Info: Collecting type3
+[ Info: Collecting type4
+[ Info: Min Sequence Amount type4 - 462
+[ Info: Exporting file: type3
+[ Info: Exporting file: type1
+[ Info: Exporting file: type4
+[ Info: Exporting file: type2
