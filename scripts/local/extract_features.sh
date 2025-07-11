@@ -1,18 +1,18 @@
 #!/bin/bash
 
-PROJECTHOME=~/Desktop/genomic-extractor/GREAC
+PROJECTHOME=~/Desktop/GREAC/GREAC
 
 #TESTDIR=~/Desktop/datasets/test_voc/test
 #TRAIN=~/Desktop/datasets/test_voc/train/kmers
 #GROUPNAME=covid
 
-# TESTDIR=~/Desktop/datasets/sars_cov2/test
-# TRAIN=~/Desktop/datasets/sars_cov2/train/kmers
-# GROUPNAME=covid_2
+TESTDIR=~/Desktop/datasets/sars_cov2/test
+TRAIN=~/Desktop/datasets/sars_cov2/train/kmers
+GROUPNAME=covid_2
 
-TESTDIR=/home/salipe/Desktop/datasets/bees/data/test
-TRAIN=/home/salipe/Desktop/datasets/bees/data/train/kmers
-GROUPNAME=bees
+#TESTDIR=/home/salipe/Desktop/datasets/bees/data/test
+#TRAIN=/home/salipe/Desktop/datasets/bees/data/train/kmers
+#GROUPNAME=bees
 
 # TESTDIR=~/Desktop/datasets/dengue/test
 # TRAIN=~/Desktop/datasets/dengue/train/kmers

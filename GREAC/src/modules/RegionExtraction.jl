@@ -234,18 +234,17 @@ function _wndwExlcusiveKmersHistogram_bytes(
     h_len = length(histogram)
     @inbounds for i in eachindex(histogram)
         if histogram[i] >= threshold_count
-            end_pos = min(maxSeqLen, i + Int(wndwSize) - 1)
-            marked[i:end_pos] .= true
-            # init = max(1, i - 2)
-            # endi = min(h_len, i + 2)
-            # while (init <= endi)
-            #     end_pos = min(maxSeqLen, init + Int(wndwSize) - 1)
-            #     marked[init:end_pos] .= true
-            #     init += 1
-            # end
+            # end_pos = min(maxSeqLen, i + Int(wndwSize) - 1)
+            # marked[i:end_pos] .= true
+            init = max(1, i - 2)
+            endi = min(h_len, i + 2)
+            while (init <= endi)
+                end_pos = min(maxSeqLen, init + Int(wndwSize) - 1)
+                marked[init:end_pos] .= true
+                init += 1
+            end
         end
     end
-
     return histogram_u16, marked
 end
 

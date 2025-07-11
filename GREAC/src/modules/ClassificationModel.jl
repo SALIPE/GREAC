@@ -43,7 +43,7 @@ function fitMulticlass(
         class_freq = kmer_distribution ./ (length(kmerset) * length(class_seqs))
         class_string_probs[class] = class_freq
 
-        in_group = Vector{Float64}(undef, length(class_seqs))
+        in_group::Vector{Float64} = zeros(Float64, length(class_seqs))
         @floop for s in eachindex(class_seqs)
             seq::Base.CodeUnits = class_seqs[s]
 
@@ -58,7 +58,6 @@ function fitMulticlass(
         variant_stats[class] = Dict(
             :mu => mean(in_group),
             :sigma => std(in_group),
-            :percentiles => quantile(in_group, [0.05, 0.95])
         )
     end
 
@@ -68,21 +67,6 @@ function fitMulticlass(
         variant_stats,
         kmerset,
         regions)
-end
-
-function trapezoidal_membership(
-    stats::Dict{Symbol,Any},
-    d::Float64)
-
-    p5, p95 = stats[:percentiles]
-
-    if d <= p5
-        0.0
-    elseif p5 < d <= p95
-        1.0
-    else
-        max(0.0, 1 - (d - p95) / (p95 - p5))
-    end
 end
 
 function gaussian_membership(
@@ -100,16 +84,38 @@ function predict_membership(
 
     model, metric = parameters
     memberships = Dict{String,Float64}()
+    divergence = Dict{String,Float64}()
+    classification = Dict{String,Float64}()
 
     for c in model.classes
-        class_freqs = model.class_string_probs[c]
+        class_freq = model.class_string_probs[c]
         stats = model.variant_stats[c]
-        d = metrics_options(model, metric, class_freqs, X)
-        memberships[c] = gaussian_membership(stats, d)
+        d = metrics_options(model, metric, class_freq, X)
+        memb::Float64 = gaussian_membership(stats, d)
+
+        diverg::Float64 = abs(entropy(X) - entropy(class_freq))
+        # diverg::Float64 = zero(Float64)
+        # @inbounds for i in eachindex(X)
+        #     diverg += abs(X[i] - class_freq[i])
+
+        # end
+        # diverg = diverg / length(X)
+        memberships[c] = memb
+        divergence[c] = diverg
+        classification[c] = (memb * exp(-(entropy(X)^2) / (2 * stats[:sigma]^2))) + (1 - d)
+        # classification[c] = (memb * (1 - diverg) + (1 - d))
     end
 
-    return argmax(memberships), memberships
+    return argmax(classification), classification
 end
+
+function entropy(frequencias::Vector{Float64})::Float64
+
+    distribuicao::Vector{Float64} = frequencias ./ sum(frequencias)
+    entropia = -sum(p * log2(p) for p in distribuicao if p > 0)
+    return entropia
+end
+
 
 function def_kmer_classes_probs(
     seq_data::Tuple{Vector{Tuple{Int,Int}},Vector{Base.CodeUnits}},
@@ -157,8 +163,7 @@ function sequence_kmer_distribution_optimized(
     kmer_set = Set(codeunits(kmer) for kmer in kmerset)
     kmer_length = length(kmerset[1])
 
-    # Inicializa o resultado
-    kmer_distribution = zeros(UInt64, length(regions))
+    kmer_distribution::Vector{UInt64} = zeros(UInt64, length(regions))
     seq_len = length(seq)
 
     @inbounds for (region_idx, (init_pos, end_pos)) in enumerate(regions)

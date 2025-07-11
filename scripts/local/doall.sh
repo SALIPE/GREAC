@@ -8,12 +8,12 @@ HBV=~/Desktop/datasets/HBV/data
 BEES=~/Desktop/datasets/bees/data
 SARS=~/Desktop/datasets/sars_cov2
 MONKEYPOX=~/Desktop/datasets/monkeypox
-HIV=~/Desktop/genomic-extractor/comparison_scripts/castor_hiv_data/variants
+HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/variants
 
-GREAC=~/Desktop/genomic-extractor/scripts/local/benchmark.sh
+GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
 BALANCEDATASET=~/Desktop/Fasta-splitter/FastaSplitter
 
-REF_HIV=~/Desktop/genomic-extractor/comparison_scripts/castor_hiv_data/hiv1_refseq.fasta
+REF_HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/hiv1_refseq.fasta
 REF_HBV=~/Desktop/datasets/HBV/refseq.fasta
 REF_DENV=~/Desktop/datasets/denv/refseq.fasta
 REF_SARS=~/Desktop/datasets/tutorial_data/reference/SARS-CoV2_wuhan_refseq.fasta
@@ -169,7 +169,7 @@ if [ ! -d "$SOURCE" ]; then
 fi
 
 
-for i in {1..1}; do
+for i in {1..100}; do
     echo "Iteração $i de 100"
     
     $BALANCEDATASET/test.sh $SOURCE

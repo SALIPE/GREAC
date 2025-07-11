@@ -744,4 +744,4 @@ function julia_main()::Cint
 end
 end
 
-# GREAC.julia_main()
+GREAC.julia_main()

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECTHOME=~/Desktop/genomic-extractor/GREAC
+PROJECTHOME=~/Desktop/GREAC/GREAC
 
 
 # TESTDIR=~/Desktop/datasets/sars_cov2/test
@@ -32,9 +32,9 @@ THRESHOLD=$7
 # TRAIN=~/Desktop/datasets/HBV/data/train/kmers
 # GROUPNAME=hbv
 
-# cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
-#    -w $WINDOW benchmark --train-dir $TRAIN --test-dir $TESTDIR -m $METRIC --threshold $THRESHOLD \
-#    -o ./output-$KMER
+cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
+   -w $WINDOW benchmark --train-dir $TRAIN --test-dir $TESTDIR -m $METRIC --threshold $THRESHOLD \
+   -o ./output-$KMER
 
 
 # docker run --rm --cpus="4" -e JULIA_NUM_THREADS=4 \
@@ -49,8 +49,8 @@ THRESHOLD=$7
 #     benchmark --train-dir /train_dir \
 #     --test-dir /test_dir  \
 #     -m $METRIC \
-# #     -o /output
-cd $PROJECTHOME &&  julia --project src/GREAC.jl --no-cache \
-   --group-name $GROUPNAME -w $WINDOW fit-parameters --train-dir $TRAIN --test-dir $TESTDIR 
+# # #     -o /output
+# cd $PROJECTHOME &&  julia --project src/GREAC.jl --no-cache \
+#    --group-name $GROUPNAME -w $WINDOW fit-parameters --train-dir $TRAIN --test-dir $TESTDIR 
 
 

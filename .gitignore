@@ -23,6 +23,7 @@ docs/site/
 # environment.
 GREAC/Manifest.toml
 GREAC/greac/
+GREAC/output**/
 *.png
 /.vscode
 /compiled_app
@@ -35,4 +36,7 @@ notebooks/.project_cache
 resultados*
 build/
 data/
-.venv/
+.venv
+study-cases/castor-krfe-comparison/castor_results2
+study-cases/castor_hiv_data/variants/test
+study-cases/castor_hiv_data/variants/train
