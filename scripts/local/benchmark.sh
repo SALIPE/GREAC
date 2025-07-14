@@ -49,7 +49,7 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNA
 #     benchmark --train-dir /train_dir \
 #     --test-dir /test_dir  \
 #     -m $METRIC \
-# # #     -o /output
+# #     -o /output
 # cd $PROJECTHOME &&  julia --project src/GREAC.jl --no-cache \
 #    --group-name $GROUPNAME -w $WINDOW fit-parameters --train-dir $TRAIN --test-dir $TESTDIR 
 

@@ -23,7 +23,8 @@ function greacClassification(
     outputdir::Union{Nothing,String},
     wnwPercent::Float32,
     groupName::String,
-    metric::Union{Nothing,String}
+    metric::Union{Nothing,String},
+    sigma::Float64=0.5
 )
 
 
@@ -32,7 +33,7 @@ function greacClassification(
 
     classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric))
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, sigma, metric))
 
     y_true = String[]
     y_pred = String[]
@@ -86,7 +87,6 @@ function greacClassification(
                     push!(local_y_true, class)
                 end
             end
-            GC.gc(false)
 
             @info "Chunk processed $chunk_init - $chunk_end"
             chunk_init = chunk_end + 1
@@ -431,6 +431,7 @@ function fitParameters(
 )
     current_f1 = 0
     current_w = 0
+    current_sigma = 0.1
     current_metric = ""
     current_threhold = 0.5
 
@@ -453,26 +454,32 @@ function fitParameters(
             )
 
             for metric in ["manhattan"]
+                sigma::Float64 = 0.1
+                # while sigma <= 1
                 f1 = greacClassification(
                     args["test-dir"],
                     nothing,
                     window,
                     groupName,
-                    metric
+                    metric,
+                    sigma
                 )
                 if f1 > current_f1
                     current_f1 = f1
+                    current_sigma = sigma
                     current_w = window
                     current_metric = metric
                     current_threhold = threhold
-                    @info "New Best:" current_f1, current_w, current_metric, threhold
+                    @info "New Best:" current_f1, current_w, current_metric, threhold, current_sigma
                 end
+                #     sigma += 0.1
+                # end
             end
             threhold += 0.05
         end
         window += Float32(0.0005)
     end
-    @info current_f1, current_w, current_metric, current_threhold
+    @info current_f1, current_w, current_metric, current_threhold, current_sigma
 end
 
 
