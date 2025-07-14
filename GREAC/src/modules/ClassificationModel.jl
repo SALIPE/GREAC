@@ -44,7 +44,6 @@ function fitMulticlass(
         class_string_probs[class] = class_freq
 
         in_group::Vector{Float64} = zeros(Float64, length(class_seqs))
-        in_group_entropy::Vector{Float64} = zeros(Float64, length(class_seqs))
         @floop for s in eachindex(class_seqs)
             seq::Base.CodeUnits = class_seqs[s]
 
@@ -52,20 +51,13 @@ function fitMulticlass(
 
             #manhttan and euclidian  distance for interval trust
             in_group[s] = sum(abs.(seq_distribution - class_freq))
-            try
-                in_group_entropy[s] = entropy(seq_distribution)
-            catch e
-            end
-
             # in_group[s] = sqrt(sum((seq_distribution - class_freq) .^ 2))
 
         end
 
         variant_stats[class] = Dict(
             :mu => mean(in_group),
-            :mu_entropy => mean(in_group_entropy),
             :sigma => std(in_group),
-            :sigma_entropy => std(in_group_entropy),
         )
     end
 
@@ -93,19 +85,28 @@ function predict_membership(
     model, sigma, metric = parameters
     memberships = Dict{String,Float64}()
     classification = Dict{String,Float64}()
-    input_entropy::Float64 = entropy(X)
     for c in model.classes
         class_freq = model.class_string_probs[c]
         stats = model.variant_stats[c]
         d = metrics_options(model, metric, class_freq, X)
         memb::Float64 = gaussian_membership(stats, d)
 
-        memberships[c] = memb
+        diverg::Float64 = zero(Float64)
 
+        @inbounds for i in eachindex(X)
+            diff = abs(X[i] - class_freq[i])
+            if (diff > diverg)
+                diverg = diff
+            end
+        end
+
+        memberships[c] = memb
+        @show diverg
         # w::Float64 = exp(-((input_entropy)^2) / (2 * stats[:sigma]^2))
         # classification[c] = (memb * (input_entropy / stats[:sigma])) + (1 - d)
         # @show memb, d, w, stats[:sigma]
-        classification[c] = (memb * abs((d - stats[:mu]))) + (1 - d)
+        classification[c] = (memb * diverg) + (1 - d)
+        # classification[c] = (memb * abs((d - stats[:mu]))) + (1 - d)
     end
 
     return argmax(classification), classification
