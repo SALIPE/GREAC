@@ -68,16 +68,20 @@ function fitMulticlass(
             in_group[s] = d
 
             diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
+            # diverg_i::Vector{Float64} = zeros(length(seq_distribution) - 1)
 
             @inbounds for i in 1:(length(seq_distribution)-1)
                 diverg[i] = abs((seq_distribution[i+1] - seq_distribution[i]))
+                # diverg_i[i] = abs((class_freq[i+1] - class_freq[i]))
             end
+            # intern_X[s] = vcat(
+            #     seq_distribution,
+            #     diverg,
+            # )
             intern_X[s] = vcat(
-                # abs.(seq_distribution .- class_freq),
                 seq_distribution,
-                # [d],
                 diverg,
-                # abs.(diverg .- diverg_i)
+                [d],
             )
         end
 
@@ -102,8 +106,8 @@ function fitMulticlass(
     dtrain = DMatrix(X_mat, label=y)
 
     model = xgboost(dtrain,
-        # num_round=20,
-        # max_depth=10,
+        # num_round=30,
+        # max_depth=30,
         # η=0.5,
         num_class=length(labels),
         objective="multi:softprob")
@@ -134,31 +138,27 @@ function predict_membership(
     X::Vector{Float64})::Tuple{String,Dict{String,Float64}}
 
     model, metric, xg_model_name = parameters
-    memberships = Dict{String,Float64}()
+    # memberships = Dict{String,Float64}()
     classification = Dict{String,Float64}()
 
     modelo_carregado = Booster(DMatrix[])
     XGBoost.load!(modelo_carregado, xg_model_name)
 
-    i_novo = Vector{Vector{Float64}}()
-
     diverg::Vector{Float64} = zeros(length(X) - 1)
     @inbounds for i in 1:(length(X)-1)
         diverg[i] = abs((X[i+1] - X[i]))
     end
-    push!(
-        i_novo,
-        vcat(
-            X,
-            diverg,
-        )
-    )
-    label2int = Dict(label => i - 1 for (i, label) in enumerate(model.classes))
-    int2label = Dict(v => k for (k, v) in label2int)
 
+    # label2int = Dict(label => i - 1 for (i, label) in enumerate(model.classes))
+    # int2label = Dict(v => k for (k, v) in label2int)
 
-    i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
-    y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
+    # i_novo = [vcat(
+    #     X,
+    #     diverg,
+    # )]
+    # i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
+    # y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
+
     # predicted_class = int2label[y_pred_int[1]]
     # idx = argmax(y_pred_int)[2]
     # predicted_class = int2label[idx-1]
@@ -166,13 +166,22 @@ function predict_membership(
     for i in eachindex(model.classes)
         c = model.classes[i]
         class_freq = model.class_string_probs[c]
-        stats = model.variant_stats[c]
+        # stats = model.variant_stats[c]
         d = metrics_options(model, metric, class_freq, X)
-        memb::Float64 = gaussian_membership(stats, d)
+        # memb::Float64 = gaussian_membership(stats, d)
 
-        memberships[c] = memb
+        # memberships[c] = memb
         # classification[c] = (y_pred_int[i] * (1 - d)) + memb
-        classification[c] = y_pred_int[i] - (d * 0.1)
+
+        i_novo = [vcat(
+            X,
+            diverg,
+            [d],
+        )]
+        i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
+        y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
+
+        classification[c] = y_pred_int[i] #- (d * 0.1)
 
     end
 
