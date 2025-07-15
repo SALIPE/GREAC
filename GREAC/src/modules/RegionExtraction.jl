@@ -4,6 +4,8 @@ include("DataIO.jl")
 
 using .DataIO,
     Serialization,
+    AbstractFFTs,
+    DSP,
     FASTX,
     FLoops
 
@@ -229,11 +231,13 @@ function _wndwExlcusiveKmersHistogram_bytes(
 
     histogram_u16 = UInt16.(min.(histogram, typemax(UInt16)))
     threshold_count = UInt32(ceil(length(sequences) * histogramThreshold))
+    threshold_mincount = UInt32(ceil(length(sequences) * 0.15))
 
     marked = falses(maxSeqLen)
     h_len = length(histogram)
+    # hist = lowpass_filter(histogram_u16)
     @inbounds for i in eachindex(histogram)
-        if histogram[i] >= threshold_count
+        if (histogram[i] >= threshold_count)
             # end_pos = min(maxSeqLen, i + Int(wndwSize) - 1)
             # marked[i:end_pos] .= true
             init = max(1, i - 2)
@@ -248,6 +252,20 @@ function _wndwExlcusiveKmersHistogram_bytes(
     return histogram_u16, marked
 end
 
+function lowpass_filter(hist)
+    freq = rfftfreq(length(hist))
+
+    var_fft = rfft(hist)
+    # Generate frequency bins for real FFT
+    # For rfft, we only need frequencies up to Nyquist frequency
+    freq = rfftfreq(length(hist))
+    @inbounds for i in eachindex(freq)
+        if freq[i] >= 0.01
+            var_fft[i] = 0
+        end
+    end
+    return irfft(var_fft, length(hist))
+end
 
 function getOccursin(
     sequence::String,

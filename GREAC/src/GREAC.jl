@@ -23,17 +23,16 @@ function greacClassification(
     outputdir::Union{Nothing,String},
     wnwPercent::Float32,
     groupName::String,
-    metric::Union{Nothing,String},
-    sigma::Float64=0.5
+    metric::Union{Nothing,String}
 )
 
-
+    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
     modelCachedFile = "$(homedir())/.project_cache/$groupName/$wnwPercent/kmers_distribution.dat"
     model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache(modelCachedFile)
 
     classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, sigma, metric))
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, model_name))
 
     y_true = String[]
     y_pred = String[]
@@ -99,6 +98,8 @@ function greacClassification(
     end
 
     results = compute_variant_metrics(model.classes, y_true, y_pred)
+
+    @info "f1 = " results[:macro][:f1]
 
     if !isnothing(outputdir)
         RESULTS_CSV = "$outputdir/benchmark_results_$groupName.csv"
@@ -241,6 +242,7 @@ function getKmersDistributionPerClass(
     variantDirPath::String
 )
     cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
+    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
 
     try
         mkpath(cachdir)
@@ -278,7 +280,8 @@ function getKmersDistributionPerClass(
             kmerset,
             meta_data,
             byte_seqs,
-            RegionExtraction.regionsConjuction(variantDirPath, wnwPercent, groupName))
+            RegionExtraction.regionsConjuction(variantDirPath, wnwPercent, groupName),
+            model_name)
 
         DataIO.save_cache("$cachdir/kmers_distribution.dat", distribution)
         return distribution
@@ -432,50 +435,47 @@ function fitParameters(
     current_f1 = 0
     current_w = 0
     current_sigma = 0.1
-    current_metric = ""
+    current_metric = "manhattan"
     current_threhold = 0.5
 
-    while window <= 0.0025
+    while window <= 0.002
 
         threhold::Float16 = 0.5
         while threhold <= 0.9
             rm("$(homedir())/.project_cache/$(groupName)/$window"; recursive=true, force=true)
 
-            RegionExtraction.extractFeaturesTemplate(
-                window,
-                groupName,
-                args["train-dir"],
-                threhold)
+            try
+                RegionExtraction.extractFeaturesTemplate(
+                    window,
+                    groupName,
+                    args["train-dir"],
+                    threhold)
 
-            getKmersDistributionPerClass(
-                window,
-                groupName,
-                args["train-dir"]
-            )
+                getKmersDistributionPerClass(
+                    window,
+                    groupName,
+                    args["train-dir"]
+                )
 
-            for metric in ["manhattan"]
-                sigma::Float64 = 0.1
-                # while sigma <= 1
                 f1 = greacClassification(
                     args["test-dir"],
                     nothing,
                     window,
                     groupName,
-                    metric,
-                    sigma
+                    current_metric,
                 )
                 if f1 > current_f1
                     current_f1 = f1
                     current_sigma = sigma
                     current_w = window
-                    current_metric = metric
                     current_threhold = threhold
                     @info "New Best:" current_f1, current_w, current_metric, threhold, current_sigma
                 end
                 #     sigma += 0.1
-                # end
+            catch e
+            finally
+                threhold += 0.05
             end
-            threhold += 0.05
         end
         window += Float32(0.0005)
     end

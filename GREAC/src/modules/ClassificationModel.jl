@@ -2,7 +2,7 @@ module ClassificationModel
 
 include("RegionExtraction.jl")
 
-using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase
+using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost
 export ClassificationModel
 
 struct MultiClassModel
@@ -18,13 +18,18 @@ function fitMulticlass(
     kmerset::Set{String},
     meta_data::Dict{String,Int},
     byte_seqs::Dict{String,Vector{Base.CodeUnits}},
-    regions::Vector{Tuple{Int,Int}}
+    regions::Vector{Tuple{Int,Int}},
+    xg_model_name::String
 )::MultiClassModel
 
     class_string_probs = Dict{String,Vector{Float64}}()
     variant_stats = Dict{String,Dict{Symbol,Any}}()
 
     regions_len = length(regions)
+
+
+    X = Vector{Vector{Float64}}()
+    y_str = String[]
     for (class, _) in meta_data
 
         class_seqs::Vector{Base.CodeUnits} = byte_seqs[class]
@@ -43,23 +48,69 @@ function fitMulticlass(
         class_freq = kmer_distribution ./ (length(kmerset) * length(class_seqs))
         class_string_probs[class] = class_freq
 
+        # diverg_i::Vector{Float64} = zeros(length(class_freq) - 1)
+
+        # @inbounds for i in 1:(length(class_freq)-1)
+        #     diverg_i[i] = abs((class_freq[i+1] - class_freq[i]))
+        # end
+
         in_group::Vector{Float64} = zeros(Float64, length(class_seqs))
+
+        intern_X = Vector{Vector{Float64}}(undef, length(class_seqs))
+        intern_y = fill(class, length(class_seqs))
         @floop for s in eachindex(class_seqs)
             seq::Base.CodeUnits = class_seqs[s]
 
             seq_distribution = sequence_kmer_distribution_optimized(regions, seq, collect(kmerset)) ./ length(kmerset)
 
             #manhttan and euclidian  distance for interval trust
-            in_group[s] = sum(abs.(seq_distribution - class_freq))
-            # in_group[s] = sqrt(sum((seq_distribution - class_freq) .^ 2))
+            d = sum(abs.(seq_distribution - class_freq))
+            in_group[s] = d
 
+            diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
+
+            @inbounds for i in 1:(length(seq_distribution)-1)
+                diverg[i] = abs((seq_distribution[i+1] - seq_distribution[i]))
+            end
+            intern_X[s] = vcat(
+                # abs.(seq_distribution .- class_freq),
+                seq_distribution,
+                # [d],
+                diverg,
+                # abs.(diverg .- diverg_i)
+            )
         end
+
+        append!(X, intern_X)
+        append!(y_str, intern_y)
 
         variant_stats[class] = Dict(
             :mu => mean(in_group),
-            :sigma => std(in_group),
+            :sigma => std(in_group)
         )
     end
+
+
+
+    labels = unique(y_str)
+    label2int = Dict(label => i - 1 for (i, label) in enumerate(labels))
+
+    y = [label2int[cls] for cls in y_str]
+
+    X_mat = convert(Matrix{Float32}, hcat(X...)')
+
+    dtrain = DMatrix(X_mat, label=y)
+
+    model = xgboost(dtrain,
+        # num_round=20,
+        # max_depth=10,
+        # η=0.5,
+        num_class=length(labels),
+        objective="multi:softprob")
+    # objective="multi:softmax")
+
+    XGBoost.save(model, xg_model_name)
+
 
     return MultiClassModel(
         [class for (class, _) in meta_data],
@@ -79,34 +130,50 @@ function gaussian_membership(
 end
 
 function predict_membership(
-    parameters::Tuple{MultiClassModel,Float64,Union{Nothing,String}},
+    parameters::Tuple{MultiClassModel,Union{Nothing,String},String},
     X::Vector{Float64})::Tuple{String,Dict{String,Float64}}
 
-    model, sigma, metric = parameters
+    model, metric, xg_model_name = parameters
     memberships = Dict{String,Float64}()
     classification = Dict{String,Float64}()
-    for c in model.classes
+
+    modelo_carregado = Booster(DMatrix[])
+    XGBoost.load!(modelo_carregado, xg_model_name)
+
+    i_novo = Vector{Vector{Float64}}()
+
+    diverg::Vector{Float64} = zeros(length(X) - 1)
+    @inbounds for i in 1:(length(X)-1)
+        diverg[i] = abs((X[i+1] - X[i]))
+    end
+    push!(
+        i_novo,
+        vcat(
+            X,
+            diverg,
+        )
+    )
+    label2int = Dict(label => i - 1 for (i, label) in enumerate(model.classes))
+    int2label = Dict(v => k for (k, v) in label2int)
+
+
+    i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
+    y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
+    # predicted_class = int2label[y_pred_int[1]]
+    # idx = argmax(y_pred_int)[2]
+    # predicted_class = int2label[idx-1]
+
+    for i in eachindex(model.classes)
+        c = model.classes[i]
         class_freq = model.class_string_probs[c]
         stats = model.variant_stats[c]
         d = metrics_options(model, metric, class_freq, X)
         memb::Float64 = gaussian_membership(stats, d)
 
-        diverg::Float64 = zero(Float64)
-
-        @inbounds for i in eachindex(X)
-            diff = abs(X[i] - class_freq[i])
-            if (diff > diverg)
-                diverg = diff
-            end
-        end
-
         memberships[c] = memb
-        @show diverg
-        # w::Float64 = exp(-((input_entropy)^2) / (2 * stats[:sigma]^2))
-        # classification[c] = (memb * (input_entropy / stats[:sigma])) + (1 - d)
-        # @show memb, d, w, stats[:sigma]
-        classification[c] = (memb * diverg) + (1 - d)
-        # classification[c] = (memb * abs((d - stats[:mu]))) + (1 - d)
+        # classification[c] = (y_pred_int[i] * (1 - d)) + memb
+        classification[c] = y_pred_int[i] - (d * 0.1)
+
     end
 
     return argmax(classification), classification
