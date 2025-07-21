@@ -8,7 +8,7 @@ export ClassificationModel
 struct MultiClassModel
     classes::Vector{String}
     class_string_probs::Dict{String,Vector{Float64}}
-    variant_stats::Dict{String,Dict{Symbol,Any}}
+    variant_stats::Dict{String,Dict{Symbol,Float64}}
     kmerset::Set{String}
     regions::Vector{Tuple{Int,Int}}
 end
@@ -23,7 +23,7 @@ function fitMulticlass(
 )::MultiClassModel
 
     class_string_probs = Dict{String,Vector{Float64}}()
-    variant_stats = Dict{String,Dict{Symbol,Any}}()
+    variant_stats = Dict{String,Dict{Symbol,Float64}}()
 
     regions_len = length(regions)
 
@@ -63,35 +63,35 @@ function fitMulticlass(
 
             seq_distribution = sequence_kmer_distribution_optimized(regions, seq, collect(kmerset)) ./ length(kmerset)
 
-            #manhttan and euclidian  distance for interval trust
+            #manhttan distance for interval trust
             d = sum(abs.(seq_distribution - class_freq))
             in_group[s] = d
 
             diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
-            # diverg_i::Vector{Float64} = zeros(length(seq_distribution) - 1)
 
             @inbounds for i in 1:(length(seq_distribution)-1)
                 diverg[i] = abs((seq_distribution[i+1] - seq_distribution[i]))
-                # diverg_i[i] = abs((class_freq[i+1] - class_freq[i]))
             end
-            # intern_X[s] = vcat(
-            #     seq_distribution,
-            #     diverg,
-            # )
             intern_X[s] = vcat(
+                [d, 0],
                 seq_distribution,
-                diverg,
-                [d],
+                diverg
             )
+        end
+
+        stats = Dict(
+            :mu => mean(in_group),
+            :sigma => std(in_group)
+        )
+
+        for x_seq in intern_X
+            x_seq[2] = gaussian_membership(stats, x_seq[1])
         end
 
         append!(X, intern_X)
         append!(y_str, intern_y)
 
-        variant_stats[class] = Dict(
-            :mu => mean(in_group),
-            :sigma => std(in_group)
-        )
+        variant_stats[class] = stats
     end
 
 
@@ -106,7 +106,7 @@ function fitMulticlass(
     dtrain = DMatrix(X_mat, label=y)
 
     model = xgboost(dtrain,
-        # num_round=30,
+        # num_round=20,
         # max_depth=30,
         # η=0.5,
         num_class=length(labels),
@@ -125,7 +125,7 @@ function fitMulticlass(
 end
 
 function gaussian_membership(
-    stats::Dict{Symbol,Any},
+    stats::Dict{Symbol,Float64},
     d::Float64
 )
     mean = stats[:mu]
@@ -166,17 +166,17 @@ function predict_membership(
     for i in eachindex(model.classes)
         c = model.classes[i]
         class_freq = model.class_string_probs[c]
-        # stats = model.variant_stats[c]
+        stats = model.variant_stats[c]
         d = metrics_options(model, metric, class_freq, X)
-        # memb::Float64 = gaussian_membership(stats, d)
+        memb::Float64 = gaussian_membership(stats, d)
 
         # memberships[c] = memb
         # classification[c] = (y_pred_int[i] * (1 - d)) + memb
 
         i_novo = [vcat(
+            [d, memb],
             X,
-            diverg,
-            [d],
+            diverg
         )]
         i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
         y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))

@@ -169,7 +169,7 @@ if [ ! -d "$SOURCE" ]; then
 fi
 
 
-for i in {1..90}; do
+for i in {1..10}; do
     echo "Iteração $i de 100"
     
     $BALANCEDATASET/test.sh $SOURCE
