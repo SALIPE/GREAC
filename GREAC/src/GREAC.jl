@@ -1,6 +1,7 @@
 module GREAC
 
 include("modules/DataIO.jl")
+include("modules/Report.jl")
 include("modules/RegionExtraction.jl")
 include("modules/ClassificationModel.jl")
 
@@ -13,7 +14,8 @@ using FLoops,
     BenchmarkTools,
     .DataIO,
     .RegionExtraction,
-    .ClassificationModel
+    .ClassificationModel,
+    .Report
 
 export GREAC
 
@@ -99,6 +101,13 @@ function greacClassification(
 
     results = compute_variant_metrics(model.classes, y_true, y_pred)
 
+    Report.generate_report_pdf(
+        wnwPercent,
+        groupName,
+        model,
+        classification_probs,
+        results)
+
     @info "f1 = " results[:macro][:f1]
 
     if !isnothing(outputdir)
@@ -156,7 +165,7 @@ function greacClassification(
             write(io, line * "\n")
         end
     end
-    return results[:micro][:f1]
+    return results[:macro][:f1]
 end
 
 function compute_variant_metrics(
@@ -213,10 +222,10 @@ function compute_variant_metrics(
     macro_recall = mean([m[:recall] for m in values(metrics)])
     macro_f1 = mean([m[:f1] for m in values(metrics)])
 
-    micro_precision = (total_tp + total_fp) == 0 ? 0.0 : total_tp / (total_tp + total_fp)
-    micro_recall = (total_tp + total_fn) == 0 ? 0.0 : total_tp / (total_tp + total_fn)
-    micro_f1 = (micro_precision + micro_recall) ≈ 0.0 ? 0.0 :
-               2 * ((micro_precision * micro_recall) / (micro_precision + micro_recall))
+    # micro_precision = (total_tp + total_fp) == 0 ? 0.0 : total_tp / (total_tp + total_fp)
+    # micro_recall = (total_tp + total_fn) == 0 ? 0.0 : total_tp / (total_tp + total_fn)
+    # micro_f1 = (micro_precision + micro_recall) ≈ 0.0 ? 0.0 :
+    #            2 * ((micro_precision * micro_recall) / (micro_precision + micro_recall))
 
     return Dict(
         :confusion_matrix => cm,
@@ -227,11 +236,11 @@ function compute_variant_metrics(
             :recall => round(macro_recall, digits=4),
             :f1 => round(macro_f1, digits=4)
         ),
-        :micro => Dict(
-            :precision => round(micro_precision, digits=4),
-            :recall => round(micro_recall, digits=4),
-            :f1 => round(micro_f1, digits=4)
-        )
+        # :micro => Dict(
+        #     :precision => round(micro_precision, digits=4),
+        #     :recall => round(micro_recall, digits=4),
+        #     :f1 => round(micro_f1, digits=4)
+        # )
     )
 end
 
@@ -269,18 +278,35 @@ function getKmersDistributionPerClass(
         meta_data = Dict{String,Int}()
         byte_seqs = Dict{String,Vector{Base.CodeUnits}}()
 
+        # win_size = zero(UInt64)
+        # maxSeqLen = zero(UInt64)
+
         for variant in variantDirs
             byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant/$variant.fasta")
             meta_data[variant] = length(byte_seqs[variant])
+            # minSeqLength::UInt64 = minimum(map(length, byte_seqs[variant]))
+            # maxSeqLength::UInt64 = maximum(map(length, byte_seqs[variant]))
+            # wnwSize::UInt64 = ceil(UInt64, minSeqLength * wnwPercent)
+
+            # if (win_size == zero(UInt64) || wnwSize < win_size)
+            #     win_size = wnwSize
+            # end
+
+            # if (maxSeqLen < maxSeqLength)
+            #     maxSeqLen = maxSeqLength
+            # end
         end
 
         @info meta_data
+        # @show Int(win_size)
+        # @show Int(maxSeqLen)
 
         distribution::ClassificationModel.MultiClassModel = ClassificationModel.fitMulticlass(
             kmerset,
             meta_data,
             byte_seqs,
             RegionExtraction.regionsConjuction(variantDirPath, wnwPercent, groupName),
+            # RegionExtraction.filterRegions(variantDirPath, wnwPercent, groupName, Int(win_size), Int(maxSeqLen)),
             model_name)
 
         DataIO.save_cache("$cachdir/kmers_distribution.dat", distribution)
@@ -433,53 +459,46 @@ function fitParameters(
     window::Float32
 )
     current_f1 = 0
-    current_w = 0
-    current_sigma = 0.1
+    current_w = window
     current_metric = "manhattan"
     current_threhold = 0.5
 
-    while window <= 0.002
+    while window <= 0.0025
 
         threhold::Float16 = 0.5
-        while threhold <= 0.9
-            rm("$(homedir())/.project_cache/$(groupName)/$window"; recursive=true, force=true)
+        # while threhold <= 0.9
+        rm("$(homedir())/.project_cache/$(groupName)/$window"; recursive=true, force=true)
+        try
+            RegionExtraction.extractFeaturesTemplate(
+                window,
+                groupName,
+                args["train-dir"],
+                threhold)
 
-            try
-                RegionExtraction.extractFeaturesTemplate(
-                    window,
-                    groupName,
-                    args["train-dir"],
-                    threhold)
+            getKmersDistributionPerClass(
+                window,
+                groupName,
+                args["train-dir"]
+            )
 
-                getKmersDistributionPerClass(
-                    window,
-                    groupName,
-                    args["train-dir"]
-                )
-
-                f1 = greacClassification(
-                    args["test-dir"],
-                    nothing,
-                    window,
-                    groupName,
-                    current_metric,
-                )
-                if f1 > current_f1
-                    current_f1 = f1
-                    current_sigma = sigma
-                    current_w = window
-                    current_threhold = threhold
-                    @info "New Best:" current_f1, current_w, current_metric, threhold, current_sigma
-                end
-                #     sigma += 0.1
-            catch e
-            finally
-                threhold += 0.05
+            f1 = greacClassification(
+                args["test-dir"],
+                nothing,
+                window,
+                groupName,
+                current_metric,
+            )
+            if f1 > current_f1
+                current_f1 = f1
+                current_w = window
+                @info "New Best:" current_f1, current_w
             end
+        catch e
+            @error e
         end
         window += Float32(0.0005)
     end
-    @info current_f1, current_w, current_metric, current_threhold, current_sigma
+    @info current_f1, current_w
 end
 
 

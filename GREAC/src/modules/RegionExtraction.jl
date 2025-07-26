@@ -6,10 +6,77 @@ using .DataIO,
     Serialization,
     AbstractFFTs,
     DSP,
+    Statistics,
+    Normalization,
     FASTX,
     FLoops
 
 export RegionExtraction
+
+function filterRegions(
+    variantDirPath::String,
+    wnwPercent::Float32,
+    groupName::String,
+    wndwSize::Int,
+    maxSeqLen::Int
+)::Vector{Tuple{Int,Int}}
+
+    variantDirs::Vector{String} = readdir(variantDirPath)
+    cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
+
+    hist_collection::Vector{Vector{UInt64}} = []
+
+    @inbounds for v in eachindex(variantDirs)
+        variant::String = variantDirs[v]
+        cache::Union{Nothing,Tuple{String,Tuple{Vector{UInt16},BitArray}}} = DataIO.load_cache("$cachdir/$(variant)_outmask.dat")
+        push!(hist_collection, cache[2][1])
+    end
+
+    min_size = minimum(length, hist_collection)
+
+
+    desvio = zeros(Float64, min_size)
+
+    @inbounds for i in 1:min_size
+        values_at_point_i = [s[i] for s in hist_collection]
+        desvio[i] = std(values_at_point_i)
+    end
+
+    marked = falses(min_size)
+
+    @inbounds for i in eachindex(desvio)
+        if (desvio[i] > mean(desvio))
+            init = max(1, i - 2)
+            endi = min(min_size, i + 2)
+            while (init <= endi)
+                end_pos = min(maxSeqLen, init + wndwSize - 1)
+                marked[init:end_pos] .= true
+                init += 1
+            end
+        end
+    end
+
+    extracted_regions = Vector{Tuple{Int,Int}}()
+
+    init_pos = 1
+    current::Bool = false
+
+    for i in eachindex(marked)
+        if (marked[i] && !current)
+            current = true
+            init_pos = i
+        elseif (!marked[i] && current)
+            push!(extracted_regions, (init_pos, i - 1))
+            init_pos = i
+            current = false
+        end
+    end
+
+    if (current)
+        push!(extracted_regions, (init_pos, length(marked)))
+    end
+    return extracted_regions
+end
 
 
 function regionsConjuction(
