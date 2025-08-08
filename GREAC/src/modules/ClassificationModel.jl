@@ -2,7 +2,7 @@ module ClassificationModel
 
 include("RegionExtraction.jl")
 
-using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost
+using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, StringDistances
 export ClassificationModel
 
 struct MultiClassModel
@@ -13,6 +13,38 @@ struct MultiClassModel
     regions::Vector{Tuple{Int,Int}}
 end
 
+function measure_reference_minhash(
+    regions,
+    reference_codeunits,
+    kmer_size_minhash=9,
+    minhash_num_hashes=256
+)::Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}
+    reference_minhash_sketches = Dict{Int,MinHashSketch}()
+
+    reference_region_strings = Dict{Int,String}()
+    for (i, region) in enumerate(regions)
+        start_idx, end_idx = region
+        sub_ref_seq_codeunits = reference_codeunits[max(1, start_idx):min(length(reference_codeunits), end_idx)]
+
+        sub_ref_seq_str = String(sub_ref_seq_codeunits)
+
+        reference_region_strings[i] = sub_ref_seq_str
+
+        ref_kmers_for_minhash = Set{String}()
+        if length(sub_ref_seq_str) >= kmer_size_minhash
+            for j in 1:(length(sub_ref_seq_str)-kmer_size_minhash+1)
+                push!(ref_kmers_for_minhash, sub_ref_seq_str[j:(j+kmer_size_minhash-1)])
+            end
+        end
+
+        # Create a MinHasher and sketch for the reference region
+        hasher = MinHasher{Base.hash}(minhash_num_hashes)
+        MinHash.update!(hasher, collect(ref_kmers_for_minhash))
+        reference_minhash_sketches[i] = MinHashSketch(hasher)
+    end
+    return reference_minhash_sketches, reference_region_strings
+end
+
 
 function fitMulticlass(
     kmerset::Set{String},
@@ -20,6 +52,7 @@ function fitMulticlass(
     byte_seqs::Dict{String,Vector{Base.CodeUnits}},
     regions::Vector{Tuple{Int,Int}},
     xg_model_name::String,
+    reference_codeunits::Base.CodeUnits,
     use_xg::Bool=false
 )::MultiClassModel
 
@@ -28,9 +61,12 @@ function fitMulticlass(
 
     regions_len = length(regions)
 
-
     X = Vector{Vector{Float64}}()
     y_str = String[]
+
+    reference_minhash_sketches, reference_region_strings = measure_reference_minhash(
+        regions, reference_codeunits)
+
     for (class, _) in meta_data
 
         class_seqs::Vector{Base.CodeUnits} = byte_seqs[class]
@@ -53,36 +89,43 @@ function fitMulticlass(
 
         intern_X = Vector{Vector{Float64}}(undef, length(class_seqs))
         intern_y = fill(class, length(class_seqs))
+
         @floop for s in eachindex(class_seqs)
             seq::Base.CodeUnits = class_seqs[s]
 
             seq_distribution = sequence_kmer_distribution_optimized(regions, seq, collect(kmerset)) ./ length(kmerset)
 
+            diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
+            @inbounds for i in 1:(length(seq_distribution)-1)
+                diverg[i] = abs((seq_distribution[i+1] - seq_distribution[i]))
+            end
+
             #manhttan distance for interval trust
             d = sum(abs.(seq_distribution - class_freq))
             in_group[s] = d
 
+            minhash_jaccard_features, _ = measure_jaccard(
+                reference_minhash_sketches, reference_region_strings, regions, seq)
+
             if (use_xg)
-                diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
-                @inbounds for i in 1:(length(seq_distribution)-1)
-                    diverg[i] = abs((seq_distribution[i+1] - seq_distribution[i]))
-                end
                 intern_X[s] = vcat(
                     [d, 0],
                     seq_distribution,
-                    diverg
+                    diverg,
+                    minhash_jaccard_features,
+                    # string_distance_features
                 )
             end
         end
 
         stats = Dict(
             :mu => mean(in_group),
-            :sigma => std(in_group)
+            :sigma => std(in_group),
         )
 
         if (use_xg)
             for x_seq in intern_X
-                x_seq[2] = gaussian_membership(stats, x_seq[1])
+                x_seq[2] = gaussian_membership(stats[:mu], stats[:sigma], x_seq[1])
             end
 
             append!(X, intern_X)
@@ -91,7 +134,6 @@ function fitMulticlass(
 
         variant_stats[class] = stats
     end
-
 
     if (use_xg)
         labels = unique(y_str)
@@ -102,8 +144,8 @@ function fitMulticlass(
         dtrain = DMatrix(X_mat, label=y)
 
         model = xgboost(dtrain,
-            # num_round=20,
-            # max_depth=30,
+            num_round=15,
+            max_depth=10,
             # η=0.5,
             num_class=length(labels),
             objective="multi:softprob")
@@ -121,54 +163,106 @@ function fitMulticlass(
 end
 
 function gaussian_membership(
-    stats::Dict{Symbol,Float64},
+    mean::Float64,
+    std::Float64,
     d::Float64
 )
-    mean = stats[:mu]
-    std = stats[:sigma]
     return exp(-((d - mean)^2) / (2 * std^2))
 end
 
-function predict_membership(
-    parameters::Tuple{MultiClassModel,Union{Nothing,String},String},
-    X::Vector{Float64})::Tuple{String,Dict{String,Float64}}
+function measure_jaccard(
+    reference_minhash_sketches,
+    reference_region_strings,
+    regions,
+    seq,
+    kmer_size_minhash=9,
+    minhash_num_hashes=256
+)::Tuple{Vector{Float64},Vector{Float64}}
 
+    minhash_jaccard_features = Float64[]
+    string_distance_features = Float64[]
+
+    for (i, region) in enumerate(regions)
+        start_idx, end_idx = region
+        sub_seq_codeunits = seq[max(1, start_idx):min(length(seq), end_idx)]
+
+        sub_seq_str = String(sub_seq_codeunits)
+
+        seq_kmers_for_minhash = Set{String}()
+        if length(sub_seq_str) >= kmer_size_minhash
+            for j in 1:(length(sub_seq_str)-kmer_size_minhash+1)
+                push!(seq_kmers_for_minhash, sub_seq_str[j:(j+kmer_size_minhash-1)])
+            end
+        end
+
+        current_hasher = MinHasher{Base.hash}(minhash_num_hashes)
+        MinHash.update!(current_hasher, collect(seq_kmers_for_minhash))
+        current_minhash_sketch = MinHashSketch(current_hasher)
+
+        # Calculate Jaccard similarity with the pre-calculated reference sketch
+        jaccard_sim = intersectionlength(current_minhash_sketch, reference_minhash_sketches[i]) / minhash_num_hashes
+        push!(minhash_jaccard_features, jaccard_sim)
+
+        # if !isempty(sub_seq_str) && !isempty(reference_region_strings[i])
+        #     # Levenshtein distance: measures dissimilarity
+        #     dist_val = StringDistances.compare(sub_seq_str, reference_region_strings[i], Levenshtein())
+        #     push!(string_distance_features, dist_val)
+        # else
+        #     push!(string_distance_features, zero(Float64))
+        # end
+    end
+    return minhash_jaccard_features, string_distance_features
+end
+
+function predict_membership(
+    parameters::Tuple{MultiClassModel,
+        Union{Nothing,String},
+        String,
+        Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}},
+    input::Tuple{Vector{Float64},Base.CodeUnits})::Tuple{String,Dict{String,Float64}}
 
     use_xg::Bool = false
-    model, metric, xg_model_name = parameters
-
+    model, metric, xg_model_name, distances = parameters
+    reference_minhash_sketches, reference_region_strings = distances
+    X, seq = input
     classification = Dict{String,Float64}()
 
     if (use_xg)
         modelo_carregado = Booster(DMatrix[])
         XGBoost.load!(modelo_carregado, xg_model_name)
-
-        diverg::Vector{Float64} = zeros(length(X) - 1)
-        @inbounds for i in 1:(length(X)-1)
-            diverg[i] = abs((X[i+1] - X[i]))
-        end
-
     end
+
+    diverg::Vector{Float64} = zeros(length(X) - 1)
+    @inbounds for i in 1:(length(X)-1)
+        diverg[i] = abs((X[i+1] - X[i]))
+    end
+
+    minhash_jaccard_features, _ = measure_jaccard(
+        reference_minhash_sketches, reference_region_strings, model.regions, seq)
 
     for i in eachindex(model.classes)
         c = model.classes[i]
         class_freq = model.class_string_probs[c]
         stats = model.variant_stats[c]
-        d = metrics_options(model, metric, class_freq, X)
-        memb::Float64 = gaussian_membership(stats, d)
+
+
+        d1 = metrics_options(model, metric, class_freq, X)
+        memb1::Float64 = gaussian_membership(stats[:mu], stats[:sigma], d1)
 
         if (use_xg)
             i_novo = [vcat(
-                [d, memb],
+                [d1, memb1],
                 X,
-                diverg
+                diverg,
+                minhash_jaccard_features,
+                # string_distance_features
             )]
             i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
             y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
 
             classification[c] = y_pred_int[i]
         else
-            classification[c] = (memb * d) + (1 - d)
+            classification[c] = memb
         end
 
     end
@@ -302,22 +396,6 @@ function predict_raw(
     return argmin(dists), dists
 end
 
-function kld(
-    class_freqs,
-    X::Vector{Float64}
-)
-    #  Kullback-Leibler (KL) divergence
-    Q_norm = X ./ sum(X)
-    P_norm = class_freqs ./ sum(class_freqs)
-
-    # Smooth to avoid zeros
-    P_smoothed = P_norm .+ 1e-6
-    P_smoothed = P_smoothed ./ sum(P_smoothed)
-
-    # Compute KL(Q || P_smoothed)
-    return sum(q * (log(q) - log(p)) for (q, p) in zip(Q_norm, P_smoothed) if q > 0)
-end
-
 function metrics_options(
     model,
     metric::Union{Nothing,String},
@@ -357,8 +435,6 @@ function metrics_options(
         # Chi-squared distance
         return sum((X - class_freqs) .^ 2 ./ (class_freqs .+ 1e-9))
 
-    elseif metric == "kld"
-        return kld(class_freqs, X)
     else
         error("Unsupported metric: $metric")
     end

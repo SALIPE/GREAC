@@ -15,7 +15,8 @@ using FLoops,
     .DataIO,
     .RegionExtraction,
     .ClassificationModel,
-    .Report
+    .Report,
+    MinHash
 
 export GREAC
 
@@ -25,21 +26,27 @@ function greacClassification(
     outputdir::Union{Nothing,String},
     wnwPercent::Float32,
     groupName::String,
-    metric::Union{Nothing,String}
+    metric::Union{Nothing,String},
+    referencePath::String
 )
 
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
     modelCachedFile = "$(homedir())/.project_cache/$groupName/$wnwPercent/kmers_distribution.dat"
     model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache(modelCachedFile)
 
-    classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
-    # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, model_name))
-
     y_true = String[]
     y_pred = String[]
     kmerset::Vector{String} = collect(model.kmerset)
     regions::Vector{Tuple{Int,Int}} = model.regions
+
+    reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
+
+    distances = ClassificationModel.measure_reference_minhash(
+        regions, reference_codeunits)
+
+    classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
+    # predict_raw predict_membership (model, metric)
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, model_name, distances))
 
     for class in model.classes
         file_path::String = "$folderPath/$class.fasta"
@@ -72,7 +79,7 @@ function greacClassification(
                 seq_distribution = kmer_distribution ./ length(kmerset)
 
                 if !iszero(sum(seq_distribution))
-                    cl, memberships = classify(seq_distribution)
+                    cl, memberships = classify((seq_distribution, seq))
                     inner_classifications[local_idx] = (id, memberships)
                     inner_y_pred[local_idx] = cl
                 else
@@ -130,7 +137,7 @@ function greacClassification(
                             write(io, "$class_name: $(round(probability, digits=4)) \n")
                         end
                     catch e
-                        @warn "Erro encontrado: $e"
+                        # @warn "Erro encontrado: $e"
                         continue
                     end
                 end
@@ -248,7 +255,8 @@ end
 function getKmersDistributionPerClass(
     wnwPercent::Float32,
     groupName::String,
-    variantDirPath::String
+    variantDirPath::String,
+    referencePath::String
 )
     cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
@@ -281,6 +289,8 @@ function getKmersDistributionPerClass(
         # win_size = zero(UInt64)
         # maxSeqLen = zero(UInt64)
 
+        reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
+
         for variant in variantDirs
             byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant/$variant.fasta")
             meta_data[variant] = length(byte_seqs[variant])
@@ -307,7 +317,8 @@ function getKmersDistributionPerClass(
             byte_seqs,
             RegionExtraction.regionsConjuction(variantDirPath, wnwPercent, groupName),
             # RegionExtraction.filterRegions(variantDirPath, wnwPercent, groupName, Int(win_size), Int(maxSeqLen)),
-            model_name)
+            model_name,
+            reference_codeunits)
 
         DataIO.save_cache("$cachdir/kmers_distribution.dat", distribution)
         return distribution
@@ -466,39 +477,44 @@ function fitParameters(
     while window <= 0.0025
 
         threhold::Float16 = 0.5
-        # while threhold <= 0.9
-        rm("$(homedir())/.project_cache/$(groupName)/$window"; recursive=true, force=true)
-        try
-            RegionExtraction.extractFeaturesTemplate(
-                window,
-                groupName,
-                args["train-dir"],
-                threhold)
+        while threhold <= 0.8
+            rm("$(homedir())/.project_cache/$(groupName)/$window"; recursive=true, force=true)
+            try
+                RegionExtraction.extractFeaturesTemplate(
+                    window,
+                    groupName,
+                    args["train-dir"],
+                    threhold)
 
-            getKmersDistributionPerClass(
-                window,
-                groupName,
-                args["train-dir"]
-            )
+                getKmersDistributionPerClass(
+                    window,
+                    groupName,
+                    args["train-dir"],
+                    args["reference"],
+                )
 
-            f1 = greacClassification(
-                args["test-dir"],
-                nothing,
-                window,
-                groupName,
-                current_metric,
-            )
-            if f1 > current_f1
-                current_f1 = f1
-                current_w = window
-                @info "New Best:" current_f1, current_w
+                f1 = greacClassification(
+                    args["test-dir"],
+                    nothing,
+                    window,
+                    groupName,
+                    current_metric,
+                    args["reference"],
+                )
+                if f1 > current_f1
+                    current_f1 = f1
+                    current_w = window
+                    current_threhold = threhold
+                    @info "New Best:" current_f1, current_w, current_threhold
+                end
+            catch e
+                @error e
             end
-        catch e
-            @error e
+            threhold += Float16(0.05)
         end
         window += Float32(0.0005)
     end
-    @info current_f1, current_w
+    @info current_f1, current_w, current_threhold
 end
 
 
@@ -507,6 +523,9 @@ function add_benchmark_args!(settings)
     @add_arg_table! s begin
         "--train-dir"
         help = "Training dataset path"
+        required = true
+        "--reference"
+        help = "reference path"
         required = true
         "-m", "--metric"
         help = "Metric used for classification"
@@ -543,6 +562,9 @@ function add_fit_parameters_args!(settings)
         "--test-dir"
         help = "Test dataset path"
         required = true
+        "--reference"
+        help = "reference path"
+        required = true
     end
 end
 
@@ -555,14 +577,6 @@ function add_fasta_regions_args!(settings)
     end
 end
 
-function add_performance_args!(settings)
-    s = settings["performance-evaluation"]
-    @add_arg_table! s begin
-        "--train-dir"
-        help = "Training dataset path"
-        required = true
-    end
-end
 
 function handle_benchmark(args,
     groupName::String,
@@ -578,7 +592,8 @@ function handle_benchmark(args,
     distribution = getKmersDistributionPerClass(
         window,
         groupName,
-        args["train-dir"]
+        args["train-dir"],
+        args["reference"]
     )
 
     # export_sars_pos(groupName, window, distribution)
@@ -588,7 +603,8 @@ function handle_benchmark(args,
         args["output-directory"],
         window,
         groupName,
-        args["metric"]
+        args["metric"],
+        args["reference"]
     )
 end
 
@@ -604,7 +620,8 @@ function extract_features(args,
     distribution = getKmersDistributionPerClass(
         window,
         groupName,
-        args["train-dir"]
+        args["train-dir"],
+        args["reference"]
     )
 end
 
@@ -630,75 +647,6 @@ function handle_extract_file_reads(args,
     end
 
 end
-
-function handle_performance_evaluation(args, groupName::String)
-    @info "Starting performance evaluation"
-
-    # Configure benchmark parameters
-    params = BenchmarkTools.DEFAULT_PARAMETERS
-    params.seconds = 60      # Longer time budget for stable results
-    params.evals = 1         # Better for multithreaded functions
-    params.gcsample = true   # Collect GC statistics
-
-    train_dir = args["train-dir"]
-    windows = Float32[0.002, 0.004, 0.006, 0.008]
-
-    # Storage for results
-    results = Dict{String,Any}()
-
-    # Benchmark each window configuration
-    for (i, window) in enumerate(windows)
-
-        # Feature extraction benchmark
-        bench_feat = @benchmarkable(
-                         RegionExtraction.extractFeaturesTemplate(w, $groupName, $train_dir),
-                         setup = (GC.gc(); w = $window),  # Ensure clean state and fixed window
-                         teardown = (GC.gc()),
-                         evals = 1,
-                         samples = 20
-                     ) |> tune! |> run
-
-        # Model fitting benchmark
-        bench_model = @benchmarkable(
-                          getKmersDistributionPerClass(w, $groupName, $train_dir),
-                          setup = (GC.gc(); w = $window),
-                          teardown = (GC.gc()),
-                          evals = 1,
-                          samples = 20
-                      ) |> tune! |> run
-
-        results["window_$i"] = Dict(
-            :window => window,
-            :feature => bench_feat,
-            :model => bench_model
-        )
-    end
-
-    open("benchmark_summary_$(groupName).txt", "w") do io
-        println(io, "Performance Evaluation Report")
-        println(io, "Group: ", groupName)
-        println(io, "Threads Available: ", Threads.nthreads(), "\n")
-
-        for (k, v) in results
-            println(io, "\n", "-"^50)
-            println(io, "Window: ", v[:window])
-
-            println(io, "\nFeature Extraction:")
-            show(io, MIME"text/plain"(), v[:feature])
-
-            println(io, "\n\nModel Fitting:")
-            show(io, MIME"text/plain"(), v[:model])
-
-            println(io, "\nMemory Summary:")
-            println(io, "  Feature - Allocs: ", v[:feature].allocs)
-            println(io, "  Model - Allocs: ", v[:model].allocs)
-        end
-    end
-
-    @info "Benchmark results saved to benchmark_summary_$(groupName).txt"
-    return results
-end
-
 
 function julia_main()::Cint
 
@@ -729,8 +677,6 @@ function julia_main()::Cint
             help="Benchmark extract features model and classify creating and print confusion matrix")
         ("extract-features", action=:command,
             help="Exract features from k-mer set")
-        ("performance-evaluation", action=:command,
-            help="Evaluate function performance using bechmark tools")
         ("fit-parameters", action=:command,
             help="Fit better params")
         ("fasta-regions", action=:command,
@@ -738,7 +684,6 @@ function julia_main()::Cint
     end
 
     # Add arguments for each subcommand
-    add_performance_args!(settings)
     add_benchmark_args!(settings)
     add_extract_features_args!(settings)
     add_fit_parameters_args!(settings)
@@ -760,8 +705,6 @@ function julia_main()::Cint
             handle_benchmark(parsed_args["benchmark"], parsed_args["group-name"], parsed_args["window"])
         elseif parsed_args["%COMMAND%"] == "fasta-regions"
             handle_extract_file_reads(parsed_args["fasta-regions"], parsed_args["group-name"], parsed_args["window"])
-        elseif parsed_args["%COMMAND%"] == "performance-evaluation"
-            handle_performance_evaluation(parsed_args["performance-evaluation"], parsed_args["group-name"])
         end
     catch e
         @error "Error processing command" exception = (e, catch_backtrace())

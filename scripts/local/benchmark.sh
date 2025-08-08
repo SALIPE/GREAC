@@ -34,7 +34,7 @@ THRESHOLD=$7
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
    -w $WINDOW benchmark --train-dir $TRAIN --test-dir $TESTDIR -m $METRIC --threshold $THRESHOLD \
-   -o ./output-$KMER
+   -o ./output-$KMER --reference $8
 
 
 # docker run --rm --cpus="4" -e JULIA_NUM_THREADS=4 \
@@ -51,6 +51,6 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNA
 #     -m $METRIC \
 # #     -o /output
 # cd $PROJECTHOME &&  julia --project src/GREAC.jl --no-cache \
-#    --group-name $GROUPNAME -w $WINDOW fit-parameters --train-dir $TRAIN --test-dir $TESTDIR 
+#    --group-name $GROUPNAME -w $WINDOW fit-parameters --train-dir $TRAIN --test-dir $TESTDIR --reference $8
 
 
