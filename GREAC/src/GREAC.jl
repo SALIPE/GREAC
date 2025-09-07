@@ -663,6 +663,10 @@ function add_classification_args!(settings)
         "--file"
         help = "Test dataset path"
         required = true
+        "-m", "--metric"
+        help = "Metric used for classification"
+        required = false
+        range_tester = (x -> x in ["manhattan", "euclidian", "chisquared", "mahalanobis", "kld"])
         "--threshold"
         help = "Window theshold consideration"
         required = false
