@@ -6,8 +6,9 @@ export RUST_BACKTRACE=full
 DENGUE=~/Desktop/datasets/dengue
 HBV=~/Desktop/datasets/HBV/data
 SARS=~/Desktop/datasets/sars_cov2
-MONKEYPOX=~/Desktop/datasets/monkeypox
+MONKEYPOX=~/Desktop/datasets/mkpx/data
 HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/variants
+HIV2=~/Desktop/datasets/hiv_ncbi/extracted_sequences
 
 BEES_1=~/Desktop/datasets/bees/data_1
 BEES_2=~/Desktop/datasets/bees/data_2
@@ -70,10 +71,12 @@ echo "   - WINDOW: $WINDOW"
 case $GROUPNAME in
     denv)
         SOURCE=$DENGUE
+        REF_TOTAL=$REF_DENV
         echo "✅ Dataset DENGUE selecionado: $SOURCE"
         ;;
     hbv)
         SOURCE=$HBV
+        REF_TOTAL=$REF_HBV
         echo "✅ Dataset HBV selecionado: $SOURCE"
         ;;
     bees[0-9]*)
@@ -98,14 +101,22 @@ case $GROUPNAME in
         ;;
     hiv)
         SOURCE=$HIV
+        REF_TOTAL=$REF_HIV
+        echo "✅ Dataset HIV selecionado: $SOURCE"
+        ;;
+    hiv2)
+        SOURCE=$HIV2
+        REF_TOTAL=$REF_HIV
         echo "✅ Dataset HIV selecionado: $SOURCE"
         ;;
     sars)
         SOURCE=$SARS
+        REF_TOTAL=$REF_SARS
         echo "✅ Dataset SARS selecionado: $SOURCE"
         ;;
     monkeypox)
         SOURCE=$MONKEYPOX
+        REF_TOTAL=$REF_MONKEYPOX
         echo "✅ Dataset MONKEYPOX selecionado: $SOURCE"
         ;;
     *)
@@ -146,7 +157,7 @@ function get_kmers_hbv() {
 
 function get_kmers_monkeypox() {
     
-    for variant in A B C D E F; do
+    for variant in I II; do
         gramep get-only-kmers \
             --rpath $REF_MONKEYPOX \
             --spath $SOURCE/train/$variant.fasta \
@@ -161,6 +172,20 @@ function get_kmers_monkeypox() {
 function get_kmers_hiv() {
     
     for variant in HIV1_A HIV1_B HIV1_C HIV1_D HIV1_F HIV1_G; do
+        gramep get-only-kmers \
+            --rpath $REF_HIV \
+            --spath $SOURCE/train/$variant.fasta \
+            --save-path $SOURCE/train/kmers/ \
+            --word $KMERSIZE \
+            --step 1
+        
+        mv $SOURCE/train/$variant.fasta kmers/$variant/$variant.fasta
+    done
+}
+
+function get_kmers_hiv2() {
+    
+    for variant in A B C D; do
         gramep get-only-kmers \
             --rpath $REF_HIV \
             --spath $SOURCE/train/$variant.fasta \
@@ -260,11 +285,14 @@ for i in {1..1}; do
         hiv)
             get_kmers_hiv
             ;;
+        hiv2)
+            get_kmers_hiv2
+            ;;
         sars)
             get_kmers_sars
             ;;
         monkeypox)
-            # get_kmers_monkeypox
+            get_kmers_monkeypox
             ;;
         bees[0-9]*)
             if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then

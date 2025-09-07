@@ -21,6 +21,116 @@ using FLoops,
 export GREAC
 
 
+function greacClassificationFile(
+    file_path::String,
+    outputdir::Union{Nothing,String},
+    wnwPercent::Float32,
+    groupName::String,
+    metric::Union{Nothing,String},
+    referencePath::String
+)
+
+    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
+    modelCachedFile = "$(homedir())/.project_cache/$groupName/$wnwPercent/kmers_distribution.dat"
+    model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache(modelCachedFile)
+
+    y_true = String[]
+    y_pred = String[]
+    kmerset::Vector{String} = collect(model.kmerset)
+    regions::Vector{Tuple{Int,Int}} = model.regions
+
+    reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
+
+    distances = ClassificationModel.measure_reference_minhash(
+        regions, reference_codeunits)
+
+    classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
+    # predict_raw predict_membership (model, metric)
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, model_name, distances))
+
+    total = DataIO.countSequences(file_path)
+
+    chunk_size = 10000
+    chunk_init::Int = 1
+
+    @info "Classyfing $total sequences:"
+    classifications = Vector{Tuple{String,Dict{String,Float64}}}(undef, total)
+    local_y_pred = String[]
+
+    while chunk_init <= total
+
+        chunk_end = min(chunk_init + chunk_size - 1, total)
+        current_chunk_size = chunk_end - chunk_init + 1
+
+        classeqs::Vector{Tuple{String,Base.CodeUnits}} = DataIO.loadCodeUnitsSequences(file_path, chunk_init, chunk_end)
+
+        inner_classifications = Vector{Tuple{String,Dict{String,Float64}}}(undef, current_chunk_size)
+        inner_y_pred = Vector{String}(undef, current_chunk_size)
+
+        @floop for local_idx in 1:current_chunk_size
+            id, seq::Base.CodeUnits = classeqs[local_idx]
+
+            kmer_distribution = ClassificationModel.sequence_kmer_distribution_optimized(
+                regions, seq, kmerset
+            )
+            seq_distribution = kmer_distribution ./ length(kmerset)
+
+            if !iszero(sum(seq_distribution))
+                cl, memberships = classify((seq_distribution, seq))
+                inner_classifications[local_idx] = (id, memberships)
+                inner_y_pred[local_idx] = cl
+            else
+                inner_y_pred[local_idx] = ""
+            end
+        end
+
+        classifications[chunk_init:chunk_end] = inner_classifications
+
+        for pred in inner_y_pred
+            if !(pred == "")
+                push!(local_y_pred, pred)
+            end
+        end
+
+        @info "Chunk processed $chunk_init - $chunk_end"
+        chunk_init = chunk_end + 1
+    end
+
+    append!(y_pred, local_y_pred)
+    classification_probs[class] = classifications
+
+
+
+    if !isnothing(outputdir)
+        MEMBERSHIPS = "$outputdir/memberships_$groupName.txt"
+        mkpath(outputdir)
+
+        open(MEMBERSHIPS, "w") do io
+
+            for (key, value) in classification_probs
+                write(io, "\n\n########### $(uppercase(key)) ############")
+
+                for i in eachindex(value)
+
+                    try
+                        id, classification = value[i]
+                        write(io, "\n--- Classificação $id ---\n")
+
+                        for (class_name, probability) in classification
+                            write(io, "$class_name: $(round(probability, digits=4)) \n")
+                        end
+                    catch e
+                        # @warn "Erro encontrado: $e"
+                        continue
+                    end
+                end
+            end
+
+        end
+    end
+end
+
+
 function greacClassification(
     folderPath::String,
     outputdir::Union{Nothing,String},
@@ -544,6 +654,25 @@ function add_benchmark_args!(settings)
     end
 end
 
+function add_classification_args!(settings)
+    s = settings["file-classification"]
+    @add_arg_table! s begin
+        "--reference"
+        help = "reference path"
+        required = true
+        "--file"
+        help = "Test dataset path"
+        required = true
+        "--threshold"
+        help = "Window theshold consideration"
+        required = false
+        arg_type = Float16
+        "-o", "--output-directory"
+        help = "Where the files go"
+        required = false
+    end
+end
+
 function add_extract_features_args!(settings)
     s = settings["extract-features"]
     @add_arg_table! s begin
@@ -575,6 +704,21 @@ function add_fasta_regions_args!(settings)
         help = "Training dataset path"
         required = true
     end
+end
+
+function handle_file_classification(args,
+    groupName::String,
+    window::Float32)
+    @info "Starting benchmark" args window groupName
+
+    greacClassification(
+        args["test-dir"],
+        args["output-directory"],
+        window,
+        groupName,
+        args["metric"],
+        args["reference"]
+    )
 end
 
 
@@ -681,6 +825,8 @@ function julia_main()::Cint
             help="Fit better params")
         ("fasta-regions", action=:command,
             help="Create file fasta region reads from extract")
+        ("file-classification", action=:command,
+            help="Classify file of sequences outputting the txt file")
     end
 
     # Add arguments for each subcommand
@@ -688,6 +834,7 @@ function julia_main()::Cint
     add_extract_features_args!(settings)
     add_fit_parameters_args!(settings)
     add_fasta_regions_args!(settings)
+    add_classification_args!(settings)
     parsed_args = parse_args(settings)
 
 
@@ -705,6 +852,8 @@ function julia_main()::Cint
             handle_benchmark(parsed_args["benchmark"], parsed_args["group-name"], parsed_args["window"])
         elseif parsed_args["%COMMAND%"] == "fasta-regions"
             handle_extract_file_reads(parsed_args["fasta-regions"], parsed_args["group-name"], parsed_args["window"])
+        elseif parsed_args["%COMMAND%"] == "file-classification"
+            handle_file_classification(parsed_args["file-classification"], parsed_args["group-name"], parsed_args["window"])
         end
     catch e
         @error "Error processing command" exception = (e, catch_backtrace())

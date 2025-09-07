@@ -2,7 +2,7 @@ module ClassificationModel
 
 include("RegionExtraction.jl")
 
-using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, StringDistances
+using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, StringDistances, Distributions
 export ClassificationModel
 
 struct MultiClassModel
@@ -16,7 +16,7 @@ end
 function measure_reference_minhash(
     regions,
     reference_codeunits,
-    kmer_size_minhash=9,
+    kmer_size_minhash=7,
     minhash_num_hashes=256
 )::Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}
     reference_minhash_sketches = Dict{Int,MinHashSketch}()
@@ -45,6 +45,59 @@ function measure_reference_minhash(
     return reference_minhash_sketches, reference_region_strings
 end
 
+function calculate_mash_distance(jaccard_similarity::Float64, kmer_size::Int)::Float64
+    if jaccard_similarity <= 0.0
+        return 0 # A distância é infinita se não há similaridade
+    end
+
+    # A fórmula do Mash para a distância
+    # Baseada no modelo de mutação de Poisson
+    mash_dist = -log(2 * jaccard_similarity / (1 + jaccard_similarity)) / kmer_size
+
+    return mash_dist
+end
+
+function calculate_mash_pvalue(jaccard_similarity::Float64;
+    sketch_size::Int=256,
+    kmer_size::Int=7,
+    alphabet_size::Int=4)
+    if !(0.0 <= jaccard_similarity <= 1.0)
+        throw(ArgumentError("A similaridade de Jaccard deve estar entre 0 e 1."))
+    end
+
+    # 1. Estimar o número de hashes partilhados (x)
+    # Deve ser um inteiro para os cálculos da distribuição
+    x = round(Int, jaccard_similarity * sketch_size)
+
+    # Se não há hashes em comum, a similaridade não é significativa (p-value = 1)
+    if x == 0
+        return 1.0
+    end
+
+    # 2. Calcular a probabilidade 'm' de um único hash aleatório ser partilhado
+    # Usamos BigFloat para precisão numérica com k-mers grandes, pois r^k pode ficar enorme
+    # A probabilidade de um k-mer aleatório específico ser selecionado num único sorteio de hash
+    # é 1 / (alphabet_size^kmer_size)
+    p_single_kmer = 1.0 / (BigFloat(alphabet_size)^kmer_size)
+
+    # Probabilidade de um hash específico NÃO aparecer no outro esboço de tamanho 'sketch_size'
+    prob_not_in_sketch = (1.0 - p_single_kmer)^sketch_size
+
+    # Probabilidade 'm' de um hash de um esboço estar presente no outro esboço por acaso
+    m = 1.0 - prob_not_in_sketch
+
+    # 3. Criar a distribuição binomial para a hipótese nula
+    # B(n, p) onde n=sketch_size e p=m
+    dist = Binomial(sketch_size, Float64(m)) # Converte m de volta para Float64
+
+    # 4. Calcular o p-value.
+    # É a probabilidade de obter 'x' ou MAIS sucessos.
+    # Isto corresponde à função de distribuição cumulativa complementar (ccdf) em x-1.
+    # P(X >= x) = 1 - P(X <= x-1) = 1 - cdf(dist, x-1) = ccdf(dist, x-1)
+    p_value = ccdf(dist, x - 1)
+
+    return p_value
+end
 
 function fitMulticlass(
     kmerset::Set{String},
@@ -53,7 +106,7 @@ function fitMulticlass(
     regions::Vector{Tuple{Int,Int}},
     xg_model_name::String,
     reference_codeunits::Base.CodeUnits,
-    use_xg::Bool=false
+    use_xg::Bool=true
 )::MultiClassModel
 
     class_string_probs = Dict{String,Vector{Float64}}()
@@ -107,13 +160,18 @@ function fitMulticlass(
             minhash_jaccard_features, _ = measure_jaccard(
                 reference_minhash_sketches, reference_region_strings, regions, seq)
 
+            distances = [calculate_mash_distance(j, 7) for j in minhash_jaccard_features]
+            pvalues = [calculate_mash_pvalue(j) for j in minhash_jaccard_features]
+
+
             if (use_xg)
                 intern_X[s] = vcat(
                     [d, 0],
                     seq_distribution,
                     diverg,
                     minhash_jaccard_features,
-                    # string_distance_features
+                    distances,
+                    pvalues
                 )
             end
         end
@@ -143,12 +201,11 @@ function fitMulticlass(
         X_mat = convert(Matrix{Float32}, hcat(X...)')
         dtrain = DMatrix(X_mat, label=y)
 
-        model = xgboost(dtrain,
-            num_round=15,
-            max_depth=10,
-            # η=0.5,
+        model = xgboost(
+            dtrain,
             num_class=length(labels),
-            objective="multi:softprob")
+            objective="multi:softprob"
+        )
         # objective="multi:softmax")
 
         XGBoost.save(model, xg_model_name)
@@ -175,7 +232,7 @@ function measure_jaccard(
     reference_region_strings,
     regions,
     seq,
-    kmer_size_minhash=9,
+    kmer_size_minhash=7,
     minhash_num_hashes=256
 )::Tuple{Vector{Float64},Vector{Float64}}
 
@@ -221,7 +278,7 @@ function predict_membership(
         Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}},
     input::Tuple{Vector{Float64},Base.CodeUnits})::Tuple{String,Dict{String,Float64}}
 
-    use_xg::Bool = false
+    use_xg::Bool = true
     model, metric, xg_model_name, distances = parameters
     reference_minhash_sketches, reference_region_strings = distances
     X, seq = input
@@ -239,6 +296,9 @@ function predict_membership(
 
     minhash_jaccard_features, _ = measure_jaccard(
         reference_minhash_sketches, reference_region_strings, model.regions, seq)
+    distances = [calculate_mash_distance(j, 7) for j in minhash_jaccard_features]
+    pvalues = [calculate_mash_pvalue(j) for j in minhash_jaccard_features]
+
 
     for i in eachindex(model.classes)
         c = model.classes[i]
@@ -246,16 +306,17 @@ function predict_membership(
         stats = model.variant_stats[c]
 
 
-        d1 = metrics_options(model, metric, class_freq, X)
-        memb1::Float64 = gaussian_membership(stats[:mu], stats[:sigma], d1)
+        d = metrics_options(model, metric, class_freq, X)
+        memb::Float64 = gaussian_membership(stats[:mu], stats[:sigma], d)
 
         if (use_xg)
             i_novo = [vcat(
-                [d1, memb1],
+                [d, memb],
                 X,
                 diverg,
                 minhash_jaccard_features,
-                # string_distance_features
+                distances,
+                pvalues
             )]
             i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
             y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
