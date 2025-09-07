@@ -713,7 +713,7 @@ end
 function handle_file_classification(args,
     groupName::String,
     window::Float32)
-    @info "Starting benchmark" args window groupName
+    @info "Starting File Classification " args window groupName
 
     greacClassificationFile(
         args["file"],

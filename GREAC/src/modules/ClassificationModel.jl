@@ -16,7 +16,7 @@ end
 function measure_reference_minhash(
     regions,
     reference_codeunits,
-    kmer_size_minhash=7,
+    kmer_size_minhash=10,
     minhash_num_hashes=256
 )::Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}
     reference_minhash_sketches = Dict{Int,MinHashSketch}()
@@ -232,7 +232,7 @@ function measure_jaccard(
     reference_region_strings,
     regions,
     seq,
-    kmer_size_minhash=7,
+    kmer_size_minhash=10,
     minhash_num_hashes=256
 )::Tuple{Vector{Float64},Vector{Float64}}
 

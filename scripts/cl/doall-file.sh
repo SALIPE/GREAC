@@ -29,7 +29,7 @@ BEES_16=~/Desktop/datasets/bees/data_16
 
 MEDIBEES_1=~/Desktop/datasets/medibees/data1/all
 
-GREAC=~/Desktop/GREAC/scripts/local/file-classification.sh
+GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
 
 BALANCEDATASET=~/Desktop/Fasta-splitter/FastaSplitter
 
@@ -335,7 +335,7 @@ for i in {1..1}; do
     # esac
 
     
-    $GREAC $FILE $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
+    $GREAC $TRAIN $FILE $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
     
 done
 
