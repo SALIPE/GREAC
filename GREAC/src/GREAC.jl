@@ -711,8 +711,8 @@ function handle_file_classification(args,
     window::Float32)
     @info "Starting benchmark" args window groupName
 
-    greacClassification(
-        args["test-dir"],
+    greacClassificationFile(
+        args["file"],
         args["output-directory"],
         window,
         groupName,
