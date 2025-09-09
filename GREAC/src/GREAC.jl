@@ -34,15 +34,16 @@ function greacClassificationFile(
     modelCachedFile = "$(homedir())/.project_cache/$groupName/$wnwPercent/kmers_distribution.dat"
     model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache(modelCachedFile)
 
-    y_true = String[]
     y_pred = String[]
     kmerset::Vector{String} = collect(model.kmerset)
     regions::Vector{Tuple{Int,Int}} = model.regions
 
     reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
 
+    kmer_size_minhash::Int = length.(kmerset)[1]
+
     distances = ClassificationModel.measure_reference_minhash(
-        regions, reference_codeunits)
+        regions, reference_codeunits, kmer_size_minhash)
 
     classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
@@ -151,8 +152,10 @@ function greacClassification(
 
     reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
 
+    kmer_size_minhash::Int = length.(kmerset)[1]
+
     distances = ClassificationModel.measure_reference_minhash(
-        regions, reference_codeunits)
+        regions, reference_codeunits, kmer_size_minhash)
 
     classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)

@@ -16,7 +16,7 @@ end
 function measure_reference_minhash(
     regions,
     reference_codeunits,
-    kmer_size_minhash=10,
+    kmer_size_minhash,
     minhash_num_hashes=256
 )::Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}
     reference_minhash_sketches = Dict{Int,MinHashSketch}()
@@ -57,9 +57,8 @@ function calculate_mash_distance(jaccard_similarity::Float64, kmer_size::Int)::F
     return mash_dist
 end
 
-function calculate_mash_pvalue(jaccard_similarity::Float64;
+function calculate_mash_pvalue(jaccard_similarity::Float64, kmer_size::Int;
     sketch_size::Int=256,
-    kmer_size::Int=7,
     alphabet_size::Int=4)
     if !(0.0 <= jaccard_similarity <= 1.0)
         throw(ArgumentError("A similaridade de Jaccard deve estar entre 0 e 1."))
@@ -111,14 +110,14 @@ function fitMulticlass(
 
     class_string_probs = Dict{String,Vector{Float64}}()
     variant_stats = Dict{String,Dict{Symbol,Float64}}()
-
+    kmer_size_minhash::Int = length.(kmerset)[1]
     regions_len = length(regions)
 
     X = Vector{Vector{Float64}}()
     y_str = String[]
 
     reference_minhash_sketches, reference_region_strings = measure_reference_minhash(
-        regions, reference_codeunits)
+        regions, reference_codeunits, kmer_size_minhash)
 
     for (class, _) in meta_data
 
@@ -158,10 +157,10 @@ function fitMulticlass(
             in_group[s] = d
 
             minhash_jaccard_features, _ = measure_jaccard(
-                reference_minhash_sketches, reference_region_strings, regions, seq)
+                reference_minhash_sketches, reference_region_strings, regions, seq, kmer_size_minhash)
 
-            distances = [calculate_mash_distance(j, 7) for j in minhash_jaccard_features]
-            pvalues = [calculate_mash_pvalue(j) for j in minhash_jaccard_features]
+            distances = [calculate_mash_distance(j, kmer_size_minhash) for j in minhash_jaccard_features]
+            pvalues = [calculate_mash_pvalue(j, kmer_size_minhash) for j in minhash_jaccard_features]
 
 
             if (use_xg)
@@ -232,7 +231,7 @@ function measure_jaccard(
     reference_region_strings,
     regions,
     seq,
-    kmer_size_minhash=10,
+    kmer_size_minhash,
     minhash_num_hashes=256
 )::Tuple{Vector{Float64},Vector{Float64}}
 
@@ -294,10 +293,14 @@ function predict_membership(
         diverg[i] = abs((X[i+1] - X[i]))
     end
 
+
+    kmer_size_minhash::Int = length.(model.kmerset)[1]
+
     minhash_jaccard_features, _ = measure_jaccard(
-        reference_minhash_sketches, reference_region_strings, model.regions, seq)
-    distances = [calculate_mash_distance(j, 7) for j in minhash_jaccard_features]
-    pvalues = [calculate_mash_pvalue(j) for j in minhash_jaccard_features]
+        reference_minhash_sketches, reference_region_strings, model.regions, seq, kmer_size_minhash)
+
+    distances = [calculate_mash_distance(j, kmer_size_minhash) for j in minhash_jaccard_features]
+    pvalues = [calculate_mash_pvalue(j, kmer_size_minhash) for j in minhash_jaccard_features]
 
 
     for i in eachindex(model.classes)
