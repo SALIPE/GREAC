@@ -5,8 +5,11 @@ PROJECTHOME=~/Desktop/GREAC/GREAC
 # INPUT=~/Desktop/datasets/sars_cov2/
 # GROUPNAME=sars
 
-INPUT=~/Desktop/datasets/dengue/
-GROUPNAME=denv
+# INPUT=~/Desktop/datasets/dengue/
+# GROUPNAME=denv
+
+INPUT=~/Desktop/datasets/mkpx/data
+GROUPNAME=monkeypox
 
 # INPUT=~/Desktop/GREAC/comparison_scripts/castor_hiv_data/variants/train/kmers
 # GROUPNAME=hiv

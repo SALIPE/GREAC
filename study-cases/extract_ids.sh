@@ -13,5 +13,9 @@ arquivo="$1"
 #grep '^>' "$arquivo" | sed 's/^>//' | cut -d'|' -f1
 
 ## To extract hiv
+# grep '^>' "$arquivo" | sed 's/^>//' 
+
+## To extract mkpx
 grep '^>' "$arquivo" | sed 's/^>//' 
+
 
