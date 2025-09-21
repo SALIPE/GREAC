@@ -1,3 +1,5 @@
+<img src="greac_logo.jpg" width="700">
+
 # GREAC - Genomic Region Extraction and Classifier
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
