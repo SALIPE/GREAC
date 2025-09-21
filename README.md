@@ -1,4 +1,4 @@
-<img src="greac_logo.jpg" width="700">
+<img src="greac_logo.jpg" width="500">
 
 # GREAC - Genomic Region Extraction and Classifier
 
