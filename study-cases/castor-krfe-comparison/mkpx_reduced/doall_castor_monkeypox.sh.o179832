@@ -1,0 +1,2900 @@
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921597968771223
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['CTATGGTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.87      1.00      0.93       245
+
+    accuracy                           0.98      2398
+   macro avg       0.93      0.99      0.96      2398
+weighted avg       0.99      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GGAGTTTAT', 'GTCCTTAGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9912885375973971
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['CTATGGTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.87      1.00      0.93       245
+
+    accuracy                           0.98      2398
+   macro avg       0.93      0.99      0.96      2398
+weighted avg       0.99      0.98      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9939022123071204
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['CTATGGTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.86      1.00      0.92       245
+
+    accuracy                           0.98      2398
+   macro avg       0.93      0.99      0.96      2398
+weighted avg       0.99      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TGAGGACAT', 'CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGAGAGTGA', 'CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CACAGTATA', 'TAGTGGACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9930310204577187
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CCGACGTCT', 'TCACATGAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['TGAGCGATG', 'ACTTCGTAG', 'TTGAGCCTA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.97      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9939022123071204
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['CGCACTAGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.83      1.00      0.91       245
+
+    accuracy                           0.98      2398
+   macro avg       0.91      0.99      0.95      2398
+weighted avg       0.98      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TCTGGAGCC', 'TGATACTCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.99      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9930310204577187
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['ATCTTCACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.88      1.00      0.93       245
+
+    accuracy                           0.99      2398
+   macro avg       0.94      0.99      0.96      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ATGAACGTG', 'TGTTCATGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACCGCTGAT', 'ACGTTTCGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TCAGCAGTG', 'CTGCTACAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973867417358744
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GTATAGCGG', 'AGTCCTTAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.97      0.99      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      0.99      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9904172386500659
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['GGGGTTGCG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.83      1.00      0.91       245
+
+    accuracy                           0.98      2398
+   macro avg       0.92      0.99      0.95      2398
+weighted avg       0.98      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGGACTTCG', 'GTCCTTAGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.99      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.996515637140637
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['ATGGACTCG', 'CTAATACCG', 'GTCCTTAGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['GCTTATTGC', 'GTGCGAAAA', 'CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.97      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ATCGACTGG', 'TCTGGAGCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      0.99      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACGCAGAGG', 'TTCATGGGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      0.99      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CGCTCTCTA', 'TCAACCGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.98       245
+
+    accuracy                           0.99      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      0.99      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['CATGACTAC', 'CACTCTCGT', 'ACGAAGTTA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      0.99      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.98      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['GCCAGATCA', 'ACTTCGTAG', 'GGACATACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.98      1.00      0.99       245
+
+    accuracy                           1.00      2398
+   macro avg       0.99      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACTTCGTAG', 'CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACTTCGTAG', 'GATCATGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.99      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CAGGTATGG', 'CTGGAGCCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACCAACGCA', 'ACTGGTTAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      0.99      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TTCAGGCCG', 'GCACTAGAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.92      0.98      0.95       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      0.98      0.97      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GGACTCGCG', 'CCTATCTGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.99      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['TCACCCCAC', 'TTGCAGGCT', 'TGATACTCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GTTAGTTCA', 'CGCCAGTTA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GGACTTCGT', 'ACGCACTAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AAGGACTTC', 'AGAATTTGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TCAGCAGTG', 'TCACATGAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGGACTTCG', 'TGGAAGACC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CATGCGGAT', 'TACAGCTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.89      1.00      0.94       245
+
+    accuracy                           0.99      2398
+   macro avg       0.95      0.99      0.97      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CTTCAGGCC', 'GTCCTTAGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921597968771223
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.86      1.00      0.92       245
+
+    accuracy                           0.98      2398
+   macro avg       0.93      0.99      0.96      2398
+weighted avg       0.99      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GCCTAACTA', 'TTGCAGGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.99      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CGTCTTCCA', 'CAACCTACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GGACTTCGT', 'ACGTCTTCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.96      0.99      0.98       245
+
+    accuracy                           0.99      2398
+   macro avg       0.98      0.99      0.99      2398
+weighted avg       1.00      0.99      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACTTCGTAG', 'GGACATACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.92      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9956445166817288
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['GTCCTTAGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.88      1.00      0.94       245
+
+    accuracy                           0.99      2398
+   macro avg       0.94      0.99      0.96      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.996515637140637
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['TGTTCATGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.86      1.00      0.93       245
+
+    accuracy                           0.98      2398
+   macro avg       0.93      0.99      0.96      2398
+weighted avg       0.99      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947733763927797
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['TCACATGAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.91      1.00      0.95       245
+
+    accuracy                           0.99      2398
+   macro avg       0.95      0.99      0.97      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ATTGCGACT', 'CCTCCGAAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.92      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TACAAGAGC', 'CTATGGTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.92      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CCATTTCCT', 'CTGCTACAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921597968771223
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['TAGTGGACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.97      0.99      2153
+  I_reducted       0.81      1.00      0.89       245
+
+    accuracy                           0.98      2398
+   macro avg       0.90      0.99      0.94      2398
+weighted avg       0.98      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['AAGGACTTC', 'CGCTGATTT', 'TCACAGTAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.97      1.00      0.99       245
+
+    accuracy                           1.00      2398
+   macro avg       0.99      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CCTCCGAAT', 'CTTATCTTT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.93      0.98      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.996515637140637
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GGATGCCGT', 'TCGTAGGTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.87      0.99      0.93       245
+
+    accuracy                           0.98      2398
+   macro avg       0.94      0.99      0.96      2398
+weighted avg       0.99      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['TCAGGCCGG', 'GTATAGCGG', 'CTACAGGCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.98      0.99      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.99      0.99      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GAGCGATGA', 'GCCTAACTA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGTGCGAAA', 'TTGCAGGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9904172386500659
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['TAGTGGACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.97      0.99      2153
+  I_reducted       0.81      1.00      0.90       245
+
+    accuracy                           0.98      2398
+   macro avg       0.91      0.99      0.94      2398
+weighted avg       0.98      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GTATAGCGG', 'CTGGAGCCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      0.99      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TTACGTACA', 'CTATGGTCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           0.99      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      0.99      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGAGAGTGA', 'TGACCGTCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TCAACCGCT', 'TTTCGCATG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CTTCAGGCC', 'AGTCCTTAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.99      1.00      0.99       245
+
+    accuracy                           1.00      2398
+   macro avg       0.99      1.00      1.00      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACGTGAAAT', 'ACGCTCTCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.98       245
+
+    accuracy                           0.99      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      0.99      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACTTCGTAG', 'CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.97      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TAGTGGACG', 'TTACAACGC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.91      1.00      0.95       245
+
+    accuracy                           0.99      2398
+   macro avg       0.95      0.99      0.97      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GCTTATTGC', 'TTCGCAGTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947733763927797
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['TCCTTAGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.87      1.00      0.93       245
+
+    accuracy                           0.98      2398
+   macro avg       0.93      0.99      0.96      2398
+weighted avg       0.99      0.98      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921597968771223
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['AGTGGACGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.97      0.99      2153
+  I_reducted       0.81      1.00      0.89       245
+
+    accuracy                           0.97      2398
+   macro avg       0.90      0.98      0.94      2398
+weighted avg       0.98      0.97      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['CAGGCCGGT', 'ACCGCAATC', 'CAGTTCCAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.99      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9939022123071204
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['TCGCAGTGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.87      1.00      0.93       245
+
+    accuracy                           0.98      2398
+   macro avg       0.94      0.99      0.96      2398
+weighted avg       0.99      0.98      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACACTACCC', 'CTTGTTACC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9956445166817288
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CATAGTGAC', 'TCCTATCTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.90      1.00      0.95       245
+
+    accuracy                           0.99      2398
+   macro avg       0.95      0.99      0.97      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CAGGCCGGT', 'CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GAGCCTCCG', 'ACGCGAACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921597968771223
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['GAAATAGTG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.97      0.99      2153
+  I_reducted       0.80      1.00      0.89       245
+
+    accuracy                           0.97      2398
+   macro avg       0.90      0.99      0.94      2398
+weighted avg       0.98      0.97      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9939022123071204
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['GTGACCGTC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.87      1.00      0.93       245
+
+    accuracy                           0.98      2398
+   macro avg       0.93      0.99      0.96      2398
+weighted avg       0.99      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9982578344335686
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TACAGCTCA', 'TCACATGAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.91      1.00      0.95       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      0.99      0.97      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CCTATCTGG', 'TCACAGTAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.97      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GGTCATGAC', 'CAGTGACCG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['ACTTCGTAG', 'GACATACGT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.92      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CGCAATAGG', 'TCACATGAT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGGACTTCG', 'CGCACTAGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947733763927797
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['CTGGAGCCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.97      0.99      2153
+  I_reducted       0.81      1.00      0.89       245
+
+    accuracy                           0.98      2398
+   macro avg       0.90      0.99      0.94      2398
+weighted avg       0.98      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGGACTTCG', 'CGTCTTCCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.96      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9947733763927797
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['CGCACTAGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.98      0.99      2153
+  I_reducted       0.82      1.00      0.90       245
+
+    accuracy                           0.98      2398
+   macro avg       0.91      0.99      0.95      2398
+weighted avg       0.98      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CGACAGCAG', 'TCCTTAGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CGACAGCAG', 'TCCTTAGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GCTGACGCG', 'CCGAATATT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      0.99      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9973867417358744
+Length of k = 9
+Number of k-mers = 3
+Extracted k-mers = ['ACTTCGTAG', 'GTGCGAAAA', 'TTGCAGGCT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.97      1.00      0.98       245
+
+    accuracy                           1.00      2398
+   macro avg       0.98      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CAGGTATGG', 'CGGTATAAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.93      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TGGAAGACC', 'ACTGGTTAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      0.99      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['TGAACGTGG', 'CGACGTATT']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.91      0.99      0.95       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      0.99      0.97      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CGACAGCAG', 'AGTCCTTAG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      1.00      1.00      2153
+  I_reducted       0.98      1.00      0.99       245
+
+    accuracy                           1.00      2398
+   macro avg       0.99      1.00      0.99      2398
+weighted avg       1.00      1.00      1.00      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GTTCGTGTC', 'GTATAGCGG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      0.99      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.98      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['GAGCCTCCG', 'CTACAGGCA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.94      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CATAGTGAC', 'CTGCTACAA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.95      1.00      0.97       245
+
+    accuracy                           0.99      2398
+   macro avg       0.97      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.999128919199668
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['CTAATACCG', 'TGACCGTCC']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      1.00      2153
+  I_reducted       0.92      1.00      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      1.00      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 0.9921597968771223
+Length of k = 9
+Number of k-mers = 1
+Extracted k-mers = ['TAGTGGACG']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.97      0.99      2153
+  I_reducted       0.81      1.00      0.89       245
+
+    accuracy                           0.98      2398
+   macro avg       0.90      0.99      0.94      2398
+weighted avg       0.98      0.98      0.98      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
+
+CASTOR-KRFE: extraction mode
+
+Analysis of the 9-mers
+
+Identified solution:
+Evaluation score (F1 score) = 1.0
+Length of k = 9
+Number of k-mers = 2
+Extracted k-mers = ['AGGTATGGA', 'CGTCCTGGA']
+Extracted k-mers saved at the path: /tmp2/felipe/castor/output/k_mers.fasta
+
+CASTOR-KRFE: training mode
+
+Model saved at the path: /tmp2/felipe/castor/output/model.pkl
+
+CASTOR-KRFE: testing mode
+
+Classification report 
+               precision    recall  f1-score   support
+
+ II_reducted       1.00      0.99      0.99      2153
+  I_reducted       0.93      0.99      0.96       245
+
+    accuracy                           0.99      2398
+   macro avg       0.96      0.99      0.98      2398
+weighted avg       0.99      0.99      0.99      2398
+
+Predictions saved at the path: /tmp2/felipe/castor/output/prediction.csv
