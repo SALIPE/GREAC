@@ -31,10 +31,10 @@ jobs:
 
       - name: Create compiled app tarball
         run: |
-          tar -czf greac.tar.gz ./build/greac/
+          tar -czf greac.tar.gz /home/runner/work/GREAC/GREAC/GREAC/greac
           echo "Listing content after tar:"
           ls -l 
-          ls -l build/greac/
+          ls -l /home/runner/work/GREAC/GREAC/GREAC/greac
 
       - name: Move tarball to repository root
         run: mv greac.tar.gz ../
