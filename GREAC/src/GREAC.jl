@@ -1,7 +1,7 @@
 module GREAC
 
 include("modules/DataIO.jl")
-include("modules/Report.jl")
+# include("modules/Report.jl")
 include("modules/RegionExtraction.jl")
 include("modules/ClassificationModel.jl")
 
@@ -15,7 +15,6 @@ using FLoops,
     .DataIO,
     .RegionExtraction,
     .ClassificationModel,
-    .Report,
     MinHash
 
 export GREAC
@@ -221,12 +220,12 @@ function greacClassification(
 
     results = compute_variant_metrics(model.classes, y_true, y_pred)
 
-    Report.generate_report_pdf(
-        wnwPercent,
-        groupName,
-        model,
-        classification_probs,
-        results)
+    # Report.generate_report_pdf(
+    #     wnwPercent,
+    #     groupName,
+    #     model,
+    #     classification_probs,
+    #     results)
 
     @info "f1 = " results[:macro][:f1]
 
