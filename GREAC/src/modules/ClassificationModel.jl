@@ -2,7 +2,7 @@ module ClassificationModel
 
 include("RegionExtraction.jl")
 
-using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, StringDistances, Distributions
+using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, Distributions
 export ClassificationModel
 
 struct MultiClassModel
