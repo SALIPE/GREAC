@@ -1,7 +1,7 @@
 module GREAC
 
 include("modules/DataIO.jl")
-# include("modules/Report.jl")
+include("modules/Report.jl")
 include("modules/RegionExtraction.jl")
 include("modules/ClassificationModel.jl")
 
@@ -11,7 +11,6 @@ using FLoops,
     Normalization,
     Statistics,
     ArgParse,
-    BenchmarkTools,
     .DataIO,
     .RegionExtraction,
     .ClassificationModel,
@@ -26,14 +25,14 @@ function greacClassificationFile(
     wnwPercent::Float32,
     groupName::String,
     metric::Union{Nothing,String},
-    referencePath::String
+    referencePath::String,
+    use_xg::Bool
 )
 
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
     modelCachedFile = "$(homedir())/.project_cache/$groupName/$wnwPercent/kmers_distribution.dat"
     model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache(modelCachedFile)
 
-    y_pred = String[]
     kmerset::Vector{String} = collect(model.kmerset)
     regions::Vector{Tuple{Int,Int}} = model.regions
 
@@ -44,9 +43,9 @@ function greacClassificationFile(
     distances = ClassificationModel.measure_reference_minhash(
         regions, reference_codeunits, kmer_size_minhash)
 
-    classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
+    classification_probs = Dict{String,Vector{Tuple{String,String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, model_name, distances))
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name, distances))
 
     total = DataIO.countSequences(file_path)
 
@@ -54,8 +53,7 @@ function greacClassificationFile(
     chunk_init::Int = 1
 
     @info "Classyfing $total sequences:"
-    classifications = Vector{Tuple{String,Dict{String,Float64}}}(undef, total)
-    local_y_pred = String[]
+    classifications = Vector{Tuple{String,String,Dict{String,Float64}}}(undef, total)
 
     while chunk_init <= total
 
@@ -64,8 +62,7 @@ function greacClassificationFile(
 
         classeqs::Vector{Tuple{String,Base.CodeUnits}} = DataIO.loadCodeUnitsSequences(file_path, chunk_init, chunk_end)
 
-        inner_classifications = Vector{Tuple{String,Dict{String,Float64}}}(undef, current_chunk_size)
-        inner_y_pred = Vector{String}(undef, current_chunk_size)
+        inner_classifications = Vector{Tuple{String,String,Dict{String,Float64}}}(undef, current_chunk_size)
 
         @floop for local_idx in 1:current_chunk_size
             id, seq::Base.CodeUnits = classeqs[local_idx]
@@ -77,55 +74,42 @@ function greacClassificationFile(
 
             if !iszero(sum(seq_distribution))
                 cl, memberships = classify((seq_distribution, seq))
-                inner_classifications[local_idx] = (id, memberships)
-                inner_y_pred[local_idx] = cl
-            else
-                inner_y_pred[local_idx] = ""
+                inner_classifications[local_idx] = (id, cl, memberships)
             end
         end
 
         classifications[chunk_init:chunk_end] = inner_classifications
 
-        for pred in inner_y_pred
-            if !(pred == "")
-                push!(local_y_pred, pred)
-            end
-        end
-
         @info "Chunk processed $chunk_init - $chunk_end"
         chunk_init = chunk_end + 1
     end
 
-    append!(y_pred, local_y_pred)
     classification_probs[class] = classifications
 
-
-
     if !isnothing(outputdir)
-        MEMBERSHIPS = "$outputdir/memberships_$groupName.txt"
+        MEMBERSHIPS = "$outputdir/classifications_$groupName.csv"
         mkpath(outputdir)
 
         open(MEMBERSHIPS, "w") do io
+            types = join(model.classes, ",")
+            write(io, "id," * types * ",predicted_label")
 
             for (key, value) in classification_probs
-                write(io, "\n\n########### $(uppercase(key)) ############")
-
                 for i in eachindex(value)
-
                     try
                         id, classification = value[i]
-                        write(io, "\n--- Classificação $id ---\n")
-
-                        for (class_name, probability) in classification
-                            write(io, "$class_name: $(round(probability, digits=4)) \n")
+                        line = "\n$id,"
+                        for (_, cl, probability) in classification
+                            line = line * "$(round(probability, digits=4)),"
                         end
+                        line = line * "$cl"
+                        write(io, line)
                     catch e
                         # @warn "Erro encontrado: $e"
                         continue
                     end
                 end
             end
-
         end
     end
 end
@@ -137,7 +121,8 @@ function greacClassification(
     wnwPercent::Float32,
     groupName::String,
     metric::Union{Nothing,String},
-    referencePath::String
+    referencePath::String,
+    use_xg::Bool
 )
 
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
@@ -156,9 +141,9 @@ function greacClassification(
     distances = ClassificationModel.measure_reference_minhash(
         regions, reference_codeunits, kmer_size_minhash)
 
-    classification_probs = Dict{String,Vector{Tuple{String,Dict{String,Float64}}}}()
+    classification_probs = Dict{String,Vector{Tuple{String,String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, model_name, distances))
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name, distances))
 
     for class in model.classes
         file_path::String = "$folderPath/$class.fasta"
@@ -168,7 +153,7 @@ function greacClassification(
         chunk_init::Int = 1
 
         @info "Classyfing $class $total sequences:"
-        classifications = Vector{Tuple{String,Dict{String,Float64}}}(undef, total)
+        classifications = Vector{Tuple{String,String,Dict{String,Float64}}}(undef, total)
         local_y_pred = String[]
         local_y_true = String[]
 
@@ -179,7 +164,7 @@ function greacClassification(
 
             classeqs::Vector{Tuple{String,Base.CodeUnits}} = DataIO.loadCodeUnitsSequences(file_path, chunk_init, chunk_end)
 
-            inner_classifications = Vector{Tuple{String,Dict{String,Float64}}}(undef, current_chunk_size)
+            inner_classifications = Vector{Tuple{String,String,Dict{String,Float64}}}(undef, current_chunk_size)
             inner_y_pred = Vector{String}(undef, current_chunk_size)
 
             @floop for local_idx in 1:current_chunk_size
@@ -192,7 +177,7 @@ function greacClassification(
 
                 if !iszero(sum(seq_distribution))
                     cl, memberships = classify((seq_distribution, seq))
-                    inner_classifications[local_idx] = (id, memberships)
+                    inner_classifications[local_idx] = (id, cl, memberships)
                     inner_y_pred[local_idx] = cl
                 else
                     inner_y_pred[local_idx] = ""
@@ -220,41 +205,40 @@ function greacClassification(
 
     results = compute_variant_metrics(model.classes, y_true, y_pred)
 
-    # Report.generate_report_pdf(
-    #     wnwPercent,
-    #     groupName,
-    #     model,
-    #     classification_probs,
-    #     results)
+    Report.generate_report_pdf(
+        wnwPercent,
+        groupName,
+        model,
+        classification_probs,
+        results)
 
     @info "f1 = " results[:macro][:f1]
 
     if !isnothing(outputdir)
         RESULTS_CSV = "$outputdir/benchmark_results_$groupName.csv"
-        MEMBERSHIPS = "$outputdir/memberships_$groupName.txt"
+        MEMBERSHIPS = "$outputdir/classifications_$groupName.csv"
         mkpath(outputdir)
 
         open(MEMBERSHIPS, "w") do io
+            types = join(model.classes, ",")
+            write(io, "id," * types * ",predicted_label,true_label")
 
             for (key, value) in classification_probs
-                write(io, "\n\n########### $(uppercase(key)) ############")
-
                 for i in eachindex(value)
-
                     try
-                        id, classification = value[i]
-                        write(io, "\n--- Classificação $id ---\n")
-
-                        for (class_name, probability) in classification
-                            write(io, "$class_name: $(round(probability, digits=4)) \n")
+                        id, cl, classification = value[i]
+                        line = "\n$id,"
+                        for (_, probability) in classification
+                            line = line * "$(round(probability, digits=4)),"
                         end
+                        line = line * "$cl,$key"
+                        write(io, line)
                     catch e
                         # @warn "Erro encontrado: $e"
                         continue
                     end
                 end
             end
-
         end
 
         open(RESULTS_CSV, "a") do io
@@ -368,7 +352,8 @@ function getKmersDistributionPerClass(
     wnwPercent::Float32,
     groupName::String,
     variantDirPath::String,
-    referencePath::String
+    referencePath::String,
+    use_xg::Bool
 )
     cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
@@ -430,34 +415,14 @@ function getKmersDistributionPerClass(
             RegionExtraction.regionsConjuction(variantDirPath, wnwPercent, groupName),
             # RegionExtraction.filterRegions(variantDirPath, wnwPercent, groupName, Int(win_size), Int(maxSeqLen)),
             model_name,
-            reference_codeunits)
+            reference_codeunits,
+            use_xg)
 
         DataIO.save_cache("$cachdir/kmers_distribution.dat", distribution)
         return distribution
     end
 end
 
-function export_sars_pos(
-    groupName::String,
-    wnwPercent::Float32,
-    distribution::ClassificationModel.MultiClassModel)
-
-    RESULTS_CSV = "regions_val_$groupName.csv"
-
-    open(RESULTS_CSV, "a") do io
-        if filesize(RESULTS_CSV) == 0
-            write(io, "wndwPercent,found,finalLength\n")
-        end
-        line = join([
-                escape_string(string(wnwPercent)),
-                escape_string(string(sars_pos_val(distribution))),
-                escape_string(string(count_region_length(distribution.regions)))
-            ], ",")
-
-        write(io, line * "\n")
-    end
-
-end
 
 function count_region_length(regions)::Int
     total_length = 0
@@ -476,105 +441,6 @@ function havein(pos, regions)
     end
     return pos, 0, 0
 end
-
-function sars_pos_val(model::ClassificationModel.MultiClassModel)::Int
-    pos = [670,
-        913,
-        1059,
-        2790,
-        3037,
-        3267,
-        4184,
-        5386,
-        5648,
-        5730,
-        8393,
-        8986,
-        9053,
-        9344,
-        9534,
-        9866,
-        9867,
-        10029,
-        10135,
-        10447,
-        10449,
-        11201,
-        11537,
-        11674,
-        11750,
-        12160,
-        12880,
-        13195,
-        14257,
-        14408,
-        14676,
-        15240,
-        15279,
-        15451,
-        15714,
-        16176,
-        16466,
-        16935,
-        17039,
-        17236,
-        17410,
-        18163,
-        18171,
-        23040,
-        23055,
-        23063,
-        23075,
-        23271,
-        23403,
-        23525,
-        23593,
-        23599,
-        23604,
-        23673,
-        23709,
-        23731,
-        23948,
-        24138,
-        24424,
-        24469,
-        24503,
-        24506,
-        24748,
-        24914,
-        25000,
-        25088,
-        25416,
-        25469,
-        25563,
-        25584,
-        26060,
-        26149,
-        26270,
-        26709,
-        26767,
-        28272,
-        28512,
-        28724,
-        28881,
-        28882,
-        28883,
-        28913,
-        28916]
-
-    havepos = Base.Fix2(havein, model.regions)
-
-    found = map(havepos, pos)
-    count = 0
-
-    for (pos, i, _) in found
-        if i != 0
-            count += 1
-        end
-    end
-    return count
-end
-
 
 function fitParameters(
     args,
@@ -603,6 +469,7 @@ function fitParameters(
                     groupName,
                     args["train-dir"],
                     args["reference"],
+                    args["usexgboost"]
                 )
 
                 f1 = greacClassification(
@@ -612,6 +479,7 @@ function fitParameters(
                     groupName,
                     current_metric,
                     args["reference"],
+                    args["usexgboost"]
                 )
                 if f1 > current_f1
                     current_f1 = f1
@@ -653,6 +521,9 @@ function add_benchmark_args!(settings)
         "-o", "--output-directory"
         help = "Where the files go"
         required = false
+        "--usexgboost"
+        help = "Classify sequences using XGBoost"
+        action = :store_true
     end
 end
 
@@ -676,6 +547,9 @@ function add_classification_args!(settings)
         "-o", "--output-directory"
         help = "Where the files go"
         required = false
+        "--usexgboost"
+        help = "Classify sequences using XGBoost"
+        action = :store_true
     end
 end
 
@@ -685,6 +559,9 @@ function add_extract_features_args!(settings)
         "--train-dir"
         help = "Training dataset path"
         required = true
+        "--usexgboost"
+        help = "Classify sequences using XGBoost"
+        action = :store_true
     end
 end
 
@@ -700,6 +577,9 @@ function add_fit_parameters_args!(settings)
         "--reference"
         help = "reference path"
         required = true
+        "--usexgboost"
+        help = "Classify sequences using XGBoost"
+        action = :store_true
     end
 end
 
@@ -723,7 +603,8 @@ function handle_file_classification(args,
         window,
         groupName,
         args["metric"],
-        args["reference"]
+        args["reference"],
+        args["usexgboost"]
     )
 end
 
@@ -743,10 +624,10 @@ function handle_benchmark(args,
         window,
         groupName,
         args["train-dir"],
-        args["reference"]
+        args["reference"],
+        args["usexgboost"]
     )
 
-    # export_sars_pos(groupName, window, distribution)
     @info "Starting classification evaluation"
     greacClassification(
         args["test-dir"],
@@ -754,7 +635,8 @@ function handle_benchmark(args,
         window,
         groupName,
         args["metric"],
-        args["reference"]
+        args["reference"],
+        args["usexgboost"]
     )
 end
 
@@ -771,7 +653,8 @@ function extract_features(args,
         window,
         groupName,
         args["train-dir"],
-        args["reference"]
+        args["reference"],
+        args["usexgboost"]
     )
 end
 
@@ -868,4 +751,4 @@ function julia_main()::Cint
 end
 end
 
-# GREAC.julia_main()
+GREAC.julia_main()

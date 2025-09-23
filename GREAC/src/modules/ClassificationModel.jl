@@ -2,6 +2,12 @@ module ClassificationModel
 
 include("RegionExtraction.jl")
 
+ENV["XGBOOST_BUILD_GPU"] = "OFF"
+ENV["USE_CUDA"] = "0"
+ENV["USE_NCCL"] = "0"
+ENV["CUDA_VISIBLE_DEVICES"] = ""
+ENV["XGBOOST_BUILD_OPTS"] = "-DUSE_CUDA=OFF -DUSE_NCCL=OFF"
+
 using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, Distributions
 export ClassificationModel
 
@@ -105,7 +111,7 @@ function fitMulticlass(
     regions::Vector{Tuple{Int,Int}},
     xg_model_name::String,
     reference_codeunits::Base.CodeUnits,
-    use_xg::Bool=true
+    use_xg::Bool=false
 )::MultiClassModel
 
     class_string_probs = Dict{String,Vector{Float64}}()
@@ -273,12 +279,12 @@ end
 function predict_membership(
     parameters::Tuple{MultiClassModel,
         Union{Nothing,String},
+        Bool,
         String,
         Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}},
     input::Tuple{Vector{Float64},Base.CodeUnits})::Tuple{String,Dict{String,Float64}}
 
-    use_xg::Bool = true
-    model, metric, xg_model_name, distances = parameters
+    model, metric, use_xg, xg_model_name, distances = parameters
     reference_minhash_sketches, reference_region_strings = distances
     X, seq = input
     classification = Dict{String,Float64}()
