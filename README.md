@@ -21,9 +21,6 @@ GREAC (Genomic Region Extraction and Classifier) is a novel computational method
 
 ## Usage
 
-### Pre-compiled Binary
-
-Download the latest pre-compiled binary from the [Releases](https://github.com/SALIPE/genomic-extractor/releases) page:
 
 ### External Dependencies (for complete workflow)
 
@@ -36,14 +33,18 @@ For the full workflow using `scripts/local/doall.sh`, install these external too
 ## Quick Start
 
 ```bash
+cd GREAC
 # Basic feature extraction
-GREAC extract-features --group-name denv --window 0.1 --train-dir /path/to/training/data
+julia --project src/GREAC.jl  extract-features --group-name denv --window 0.1 --train-dir /path/to/training/data
 
 # Run benchmark with classification
-GREAC benchmark --group-name denv --window 0.1 --train-dir /path/to/train --test-dir /path/to/test
+julia --project src/GREAC.jl  benchmark --group-name denv --window 0.1 --train-dir /path/to/train --test-dir /path/to/test
 
 # Brute Force Parameters search
-GREAC fit-parameters --group-name denv --window 0.05 --train-dir /path/to/train --test-dir /path/to/test
+julia --project src/GREAC.jl  fit-parameters --group-name denv --window 0.05 --train-dir /path/to/train --test-dir /path/to/test
+
+# Create reduced dataset with the extracted regions
+julia --project src/GREAC.jl --group-name $GROUPNAME -w $WINDOW fasta-regions -i /path/to/dataset 
 ```
 
 ## Usage
@@ -51,7 +52,7 @@ GREAC fit-parameters --group-name denv --window 0.05 --train-dir /path/to/train 
 ### Command Structure
 
 ```bash
-GREAC [GLOBAL OPTIONS] COMMAND [COMMAND OPTIONS]
+julia --project src/GREAC.jl [GLOBAL OPTIONS] COMMAND [COMMAND OPTIONS]
 ```
 
 ### Global Options
@@ -97,7 +98,7 @@ GREAC --group-name denv --window 0.1 benchmark \
 Optimize model parameters using training and test datasets.
 
 ```bash
-GREAC --group-name denv --window 0.05 fit-parameters \
+julia --project src/GREAC.jl --group-name denv --window 0.05 fit-parameters \
   --train-dir /data/training/ --test-dir /data/testing/
 ```
 
@@ -110,7 +111,7 @@ GREAC --group-name denv --window 0.05 fit-parameters \
 Create the datasets FASTA files with cutted sequences on the extract regions.
 
 ```bash
-GREAC --group-name denv --window 0.05 fasta-regions --input /data/training/
+julia --project src/GREAC.jl --group-name denv --window 0.05 fasta-regions --input /data/training/
 ```
 
 **Options:**
@@ -155,6 +156,7 @@ The `doall.sh` script includes:
 - Complete GREAC workflow execution
 - Result organization and summary generation
 
+More examples are disposed in [Shell Scripts Examples](./scripts/README.md)
 
 ## Performance Considerations
 
@@ -193,33 +195,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-
-### ⚠️ Important Disclaimers
-
-#### Running Example Scripts
-The `scripts/` directory contains example shell scripts demonstrating various GREAC workflows. These scripts are provided as **templates and examples only**. Users should:
-
-- **Review and modify** all paths, parameters, and configurations before execution
-- **Test with small datasets** before running on production data
-- **Understand each command** and its implications for your specific use case
-- **Backup your data** before running any automated workflows
-
-#### Complete Workflow Script (`doall.sh`)
-The `scripts/doall.sh` script provides a **comprehensive end-to-end example** of the entire GREAC workflow, including data preprocessing, feature extraction, parameter optimization, and benchmarking. 
-
-**⚠️ Prerequisites Warning**: This script requires two external tools that must be installed separately:
-
-1. **[GRAMEP](https://github.com/omatheuspimenta/GRAMEP)** - Tool for exclusive k-mers search
-   - Used for k-mer extraction and analysis
-   - Must be installed and accessible in your PATH
-   - Follow GRAMEP installation instructions before using `doall.sh`
-
-2. **[FastasSplitter](https://github.com/SALIPE/Fasta-splitter)** - Dataset balancing and structuring tool
-   - Used to balance datasets and export structured files for GREAC execution
-   - Required for proper data organization and preprocessing
-   - Install according to FastasSplitter documentation
-
-**The `doall.sh` script will NOT work without these dependencies properly installed and configured.**
 
 ## License
 

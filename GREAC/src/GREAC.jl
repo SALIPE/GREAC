@@ -559,6 +559,12 @@ function add_extract_features_args!(settings)
         "--train-dir"
         help = "Training dataset path"
         required = true
+        "--threshold"
+        help = "Window theshold consideration"
+        required = false
+        "--reference"
+        help = "reference path"
+        required = true
         "--usexgboost"
         help = "Classify sequences using XGBoost"
         action = :store_true
@@ -647,7 +653,8 @@ function extract_features(args,
     RegionExtraction.extractFeaturesTemplate(
         window,
         groupName,
-        args["train-dir"]
+        args["train-dir"],
+        args["threshold"]
     )
     distribution = getKmersDistributionPerClass(
         window,

@@ -2,8 +2,8 @@
 
 PROJECTHOME=~/Desktop/GREAC/GREAC
 
-INPUT=~/Desktop/datasets/sars_cov2/
-GROUPNAME=sars
+# INPUT=~/Desktop/datasets/sars_cov2/
+# GROUPNAME=sars
 
 # INPUT=~/Desktop/datasets/dengue/
 # GROUPNAME=denv
@@ -11,14 +11,16 @@ GROUPNAME=sars
 # INPUT=~/Desktop/datasets/mkpx/data
 # GROUPNAME=monkeypox
 
-# INPUT=~/Desktop/GREAC/comparison_scripts/castor_hiv_data/variants/train/kmers
+# INPUT=~/Desktop/GREAC/study-cases/castor_hiv_data/variants
 # GROUPNAME=hiv
 
-# INPUT=~/Desktop/datasets/HBV/data/train/kmers
-# GROUPNAME=hbv
+INPUT=~/Desktop/GREAC/study-cases/HBV/data
+GROUPNAME=hbv
+
+WINDOW=$1
 
 cd $PROJECTHOME && julia --project src/GREAC.jl \
    --group-name $GROUPNAME \
-   -w $1 fasta-regions -i $INPUT 
+   -w $WINDOW fasta-regions -i $INPUT 
 
 
