@@ -90,9 +90,12 @@ function greacClassificationFile(
         MEMBERSHIPS = "$outputdir/classifications_$groupName.csv"
         mkpath(outputdir)
 
-        open(MEMBERSHIPS, "w") do io
-            types = join(model.classes, ",")
-            write(io, "id," * types * ",predicted_label")
+        open(MEMBERSHIPS, "a") do io
+
+            if filesize(MEMBERSHIPS) == 0
+                types = join(model.classes, ",")
+                write(io, "id," * types * ",predicted_label")
+            end
 
             for (key, value) in classification_probs
                 for i in eachindex(value)
@@ -219,10 +222,12 @@ function greacClassification(
         MEMBERSHIPS = "$outputdir/classifications_$groupName.csv"
         mkpath(outputdir)
 
-        open(MEMBERSHIPS, "w") do io
-            types = join(model.classes, ",")
-            write(io, "id," * types * ",predicted_label,true_label")
+        open(MEMBERSHIPS, "a") do io
 
+            if filesize(MEMBERSHIPS) == 0
+                types = join(model.classes, ",")
+                write(io, "id," * types * ",predicted_label,true_label")
+            end
             for (key, value) in classification_probs
                 for i in eachindex(value)
                     try
