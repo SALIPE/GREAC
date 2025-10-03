@@ -599,7 +599,7 @@ function add_fasta_regions_args!(settings)
     @add_arg_table! s begin
         "-i", "--input"
         help = "Training dataset path"
-        required = true
+        required = false
     end
 end
 
@@ -674,7 +674,7 @@ function handle_extract_file_reads(args,
     groupName::String,
     wnwPercent::Float32)
 
-    variantDirPath::String = args["input"]
+    variantDirPath::Union{Nothing,String} = args["input"]
     cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
     model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache("$cachdir/kmers_distribution.dat")
 
@@ -682,14 +682,25 @@ function handle_extract_file_reads(args,
         error("Model not found!")
     end
 
-    variantDirs::Vector{String} = readdir(variantDirPath)
-
-    for variant in variantDirs
-        DataIO.createFastaRegionFile(
-            "$variantDirPath/$variant/$variant.fasta",
-            "$variantDirPath/$variant/$variant-extracted.fasta",
-            model.regions)
+    if !isnothing(variantDirPath)
+        variantDirs::Vector{String} = readdir(variantDirPath)
+        for variant in variantDirs
+            DataIO.createFastaRegionFile(
+                "$variantDirPath/$variant/$variant.fasta",
+                "$variantDirPath/$variant/$variant-extracted.fasta",
+                model.regions)
+        end
     end
+
+    REGIONS = "regions_$groupName.bed"
+
+    open(REGIONS, "w") do io
+        for (init_pos, end_pos) in model.regions
+            write(io, "\n$groupName\t$init_pos\t$end_pos")
+        end
+    end
+
+    @info "Region BED file saved at: $REGIONS"
 
 end
 

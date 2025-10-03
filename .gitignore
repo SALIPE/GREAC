@@ -31,6 +31,7 @@ GREAC/output**/
 notebooks/.project_cache
 *.zip
 *.svg
+*.bed
 /notebooks/*.csv
 *pdf
 resultados*

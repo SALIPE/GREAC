@@ -14,13 +14,14 @@ PROJECTHOME=~/Desktop/GREAC/GREAC
 # INPUT=~/Desktop/GREAC/study-cases/castor_hiv_data/variants
 # GROUPNAME=hiv
 
-INPUT=~/Desktop/GREAC/study-cases/HBV/data
-GROUPNAME=hbv
+# INPUT=~/Desktop/GREAC/study-cases/HBV/data
+# GROUPNAME=hbv
 
-WINDOW=$1
+GROUPNAME=$1
+WINDOW=$2
 
 cd $PROJECTHOME && julia --project src/GREAC.jl \
    --group-name $GROUPNAME \
-   -w $WINDOW fasta-regions -i $INPUT 
+   -w $WINDOW fasta-regions # -i $INPUT 
 
 

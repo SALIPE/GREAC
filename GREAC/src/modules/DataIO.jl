@@ -87,7 +87,6 @@ function readRegionsFromBed(
                 push!(regioes, (cromossomo, parse(Int, inicio), parse(Int, fim)))
             end
         end
-
     end
     return regioes
 end
