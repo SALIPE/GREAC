@@ -3,12 +3,15 @@
 PROJECTHOME=~/Desktop/GREAC/GREAC
 
 
-GROUPNAME=$1
-WINDOW=$2
-TRAIN=$3
-THRESHOLD=$4
-REFERENCE=$5
+TRAIN=$1
+GROUPNAME=$2
+WINDOW=$3
+METRIC=$4
+THRESHOLD=$5
+REFERENCE=$6
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
         -w $WINDOW \
-        extract-features --train-dir $TRAIN 
+        extract-features --train-dir $TRAIN \
+        --threshold $THRESHOLD \
+        --reference $REFERENCE
