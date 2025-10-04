@@ -9,18 +9,16 @@ from glob import glob
 
 import streamlit as st
 
-# Configuração da página
 st.set_page_config(
-    page_title="GREAC - Script Executor",
+    page_title="GREAC",
     page_icon="🧬",
     layout="wide"
 )
 
-home = "/home/salipe"
 # ============================================================================
 # CONFIGURAÇÃO DOS SCRIPTS
 # ============================================================================
-GROUPS_BASE_PATH = f"{home}/.project_cache"
+GROUPS_BASE_PATH = "~/.project_cache"
 SCRIPTS_CONFIG = {
     "Benchmark GREAC": {
         "script_path": "../scripts/local/benchmark.sh",
@@ -44,7 +42,7 @@ SCRIPTS_CONFIG = {
                 "name": "group_name",
                 "label": "📁 Nome do Grupo",
                 "type": "group_selector",
-                "base_path": f"{home}/.project_cache",
+                "base_path": "~/.project_cache",
                 "default": "",
                 "required": True
             },
@@ -52,7 +50,7 @@ SCRIPTS_CONFIG = {
                 "name": "window_size",
                 "label": "🪟 Janela/Window Size",
                 "type": "window_selector",
-                "base_path": f"{home}/.project_cache",
+                "base_path": "~/.project_cache",
                 "default": "",
                 "required": True
             },
@@ -106,7 +104,7 @@ SCRIPTS_CONFIG = {
                 "name": "group_name",
                 "label": "📁 Nome do Grupo",
                 "type": "group_selector",
-                "base_path": f"{home}/.project_cache",
+                "base_path": "~/.project_cache",
                 "default": "",
                 "required": True
             },
@@ -114,7 +112,7 @@ SCRIPTS_CONFIG = {
                 "name": "window_size",
                 "label": "🪟 Janela/Window Size",
                 "type": "window_selector",
-                "base_path": f"{home}/.project_cache",
+                "base_path": "~/.project_cache",
                 "default": "",
                 "required": True
             },
@@ -123,6 +121,143 @@ SCRIPTS_CONFIG = {
                 "label": "📂 Diretório da referencia",
                 "type": "text",
                 "default": None,
+                "required": False
+            }
+        ]
+    },
+    "Extração de Features": {
+        "script_path": "../scripts/local/extract-features.sh",
+        "description": "Aplica o metodo do GREAC para extração de regiões e treinamento do modelo",
+        "parameters": [
+            {
+                "name": "train_dir",
+                "label": "📂 Diretório de Treino",
+                "type": "text",
+                "default": "~/Desktop/datasets/dengue/train/kmers",
+                "required": True
+            },
+            {
+                "name": "group_name",
+                "label": "📁 Nome do Grupo",
+                "type": "group_selector",
+                "base_path": "~/.project_cache",
+                "default": "",
+                "required": True
+            },
+            {
+                "name": "window_size",
+                "label": "🪟 Janela/Window Size",
+                "type": "window_selector",
+                "base_path": "~/.project_cache",
+                "default": "",
+                "required": True
+            },
+            {
+                "name": "metric",
+                "label": "Métrica",
+                "type": "select",
+                "options": ["manhattan", "euclidian", "chisquared", "mahalanobis", "kld"],
+                "default": "manhattan",
+                "required": True
+            },
+            {
+                "name": "threshold",
+                "label": "Percentual de consideração de janela",
+                "type": "number",
+                "default": 0.0,
+                "step": 0.1,
+                "format": "%.1f",
+                "required": True
+            },
+             {
+                "name": "reference_path",
+                "label": "📄 Arquivo de Referência (.fasta)",
+                "type": "file_path",
+                "extensions": [".fasta", ".fa", ".fas"],
+                "default": "~/Desktop/datasets/denv/",
+                "required": True
+            },
+            {
+                "name": "cache",
+                "label": "Usar Cache",
+                "type": "checkbox",
+                "default": True,
+                "required": False
+            }
+        ]
+    },
+    "Classificação": {
+        "script_path": "../scripts/local/file-classification.sh",
+        "description": "Classifica um arquivo baseado em um modelo pré-treinado",
+        "parameters": [
+            {
+                "name": "train_dir",
+                "label": "📂 Diretório de Treino",
+                "type": "text",
+                "default": "~/Desktop/datasets/dengue/train/kmers",
+                "required": True
+            },
+            {
+                "name": "test_dir",
+                "label": "📂 Diretório de Teste",
+                "type": "text",
+                "default": "~/Desktop/datasets/dengue/test",
+                "required": True
+            },
+            {
+                "name": "group_name",
+                "label": "📁 Nome do Grupo",
+                "type": "group_selector",
+                "base_path": "~/.project_cache",
+                "default": "",
+                "required": True
+            },
+            {
+                "name": "window_size",
+                "label": "🪟 Janela/Window Size",
+                "type": "window_selector",
+                "base_path": "~/.project_cache",
+                "default": "",
+                "required": True
+            },
+            {
+                "name": "metric",
+                "label": "Métrica",
+                "type": "select",
+                "options": ["manhattan", "euclidian", "chisquared", "mahalanobis", "kld"],
+                "default": "manhattan",
+                "required": True
+            },
+            {
+                "name": "kmer_size",
+                "label": "Tamanho do K-mer",
+                "type": "number",
+                "default": 0,
+                "step": 1,
+                "required": True
+            },
+            {
+                "name": "threshold",
+                "label": "Percentual de consideração de janela",
+                "type": "number",
+                "default": 0.0,
+                "step": 0.1,
+                "format": "%.1f",
+                "required": True
+            },
+             {
+                "name": "reference_path",
+                "label": "📄 Arquivo de Referência (.fasta)",
+                "type": "file_path",
+                "extensions": [".fasta", ".fa", ".fas"],
+                "default": "~/Desktop/datasets/denv/",
+                "required": True
+            },
+            {
+                "name": "cache",
+                "label": "Usar Cache",
+                "type": "checkbox",
+                "default": True,
                 "required": False
             }
         ]
@@ -226,7 +361,7 @@ def render_parameter(param_config: Dict[str, Any], key_prefix: str, context: Dic
         )
     elif param_type == "group_selector":
         # Campo híbrido para seleção/digitação de grupo
-        base_path = param_config.get("base_path", GROUPS_BASE_PATH)
+        base_path = os.path.expanduser(GROUPS_BASE_PATH)
         available_groups = get_available_groups(base_path)
         
         st.markdown(f"**{label}**" + (" *" if required else ""))
@@ -268,7 +403,7 @@ def render_parameter(param_config: Dict[str, Any], key_prefix: str, context: Dic
     
     elif param_type == "window_selector":
         # Campo híbrido para seleção/digitação de janela (depende do grupo)
-        base_path = param_config.get("base_path", GROUPS_BASE_PATH)
+        base_path =  os.path.expanduser(GROUPS_BASE_PATH)
         group_name = context.get("group_name") if context else None
         
         st.markdown(f"**{label}**" + (" *" if required else ""))
