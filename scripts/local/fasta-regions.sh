@@ -17,11 +17,17 @@ PROJECTHOME=~/Desktop/GREAC/GREAC
 # INPUT=~/Desktop/GREAC/study-cases/HBV/data
 # GROUPNAME=hbv
 
-GROUPNAME=$1
-WINDOW=$2
+GROUPNAME="$1"
+WINDOW="$2"
+INPUT="$3"
 
-cd $PROJECTHOME && julia --project src/GREAC.jl \
-   --group-name $GROUPNAME \
-   -w $WINDOW fasta-regions # -i $INPUT 
+CMD="cd $PROJECTHOME && julia --project src/GREAC.jl \
+   --group-name $GROUPNAME -w $WINDOW fasta-regions"
+
+if [ -n "$INPUT" ]; then
+    CMD="$CMD -i $INPUT"
+fi
+
+eval $CMD
 
 
