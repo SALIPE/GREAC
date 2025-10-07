@@ -12,11 +12,10 @@ function generate_report_pdf(
     groupName::String,
     model,
     classification_probs,
-    results,
-    output_file="analysis_report.pdf")
+    results)
     # Set the backend to PDF-compatible backend
     gr()
-
+    output_file = "analysis_report_$groupName.pdf"
     # Create the first plot: Variants Regions Behavior
     plt1 = plot(title="Variants Regions Behavior - $(length(model.regions)) windows",
         titlefont=10,

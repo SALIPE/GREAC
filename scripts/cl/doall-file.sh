@@ -27,7 +27,7 @@ BEES_14=~/Desktop/datasets/bees/data_14
 BEES_15=~/Desktop/datasets/bees/data_15
 BEES_16=~/Desktop/datasets/bees/data_16
 
-MEDIBEES_1=~/Desktop/datasets/medibees/data1/all
+MEDIBEES_1=~/Desktop/datasets/medibees/data1/all2
 
 GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
 
@@ -261,19 +261,35 @@ function get_kmers_bees_chr() {
     done
 }
 
-
 function get_kmers_medibees() {
-    for variant in anatoliaca carnica caucasia cypria iberiensis intermissa jemenitica ligustica meda mellifera ruttneri saharienis siciliana syriaca; do
-        gramep get-only-kmers \
-            --rpath $REF_MEDIBEES_1 \
-            --spath $SOURCE/$variant.fasta \
-            --save-path $SOURCE/kmers/ \
-            --word $KMERSIZE  \
-            --step 1 -d ALL
-        
-        cp $SOURCE/$variant.fasta kmers/$variant/$variant.fasta
+    for variant in carnica iberiensis jemenitica ligustica meda mellifera ruttneri sahariensis siciliana syriaca; do
+        (
+            gramep get-only-kmers \
+                --rpath $REF_MEDIBEES_1 \
+                --spath $SOURCE/train/$variant.fasta \
+                --save-path $SOURCE/train/kmers/ \
+                --word $KMERSIZE \
+                --step 1 -d ALL
+            mv $SOURCE/train/$variant.fasta kmers/$variant/$variant.fasta
+        ) &
     done
+    wait  # Aguarda todos os processos em background terminarem
+    echo "Todos os processos concluídos!"
 }
+
+
+# function get_kmers_medibees() {
+#     for variant in carnica iberiensis jemenitica ligustica meda mellifera ruttneri sahariensis siciliana syriaca; do
+#         gramep get-only-kmers \
+#             --rpath $REF_MEDIBEES_1 \
+#             --spath $SOURCE/train/$variant.fasta \
+#             --save-path $SOURCE/train/kmers/ \
+#             --word $KMERSIZE \
+#             --step 1 -d ALL
+        
+#         mv $SOURCE/train/$variant.fasta kmers/$variant/$variant.fasta
+#     done
+# }
 
 TRAIN=$SOURCE/train/kmers
 FILE=/home/a61491/Desktop/datasets/medibees/individuos_teste.fasta
@@ -292,50 +308,53 @@ if [ ! -d "$SOURCE" ]; then
 fi
 
 
-for i in {1..1}; do
+for i in {1..10}; do
     echo "Iteração $i de 100"
     
-    # $BALANCEDATASET/test.sh $SOURCE
+    $BALANCEDATASET/test.sh $SOURCE
 
-    # cd $SOURCE/train
-    # mkdir -p kmers
+    cd $SOURCE/train
+    mkdir -p kmers
 
-    # case $GROUPNAME in
-    #     denv)
-    #         get_kmers_denv
-    #         ;;
-    #     hbv)
-    #         get_kmers_hbv
-    #         ;;
-    #     hiv)
-    #         get_kmers_hiv
-    #         ;;
-    #     hiv2)
-    #         get_kmers_hiv2
-    #         ;;
-    #     sars)
-    #         get_kmers_sars
-    #         ;;
-    #     monkeypox)
-    #         get_kmers_monkeypox
-    #         ;;
-    #     bees[0-9]*)
-    #         if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then
-    #             chr="${BASH_REMATCH[1]}"
-    #             get_kmers_bees_chr $chr
-    #         else
-    #             echo "❌ Erro: Formato inválido para bees: $GROUPNAME"
-    #             exit 1
-    #         fi
-    #         ;;
-    #     *)
-    #         echo "❌ Erro: GROUPNAME inválido: $GROUPNAME"
-    #         exit 1
-    #         ;;
-    # esac
+    case $GROUPNAME in
+        denv)
+            get_kmers_denv
+            ;;
+        hbv)
+            get_kmers_hbv
+            ;;
+        hiv)
+            get_kmers_hiv
+            ;;
+        hiv2)
+            get_kmers_hiv2
+            ;;
+        sars)
+            get_kmers_sars
+            ;;
+        monkeypox)
+            get_kmers_monkeypox
+            ;;
+        medibees[0-9]*)
+            get_kmers_medibees
+            ;;
+        bees[0-9]*)
+            if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then
+                chr="${BASH_REMATCH[1]}"
+                get_kmers_bees_chr $chr
+            else
+                echo "❌ Erro: Formato inválido para bees: $GROUPNAME"
+                exit 1
+            fi
+            ;;
+        *)
+            echo "❌ Erro: GROUPNAME inválido: $GROUPNAME"
+            exit 1
+            ;;
+    esac
 
     
-    $GREAC $TRAIN $FILE $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
+    $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
     
 done
 
