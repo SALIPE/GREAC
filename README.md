@@ -18,6 +18,94 @@ GREAC (Genomic Region Extraction and Classifier) is a novel computational method
 - **High-performance**: Optimized Julia implementation for computational efficiency
 - **Flexible classification**: Multiple distance metrics and evaluation tools
 - **Benchmarking suite**: Comprehensive performance evaluation capabilities
+---
+
+## 🚀 User Guide: Installation and First Run
+
+This section will guide you through setting up your **Julia environment** and executing a minimal working example using the provided `toymodel.sh` script.
+
+### 1. Install Julia
+
+GREAC requires **Julia 1.6 or newer**.  
+You can install Julia by following the instructions for your operating system:
+
+#### Linux / macOS
+```bash
+# Download and extract Julia (example for v1.10)
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz
+tar -xvzf julia-1.10.4-linux-x86_64.tar.gz
+sudo mv julia-1.10.4 /opt/
+sudo ln -s /opt/julia-1.10.4/bin/julia /usr/local/bin/julia
+```
+
+#### Windows
+Download the installer from [https://julialang.org/downloads/](https://julialang.org/downloads/) and follow the setup wizard.
+
+You can verify the installation by running:
+```bash
+julia --version
+```
+
+---
+
+### 2. Clone GREAC
+
+Clone the GREAC repository from GitHub:
+
+```bash
+git clone https://github.com/SALIPE/GREAC.git
+cd GREAC
+```
+
+---
+
+### 3. Initialize the Julia Environment
+
+GREAC is a **Julia project** and uses the built-in **Pkg** environment manager.  
+You must instantiate the environment before running any script to ensure all dependencies are installed.
+
+Start the Julia REPL in the project folder:
+
+```bash
+julia --project=./GREAC
+```
+
+Then, in the Julia REPL, press `]` to enter **Pkg mode**, and run:
+
+```julia
+pkg> resolve
+pkg> instantiate
+```
+
+This will download and compile all the required packages for GREAC.
+
+To exit Pkg mode, press the **Backspace** key, and then exit the Julia REPL:
+```julia
+julia> exit()
+```
+
+---
+
+### 4. Run the Toy Model Example
+
+A minimal example is provided for first-time users to test the workflow.
+
+Execute the following shell script:
+
+```bash
+cd scripts
+chmod +x hbv_benchmark_toymodel.sh
+./hbv_benchmark_toymodel.sh
+```
+
+This script:
+- Loads the example dataset included in the repository
+- Performs basic k-mer extraction and classification
+- Outputs results in the `GREAC/` directory
+
+> 💡 **Tip:** The `hbv_benchmark_toymodel.sh` script is a good starting point to verify that your Julia environment and GREAC setup are working correctly.
+
+---
 
 ## Usage
 
@@ -30,26 +118,38 @@ For the full workflow using `scripts/local/doall.sh`, install these external too
 
 ### [FastasSplitter](https://github.com/SALIPE/Fasta-splitter) - For Dataset Balancing
 
+## Usage
+
+### External Dependencies (for complete workflow)
+
+For the full workflow using `scripts/local/doall.sh`, install these external tools:
+
+- **[GRAMEP](https://github.com/omatheuspimenta/GRAMEP)** – For exclusive k-mer search  
+- **[FastasSplitter](https://github.com/SALIPE/Fasta-splitter)** – For dataset balancing
+
+---
+
 ## Quick Start
 
 ```bash
 cd GREAC
+
 # Basic feature extraction
-julia --project src/GREAC.jl  extract-features --group-name denv --window 0.1 --train-dir /path/to/training/data
+julia --project src/GREAC.jl extract-features --group-name denv --window 0.1 --train-dir /path/to/training/data
 
 # Run benchmark with classification
-julia --project src/GREAC.jl  benchmark --group-name denv --window 0.1 --train-dir /path/to/train --test-dir /path/to/test
+julia --project src/GREAC.jl benchmark --group-name denv --window 0.1 --train-dir /path/to/train --test-dir /path/to/test
 
 # Brute Force Parameters search
-julia --project src/GREAC.jl  fit-parameters --group-name denv --window 0.05 --train-dir /path/to/train --test-dir /path/to/test
+julia --project src/GREAC.jl fit-parameters --group-name denv --window 0.05 --train-dir /path/to/train --test-dir /path/to/test
 
 # Create reduced dataset with the extracted regions
-julia --project src/GREAC.jl --group-name $GROUPNAME -w $WINDOW fasta-regions -i /path/to/dataset 
+julia --project src/GREAC.jl --group-name $GROUPNAME -w $WINDOW fasta-regions -i /path/to/dataset
 ```
 
-## Usage
+---
 
-### Command Structure
+## Command Structure
 
 ```bash
 julia --project src/GREAC.jl [GLOBAL OPTIONS] COMMAND [COMMAND OPTIONS]
