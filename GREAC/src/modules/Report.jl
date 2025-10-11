@@ -11,11 +11,11 @@ function generate_report_pdf(
     wnwPercent::Float32,
     groupName::String,
     model,
-    classification_probs,
+    outputdir,
     results)
     # Set the backend to PDF-compatible backend
     gr()
-    output_file = "analysis_report_$groupName.pdf"
+    output_file = "$outputdir/analysis_report_$groupName.pdf"
     # Create the first plot: Variants Regions Behavior
     plt1 = plot(title="Variants Regions Behavior - $(length(model.regions)) windows",
         titlefont=10,

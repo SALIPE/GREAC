@@ -208,12 +208,6 @@ function greacClassification(
 
     results = compute_variant_metrics(model.classes, y_true, y_pred)
 
-    Report.generate_report_pdf(
-        wnwPercent,
-        groupName,
-        model,
-        classification_probs,
-        results)
 
     @info "f1 = " results[:macro][:f1]
 
@@ -272,6 +266,13 @@ function greacClassification(
 
             write(io, line * "\n")
         end
+
+        Report.generate_report_pdf(
+            wnwPercent,
+            groupName,
+            model,
+            outputdir,
+            results)
     end
     return results[:macro][:f1]
 end
