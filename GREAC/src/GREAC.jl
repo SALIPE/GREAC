@@ -411,7 +411,7 @@ function getKmersDistributionPerClass(
         end
 
         @info meta_data
-        # @show Int(win_size)
+        @info "Total k-mer set" length(kmerset)
         # @show Int(maxSeqLen)
 
         distribution::ClassificationModel.MultiClassModel = ClassificationModel.fitMulticlass(
@@ -567,6 +567,7 @@ function add_extract_features_args!(settings)
         required = true
         "--threshold"
         help = "Window theshold consideration"
+        arg_type = Float16
         required = false
         "--reference"
         help = "reference path"
