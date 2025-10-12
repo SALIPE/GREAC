@@ -26,27 +26,13 @@ This section will guide you through setting up your **Julia environment** and ex
 
 ### 1. Install Julia
 
-GREAC requires **Julia 1.6 or newer**.  
+GREAC requires **Julia 1.11 or newer**.  
 You can install Julia by following the instructions for your operating system:
 
-#### Linux / macOS
+#### Linux 
 ```bash
-# Download and extract Julia (example for v1.10)
-wget https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz
-tar -xvzf julia-1.10.4-linux-x86_64.tar.gz
-sudo mv julia-1.10.4 /opt/
-sudo ln -s /opt/julia-1.10.4/bin/julia /usr/local/bin/julia
+curl -fsSL https://install.julialang.org | sh
 ```
-
-#### Windows
-Download the installer from [https://julialang.org/downloads/](https://julialang.org/downloads/) and follow the setup wizard.
-
-You can verify the installation by running:
-```bash
-julia --version
-```
-
----
 
 ### 2. Clone GREAC
 
