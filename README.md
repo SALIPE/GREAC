@@ -1,4 +1,7 @@
-<img src="greac_logo.jpg" width="500">
+<div style="display:flex;justify-content:center;">
+<img src="greac_logo_semfundo.png" width="500">
+</div>
+
 
 # GREAC - Genomic Region Extraction and Classifier
 
@@ -22,7 +25,7 @@ GREAC (Genomic Region Extraction and Classifier) is a novel computational method
 
 ## 🚀 User Guide: Installation and First Run
 
-This section will guide you through setting up your **Julia environment** and executing a minimal working example using the provided `toymodel.sh` script.
+This section will guide you through setting up your **Julia environment** and executing a minimal working example using the provided `hbv_benchmark_toymodel.sh` script.
 
 ### 1. Install Julia
 
@@ -59,8 +62,8 @@ julia --project=./GREAC
 Then, in the Julia REPL, press `]` to enter **Pkg mode**, and run:
 
 ```julia
-pkg> resolve
 pkg> instantiate
+pkg> resolve
 ```
 
 This will download and compile all the required packages for GREAC.
@@ -156,7 +159,7 @@ julia --project src/GREAC.jl [GLOBAL OPTIONS] COMMAND [COMMAND OPTIONS]
 Extract k-mer features from genomic sequences for downstream analysis.
 
 ```bash
-GREAC --group-name denv --window 0.1 extract-features  --train-dir /data/training/
+julia --project --group-name denv --window 0.1 extract-features  --train-dir /data/training/
 ```
 
 **Options:**
@@ -167,7 +170,7 @@ GREAC --group-name denv --window 0.1 extract-features  --train-dir /data/trainin
 Perform classification benchmark with confusion matrix generation.
 
 ```bash
-GREAC --group-name denv --window 0.1 benchmark \
+julia --project --group-name denv --window 0.1 benchmark \
   --train-dir /data/training/ --test-dir /data/testing/ \
   --metric manhattan --threshold 0.05 --output-directory /results/
 ```
@@ -258,7 +261,7 @@ More examples are disposed in [Shell Scripts Examples](./scripts/README.md)
 **Memory errors with large datasets:**
 ```bash
 # Use smaller window sizes or process in batches
-GREAC benchmark --window 0.05 --no-cache [other options]
+julia --project benchmark --window 0.05 --no-cache [other options]
 ```
 
 **File format errors:**

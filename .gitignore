@@ -24,7 +24,6 @@ docs/site/
 GREAC/Manifest.toml
 GREAC/greac/
 GREAC/output**/
-*.png
 /.vscode
 /compiled_app
 /.project_cache
