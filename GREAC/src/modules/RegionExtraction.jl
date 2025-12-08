@@ -134,14 +134,119 @@ function regionsConjuction(
 
 end
 
+function generate_kmers(k::Int)
+    nucleotides = ['A', 'C', 'T', 'G']
+    sketch = Dict{String,Int}()
+    function gerar_combinacoes(prefixo::String, tamanho_restante::Int)
+        if tamanho_restante == 0
+            sketch[prefixo] = 0
+            return
+        end
+
+        for nucleotide in nucleotides
+            gerar_combinacoes(prefixo * nucleotide, tamanho_restante - 1)
+        end
+    end
+
+    gerar_combinacoes("", k)
+
+    return sketch
+end
+
+function rolling_hash_kmers(
+    sequence::String,
+    kmer_hash_map::Dict{UInt64,String},
+    k_len::Int)::Dict{UInt64,String}
+
+    seq_len = length(sequence)
+
+    update_hashmap = Dict{UInt64,String}()
+
+    if seq_len < k_len
+        error("K-mer size must be greater than the inputed sequence")
+    end
+
+    base = UInt64(5)
+
+    power = UInt64(1)
+    for i in 1:(k_len-1)
+        power *= base
+    end
+
+    current_hash = UInt64(0)
+    @inbounds for i in 1:k_len
+        current_hash = current_hash * base + UInt64(sequence[i])
+    end
+
+    if haskey(kmer_hash_map, current_hash)
+        update_hashmap[current_hash] = kmer_hash_map[current_hash]
+    end
+
+    @inbounds for i in (k_len+1):seq_len
+        current_hash = current_hash - UInt64(sequence[i-k_len]) * power
+        current_hash = current_hash * base + UInt64(sequence[i])
+
+        if haskey(kmer_hash_map, current_hash)
+            update_hashmap[current_hash] = kmer_hash_map[current_hash]
+        end
+    end
+
+    return update_hashmap
+
+end
+
+function get_exclusive_kmers(
+    k_len::Int,
+    variantDirPath::String)::Set{String}
+
+    sketch::Dict{String,Int} = generate_kmers(k_len)
+    kmer_hash_map = Dict{UInt64,String}()
+
+    for kmer in keys(sketch)
+        h = compute_hash(kmer)
+        if !haskey(kmer_hash_map, h)
+            kmer_hash_map[h] = kmer
+        end
+    end
+
+    all_exclusive_kmers = Set{String}()
+    intersercion = kmer_hash_map
+    variantDirs::Vector{String} = readdir(variantDirPath)
+
+    @inbounds for v in eachindex(variantDirs)
+        variant::String = variantDirs[v]
+        println("Getting $variant k-mers")
+        var_hash = kmer_hash_map
+
+        sequences::Vector{String} = DataIO.loadStringSequences("$variantDirPath/$variant/$variant.fasta")
+
+        for seq in sequences
+            var_hash = rolling_hash_kmers(seq, var_hash, k_len)
+            intersercion = rolling_hash_kmers(seq, intersercion, k_len)
+        end
+
+        for (_, kmer_values) in var_hash
+            union!(all_exclusive_kmers, Set([kmer_values]))
+        end
+
+    end
+
+
+    for (_, kmer_value) in intersercion
+        filter!(e -> e != kmer_value, all_exclusive_kmers)
+    end
+
+    return all_exclusive_kmers
+end
+
 
 # Function to extract discriminatives features from each class
 function extractFeaturesTemplate(
     wnwPercent::Float32,
     groupName::String,
     variantDirPath::String,
-    histogramThreshold::Float16=Float16(0.8)
-)
+    k_len::Int,
+    histogramThreshold::Float16=Float16(0.8))
 
     @info "Threads:" Threads.nthreads()
     cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
@@ -155,12 +260,16 @@ function extractFeaturesTemplate(
     variantDirs::Vector{String} = readdir(variantDirPath)
 
     outputs = Vector{Tuple{String,Tuple{Vector{UInt16},BitArray}}}(undef, length(variantDirs))
-    kmerset = Set{String}()
 
-    for variant in variantDirs
-        variantKmers = DataIO.read_pickle_data("$variantDirPath/$variant/$(variant)_ExclusiveKmers.sav")
-        union!(kmerset, Set(variantKmers))
-    end
+    kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
+
+    @info "Found: " kmerset
+    # kmerset = Set{String}()
+
+    # for variant in variantDirs
+    #     variantKmers = DataIO.read_pickle_data("$variantDirPath/$variant/$(variant)_ExclusiveKmers.sav")
+    #     union!(kmerset, Set(variantKmers))
+    # end
 
 
     @inbounds for v in eachindex(variantDirs)
@@ -253,6 +362,8 @@ function getOccursin_rolling_hash(
 
     return positions
 end
+
+
 
 function _wndwExlcusiveKmersHistogram_bytes(
     exclusiveKmers::Vector{String},

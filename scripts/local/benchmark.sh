@@ -13,7 +13,12 @@ REFERENCE=$8
 
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
-   -w $WINDOW benchmark --train-dir $TRAIN --test-dir $TESTDIR -m $METRIC --threshold $THRESHOLD \
+   -w $WINDOW benchmark \
+   --train-dir $TRAIN \
+   --test-dir $TESTDIR \
+   -m $METRIC \
+   -k $KMER \
+   --threshold $THRESHOLD \
    -o ./output-$KMER --reference $REFERENCE 
 
 # cd $PROJECTHOME &&  julia --project src/GREAC.jl --no-cache \

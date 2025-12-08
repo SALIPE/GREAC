@@ -359,7 +359,8 @@ function getKmersDistributionPerClass(
     groupName::String,
     variantDirPath::String,
     referencePath::String,
-    use_xg::Bool
+    use_xg::Bool,
+    k_len::Int
 )
     cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
@@ -379,12 +380,14 @@ function getKmersDistributionPerClass(
 
         variantDirs::Vector{String} = readdir(variantDirPath)
 
-        kmerset = Set{String}()
+        kmerset::Set{String} = RegionExtraction.get_exclusive_kmers(k_len, variantDirPath)
 
-        @simd for variant in variantDirs
-            variantKmers = DataIO.read_pickle_data("$variantDirPath/$variant/$(variant)_ExclusiveKmers.sav")
-            union!(kmerset, Set(variantKmers))
-        end
+        # kmerset = Set{String}()
+
+        # @simd for variant in variantDirs
+        #     variantKmers = DataIO.read_pickle_data("$variantDirPath/$variant/$(variant)_ExclusiveKmers.sav")
+        #     union!(kmerset, Set(variantKmers))
+        # end
 
         meta_data = Dict{String,Int}()
         byte_seqs = Dict{String,Vector{Base.CodeUnits}}()
@@ -467,6 +470,7 @@ function fitParameters(
                     window,
                     groupName,
                     args["train-dir"],
+                    args["k-len"],
                     threhold)
 
                 getKmersDistributionPerClass(
@@ -474,7 +478,8 @@ function fitParameters(
                     groupName,
                     args["train-dir"],
                     args["reference"],
-                    args["usexgboost"]
+                    args["usexgboost"],
+                    args["k-len"],
                 )
 
                 f1 = greacClassification(
@@ -512,6 +517,10 @@ function add_benchmark_args!(settings)
         "--reference"
         help = "reference path"
         required = true
+        "-k", "--k-len"
+        help = "K-mer K value"
+        required = true
+        arg_type = Int
         "-m", "--metric"
         help = "Metric used for classification"
         required = false
@@ -568,6 +577,10 @@ function add_extract_features_args!(settings)
         help = "Window theshold consideration"
         arg_type = Float16
         required = false
+        "-k", "--k-len"
+        help = "K-mer K value"
+        required = true
+        arg_type = Int
         "--reference"
         help = "reference path"
         required = true
@@ -630,6 +643,7 @@ function handle_benchmark(args,
         window,
         groupName,
         args["train-dir"],
+        args["k-len"],
         args["threshold"]
     )
     distribution = getKmersDistributionPerClass(
@@ -637,7 +651,8 @@ function handle_benchmark(args,
         groupName,
         args["train-dir"],
         args["reference"],
-        args["usexgboost"]
+        args["usexgboost"],
+        args["k-len"],
     )
 
     @info "Starting classification evaluation"
@@ -660,6 +675,7 @@ function extract_features(args,
         window,
         groupName,
         args["train-dir"],
+        args["k-len"],
         args["threshold"]
     )
     distribution = getKmersDistributionPerClass(
@@ -667,7 +683,8 @@ function extract_features(args,
         groupName,
         args["train-dir"],
         args["reference"],
-        args["usexgboost"]
+        args["usexgboost"],
+        args["k-len"],
     )
 end
 
