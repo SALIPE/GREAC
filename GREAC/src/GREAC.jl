@@ -412,7 +412,6 @@ function getKmersDistributionPerClass(
 
         @info meta_data
         @info "Total k-mer set" length(kmerset)
-        # @show Int(maxSeqLen)
 
         distribution::ClassificationModel.MultiClassModel = ClassificationModel.fitMulticlass(
             kmerset,

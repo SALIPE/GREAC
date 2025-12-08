@@ -154,14 +154,11 @@ function extractFeaturesTemplate(
 
     variantDirs::Vector{String} = readdir(variantDirPath)
 
-
     outputs = Vector{Tuple{String,Tuple{Vector{UInt16},BitArray}}}(undef, length(variantDirs))
-    # varKmer = Dict{String,Vector{String}}()
     kmerset = Set{String}()
 
     for variant in variantDirs
         variantKmers = DataIO.read_pickle_data("$variantDirPath/$variant/$(variant)_ExclusiveKmers.sav")
-        # varKmer[variant] = variantKmers
         union!(kmerset, Set(variantKmers))
     end
 
@@ -195,7 +192,8 @@ end
 
 function compute_hash(s::String)::UInt64
     h = UInt64(0)
-    base = UInt64(257)
+    # base = UInt64(4^length(s))
+    base = UInt64(5)
 
     for char in s
         h = h * base + UInt64(char)
@@ -216,7 +214,7 @@ function getOccursin_rolling_hash(
         return positions
     end
 
-    base = UInt64(257)
+    base = UInt64(5)
 
     # Calculate base^(k_len-1) for rolling hash
     power = UInt64(1)
@@ -278,6 +276,13 @@ function _wndwExlcusiveKmersHistogram_bytes(
         end
         push!(kmer_hash_map[h], kmer)
     end
+
+    for (key, value) in kmer_hash_map
+        if length(value) > 1
+            @show key value
+        end
+    end
+
 
     @floop for seq in sequences
         positions = getOccursin_rolling_hash(seq, kmer_hash_map, k_len)

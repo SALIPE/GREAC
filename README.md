@@ -56,7 +56,7 @@ You must instantiate the environment before running any script to ensure all dep
 Start the Julia REPL in the project folder:
 
 ```bash
-julia --project=./GREAC
+julia --project=.
 ```
 
 Then, in the Julia REPL, press `]` to enter **Pkg mode**, and run:
