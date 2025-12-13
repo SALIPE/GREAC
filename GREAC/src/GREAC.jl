@@ -149,7 +149,7 @@ function greacClassification(
     classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name, distances))
 
     for class in model.classes
-        file_path::String = "$folderPath/$class.fasta"
+        file_path::String = "$folderPath/$class"
         total = DataIO.countSequences(file_path)
 
         chunk_size = 10000
@@ -380,7 +380,7 @@ function getKmersDistributionPerClass(
 
         variantDirs::Vector{String} = readdir(variantDirPath)
 
-        kmerset::Set{String} = RegionExtraction.get_exclusive_kmers(k_len, variantDirPath)
+        kmerset::Set{String} = RegionExtraction.get_exclusive_kmers(k_len, variantDirPath, referencePath)
 
         # kmerset = Set{String}()
 
@@ -398,7 +398,7 @@ function getKmersDistributionPerClass(
         reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
 
         for variant in variantDirs
-            byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant/$variant.fasta")
+            byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant")
             meta_data[variant] = length(byte_seqs[variant])
             # minSeqLength::UInt64 = minimum(map(length, byte_seqs[variant]))
             # maxSeqLength::UInt64 = maximum(map(length, byte_seqs[variant]))
@@ -470,6 +470,7 @@ function fitParameters(
                     window,
                     groupName,
                     args["train-dir"],
+                    args["reference"],
                     args["k-len"],
                     threhold)
 
@@ -643,6 +644,7 @@ function handle_benchmark(args,
         window,
         groupName,
         args["train-dir"],
+        args["reference"],
         args["k-len"],
         args["threshold"]
     )
@@ -675,6 +677,7 @@ function extract_features(args,
         window,
         groupName,
         args["train-dir"],
+        args["reference"],
         args["k-len"],
         args["threshold"]
     )
