@@ -272,6 +272,7 @@ function get_exclusive_kmers(
     end
 
     all_exclusive_kmers = Set{String}()
+    intersection_kmers = Set{String}()
 
     variantDirs::Vector{String} = readdir(variantDirPath)
 
@@ -286,7 +287,7 @@ function get_exclusive_kmers(
     end
 
 
-    @floop for v in eachindex(variantDirs)
+    @inbounds for v in eachindex(variantDirs)
         variant::String = variantDirs[v]
         println("Getting $variant k-mers")
         var_hash = kmer_hash_map
@@ -304,14 +305,25 @@ function get_exclusive_kmers(
         freq = max_entropy(kmer_dict)
 
         filter!(e -> e[2] >= freq, kmer_dict)
+        variant_exclusive = Set{String}()
 
         for (_, kmer_values) in var_hash
-            if !(kmer_values[1] in keys(ref_kmer_dict))
-                union!(all_exclusive_kmers, Set([kmer_values[1]]))
-            end
+            # if !(kmer_values[1] in keys(ref_kmer_dict))
+            union!(all_exclusive_kmers, Set([kmer_values[1]]))
+            union!(variant_exclusive, Set([kmer_values[1]]))
+            # end
+
+
+        end
+
+        if length(intersection_kmers) == 0
+            union!(intersection_kmers, variant_exclusive)
+        else
+            intersect!(intersection_kmers, variant_exclusive)
         end
     end
 
+    filter!(e -> !(e in intersection_kmers), all_exclusive_kmers)
     return all_exclusive_kmers
 end
 

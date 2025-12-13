@@ -125,7 +125,7 @@ function fitMulticlass(
     reference_minhash_sketches, reference_region_strings = measure_reference_minhash(
         regions, reference_codeunits, kmer_size_minhash)
 
-    for (class, _) in meta_data
+    for class in keys(meta_data)
 
         class_seqs::Vector{Base.CodeUnits} = byte_seqs[class]
         println("Calculating $class probabilities")
@@ -153,6 +153,7 @@ function fitMulticlass(
 
             seq_distribution = sequence_kmer_distribution_optimized(regions, seq, collect(kmerset)) ./ length(kmerset)
 
+            total = max((length(seq_distribution) - 1), 1)
             diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
             @inbounds for i in 1:(length(seq_distribution)-1)
                 diverg[i] = abs((seq_distribution[i+1] - seq_distribution[i]))

@@ -7,7 +7,7 @@ DENGUE=~/Desktop/datasets/dengue
 HBV=~/Desktop/datasets/HBV/data
 SARS=~/Desktop/datasets/sars_cov2
 MONKEYPOX=~/Desktop/datasets/mkpx/data
-HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/variants
+HIV=~/Desktop/datasets/hiv/data
 HIV2=~/Desktop/datasets/hiv_ncbi/extracted_sequences
 
 BEES_1=~/Desktop/datasets/bees/data_1
@@ -30,11 +30,11 @@ BEES_16=~/Desktop/datasets/bees/data_16
 GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
 BALANCEDATASET=~/Desktop/Fasta-splitter/FastaSplitter
 
-REF_HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/hiv1_refseq.fasta
+REF_HIV=~/Desktop/datasets/hiv/hiv1_refseq.fasta
 REF_HBV=~/Desktop/datasets/HBV/refseq.fasta
 REF_DENV=~/Desktop/datasets/denv/refseq.fasta
 REF_SARS=~/Desktop/datasets/tutorial_data/reference/SARS-CoV2_wuhan_refseq.fasta
-REF_MONKEYPOX=~/Desktop/datasets/refseq_mkpx/ncbi_dataset/data/GCF_000857045.1/GCF_000857045.1_ViralProj15142_genomic.fna
+REF_MONKEYPOX=~/Desktop/datasets/mkpx/GCF_000857045.1_ViralProj15142_genomic.fna
 
 REF_BEES_1=~/Desktop/datasets/bees/GCA_000002195.1_Amel_4.5_genomic_Group1.fasta
 REF_BEES_2=~/Desktop/datasets/bees/GCA_000002195.1_Amel_4.5_genomic_Group2.fasta
@@ -251,7 +251,7 @@ function get_kmers_bees() {
     done
 }
 
-TRAIN=$SOURCE/train/kmers
+TRAIN=$SOURCE/train
 TESTDIR=$SOURCE/test
 METRIC=manhattan
 
@@ -272,42 +272,42 @@ for i in {1..1}; do
     
     $BALANCEDATASET/test.sh $SOURCE
 
-    cd $SOURCE/train
-    mkdir -p kmers
+    # cd $SOURCE/train
+    # mkdir -p kmers
 
-    case $GROUPNAME in
-        denv)
-            get_kmers_denv
-            ;;
-        hbv)
-            get_kmers_hbv
-            ;;
-        hiv)
-            get_kmers_hiv
-            ;;
-        hiv2)
-            get_kmers_hiv2
-            ;;
-        sars)
-            get_kmers_sars
-            ;;
-        monkeypox)
-            get_kmers_monkeypox
-            ;;
-        bees[0-9]*)
-            if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then
-                chr="${BASH_REMATCH[1]}"
-                get_kmers_bees_chr $chr
-            else
-                echo "❌ Erro: Formato inválido para bees: $GROUPNAME"
-                exit 1
-            fi
-            ;;
-        *)
-            echo "❌ Erro: GROUPNAME inválido: $GROUPNAME"
-            exit 1
-            ;;
-    esac
+    # case $GROUPNAME in
+    #     denv)
+    #         get_kmers_denv
+    #         ;;
+    #     hbv)
+    #         get_kmers_hbv
+    #         ;;
+    #     hiv)
+    #         get_kmers_hiv
+    #         ;;
+    #     hiv2)
+    #         get_kmers_hiv2
+    #         ;;
+    #     sars)
+    #         get_kmers_sars
+    #         ;;
+    #     monkeypox)
+    #         get_kmers_monkeypox
+    #         ;;
+    #     bees[0-9]*)
+    #         if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then
+    #             chr="${BASH_REMATCH[1]}"
+    #             get_kmers_bees_chr $chr
+    #         else
+    #             echo "❌ Erro: Formato inválido para bees: $GROUPNAME"
+    #             exit 1
+    #         fi
+    #         ;;
+    #     *)
+    #         echo "❌ Erro: GROUPNAME inválido: $GROUPNAME"
+    #         exit 1
+    #         ;;
+    # esac
 
     
     $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
