@@ -3,7 +3,7 @@ source ~/.py-venv/bin/activate
 
 export RUST_BACKTRACE=full
 
-DENGUE=~/Desktop/datasets/dengue
+DENGUE=~/Desktop/datasets/denv/data
 HBV=~/Desktop/datasets/HBV/data
 SARS=~/Desktop/datasets/sars_cov2
 MONKEYPOX=~/Desktop/datasets/mkpx/data

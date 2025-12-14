@@ -165,6 +165,9 @@ function rolling_hash_kmers(
     if seq_len < k_len
         error("K-mer size must be greater than the inputed sequence")
     end
+    if length(keys(kmer_hash_map)) == 0
+        error("0 k-mers found!")
+    end
 
     base = UInt64(5)
 
@@ -276,15 +279,15 @@ function get_exclusive_kmers(
 
     variantDirs::Vector{String} = readdir(variantDirPath)
 
-    println("Getting reference k-mers")
-    reference::Vector{String} = DataIO.loadStringSequences(referencePath)
-    reference_kmer_hash_map = rolling_hash_kmers(reference[1], reference_kmer_hash_map, k_len)
+    # println("Getting reference k-mers")
+    # reference::Vector{String} = DataIO.loadStringSequences(referencePath)
+    # reference_kmer_hash_map = rolling_hash_kmers(reference[1], reference_kmer_hash_map, k_len)
 
-    # For reference entropy threshold is 0
-    ref_kmer_dict = Dict{String,Int32}()
-    for (_, kmer_freq) in reference_kmer_hash_map
-        ref_kmer_dict[kmer_freq[1]] = kmer_freq[2]
-    end
+    # # For reference entropy threshold is 0
+    # ref_kmer_dict = Dict{String,Int32}()
+    # for (_, kmer_freq) in reference_kmer_hash_map
+    #     ref_kmer_dict[kmer_freq[1]] = kmer_freq[2]
+    # end
 
 
     @inbounds for v in eachindex(variantDirs)
@@ -299,15 +302,21 @@ function get_exclusive_kmers(
 
         # A busca das mais informativas tem que ser aqui em comparação com a referencia
         kmer_dict = Dict{String,Int32}()
-        for (_, kmer_freq) in var_hash
+        for kmer_freq in values(var_hash)
             kmer_dict[kmer_freq[1]] = kmer_freq[2]
+        end
+
+        if length(keys(kmer_dict)) <= 1
+            error("Insufficient k-mers found!")
+        else
+            @info "Found $(length(keys(kmer_dict))) kmers for $variant"
         end
         freq = max_entropy(kmer_dict)
 
         filter!(e -> e[2] >= freq, kmer_dict)
         variant_exclusive = Set{String}()
 
-        for (_, kmer_values) in var_hash
+        for kmer_values in values(var_hash)
             # if !(kmer_values[1] in keys(ref_kmer_dict))
             union!(all_exclusive_kmers, Set([kmer_values[1]]))
             union!(variant_exclusive, Set([kmer_values[1]]))
@@ -319,7 +328,7 @@ function get_exclusive_kmers(
         if length(intersection_kmers) == 0
             union!(intersection_kmers, variant_exclusive)
         else
-            intersect!(intersection_kmers, variant_exclusive)
+            filter!(e -> e in variant_exclusive, intersection_kmers)
         end
     end
 
