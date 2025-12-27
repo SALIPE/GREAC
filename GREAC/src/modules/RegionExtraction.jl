@@ -263,7 +263,7 @@ function get_exclusive_kmers(
 
     sketch::Dict{String,Int} = generate_kmers(k_len)
 
-    kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}()
+    kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}() # 4^klen
     reference_kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}()
 
     for kmer in keys(sketch)

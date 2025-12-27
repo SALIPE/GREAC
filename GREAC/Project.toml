@@ -1,13 +1,16 @@
 name = "GREAC"
 uuid = "89730fe7-fd85-4e0c-8219-5cbad89a3abb"
-authors = ["SALIPE"]
 version = "0.1.0"
+authors = ["SALIPE"]
 
 [deps]
 AbstractFFTs = "621f4979-c628-5d54-868e-fcf4e3e8185c"
 ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
 BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DecisionTree = "7806a523-6efd-50cb-b5f6-3fa6f1930dbb"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 FASTX = "c2308a5c-f048-11e8-3e8a-31650f418d12"
 FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
@@ -25,6 +28,9 @@ StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 XGBoost = "009559a3-9522-5dbb-924b-0b6ed2b22bb9"
 
 [compat]
+CSV = "0.10.15"
+DataFrames = "1.8.1"
+DecisionTree = "0.12.4"
 Distributions = "0.25.120"
 LinearAlgebra = "1.10.6"
 MinHash = "0.2.2"

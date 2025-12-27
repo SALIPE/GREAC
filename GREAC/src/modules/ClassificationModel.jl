@@ -8,7 +8,7 @@ ENV["USE_NCCL"] = "0"
 ENV["CUDA_VISIBLE_DEVICES"] = ""
 ENV["XGBOOST_BUILD_OPTS"] = "-DUSE_CUDA=OFF -DUSE_NCCL=OFF"
 
-using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, Distributions
+using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, Distributions, DecisionTree, Serialization
 export ClassificationModel
 
 struct MultiClassModel
@@ -127,10 +127,12 @@ function fitMulticlass(
 
     for class in keys(meta_data)
 
+
         class_seqs::Vector{Base.CodeUnits} = byte_seqs[class]
         println("Calculating $class probabilities")
         get_class_appearences = Base.Fix1(def_kmer_classes_probs, (regions, class_seqs))
 
+        # Analyze the n behaviour based on all the data from the set
         @floop for kmer in collect(kmerset)
             kmer_seq_histogram = get_class_appearences(kmer)
 
@@ -148,10 +150,13 @@ function fitMulticlass(
         intern_X = Vector{Vector{Float64}}(undef, length(class_seqs))
         intern_y = fill(class, length(class_seqs))
 
+        # Analyze each sequence in the variant set
         @floop for s in eachindex(class_seqs)
             seq::Base.CodeUnits = class_seqs[s]
 
-            seq_distribution = sequence_kmer_distribution_optimized(regions, seq, collect(kmerset)) ./ length(kmerset)
+
+            kmer_distribution, kmer_counts = sequence_kmer_distribution_optimized(regions, seq, collect(kmerset))
+            seq_distribution = kmer_distribution ./ length(kmerset)
 
             total = max((length(seq_distribution) - 1), 1)
             diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
@@ -159,7 +164,7 @@ function fitMulticlass(
                 diverg[i] = abs((seq_distribution[i+1] - seq_distribution[i]))
             end
 
-            #manhttan distance for interval trust
+            # manhttan distance for interval trust
             d = sum(abs.(seq_distribution - class_freq))
             in_group[s] = d
 
@@ -175,9 +180,7 @@ function fitMulticlass(
                     [d, 0],
                     seq_distribution,
                     diverg,
-                    minhash_jaccard_features,
-                    distances,
-                    pvalues
+                    kmer_counts
                 )
             end
         end
@@ -201,20 +204,33 @@ function fitMulticlass(
 
     if (use_xg)
         labels = unique(y_str)
-        label2int = Dict(label => i - 1 for (i, label) in enumerate(labels))
+        label2int = Dict(label => i for (i, label) in enumerate(labels))
 
         y = [label2int[cls] for cls in y_str]
         X_mat = convert(Matrix{Float32}, hcat(X...)')
-        dtrain = DMatrix(X_mat, label=y)
+        # dtrain = DMatrix(X_mat, label=y)
 
-        model = xgboost(
-            dtrain,
-            num_class=length(labels),
-            objective="multi:softprob"
+        model = DecisionTree.build_forest(y, X_mat)
+
+        # Salvar modelo e mapeamento de labels
+        model_data = Dict(
+            "model" => model,
+            "labels" => labels,
+            "label2int" => label2int,
+            "int2label" => Dict(v => k for (k, v) in label2int)
         )
-        # objective="multi:softmax")
 
-        XGBoost.save(model, xg_model_name)
+        mkpath(dirname(xg_model_name))
+        serialize(xg_model_name, model_data)
+
+        # model = xgboost(
+        #     dtrain,
+        #     num_class=length(labels),
+        #     objective="multi:softprob"
+        # )
+        # # objective="multi:softmax")
+
+        # XGBoost.save(model, xg_model_name)
     end
 
     return MultiClassModel(
@@ -283,16 +299,21 @@ function predict_membership(
         Bool,
         String,
         Tuple{Dict{Int,MinHashSketch},Dict{Int,String}}},
-    input::Tuple{Vector{Float64},Base.CodeUnits})::Tuple{String,Dict{String,Float64}}
+    input::Tuple{Vector{Float64},Base.CodeUnits,Vector{Int32}})::Tuple{String,Dict{String,Float64}}
 
     model, metric, use_xg, xg_model_name, distances = parameters
     reference_minhash_sketches, reference_region_strings = distances
-    X, seq = input
+    X, seq, kmer_counts = input
     classification = Dict{String,Float64}()
 
     if (use_xg)
-        modelo_carregado = Booster(DMatrix[])
-        XGBoost.load!(modelo_carregado, xg_model_name)
+        # modelo_carregado = Booster(DMatrix[])
+        # XGBoost.load!(modelo_carregado, xg_model_name)
+        if !isfile(xg_model_name)
+            error("Arquivo de modelo não encontrado: $xg_model_name")
+        end
+
+        modelo_carregado = deserialize(xg_model_name)
     end
 
     diverg::Vector{Float64} = zeros(length(X) - 1)
@@ -320,18 +341,24 @@ function predict_membership(
         memb::Float64 = gaussian_membership(stats[:mu], stats[:sigma], d)
 
         if (use_xg)
+            labels_int = collect(1:length(modelo_carregado["labels"]))
             i_novo = [vcat(
                 [d, memb],
                 X,
                 diverg,
-                minhash_jaccard_features,
-                distances,
-                pvalues
+                kmer_counts
             )]
             i_novo_mat = convert(Matrix{Float32}, hcat(i_novo...)')
-            y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
+            # y_pred_int = XGBoost.predict(modelo_carregado, DMatrix(i_novo_mat))
+            y_pred_proba = DecisionTree.apply_forest_proba(
+                modelo_carregado["model"],
+                i_novo_mat,
+                labels_int)
 
-            classification[c] = y_pred_int[i]
+            label_idx = findfirst(==(c), modelo_carregado["labels"])
+
+            classification[c] = y_pred_proba[1, label_idx]
+            # classification[c] = y_pred_int[i]
         else
             classification[c] = memb
         end
@@ -387,10 +414,13 @@ function sequence_kmer_distribution_optimized(
     regions::Vector{Tuple{Int,Int}},
     seq::Base.CodeUnits,
     kmerset::Vector{String}
-)::Vector{UInt64}
+)::Tuple{Vector{UInt64},Vector{Int32}}
+
 
     # Pré-processa os kmers para busca mais eficiente
     kmer_set = Set(codeunits(kmer) for kmer in kmerset)
+    kmer_histogram = Dict{Vector{UInt8},Int32}((kmer, 0) for kmer in kmer_set)
+
     kmer_length = length(kmerset[1])
 
     kmer_distribution::Vector{UInt64} = zeros(UInt64, length(regions))
@@ -408,46 +438,16 @@ function sequence_kmer_distribution_optimized(
 
             if kmer_vector in kmer_set
                 push!(region_kmers, kmer_vector)
+                kmer_histogram[kmer_vector] += 1
+
             end
         end
 
         kmer_distribution[region_idx] = length(region_kmers)
     end
 
-    return kmer_distribution
+    return kmer_distribution, collect(values(kmer_histogram))
 end
-
-function sequence_kmer_distribution(
-    regions::Vector{Tuple{Int,Int}},
-    seq::Base.CodeUnits,
-    kmerset::Vector{String}
-)::Vector{UInt64}
-
-    @floop for kmer in kmerset
-        local_seq_histogram = zeros(UInt64, length(regions))
-        seq_len = length(seq)
-
-        for i in eachindex(regions)
-            init_pos, end_pos = regions[i]
-
-            if (end_pos > seq_len)
-                end_pos = seq_len
-            end
-
-            wndw_buffer = @view seq[init_pos:end_pos]
-
-            if RegionExtraction.occursinKmerBit(codeunits(kmer), wndw_buffer)
-                local_seq_histogram[i] += 1
-            end
-        end
-
-        @reduce(
-            kmer_distribution = zeros(UInt64, length(regions)) .+ local_seq_histogram
-        )
-    end
-    return kmer_distribution
-end
-
 
 
 function predict_raw(

@@ -14,7 +14,8 @@ using FLoops,
     .DataIO,
     .RegionExtraction,
     .ClassificationModel,
-    MinHash
+    MinHash,
+    CSV, DataFrames, Dates
 
 export GREAC
 
@@ -67,13 +68,13 @@ function greacClassificationFile(
         @floop for local_idx in 1:current_chunk_size
             id, seq::Base.CodeUnits = classeqs[local_idx]
 
-            kmer_distribution = ClassificationModel.sequence_kmer_distribution_optimized(
+            kmer_distribution, kmer_counts = ClassificationModel.sequence_kmer_distribution_optimized(
                 regions, seq, kmerset
             )
             seq_distribution = kmer_distribution ./ length(kmerset)
 
             if !iszero(sum(seq_distribution))
-                cl, memberships = classify((seq_distribution, seq))
+                cl, memberships = classify((seq_distribution, seq, kmer_counts))
                 inner_classifications[local_idx] = (id, cl, memberships)
             end
         end
@@ -173,13 +174,13 @@ function greacClassification(
             @floop for local_idx in 1:current_chunk_size
                 id, seq::Base.CodeUnits = classeqs[local_idx]
 
-                kmer_distribution = ClassificationModel.sequence_kmer_distribution_optimized(
+                kmer_distribution, kmer_counts = ClassificationModel.sequence_kmer_distribution_optimized(
                     regions, seq, kmerset
                 )
                 seq_distribution = kmer_distribution ./ length(kmerset)
 
                 if !iszero(sum(seq_distribution))
-                    cl, memberships = classify((seq_distribution, seq))
+                    cl, memberships = classify((seq_distribution, seq, kmer_counts))
                     inner_classifications[local_idx] = (id, cl, memberships)
                     inner_y_pred[local_idx] = cl
                 else
@@ -453,26 +454,41 @@ end
 function fitParameters(
     args,
     groupName::String,
-    window::Float32
+    window::Float32,
+    kmer::Int=7
 )
-    current_f1 = 0
+
+    current_f1 = 0.0
     current_w = window
     current_metric = "manhattan"
-    current_threhold = 0.5
+    current_threshold = 0.5
+
+    results = DataFrame(
+        timestamp=DateTime[],
+        window=Float32[],
+        threshold=Float16[],
+        kmer=Int[],
+        metric=String[],
+        f1_score=Float64[]
+    )
 
     while window <= 0.0025
+        @info ">> Window " window
+        threshold::Float16 = 0.5
 
-        threhold::Float16 = 0.5
-        while threhold <= 0.8
-            rm("$(homedir())/.project_cache/$(groupName)/$window"; recursive=true, force=true)
+        while threshold <= 0.8
+            rm("$(homedir())/.project_cache/$(groupName)/$window";
+                recursive=true, force=true)
+
             try
                 RegionExtraction.extractFeaturesTemplate(
                     window,
                     groupName,
                     args["train-dir"],
                     args["reference"],
-                    args["k-len"],
-                    threhold)
+                    kmer,
+                    threshold
+                )
 
                 getKmersDistributionPerClass(
                     window,
@@ -480,7 +496,7 @@ function fitParameters(
                     args["train-dir"],
                     args["reference"],
                     args["usexgboost"],
-                    args["k-len"],
+                    kmer,
                 )
 
                 f1 = greacClassification(
@@ -492,20 +508,64 @@ function fitParameters(
                     args["reference"],
                     args["usexgboost"]
                 )
+
+                push!(results, (
+                    now(),
+                    window,
+                    threshold,
+                    kmer,
+                    current_metric,
+                    f1
+                ))
+
                 if f1 > current_f1
                     current_f1 = f1
                     current_w = window
-                    current_threhold = threhold
-                    @info "New Best:" current_f1, current_w, current_threhold
+                    current_threshold = threshold
+                    @info "Novo Melhor:" current_f1 current_w current_threshold kmer
                 end
+
             catch e
-                @error e
+                @error "Erro durante iteração" exception = (e, catch_backtrace())
             end
-            threhold += Float16(0.05)
+
+            threshold += Float16(0.05)
         end
+
         window += Float32(0.0005)
     end
-    @info current_f1, current_w, current_threhold
+
+    # Informações finais
+    @info "Melhores Parâmetros:" current_f1 current_w current_threshold kmer
+
+    # Gerar relatório CSV
+    timestamp_str = Dates.format(now(), "yyyymmdd_HHMMSS")
+    output_dir = "$(homedir())/.project_cache/$(groupName)/reports"
+    mkpath(output_dir)
+
+    csv_filename = "$(output_dir)/parameter_optimization_$(timestamp_str).csv"
+    CSV.write(csv_filename, results)
+
+    # Criar arquivo com o melhor resultado
+    best_result = DataFrame(
+        parameter=["window", "threshold", "kmer", "metric", "f1_score"],
+        value=[string(current_w), string(current_threshold),
+            string(kmer), current_metric, string(current_f1)]
+    )
+
+    best_filename = "$(output_dir)/best_parameters_$(timestamp_str).csv"
+    CSV.write(best_filename, best_result)
+
+    @info "Relatórios salvos:" csv_filename best_filename
+
+    return (
+        f1=current_f1,
+        window=current_w,
+        threshold=current_threshold,
+        kmer=kmer,
+        metric=current_metric,
+        all_results=results
+    )
 end
 
 

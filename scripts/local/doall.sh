@@ -28,6 +28,7 @@ BEES_15=~/Desktop/datasets/bees/data_15
 BEES_16=~/Desktop/datasets/bees/data_16
 
 GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
+GREAC_FIT=~/Desktop/GREAC/scripts/local/fit_parameters.sh
 BALANCEDATASET=~/Desktop/Fasta-splitter/FastaSplitter
 
 REF_HIV=~/Desktop/datasets/hiv/hiv1_refseq.fasta
@@ -309,8 +310,11 @@ for i in {1..1}; do
     #         ;;
     # esac
 
+    # Do All
+    # $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
     
-    $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
-    
+    #Fit Parameters
+    $GREAC_FIT $TRAIN $TESTDIR $GROUPNAME $WINDOW $REF_TOTAL 
+
 done
 
