@@ -1,5 +1,10 @@
 #!/bin/sh
 
+#$ -o /home/a61491/.outputs
+#$ -e /home/a61491/.errs
+
+source /home/a61491/.bashrc
+
 SALIPE_HOME=/home/a61491
 TEMPDIR=/tmp2/felipe
 
