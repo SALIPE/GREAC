@@ -6,13 +6,15 @@ TRAIN=$1
 TESTDIR=$2
 GROUPNAME=$3
 WINDOW=$4
-REFERENCE=$5
+KMER=$5
+REFERENCE=$6
 
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
    -w $WINDOW fit-parameters  \
    --train-dir $TRAIN \
    --test-dir $TESTDIR \
+   --k-len $KMER \
    --reference $REFERENCE \
    --usexgboost
 

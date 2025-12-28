@@ -21,8 +21,3 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNA
    --threshold $THRESHOLD \
    -o ./output-$KMER --reference $REFERENCE \
    --usexgboost
-
-# cd $PROJECTHOME &&  julia --project src/GREAC.jl --no-cache \
-#    --group-name $GROUPNAME -w $WINDOW fit-parameters --train-dir $TRAIN --test-dir $TESTDIR --reference $8
-
-

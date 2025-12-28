@@ -275,19 +275,9 @@ function get_exclusive_kmers(
     end
 
     all_exclusive_kmers = Set{String}()
-    intersection_kmers = Set{String}()
 
     variantDirs::Vector{String} = readdir(variantDirPath)
-
-    # println("Getting reference k-mers")
-    # reference::Vector{String} = DataIO.loadStringSequences(referencePath)
-    # reference_kmer_hash_map = rolling_hash_kmers(reference[1], reference_kmer_hash_map, k_len)
-
-    # # For reference entropy threshold is 0
-    # ref_kmer_dict = Dict{String,Int32}()
-    # for (_, kmer_freq) in reference_kmer_hash_map
-    #     ref_kmer_dict[kmer_freq[1]] = kmer_freq[2]
-    # end
+    variant_kmers = Dict{String,Set{String}}()
 
 
     @inbounds for v in eachindex(variantDirs)
@@ -311,29 +301,32 @@ function get_exclusive_kmers(
         else
             @info "Found $(length(keys(kmer_dict))) kmers for $variant"
         end
-        freq = max_entropy(kmer_dict)
 
+        freq = max_entropy(kmer_dict)
         filter!(e -> e[2] >= freq, kmer_dict)
-        variant_exclusive = Set{String}()
+        variant_kmers[variant] = Set(keys(kmer_dict))
 
         for kmer_values in values(var_hash)
-            # if !(kmer_values[1] in keys(ref_kmer_dict))
             union!(all_exclusive_kmers, Set([kmer_values[1]]))
-            union!(variant_exclusive, Set([kmer_values[1]]))
-            # end
-
-
         end
 
-        if length(intersection_kmers) == 0
-            union!(intersection_kmers, variant_exclusive)
-        else
-            filter!(e -> e in variant_exclusive, intersection_kmers)
+    end
+
+    # Measure all te intersections
+    kmers_in_multiple_variants = Set{String}()
+    variant_list = collect(keys(variant_kmers))
+
+    @inbounds for i in eachindex(variant_list)
+        for j in (i+1):length(variant_list)
+            v1 = variant_list[i]
+            v2 = variant_list[j]
+            shared = intersect(variant_kmers[v1], variant_kmers[v2])
+            union!(kmers_in_multiple_variants, shared)
         end
     end
 
-    filter!(e -> !(e in intersection_kmers), all_exclusive_kmers)
-    return all_exclusive_kmers
+    union_exclusive = setdiff(all_exclusive_kmers, kmers_in_multiple_variants)
+    return union_exclusive
 end
 
 

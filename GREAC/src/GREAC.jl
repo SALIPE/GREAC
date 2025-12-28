@@ -455,9 +455,8 @@ function fitParameters(
     args,
     groupName::String,
     window::Float32,
-    kmer::Int=7
 )
-
+    kmer::Int = args["k-len"]
     current_f1 = 0.0
     current_w = window
     current_metric = "manhattan"
@@ -472,7 +471,7 @@ function fitParameters(
         f1_score=Float64[]
     )
 
-    while window <= 0.0025
+    while window <= 0.003
         @info ">> Window " window
         threshold::Float16 = 0.5
 
@@ -522,11 +521,11 @@ function fitParameters(
                     current_f1 = f1
                     current_w = window
                     current_threshold = threshold
-                    @info "Novo Melhor:" current_f1 current_w current_threshold kmer
+                    @info "New Best:" current_f1 current_w current_threshold kmer
                 end
 
             catch e
-                @error "Erro durante iteração" exception = (e, catch_backtrace())
+                @error "Error during iteraction" exception = (e, catch_backtrace())
             end
 
             threshold += Float16(0.05)
@@ -535,18 +534,16 @@ function fitParameters(
         window += Float32(0.0005)
     end
 
-    # Informações finais
-    @info "Melhores Parâmetros:" current_f1 current_w current_threshold kmer
+    @info "Best Parameters:" current_f1 current_w current_threshold kmer
 
-    # Gerar relatório CSV
-    timestamp_str = Dates.format(now(), "yyyymmdd_HHMMSS")
-    output_dir = "$(homedir())/.project_cache/$(groupName)/reports"
+
+    timestamp_str = Dates.format(now(), "yyyymmdd")
+    output_dir = "./output-$kmer/reports-$groupName"
     mkpath(output_dir)
 
     csv_filename = "$(output_dir)/parameter_optimization_$(timestamp_str).csv"
     CSV.write(csv_filename, results)
 
-    # Criar arquivo com o melhor resultado
     best_result = DataFrame(
         parameter=["window", "threshold", "kmer", "metric", "f1_score"],
         value=[string(current_w), string(current_threshold),
@@ -556,7 +553,7 @@ function fitParameters(
     best_filename = "$(output_dir)/best_parameters_$(timestamp_str).csv"
     CSV.write(best_filename, best_result)
 
-    @info "Relatórios salvos:" csv_filename best_filename
+    @info "Reports:" csv_filename best_filename
 
     return (
         f1=current_f1,
@@ -663,6 +660,10 @@ function add_fit_parameters_args!(settings)
         "--reference"
         help = "reference path"
         required = true
+        "-k", "--k-len"
+        help = "K-mer K value"
+        required = false
+        arg_type = Int
         "--usexgboost"
         help = "Classify sequences using XGBoost"
         action = :store_true
