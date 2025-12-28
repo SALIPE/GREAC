@@ -121,8 +121,7 @@ METRIC=manhattan
 
 # Configurar diretório temporário para este job
 TEMP_DATASET="$TEMPDIR/${GROUPNAME}_$$"
-TEMP_TRAIN="$TEMP_DATASET/train"
-TEMP_TEST="$TEMP_DATASET/test"
+TEMP_DATA="$TEMP_DATASET/data"
 
 echo "📁 Preparando diretório temporário..."
 echo "   - TEMP_DATASET: $TEMP_DATASET"
@@ -134,26 +133,17 @@ if [ -d "$TEMP_DATASET" ]; then
 fi
 
 # Criar estrutura de diretórios temporários
-mkdir -p "$TEMP_TRAIN"
-mkdir -p "$TEMP_TEST"
+mkdir -p $TEMP_DATA
 
-# Copiar dados para TEMPDIR
 echo "📦 Copiando dados para diretório temporário..."
-echo "   - Copiando TRAIN..."
-if [ -d "$SOURCE/train" ]; then
-    cp -r "$SOURCE/train/"* "$TEMP_TRAIN/" 2>/dev/null || echo "⚠️  Nenhum arquivo de treino encontrado"
+echo "   - Copiando..."
+if [ -d "$SOURCE" ]; then
+    cp -r "$SOURCE/"* "$TEMP_DATA/" 2>/dev/null || echo "⚠️  Nenhum arquivo encontrado"
 else
-    echo "❌ Erro: Diretório de treino não existe: $SOURCE/train"
+    echo "❌ Erro: Diretório de dados não existe: $SOURCE"
     exit 1
 fi
 
-echo "   - Copiando TEST..."
-if [ -d "$SOURCE/test" ]; then
-    cp -r "$SOURCE/test/"* "$TEMP_TEST/" 2>/dev/null || echo "⚠️  Nenhum arquivo de teste encontrado"
-else
-    echo "❌ Erro: Diretório de teste não existe: $SOURCE/test"
-    exit 1
-fi
 
 # Copiar referência para TEMPDIR (se necessário)
 TEMP_REF="$TEMP_DATASET/$(basename $REF_TOTAL)"
@@ -168,11 +158,10 @@ fi
 echo "✅ Dados copiados com sucesso para TEMPDIR"
 echo ""
 echo "📊 Estatísticas dos dados temporários:"
-echo "   - Train: $(find "$TEMP_TRAIN" -type f | wc -l) arquivos"
-echo "   - Test: $(find "$TEMP_TEST" -type f | wc -l) arquivos"
+echo "   - Dados: $(find "$TEMP_DATA" -type f | wc -l) arquivos"
 echo ""
 
-# Loop de execução
+
 for i in {1..1}; do
     echo "=========================================="
     echo "🔄 Iteração $i de 1"
@@ -180,11 +169,11 @@ for i in {1..1}; do
     
     # Balancear dataset (se necessário, usar dados temporários)
     echo "⚖️  Balanceando dataset..."
-    $BALANCEDATASET/test.sh $TEMP_DATASET
+    $BALANCEDATASET/testcl.sh $TEMP_DATA
     
     # Executar GREAC com dados temporários
     echo "🚀 Executando GREAC_FIT..."
-    $GREAC_FIT "$TEMP_TRAIN" "$TEMP_TEST" "$GROUPNAME" "$WINDOW" "$KMERSIZE" "$TEMP_REF"
+    $GREAC_FIT $TEMP_DATA/train $TEMP_DATA/test $GROUPNAME $WINDOW $KMERSIZE $TEMP_REF
     
     if [ $? -eq 0 ]; then
         echo "✅ Iteração $i concluída com sucesso"
