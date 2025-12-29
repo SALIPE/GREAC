@@ -2,13 +2,7 @@ module ClassificationModel
 
 include("RegionExtraction.jl")
 
-ENV["XGBOOST_BUILD_GPU"] = "OFF"
-ENV["USE_CUDA"] = "0"
-ENV["USE_NCCL"] = "0"
-ENV["CUDA_VISIBLE_DEVICES"] = ""
-ENV["XGBOOST_BUILD_OPTS"] = "-DUSE_CUDA=OFF -DUSE_NCCL=OFF"
-
-using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, XGBoost, MinHash, Distributions, DecisionTree, Serialization
+using FLoops, .RegionExtraction, LinearAlgebra, Statistics, StatsBase, MinHash, Distributions, DecisionTree, Serialization
 export ClassificationModel
 
 struct MultiClassModel
