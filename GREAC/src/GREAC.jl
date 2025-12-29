@@ -1,7 +1,7 @@
 module GREAC
 
 include("modules/DataIO.jl")
-include("modules/Report.jl")
+# include("modules/Report.jl")
 include("modules/RegionExtraction.jl")
 include("modules/ClassificationModel.jl")
 
@@ -15,7 +15,9 @@ using FLoops,
     .RegionExtraction,
     .ClassificationModel,
     MinHash,
-    CSV, DataFrames, Dates
+    CSV,
+    DataFrames,
+    Dates
 
 export GREAC
 
@@ -268,12 +270,12 @@ function greacClassification(
             write(io, line * "\n")
         end
 
-        Report.generate_report_pdf(
-            wnwPercent,
-            groupName,
-            model,
-            outputdir,
-            results)
+        # Report.generate_report_pdf(
+        #     wnwPercent,
+        #     groupName,
+        #     model,
+        #     outputdir,
+        #     results)
     end
     return results[:macro][:f1]
 end
