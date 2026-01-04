@@ -1,5 +1,5 @@
 module DataIO
-using FASTX, Pickle, Serialization, BioSequences
+using FASTX, Serialization, BioSequences
 
 export DataIO
 
@@ -103,10 +103,10 @@ function readVectorFromFile(file::String, T::Type)::Vector{T}
 end
 
 
-function read_pickle_data(file_name::AbstractString)
-    load_pickle = Pickle.load(file_name)
-    return load_pickle
-end
+# function read_pickle_data(file_name::AbstractString)
+#     load_pickle = Pickle.load(file_name)
+#     return load_pickle
+# end
 
 function save_cache(cache_path::String, data)
     try
