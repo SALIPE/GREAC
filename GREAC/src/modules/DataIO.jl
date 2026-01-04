@@ -135,7 +135,7 @@ function loadStringSequences(
 
     sequences = String[]
     for record in open(FASTAReader, file)
-        push!(sequences, sequence(String, record))
+        push!(sequences, uppercase(sequence(String, record)))
     end
     return sequences
 end
@@ -146,7 +146,7 @@ function loadCodeUnitsSequences(
 
     sequences = Vector{Base.CodeUnits}()
     for record in open(FASTAReader, file)
-        push!(sequences, codeunits(sequence(String, record)))
+        push!(sequences, codeunits(uppercase(sequence(String, record))))
     end
     return sequences
 end
@@ -160,12 +160,13 @@ function loadCodeUnitsSequences(
     for (i, record) in enumerate(open(FASTAReader, file))
         if i >= chunk_init && i <= chunk_end
             id = identifier(record)
-            seq = sequence(String, record)
+            seq = uppercase(sequence(String, record))
             push!(sequences, (String(id), codeunits(seq)))
         end
     end
     return sequences
 end
+
 
 function countSequences(
     file::String

@@ -8,7 +8,7 @@ HBV=~/Desktop/datasets/HBV/data
 SARS=~/Desktop/datasets/sars_cov2
 MONKEYPOX=~/Desktop/datasets/mkpx/data
 HIV=~/Desktop/datasets/hiv/data
-HIV2=~/Desktop/datasets/hiv_ncbi/extracted_sequences
+HIV2=~/Desktop/datasets/hiv_2
 
 BEES_1=~/Desktop/datasets/bees/data_1
 BEES_2=~/Desktop/datasets/bees/data_2
@@ -101,7 +101,7 @@ case $GROUPNAME in
         fi
         ;;
     hiv)
-        SOURCE=$HIV
+        SOURCE=$HIV2
         REF_TOTAL=$REF_HIV
         echo "✅ Dataset HIV selecionado: $SOURCE"
         ;;
@@ -311,10 +311,10 @@ for i in {1..1}; do
     # esac
 
     # Do All
-    # $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
+    $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 
     
     #Fit Parameters
-    $GREAC_FIT $TRAIN $TESTDIR $GROUPNAME $WINDOW $KMERSIZE $REF_TOTAL 
+    # $GREAC_FIT $TRAIN $TESTDIR $GROUPNAME $WINDOW $KMERSIZE $REF_TOTAL 
 
 done
 
