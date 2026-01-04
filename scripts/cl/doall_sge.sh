@@ -27,12 +27,11 @@ GREAC=$SALIPE_HOME/GREAC/scripts/cl/benchmark.sh
 GREAC_FIT=$SALIPE_HOME/GREAC/scripts/cl/fit_parameters.sh
 BALANCEDATASET=$SALIPE_HOME/Fasta-splitter/FastaSplitter
 
-# Função para limpar TEMPDIR ao sair
 cleanup() {
-    echo "🧹 Limpando diretório temporário..."
+    echo "🧹 Cleaning TEMP..."
     if [ -d "$TEMP_DATASET" ]; then
         rm -rf "$TEMP_DATASET"
-        echo "✅ Diretório temporário removido: $TEMP_DATASET"
+        echo "✅ TEMP removed: $TEMP_DATASET"
     fi
 }
 
@@ -60,12 +59,12 @@ case $GROUPNAME in
     denv)
         SOURCE=$DENGUE
         REF_TOTAL=$REF_DENV
-        echo "✅ Dataset DENGUE selecionado: $SOURCE"
+        echo "✅ Dataset DENGUE selected: $SOURCE"
         ;;
     hbv)
         SOURCE=$HBV
         REF_TOTAL=$REF_HBV
-        echo "✅ Dataset HBV selecionado: $SOURCE"
+        echo "✅ Dataset HBV selected: $SOURCE"
         ;;
     bees[0-9]*)
         if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then
@@ -75,7 +74,7 @@ case $GROUPNAME in
                 REF_TOTAL=$(eval echo \$$REF_BEES)
                 SOURCE_VAR="BEES_${chr}"
                 SOURCE=$(eval echo \$$SOURCE_VAR)
-                echo "✅ Dataset BEES selecionado: $SOURCE"
+                echo "✅ Dataset BEES selected: $SOURCE"
             else
                 echo "❌ Erro: Número fora do intervalo permitido (1–16): $chr"
                 exit 1
@@ -88,55 +87,52 @@ case $GROUPNAME in
     hiv)
         SOURCE=$HIV
         REF_TOTAL=$REF_HIV
-        echo "✅ Dataset HIV selecionado: $SOURCE"
+        echo "✅ Dataset HIV selected: $SOURCE"
         ;;
     hiv2)
         SOURCE=$HIV2
         REF_TOTAL=$REF_HIV
-        echo "✅ Dataset HIV2 selecionado: $SOURCE"
+        echo "✅ Dataset HIV2 selected: $SOURCE"
         ;;
     sars)
         SOURCE=$SARS
         REF_TOTAL=$REF_SARS
-        echo "✅ Dataset SARS selecionado: $SOURCE"
+        echo "✅ Dataset SARS selected: $SOURCE"
         ;;
     monkeypox)
         SOURCE=$MONKEYPOX
         REF_TOTAL=$REF_MONKEYPOX
-        echo "✅ Dataset MONKEYPOX selecionado: $SOURCE"
+        echo "✅ Dataset MONKEYPOX selected: $SOURCE"
         ;;
     *)
-        echo "❌ Erro: GROUPNAME inválido: $GROUPNAME"
+        echo "❌ Error: GROUPNAME invaild: $GROUPNAME"
         exit 1
         ;;
 esac
 
-# Verificar se SOURCE existe
 if [ ! -d "$SOURCE" ]; then
-    echo "❌ Erro: Diretório SOURCE não existe: $SOURCE"
+    echo "❌ Error: Directory SOURCE don't exists: $SOURCE"
     exit 1
 fi
 
 METRIC=manhattan
 
-# Configurar diretório temporário para este job
+# $$ Job number
 TEMP_DATASET="$TEMPDIR/${GROUPNAME}_$$"
 TEMP_DATA="$TEMP_DATASET/data"
 
 echo "📁 Preparando diretório temporário..."
 echo "   - TEMP_DATASET: $TEMP_DATASET"
 
-# Limpar qualquer resíduo anterior
+
 if [ -d "$TEMP_DATASET" ]; then
     echo "⚠️  Removendo diretório temporário existente..."
     rm -rf "$TEMP_DATASET"
 fi
 
-# Criar estrutura de diretórios temporários
 mkdir -p $TEMP_DATA
 
-echo "📦 Copiando dados para diretório temporário..."
-echo "   - Copiando..."
+echo "📦 Copying data to TEMP..."
 if [ -d "$SOURCE" ]; then
     cp -r "$SOURCE/"* "$TEMP_DATA/" 2>/dev/null || echo "⚠️  Nenhum arquivo encontrado"
 else
@@ -145,34 +141,15 @@ else
 fi
 
 
-# Copiar referência para TEMPDIR (se necessário)
-TEMP_REF="$TEMP_DATASET/$(basename $REF_TOTAL)"
-if [ -f "$REF_TOTAL" ]; then
-    echo "   - Copiando referência..."
-    cp "$REF_TOTAL" "$TEMP_REF"
-else
-    echo "❌ Erro: Arquivo de referência não existe: $REF_TOTAL"
-    exit 1
-fi
-
-echo "✅ Dados copiados com sucesso para TEMPDIR"
-echo ""
-echo "📊 Estatísticas dos dados temporários:"
-echo "   - Dados: $(find "$TEMP_DATA" -type f | wc -l) arquivos"
-echo ""
-
+echo "✅ Data copied TEMPDIR"
 
 for i in {1..1}; do
     echo "=========================================="
     echo "🔄 Iteração $i de 1"
     echo "=========================================="
     
-    # Balancear dataset (se necessário, usar dados temporários)
-    echo "⚖️  Balanceando dataset..."
     $BALANCEDATASET/testcl.sh $TEMP_DATA
     
-    # Executar GREAC com dados temporários
-    echo "🚀 Executando GREAC_FIT..."
     $GREAC_FIT $TEMP_DATA/train $TEMP_DATA/test $GROUPNAME $WINDOW $KMERSIZE $TEMP_REF
     
     if [ $? -eq 0 ]; then

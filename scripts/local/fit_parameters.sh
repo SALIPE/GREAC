@@ -7,7 +7,6 @@ TESTDIR=$2
 GROUPNAME=$3
 WINDOW=$4
 KMER=$5
-REFERENCE=$6
 
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
@@ -15,7 +14,6 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNA
    --train-dir $TRAIN \
    --test-dir $TESTDIR \
    --k-len $KMER \
-   --reference $REFERENCE \
-   --usexgboost
+   --classifier
 
 

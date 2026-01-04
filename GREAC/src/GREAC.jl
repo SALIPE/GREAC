@@ -1,7 +1,7 @@
 module GREAC
 
 include("modules/DataIO.jl")
-# include("modules/Report.jl")
+include("modules/Report.jl")
 include("modules/RegionExtraction.jl")
 include("modules/ClassificationModel.jl")
 
@@ -14,7 +14,7 @@ using FLoops,
     .DataIO,
     .RegionExtraction,
     .ClassificationModel,
-    MinHash,
+    .Report,
     CSV,
     DataFrames,
     Dates
@@ -28,27 +28,19 @@ function greacClassificationFile(
     wnwPercent::Float32,
     groupName::String,
     metric::Union{Nothing,String},
-    referencePath::String,
     use_xg::Bool
 )
 
-    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
+    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass"
     modelCachedFile = "$(homedir())/.project_cache/$groupName/$wnwPercent/kmers_distribution.dat"
     model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache(modelCachedFile)
 
     kmerset::Vector{String} = collect(model.kmerset)
     regions::Vector{Tuple{Int,Int}} = model.regions
 
-    reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
-
-    kmer_size_minhash::Int = length.(kmerset)[1]
-
-    distances = ClassificationModel.measure_reference_minhash(
-        regions, reference_codeunits, kmer_size_minhash)
-
     classification_probs = Dict{String,Vector{Tuple{String,String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name, distances))
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name))
 
     total = DataIO.countSequences(file_path)
 
@@ -127,11 +119,10 @@ function greacClassification(
     wnwPercent::Float32,
     groupName::String,
     metric::Union{Nothing,String},
-    referencePath::String,
     use_xg::Bool
 )
 
-    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
+    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass"
     modelCachedFile = "$(homedir())/.project_cache/$groupName/$wnwPercent/kmers_distribution.dat"
     model::Union{Nothing,ClassificationModel.MultiClassModel} = DataIO.load_cache(modelCachedFile)
 
@@ -140,16 +131,9 @@ function greacClassification(
     kmerset::Vector{String} = collect(model.kmerset)
     regions::Vector{Tuple{Int,Int}} = model.regions
 
-    reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
-
-    kmer_size_minhash::Int = length.(kmerset)[1]
-
-    distances = ClassificationModel.measure_reference_minhash(
-        regions, reference_codeunits, kmer_size_minhash)
-
     classification_probs = Dict{String,Vector{Tuple{String,String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name, distances))
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name))
 
     for class in model.classes
         file_path::String = "$folderPath/$class"
@@ -270,12 +254,12 @@ function greacClassification(
             write(io, line * "\n")
         end
 
-        # Report.generate_report_pdf(
-        #     wnwPercent,
-        #     groupName,
-        #     model,
-        #     outputdir,
-        #     results)
+        Report.generate_report_pdf(
+            wnwPercent,
+            groupName,
+            model,
+            outputdir,
+            results)
     end
     return results[:macro][:f1]
 end
@@ -361,12 +345,11 @@ function getKmersDistributionPerClass(
     wnwPercent::Float32,
     groupName::String,
     variantDirPath::String,
-    referencePath::String,
     use_xg::Bool,
     k_len::Int
 )
     cachdir::String = "$(homedir())/.project_cache/$groupName/$wnwPercent"
-    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass.xgb"
+    model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass"
 
     try
         mkpath(cachdir)
@@ -383,7 +366,8 @@ function getKmersDistributionPerClass(
 
         variantDirs::Vector{String} = readdir(variantDirPath)
 
-        kmerset::Set{String} = RegionExtraction.get_exclusive_kmers(k_len, variantDirPath, referencePath)
+        # kmerset::Set{String} = RegionExtraction.get_exclusive_kmers(k_len, variantDirPath)
+        kmerset::Set{String} = DataIO.load_cache("$cachdir/kmerset.dat")
 
         # kmerset = Set{String}()
 
@@ -395,25 +379,9 @@ function getKmersDistributionPerClass(
         meta_data = Dict{String,Int}()
         byte_seqs = Dict{String,Vector{Base.CodeUnits}}()
 
-        # win_size = zero(UInt64)
-        # maxSeqLen = zero(UInt64)
-
-        reference_codeunits::Base.CodeUnits = DataIO.loadCodeUnitsSequences(referencePath)[1]
-
         for variant in variantDirs
             byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant")
             meta_data[variant] = length(byte_seqs[variant])
-            # minSeqLength::UInt64 = minimum(map(length, byte_seqs[variant]))
-            # maxSeqLength::UInt64 = maximum(map(length, byte_seqs[variant]))
-            # wnwSize::UInt64 = ceil(UInt64, minSeqLength * wnwPercent)
-
-            # if (win_size == zero(UInt64) || wnwSize < win_size)
-            #     win_size = wnwSize
-            # end
-
-            # if (maxSeqLen < maxSeqLength)
-            #     maxSeqLen = maxSeqLength
-            # end
         end
 
         @info meta_data
@@ -426,7 +394,6 @@ function getKmersDistributionPerClass(
             RegionExtraction.regionsConjuction(variantDirPath, wnwPercent, groupName),
             # RegionExtraction.filterRegions(variantDirPath, wnwPercent, groupName, Int(win_size), Int(maxSeqLen)),
             model_name,
-            reference_codeunits,
             use_xg)
 
         DataIO.save_cache("$cachdir/kmers_distribution.dat", distribution)
@@ -486,7 +453,6 @@ function fitParameters(
                     window,
                     groupName,
                     args["train-dir"],
-                    args["reference"],
                     kmer,
                     threshold
                 )
@@ -495,8 +461,7 @@ function fitParameters(
                     window,
                     groupName,
                     args["train-dir"],
-                    args["reference"],
-                    args["usexgboost"],
+                    args["classifier"],
                     kmer,
                 )
 
@@ -506,8 +471,7 @@ function fitParameters(
                     window,
                     groupName,
                     current_metric,
-                    args["reference"],
-                    args["usexgboost"]
+                    args["classifier"]
                 )
 
                 push!(results, (
@@ -574,9 +538,6 @@ function add_benchmark_args!(settings)
         "--train-dir"
         help = "Training dataset path"
         required = true
-        "--reference"
-        help = "reference path"
-        required = true
         "-k", "--k-len"
         help = "K-mer K value"
         required = true
@@ -595,7 +556,7 @@ function add_benchmark_args!(settings)
         "-o", "--output-directory"
         help = "Where the files go"
         required = false
-        "--usexgboost"
+        "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
     end
@@ -604,9 +565,6 @@ end
 function add_classification_args!(settings)
     s = settings["file-classification"]
     @add_arg_table! s begin
-        "--reference"
-        help = "reference path"
-        required = true
         "--file"
         help = "Test dataset path"
         required = true
@@ -621,8 +579,8 @@ function add_classification_args!(settings)
         "-o", "--output-directory"
         help = "Where the files go"
         required = false
-        "--usexgboost"
-        help = "Classify sequences using XGBoost"
+        "--classifier"
+        help = "Classify sequences using Random Forest"
         action = :store_true
     end
 end
@@ -641,10 +599,7 @@ function add_extract_features_args!(settings)
         help = "K-mer K value"
         required = true
         arg_type = Int
-        "--reference"
-        help = "reference path"
-        required = true
-        "--usexgboost"
+        "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
     end
@@ -659,14 +614,11 @@ function add_fit_parameters_args!(settings)
         "--test-dir"
         help = "Test dataset path"
         required = true
-        "--reference"
-        help = "reference path"
-        required = true
         "-k", "--k-len"
         help = "K-mer K value"
         required = false
         arg_type = Int
-        "--usexgboost"
+        "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
     end
@@ -692,8 +644,7 @@ function handle_file_classification(args,
         window,
         groupName,
         args["metric"],
-        args["reference"],
-        args["usexgboost"]
+        args["classifier"]
     )
 end
 
@@ -707,7 +658,6 @@ function handle_benchmark(args,
         window,
         groupName,
         args["train-dir"],
-        args["reference"],
         args["k-len"],
         args["threshold"]
     )
@@ -715,8 +665,7 @@ function handle_benchmark(args,
         window,
         groupName,
         args["train-dir"],
-        args["reference"],
-        args["usexgboost"],
+        args["classifier"],
         args["k-len"],
     )
 
@@ -727,8 +676,7 @@ function handle_benchmark(args,
         window,
         groupName,
         args["metric"],
-        args["reference"],
-        args["usexgboost"]
+        args["classifier"]
     )
 end
 
@@ -740,7 +688,6 @@ function extract_features(args,
         window,
         groupName,
         args["train-dir"],
-        args["reference"],
         args["k-len"],
         args["threshold"]
     )
@@ -748,8 +695,7 @@ function extract_features(args,
         window,
         groupName,
         args["train-dir"],
-        args["reference"],
-        args["usexgboost"],
+        args["classifier"],
         args["k-len"],
     )
 end
@@ -858,4 +804,4 @@ function julia_main()::Cint
 end
 end
 
-GREAC.julia_main()
+# GREAC.julia_main()

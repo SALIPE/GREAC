@@ -258,19 +258,16 @@ end
 
 function get_exclusive_kmers(
     k_len::Int,
-    variantDirPath::String,
-    referencePath::String)::Set{String}
+    variantDirPath::String)::Set{String}
 
     sketch::Dict{String,Int} = generate_kmers(k_len)
 
     kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}() # 4^klen
-    reference_kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}()
 
     for kmer in keys(sketch)
         h = compute_hash(kmer)
         if !haskey(kmer_hash_map, h)
             kmer_hash_map[h] = (kmer, Int32(0))
-            reference_kmer_hash_map[h] = (kmer, Int32(0))
         end
     end
 
@@ -326,7 +323,7 @@ function get_exclusive_kmers(
     end
 
     union_exclusive = setdiff(all_exclusive_kmers, kmers_in_multiple_variants)
-    return union_exclusive
+    return all_exclusive_kmers
 end
 
 
@@ -335,7 +332,6 @@ function extractFeaturesTemplate(
     wnwPercent::Float32,
     groupName::String,
     variantDirPath::String,
-    referencePath::String,
     k_len::Int,
     histogramThreshold::Float16=Float16(0.8))
 
@@ -352,7 +348,8 @@ function extractFeaturesTemplate(
 
     outputs = Vector{Tuple{String,Tuple{Vector{UInt16},BitArray}}}(undef, length(variantDirs))
 
-    kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath, referencePath)
+    kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
+    DataIO.save_cache("$cachdir/kmerset.dat", kmerset)
 
     @info "Found: " kmerset
     # kmerset = Set{String}()
