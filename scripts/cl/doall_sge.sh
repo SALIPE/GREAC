@@ -150,7 +150,7 @@ for i in {1..1}; do
     
     $BALANCEDATASET/testcl.sh $TEMP_DATA
     
-    $GREAC_FIT $TEMP_DATA/train $TEMP_DATA/test $GROUPNAME $WINDOW $KMERSIZE $TEMP_REF
+    $GREAC_FIT $TEMP_DATA/train $TEMP_DATA/test $GROUPNAME $WINDOW $KMERSIZE
     
     if [ $? -eq 0 ]; then
         echo "✅ Iteração $i concluída com sucesso"

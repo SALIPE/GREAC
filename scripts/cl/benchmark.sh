@@ -20,7 +20,6 @@ WINDOW=$4
 METRIC=$5
 KMER=$6
 THRESHOLD=$7
-REFERENCE=$8
 
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
@@ -30,7 +29,7 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNA
    -m $METRIC \
    -k $KMER \
    --threshold $THRESHOLD \
-   -o ./output-$KMER --reference $REFERENCE \
-   --usexgboost
+   -o ./output-$KMER\
+   --classifier
 
 

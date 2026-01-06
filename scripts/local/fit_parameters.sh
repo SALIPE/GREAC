@@ -14,6 +14,5 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNA
    --train-dir $TRAIN \
    --test-dir $TESTDIR \
    --k-len $KMER \
-   --classifier
 
 

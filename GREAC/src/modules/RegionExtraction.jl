@@ -323,7 +323,7 @@ function get_exclusive_kmers(
     end
 
     union_exclusive = setdiff(all_exclusive_kmers, kmers_in_multiple_variants)
-    return all_exclusive_kmers
+    return union_exclusive
 end
 
 
