@@ -254,12 +254,12 @@ function greacClassification(
             write(io, line * "\n")
         end
 
-        Report.generate_report_pdf(
-            wnwPercent,
-            groupName,
-            model,
-            outputdir,
-            results)
+        # Report.generate_report_pdf(
+        #     wnwPercent,
+        #     groupName,
+        #     model,
+        #     outputdir,
+        #     results)
     end
     return results[:macro][:f1]
 end

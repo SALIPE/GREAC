@@ -28,6 +28,8 @@ BEES_15=~/Desktop/datasets/bees/data_15
 BEES_16=~/Desktop/datasets/bees/data_16
 
 GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
+GREAC_FEATURE_EXTRACT=~/Desktop/GREAC/scripts/local/extract-features.sh
+GREAC_FASTA_REGIONS=~/Desktop/GREAC/scripts/local/fasta-regions.sh
 GREAC_FIT=~/Desktop/GREAC/scripts/local/fit_parameters.sh
 BALANCEDATASET=~/Desktop/Fasta-splitter/FastaSplitter
 
@@ -311,10 +313,16 @@ for i in {1..1}; do
     # esac
 
     # Do All
-    $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD 
+    #$GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD 
     
+    # Extract Feature
+    # $GREAC_FEATURE_EXTRACT $TRAIN $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD
+
+    # FASTA Regions
+    #$GREAC_FASTA_REGIONS $SOURCE $GROUPNAME $WINDOW 
+
     #Fit Parameters
-    # $GREAC_FIT $TRAIN $TESTDIR $GROUPNAME $WINDOW $KMERSIZE 
+    $GREAC_FIT $TRAIN $TESTDIR $GROUPNAME $WINDOW $KMERSIZE 
 
 done
 
