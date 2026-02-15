@@ -1,7 +1,6 @@
 module GREAC
 
 include("modules/DataIO.jl")
-include("modules/Report.jl")
 include("modules/RegionExtraction.jl")
 include("modules/ClassificationModel.jl")
 
@@ -14,7 +13,6 @@ using FLoops,
     .DataIO,
     .RegionExtraction,
     .ClassificationModel,
-    .Report,
     CSV,
     DataFrames,
     Dates
@@ -254,12 +252,6 @@ function greacClassification(
             write(io, line * "\n")
         end
 
-        # Report.generate_report_pdf(
-        #     wnwPercent,
-        #     groupName,
-        #     model,
-        #     outputdir,
-        #     results)
     end
     return results[:macro][:f1]
 end
@@ -804,4 +796,4 @@ function julia_main()::Cint
 end
 end
 
-GREAC.julia_main()
+# GREAC.julia_main()
