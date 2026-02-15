@@ -271,47 +271,47 @@ if [ ! -d "$SOURCE" ]; then
 fi
 
 
-for i in {1..1}; do
+for i in {1..100}; do
     echo "Iteração $i de 100"
     
     $BALANCEDATASET/test.sh $SOURCE
 
-    cd $SOURCE/train
-    mkdir -p kmers
+    # cd $SOURCE/train
+    # mkdir -p kmers
 
-    case $GROUPNAME in
-        denv)
-            get_kmers_denv
-            ;;
-        hbv)
-            get_kmers_hbv
-            ;;
-        hiv)
-            get_kmers_hiv
-            ;;
-        hiv2)
-            get_kmers_hiv2
-            ;;
-        sars)
-            get_kmers_sars
-            ;;
-        monkeypox)
-            get_kmers_monkeypox
-            ;;
-        bees[0-9]*)
-            if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then
-                chr="${BASH_REMATCH[1]}"
-                get_kmers_bees_chr $chr
-            else
-                echo "❌ Erro: Formato inválido para bees: $GROUPNAME"
-                exit 1
-            fi
-            ;;
-        *)
-            echo "❌ Erro: GROUPNAME inválido: $GROUPNAME"
-            exit 1
-            ;;
-    esac
+    # case $GROUPNAME in
+    #     denv)
+    #         get_kmers_denv
+    #         ;;
+    #     hbv)
+    #         get_kmers_hbv
+    #         ;;
+    #     hiv)
+    #         get_kmers_hiv
+    #         ;;
+    #     hiv2)
+    #         get_kmers_hiv2
+    #         ;;
+    #     sars)
+    #         get_kmers_sars
+    #         ;;
+    #     monkeypox)
+    #         get_kmers_monkeypox
+    #         ;;
+    #     bees[0-9]*)
+    #         if [[ $GROUPNAME =~ ^bees([0-9]+)$ ]]; then
+    #             chr="${BASH_REMATCH[1]}"
+    #             get_kmers_bees_chr $chr
+    #         else
+    #             echo "❌ Erro: Formato inválido para bees: $GROUPNAME"
+    #             exit 1
+    #         fi
+    #         ;;
+    #     *)
+    #         echo "❌ Erro: GROUPNAME inválido: $GROUPNAME"
+    #         exit 1
+    #         ;;
+    # esac
 
     
     $GREAC $TRAIN $TESTDIR $GROUPNAME $WINDOW $METRIC $KMERSIZE $THRESHOLD $REF_TOTAL 

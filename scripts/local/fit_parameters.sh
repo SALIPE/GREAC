@@ -6,17 +6,14 @@ TRAIN=$1
 TESTDIR=$2
 GROUPNAME=$3
 WINDOW=$4
-METRIC=$5
-KMER=$6
-THRESHOLD=$7
+KMER=$5
 
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
-   -w $WINDOW benchmark \
+   -w $WINDOW fit-parameters  \
    --train-dir $TRAIN \
    --test-dir $TESTDIR \
-   -m $METRIC \
-   -k $KMER \
-   --threshold $THRESHOLD \
-   -o ./output-$KMER \
+   --k-len $KMER \
    --classifier
+
+
