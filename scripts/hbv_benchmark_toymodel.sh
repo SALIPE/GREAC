@@ -40,6 +40,6 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache \
     --k-len $KMERSIZE \
     --threshold $THRESHOLD \
     -o ./output-$KMERSIZE \
-    --reference $REF_HBV 
+    # --reference $REF_HBV 
 
 

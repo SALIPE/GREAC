@@ -303,6 +303,8 @@ function get_exclusive_kmers(
         filter!(e -> e[2] >= freq, kmer_dict)
         variant_kmers[variant] = Set(keys(kmer_dict))
 
+        @info "Selected $(length(keys(kmer_dict))) kmers for $variant"
+
         for kmer_values in values(var_hash)
             union!(all_exclusive_kmers, Set([kmer_values[1]]))
         end
