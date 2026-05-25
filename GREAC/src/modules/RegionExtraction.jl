@@ -328,6 +328,81 @@ function get_exclusive_kmers(
     return union_exclusive
 end
 
+function gramep_exclusive_kmers(
+    k_len::Int,
+    referenceDirPath::String,
+    variantDirPath::String)::Set{String}
+
+    sketch::Dict{String,Int} = generate_kmers(k_len)
+
+    kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}() # 4^klen
+
+    for kmer in keys(sketch)
+        h = compute_hash(kmer)
+        if !haskey(kmer_hash_map, h)
+            kmer_hash_map[h] = (kmer, Int32(0))
+        end
+    end
+
+    all_exclusive_kmers = Set{String}()
+
+    variantDirs::Vector{String} = readdir(variantDirPath)
+    variant_kmers = Dict{String,Set{String}}()
+
+
+    @inbounds for v in eachindex(variantDirs)
+        variant::String = variantDirs[v]
+        println("Getting $variant k-mers")
+        var_hash = kmer_hash_map
+
+        sequences::Vector{String} = DataIO.loadStringSequences("$variantDirPath/$variant")
+        for seq in sequences
+            var_hash = rolling_hash_kmers(seq, var_hash, k_len)
+        end
+
+        # A busca das mais informativas tem que ser aqui em comparação com a referencia
+        kmer_dict = Dict{String,Int32}()
+        for kmer_freq in values(var_hash)
+            kmer_dict[kmer_freq[1]] = kmer_freq[2]
+        end
+
+        if length(keys(kmer_dict)) <= 1
+            error("Insufficient k-mers found!")
+        else
+            @info "Found $(length(keys(kmer_dict))) kmers for $variant"
+        end
+
+        freq = max_entropy(kmer_dict)
+        filter!(e -> e[2] >= freq, kmer_dict)
+        variant_kmers[variant] = Set(keys(kmer_dict))
+
+        @info "Selected $(length(keys(kmer_dict))) kmers for $variant"
+
+        for kmer_values in values(var_hash)
+            union!(all_exclusive_kmers, Set([kmer_values[1]]))
+        end
+
+    end
+
+    # Measure all te intersections
+    kmers_in_multiple_variants = Set{String}()
+    variant_list = collect(keys(variant_kmers))
+
+    @inbounds for i in eachindex(variant_list)
+        for j in (i+1):length(variant_list)
+            v1 = variant_list[i]
+            v2 = variant_list[j]
+            shared = intersect(variant_kmers[v1], variant_kmers[v2])
+            union!(kmers_in_multiple_variants, shared)
+        end
+    end
+
+    union_exclusive = setdiff(all_exclusive_kmers, kmers_in_multiple_variants)
+    return union_exclusive
+
+end
+
+
 
 # Function to extract discriminatives features from each class
 function extractFeaturesTemplate(
@@ -335,6 +410,8 @@ function extractFeaturesTemplate(
     groupName::String,
     variantDirPath::String,
     k_len::Int,
+    useGramep::Bool,
+    reference::Union{},
     histogramThreshold::Float16=Float16(0.8))
 
     @info "Threads:" Threads.nthreads()
@@ -350,7 +427,12 @@ function extractFeaturesTemplate(
 
     outputs = Vector{Tuple{String,Tuple{Vector{UInt16},BitArray}}}(undef, length(variantDirs))
 
-    kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
+    if useGramep
+    else
+        kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
+    end
+
+
     DataIO.save_cache("$cachdir/kmerset.dat", kmerset)
 
     @info "Found: " kmerset

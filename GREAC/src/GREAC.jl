@@ -556,6 +556,9 @@ function add_benchmark_args!(settings)
         "-o", "--output-directory"
         help = "Where the files go"
         required = false
+        "--use-gramep"
+        help = "Use K-mer set from GRAMEP"
+        action = :store_true
         "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
@@ -659,7 +662,9 @@ function handle_benchmark(args,
         groupName,
         args["train-dir"],
         args["k-len"],
-        args["threshold"]
+        args["threshold"],
+        args["reference"],
+        args["use-gramep"],
     )
     distribution = getKmersDistributionPerClass(
         window,
