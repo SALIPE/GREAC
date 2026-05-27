@@ -14,7 +14,7 @@ REFERENCE=$8
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
    -w $WINDOW benchmark --train-dir $TRAIN --test-dir $TESTDIR -m $METRIC --threshold $THRESHOLD \
-   -o ./output-$KMER --reference $REFERENCE 
+   -o ./output-gaussian-$KMER --reference $REFERENCE  #--usexgboost
 
 # cd $PROJECTHOME &&  julia --project src/GREAC.jl --no-cache \
 #    --group-name $GROUPNAME -w $WINDOW fit-parameters --train-dir $TRAIN --test-dir $TESTDIR --reference $8

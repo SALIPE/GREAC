@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/Desktop/gramep/.venv/bin/activate
+source .venv/bin/activate
 
 export RUST_BACKTRACE=full
 
@@ -7,7 +7,7 @@ DENGUE=~/Desktop/datasets/dengue
 HBV=~/Desktop/datasets/HBV/data
 SARS=~/Desktop/datasets/sars_cov2
 MONKEYPOX=~/Desktop/datasets/mkpx/data
-HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/variants
+HIV=~/Desktop/datasets/hiv/data
 HIV2=~/Desktop/datasets/hiv_ncbi/extracted_sequences
 
 BEES_1=~/Desktop/datasets/bees/data_1
@@ -32,7 +32,7 @@ MEDIBEES_1=~/Desktop/datasets/medibees/data1/all
 GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
 BALANCEDATASET=~/Desktop/Fasta-splitter/FastaSplitter
 
-REF_HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/hiv1_refseq.fasta
+REF_HIV=~/Desktop/datasets/hiv/hiv1_refseq.fasta
 REF_HBV=~/Desktop/datasets/HBV/refseq.fasta
 REF_DENV=~/Desktop/datasets/denv/refseq.fasta
 REF_SARS=~/Desktop/datasets/tutorial_data/reference/SARS-CoV2_wuhan_refseq.fasta

@@ -1,13 +1,13 @@
 #!/bin/bash
-source ~/.py-venv/bin/activate
+source .venv/bin/activate
 
 export RUST_BACKTRACE=full
 
-DENGUE=~/Desktop/datasets/dengue
+DENGUE=~/Desktop/datasets/denv/data
 HBV=~/Desktop/datasets/HBV/data
 SARS=~/Desktop/datasets/sars_cov2
 MONKEYPOX=~/Desktop/datasets/mkpx/data
-HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/variants
+HIV=~/Desktop/datasets/hiv/data
 HIV2=~/Desktop/datasets/hiv_ncbi/extracted_sequences
 
 BEES_1=~/Desktop/datasets/bees/data_1
@@ -30,11 +30,11 @@ BEES_16=~/Desktop/datasets/bees/data_16
 GREAC=~/Desktop/GREAC/scripts/local/benchmark.sh
 BALANCEDATASET=~/Desktop/Fasta-splitter/FastaSplitter
 
-REF_HIV=~/Desktop/GREAC/study-cases/castor_hiv_data/hiv1_refseq.fasta
+REF_HIV=~/Desktop/datasets/hiv/hiv1_refseq.fasta
 REF_HBV=~/Desktop/datasets/HBV/refseq.fasta
 REF_DENV=~/Desktop/datasets/denv/refseq.fasta
-REF_SARS=~/Desktop/datasets/tutorial_data/reference/SARS-CoV2_wuhan_refseq.fasta
-REF_MONKEYPOX=~/Desktop/datasets/refseq_mkpx/ncbi_dataset/data/GCF_000857045.1/GCF_000857045.1_ViralProj15142_genomic.fna
+REF_SARS=~/Desktop/datasets/SARS-CoV2_wuhan_refseq.fasta
+REF_MONKEYPOX=~/Desktop/datasets/mkpx/GCF_000857045.1_ViralProj15142_genomic.fna
 
 REF_BEES_1=~/Desktop/datasets/bees/GCA_000002195.1_Amel_4.5_genomic_Group1.fasta
 REF_BEES_2=~/Desktop/datasets/bees/GCA_000002195.1_Amel_4.5_genomic_Group2.fasta
@@ -267,7 +267,7 @@ if [ ! -d "$SOURCE" ]; then
 fi
 
 
-for i in {1..1}; do
+for i in {1..100}; do
     echo "Iteração $i de 100"
     
     $BALANCEDATASET/test.sh $SOURCE
