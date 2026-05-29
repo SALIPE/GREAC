@@ -32,7 +32,7 @@ notebooks/.project_cache
 *.svg
 *.bed
 /notebooks/*.csv
-*pdf
+/notebooks/*.pdf
 resultados*
 build/
 data/
