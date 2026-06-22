@@ -13,6 +13,8 @@
 
 GREAC (Genomic Region Extraction and Classifier) is a novel computational methodology for discriminative genomic region extraction and classification. This data-driven, non-parametric approach employs exclusive k-mers through strategically defined sliding windows to identify genomic regions with high concentrations of variant-specific signatures.
 
+Support Data Avaiable in [Datasets and Support Data](./study-cases/README.md)
+
 ### Key Features
 
 - **K-mer based analysis**: Utilizes exclusive k-mers for discriminative feature extraction
