@@ -137,7 +137,15 @@ function greacClassification(
 
     for class in model.classes
         file_path::String = "$folderPath/$class"
-        total = DataIO.countSequences(file_path)
+        total = 0
+
+        try
+            total = DataIO.countSequences(file_path)
+        catch
+            file_path = "$folderPath/$class.fasta"
+            total = DataIO.countSequences(file_path)
+        end
+
 
         chunk_size = 10000
         chunk_init::Int = 1
@@ -380,7 +388,12 @@ function getKmersDistributionPerClass(
         byte_seqs = Dict{String,Vector{Base.CodeUnits}}()
 
         for variant in variantDirs
-            byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant")
+            try
+                byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant/$variant.fasta")
+            catch
+                byte_seqs[variant] = DataIO.loadCodeUnitsSequences("$variantDirPath/$variant")
+            end
+
             meta_data[variant] = length(byte_seqs[variant])
         end
 
@@ -538,6 +551,12 @@ function add_benchmark_args!(settings)
         "--train-dir"
         help = "Training dataset path"
         required = true
+        "--test-dir"
+        help = "Test dataset path"
+        required = true
+        "--reference"
+        help = "Reference sequence path"
+        required = false
         "-k", "--k-len"
         help = "K-mer K value"
         required = true
@@ -546,9 +565,6 @@ function add_benchmark_args!(settings)
         help = "Metric used for classification"
         required = false
         range_tester = (x -> x in ["manhattan", "euclidian", "chisquared", "mahalanobis", "kld"])
-        "--test-dir"
-        help = "Test dataset path"
-        required = true
         "--threshold"
         help = "Window theshold consideration"
         required = false
@@ -662,9 +678,9 @@ function handle_benchmark(args,
         groupName,
         args["train-dir"],
         args["k-len"],
-        args["threshold"],
         args["reference"],
         args["use-gramep"],
+        args["threshold"]
     )
     distribution = getKmersDistributionPerClass(
         window,
@@ -694,6 +710,8 @@ function extract_features(args,
         groupName,
         args["train-dir"],
         args["k-len"],
+        args["reference"],
+        args["use-gramep"],
         args["threshold"]
     )
     distribution = getKmersDistributionPerClass(

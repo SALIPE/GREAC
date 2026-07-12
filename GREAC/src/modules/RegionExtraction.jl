@@ -153,6 +153,52 @@ function generate_kmers(k::Int)
     return sketch
 end
 
+function find_init_kmers(
+    sequence::String,
+    k_len::Int)::Dict{UInt64,Tuple{String,Int32}}
+
+    seq_len = length(sequence)
+    kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}()
+
+    if seq_len < k_len
+        error("K-mer size must be greater than the inputed sequence")
+    end
+
+    base::UInt64 = UInt64(5)
+    power::UInt64 = UInt64(1)
+    @inbounds for i in 1:(k_len-1)
+        power *= base
+    end
+
+
+    # Have to init the hash
+    current_hash = UInt64(0)
+    @inbounds for i in 1:k_len
+        current_hash = current_hash * base + UInt64(sequence[i])
+    end
+
+    # First Iteraction need to add the first hash
+    kmer = sequence[1:k_len]
+    kmer_hash_map[current_hash] = (kmer, 1)
+
+    @inbounds for i in (k_len+1):seq_len
+        current_hash = current_hash - UInt64(sequence[i-k_len]) * power
+        current_hash = current_hash * base + UInt64(sequence[i])
+
+
+        if haskey(kmer_hash_map, current_hash)
+            kmer, value = kmer_hash_map[current_hash]
+            kmer_hash_map[current_hash] = (kmer, value + 1)
+        else
+            kmer = sequence[i-k_len+1:i]
+            kmer_hash_map[current_hash] = (kmer, 1)
+        end
+
+    end
+
+    return kmer_hash_map
+end
+
 function rolling_hash_kmers(
     sequence::String,
     kmer_hash_map::Dict{UInt64,Tuple{String,Int32}},
@@ -333,30 +379,28 @@ function gramep_exclusive_kmers(
     referenceDirPath::String,
     variantDirPath::String)::Set{String}
 
-    sketch::Dict{String,Int} = generate_kmers(k_len)
-
-    kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}() # 4^klen
-
-    for kmer in keys(sketch)
-        h = compute_hash(kmer)
-        if !haskey(kmer_hash_map, h)
-            kmer_hash_map[h] = (kmer, Int32(0))
-        end
-    end
+    reference_sequence::String = DataIO.loadStringSequences(referenceDirPath)[1]
+    reference_sketch::Dict{UInt64,Tuple{String,Int32}} = find_init_kmers(reference_sequence, k_len)
+    reference_kmers::Set{String} = Set(map(x -> x[1], collect(values(reference_sketch))))
 
     all_exclusive_kmers = Set{String}()
 
     variantDirs::Vector{String} = readdir(variantDirPath)
-    variant_kmers = Dict{String,Set{String}}()
 
 
     @inbounds for v in eachindex(variantDirs)
         variant::String = variantDirs[v]
         println("Getting $variant k-mers")
-        var_hash = kmer_hash_map
 
-        sequences::Vector{String} = DataIO.loadStringSequences("$variantDirPath/$variant")
-        for seq in sequences
+        sequences = String[]
+        try
+            sequences = DataIO.loadStringSequences("$variantDirPath/$variant/$variant.fasta")
+        catch
+            sequences = DataIO.loadStringSequences("$variantDirPath/$variant")
+        end
+        var_hash = find_init_kmers(sequences[1], k_len)
+
+        for seq in sequences[2:end]
             var_hash = rolling_hash_kmers(seq, var_hash, k_len)
         end
 
@@ -372,37 +416,17 @@ function gramep_exclusive_kmers(
             @info "Found $(length(keys(kmer_dict))) kmers for $variant"
         end
 
-        freq = max_entropy(kmer_dict)
-        filter!(e -> e[2] >= freq, kmer_dict)
-        variant_kmers[variant] = Set(keys(kmer_dict))
+        variant_kmers::Set{String} = setdiff(Set(keys(kmer_dict)), reference_kmers)
+        @info "Selected $(length(variant_kmers)) kmers for $variant"
 
-        @info "Selected $(length(keys(kmer_dict))) kmers for $variant"
-
-        for kmer_values in values(var_hash)
-            union!(all_exclusive_kmers, Set([kmer_values[1]]))
-        end
+        union!(all_exclusive_kmers, variant_kmers)
 
     end
 
-    # Measure all te intersections
-    kmers_in_multiple_variants = Set{String}()
-    variant_list = collect(keys(variant_kmers))
 
-    @inbounds for i in eachindex(variant_list)
-        for j in (i+1):length(variant_list)
-            v1 = variant_list[i]
-            v2 = variant_list[j]
-            shared = intersect(variant_kmers[v1], variant_kmers[v2])
-            union!(kmers_in_multiple_variants, shared)
-        end
-    end
-
-    union_exclusive = setdiff(all_exclusive_kmers, kmers_in_multiple_variants)
-    return union_exclusive
+    return all_exclusive_kmers
 
 end
-
-
 
 # Function to extract discriminatives features from each class
 function extractFeaturesTemplate(
@@ -410,8 +434,8 @@ function extractFeaturesTemplate(
     groupName::String,
     variantDirPath::String,
     k_len::Int,
+    referenceDirPath::Union{String,Nothing},
     useGramep::Bool,
-    reference::Union{},
     histogramThreshold::Float16=Float16(0.8))
 
     @info "Threads:" Threads.nthreads()
@@ -426,10 +450,12 @@ function extractFeaturesTemplate(
     variantDirs::Vector{String} = readdir(variantDirPath)
 
     outputs = Vector{Tuple{String,Tuple{Vector{UInt16},BitArray}}}(undef, length(variantDirs))
-
+    kmerset = Set{String}()
+    @show useGramep
     if useGramep
+        kmerset = gramep_exclusive_kmers(k_len, referenceDirPath, variantDirPath)
     else
-        kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
+        kmerset = get_exclusive_kmers(k_len, variantDirPath)
     end
 
 
@@ -456,7 +482,12 @@ function extractFeaturesTemplate(
             outputs[v] = cache
         else
 
-            sequences::Vector{String} = DataIO.loadStringSequences("$variantDirPath/$variant")
+            sequences = String[]
+            try
+                sequences = DataIO.loadStringSequences("$variantDirPath/$variant/$variant.fasta")
+            catch
+                sequences = DataIO.loadStringSequences("$variantDirPath/$variant")
+            end
             minSeqLength::UInt64 = minimum(map(length, sequences))
             wnwSize::UInt64 = ceil(UInt64, minSeqLength * wnwPercent)
             kmer_vector::Vector{String} = collect(kmerset)

@@ -14,11 +14,11 @@ REF_HBV=../study-cases/HBV/refseq.fasta
 GROUPNAME=hbv
 WINDOW=0.002
 KMERSIZE=7
-THRESHOLD=0.7
+THRESHOLD=0.5
 
 
 
-TRAIN=../scripts/HBV_tutorial/train/data
+TRAIN=../scripts/HBV_tutorial/train/kmers
 TESTDIR=../scripts/HBV_tutorial/test
 METRIC=manhattan
 
@@ -40,6 +40,7 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache \
     --k-len $KMERSIZE \
     --threshold $THRESHOLD \
     -o ./output-$KMERSIZE \
-    # --reference $REF_HBV 
+    --reference $REF_HBV \
+    --use-gramep
 
 
