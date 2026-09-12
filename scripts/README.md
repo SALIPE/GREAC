@@ -37,7 +37,7 @@ This `scripts/` directory contains example shell scripts demonstrating various G
   python scripts/clean_dataset.py ~/Desktop/datasets/virus_dataset --group all --by seq -j 8
   ```
 
-  **Requires `seqkit` (SeqKit2) in the PATH** (or `--seqkit /path/to/seqkit`). See `--help` for `--by {id,name,seq}`, `--rmdup-by`, `--keep-common`, `--skip-extra`, `-o/--output-dir` and `-f/--force`.
+  **Requires `seqkit` (SeqKit2) in the PATH** (or `--seqkit /path/to/seqkit`). Runs on Python 3.6+ (standard library only). See `--help` for `--by {id,name,seq}`, `--group {dir,all}`, `-j/--threads`, `-o/--output-dir` and `-f/--force`.
 
 - [`benchmark.sh`](./local/benchmark.sh): provides a **complete execution** of GREAC, benchmarking datasets. 
 - [`extract-features.sh`](./local/extract-features.sh): extraction of features and model fitting (regions and frequency behavior). 
