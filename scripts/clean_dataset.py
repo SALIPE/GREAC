@@ -36,7 +36,6 @@ Examples:
     python clean_dataset.py ./virus_dataset --group all --by seq -j 8
 """
 
-from __future__ import annotations
 
 import argparse
 import itertools
