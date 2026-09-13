@@ -41,3 +41,5 @@ study-cases/castor-krfe-comparison/castor_results2
 study-cases/castor_hiv_data/variants/test
 study-cases/castor_hiv_data/variants/train
 scripts/HBV_tutorial
+
+**/__pycache__
