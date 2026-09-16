@@ -119,7 +119,10 @@ function greacClassification(
     wnwPercent::Float32,
     groupName::String,
     metric::Union{Nothing,String},
-    use_xg::Bool
+    use_xg::Bool;
+    k_len::Int=0,
+    extract_time::Float64=NaN,
+    fit_time::Float64=NaN
 )
 
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass"
@@ -135,7 +138,7 @@ function greacClassification(
     # predict_raw predict_membership (model, metric)
     classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name))
 
-    for class in model.classes
+    classify_time = @elapsed for class in model.classes
         file_path::String = "$folderPath/$class"
         total = DataIO.countSequences(file_path)
 
@@ -193,6 +196,9 @@ function greacClassification(
 
     end
 
+    n_test = length(y_pred)
+    @info "Timing (s)" extract_time fit_time classify_time n_test
+
     results = compute_variant_metrics(model.classes, y_true, y_pred)
 
 
@@ -231,7 +237,7 @@ function greacClassification(
             # Write header if file is empty/new
             if filesize(RESULTS_CSV) == 0
                 types = join(model.classes, ",")
-                write(io, "wndwPercent,metric,windows,kmerset,final_len," * types * ",macro_f1,macro_precision,macro_recall,cm\n")
+                write(io, "wndwPercent,metric,windows,kmerset,final_len," * types * ",macro_f1,macro_precision,macro_recall,cm,k,extract_time,fit_time,classify_time,n_test,classify_time_per_seq\n")
             end
 
             # Format data components
@@ -248,7 +254,13 @@ function greacClassification(
                     results[:macro][:f1],
                     results[:macro][:precision],
                     results[:macro][:recall],
-                    cm
+                    cm,
+                    k_len,
+                    extract_time,
+                    fit_time,
+                    classify_time,
+                    n_test,
+                    n_test == 0 ? NaN : classify_time / n_test
                 ], ",")
 
             write(io, line * "\n")
@@ -261,7 +273,16 @@ function greacClassification(
         #     outputdir,
         #     results)
     end
-    return results[:macro][:f1]
+    return (
+        f1=results[:macro][:f1],
+        precision=results[:macro][:precision],
+        recall=results[:macro][:recall],
+        classify_time=classify_time,
+        n_test=n_test,
+        windows=length(model.regions),
+        kmerset=length(model.kmerset),
+        final_len=count_region_length(model.regions)
+    )
 end
 
 function compute_variant_metrics(
@@ -402,6 +423,25 @@ function getKmersDistributionPerClass(
 end
 
 
+# Agrega todas as repetições já gravadas: média e desvio padrão por combinação.
+# std de uma única repetição é NaN por definição.
+function summarizeSweep(csv_filename::String, summary_filename::String)
+    all_runs = CSV.read(csv_filename, DataFrame)
+
+    summary = combine(
+        groupby(all_runs, [:window, :threshold, :kmer, :metric]),
+        nrow => :reps,
+        [:f1_score, :precision, :recall,
+            :extract_time, :fit_time, :classify_time] .=> mean,
+        [:f1_score, :precision, :recall,
+            :extract_time, :fit_time, :classify_time] .=> std
+    )
+
+    sort!(summary, :f1_score_mean, rev=true)
+    CSV.write(summary_filename, summary)
+    return summary
+end
+
 function count_region_length(regions)::Int
     total_length = 0
     for (i, e) in regions
@@ -425,107 +465,135 @@ function fitParameters(
     groupName::String,
     window::Float32,
 )
-    kmer::Int = args["k-len"]
-    current_f1 = 0.0
-    current_w = window
+    k_list::Vector{Int} = args["k-list"]
+    window_max::Float32 = args["window-max"]
+    window_step::Float32 = args["window-step"]
+    threshold_min::Float16 = args["threshold-min"]
+    threshold_max::Float16 = args["threshold-max"]
+    threshold_step::Float16 = args["threshold-step"]
+
     current_metric = "manhattan"
-    current_threshold = 0.5
+    best = (f1=-1.0, window=window, threshold=threshold_min, kmer=first(k_list))
 
     results = DataFrame(
         timestamp=DateTime[],
+        rep=Int[],
         window=Float32[],
         threshold=Float16[],
         kmer=Int[],
         metric=String[],
-        f1_score=Float64[]
+        f1_score=Float64[],
+        precision=Float64[],
+        recall=Float64[],
+        windows=Int[],
+        kmerset=Int[],
+        final_len=Int[],
+        extract_time=Float64[],
+        fit_time=Float64[],
+        classify_time=Float64[],
+        n_test=Int[]
     )
 
-    while window <= 0.003
+    rep::Int = args["rep"]
+    output_dir = "./output-sweep-$groupName"
+    mkpath(output_dir)
+    # nome fixo: as repetições acumulam no mesmo arquivo para a agregação
+    csv_filename = "$(output_dir)/parameter_sweep_$(groupName).csv"
+    summary_filename = "$(output_dir)/parameter_summary_$(groupName).csv"
+
+    while window <= window_max
         @info ">> Window " window
-        threshold::Float16 = 0.5
+        threshold::Float16 = threshold_min
 
-        while threshold <= 0.8
-            rm("$(homedir())/.project_cache/$(groupName)/$window";
-                recursive=true, force=true)
+        while threshold <= threshold_max
+            for kmer in k_list
+                # cache é indexado só por grupo/janela: precisa limpar a cada
+                # combinação, senão k e threshold novos reusam regiões antigas
+                rm("$(homedir())/.project_cache/$(groupName)/$window";
+                    recursive=true, force=true)
 
-            try
-                RegionExtraction.extractFeaturesTemplate(
-                    window,
-                    groupName,
-                    args["train-dir"],
-                    kmer,
-                    threshold
-                )
+                @info ">> Iteration" window threshold kmer
 
-                getKmersDistributionPerClass(
-                    window,
-                    groupName,
-                    args["train-dir"],
-                    args["classifier"],
-                    kmer,
-                )
+                try
+                    extract_time = @elapsed RegionExtraction.extractFeaturesTemplate(
+                        window,
+                        groupName,
+                        args["train-dir"],
+                        kmer,
+                        threshold
+                    )
 
-                f1 = greacClassification(
-                    args["test-dir"],
-                    nothing,
-                    window,
-                    groupName,
-                    current_metric,
-                    args["classifier"]
-                )
+                    fit_time = @elapsed getKmersDistributionPerClass(
+                        window,
+                        groupName,
+                        args["train-dir"],
+                        args["classifier"],
+                        kmer,
+                    )
 
-                push!(results, (
-                    now(),
-                    window,
-                    threshold,
-                    kmer,
-                    current_metric,
-                    f1
-                ))
+                    r = greacClassification(
+                        args["test-dir"],
+                        nothing,
+                        window,
+                        groupName,
+                        current_metric,
+                        args["classifier"];
+                        k_len=kmer,
+                        extract_time=extract_time,
+                        fit_time=fit_time
+                    )
 
-                if f1 > current_f1
-                    current_f1 = f1
-                    current_w = window
-                    current_threshold = threshold
-                    @info "New Best:" current_f1 current_w current_threshold kmer
+                    push!(results, (
+                        now(),
+                        rep,
+                        window,
+                        threshold,
+                        kmer,
+                        current_metric,
+                        r.f1,
+                        r.precision,
+                        r.recall,
+                        r.windows,
+                        r.kmerset,
+                        r.final_len,
+                        extract_time,
+                        fit_time,
+                        r.classify_time,
+                        r.n_test
+                    ))
+
+                    # grava a cada iteração: o sweep é longo, uma falha no meio
+                    # não pode levar junto as combinações já medidas
+                    CSV.write(csv_filename, DataFrame(last(results));
+                        append=isfile(csv_filename) && filesize(csv_filename) > 0)
+
+                    if r.f1 > best.f1
+                        best = (f1=r.f1, window=window, threshold=threshold, kmer=kmer)
+                        @info "New Best:" best
+                    end
+
+                catch e
+                    @error "Error during iteraction" exception = (e, catch_backtrace())
                 end
-
-            catch e
-                @error "Error during iteraction" exception = (e, catch_backtrace())
             end
 
-            threshold += Float16(0.05)
+            threshold += threshold_step
         end
 
-        window += Float32(0.0005)
+        window += window_step
     end
 
-    @info "Best Parameters:" current_f1 current_w current_threshold kmer
+    @info "Best of this rep:" best
 
-
-    timestamp_str = Dates.format(now(), "yyyymmdd")
-    output_dir = "./output-$kmer/reports-$groupName"
-    mkpath(output_dir)
-
-    csv_filename = "$(output_dir)/parameter_optimization_$(timestamp_str).csv"
-    CSV.write(csv_filename, results)
-
-    best_result = DataFrame(
-        parameter=["window", "threshold", "kmer", "metric", "f1_score"],
-        value=[string(current_w), string(current_threshold),
-            string(kmer), current_metric, string(current_f1)]
-    )
-
-    best_filename = "$(output_dir)/best_parameters_$(timestamp_str).csv"
-    CSV.write(best_filename, best_result)
-
-    @info "Reports:" csv_filename best_filename
+    summary = summarizeSweep(csv_filename, summary_filename)
+    @info "Reports:" csv_filename summary_filename
+    @info "Top combinations (mean over reps):" first(summary, min(5, nrow(summary)))
 
     return (
-        f1=current_f1,
-        window=current_w,
-        threshold=current_threshold,
-        kmer=kmer,
+        f1=best.f1,
+        window=best.window,
+        threshold=best.threshold,
+        kmer=best.kmer,
         metric=current_metric,
         all_results=results
     )
@@ -556,9 +624,6 @@ function add_benchmark_args!(settings)
         "-o", "--output-directory"
         help = "Where the files go"
         required = false
-        "--use-gramep"
-        help = "Use K-mer set from GRAMEP"
-        action = :store_true
         "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
@@ -617,10 +682,31 @@ function add_fit_parameters_args!(settings)
         "--test-dir"
         help = "Test dataset path"
         required = true
-        "-k", "--k-len"
-        help = "K-mer K value"
-        required = false
+        "-k", "--k-list"
+        help = "K-mer K values to sweep"
+        required = true
         arg_type = Int
+        nargs = '+'
+        "--window-max"
+        help = "Sweep window upper bound (start comes from -w)"
+        arg_type = Float32
+        default = Float32(0.003)
+        "--window-step"
+        arg_type = Float32
+        default = Float32(0.0005)
+        "--threshold-min"
+        arg_type = Float16
+        default = Float16(0.5)
+        "--threshold-max"
+        arg_type = Float16
+        default = Float16(0.8)
+        "--threshold-step"
+        arg_type = Float16
+        default = Float16(0.05)
+        "--rep"
+        help = "Repetition id, written to the CSV so reps can be aggregated"
+        arg_type = Int
+        default = 1
         "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
@@ -657,22 +743,21 @@ function handle_benchmark(args,
     window::Float32)
     @info "Starting benchmark" args window groupName
     @info "Starting model extraction"
-    RegionExtraction.extractFeaturesTemplate(
+    extract_time = @elapsed RegionExtraction.extractFeaturesTemplate(
         window,
         groupName,
         args["train-dir"],
         args["k-len"],
         args["threshold"],
-        args["reference"],
-        args["use-gramep"],
     )
-    distribution = getKmersDistributionPerClass(
+    fit_time = @elapsed getKmersDistributionPerClass(
         window,
         groupName,
         args["train-dir"],
         args["classifier"],
         args["k-len"],
     )
+    @info "Training time (s)" extract_time fit_time
 
     @info "Starting classification evaluation"
     greacClassification(
@@ -681,7 +766,10 @@ function handle_benchmark(args,
         window,
         groupName,
         args["metric"],
-        args["classifier"]
+        args["classifier"];
+        k_len=args["k-len"],
+        extract_time=extract_time,
+        fit_time=fit_time
     )
 end
 

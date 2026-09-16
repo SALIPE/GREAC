@@ -410,8 +410,6 @@ function extractFeaturesTemplate(
     groupName::String,
     variantDirPath::String,
     k_len::Int,
-    useGramep::Bool,
-    reference::Union{},
     histogramThreshold::Float16=Float16(0.8))
 
     @info "Threads:" Threads.nthreads()
@@ -427,10 +425,7 @@ function extractFeaturesTemplate(
 
     outputs = Vector{Tuple{String,Tuple{Vector{UInt16},BitArray}}}(undef, length(variantDirs))
 
-    if useGramep
-    else
-        kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
-    end
+    kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
 
 
     DataIO.save_cache("$cachdir/kmerset.dat", kmerset)
