@@ -43,8 +43,11 @@ REPEATS=${REPEATS:-100}
 REPEAT_START=${REPEAT_START:-1}
 OUTPUTS=${OUTPUTS:-$KEVOLVE/outputs}
 REPORTS=${REPORTS:-$OUTPUTS/reports.csv}
-# Per organism/k timeout in seconds (0 = no limit)
-TIMEOUT=${TIMEOUT:-0}
+# Per organism/k/repetition time limit in seconds (0 = no limit). A run that
+# exceeds it is killed and the sweep continues with the next one - needed when
+# the solution search cannot find solutions and would otherwise never end.
+# Tune it per organism, e.g. qsub -v TIMEOUT=7200 ...
+TIMEOUT=${TIMEOUT:-3600}
 # Set FORCE=1 to reprocess organism/k combinations already completed
 FORCE_FLAG=""
 [ "${FORCE:-0}" = "1" ] && FORCE_FLAG="--force"
@@ -71,35 +74,35 @@ prepare_dataset() {
 	rm -rf "$(temp_dataset_dir "$organism")"
 	case $organism in
 		sars)
-			[ -d "$TEMPROOT/sars_cov2" ] || cp -r "$DATASETS/sars_cov2/data" "$TEMPROOT/sars_cov2"
-			"$BALANCEDATASET/testcl_sars.sh" || return 1
+			[ -d "$TEMPROOT/sars_cov2" ] || cp -r "$DATASETS/sars_cov2/data_clean" "$TEMPROOT/sars_cov2"
+			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/sars_cov2" || return 1
 			rm -f "$TEMPROOT/sars_cov2/train/sars_train.fasta" "$TEMPROOT/sars_cov2/test/sars_test.fasta"
 			cat "$TEMPROOT"/sars_cov2/train/*.fasta > "$TEMPROOT/sars_cov2/train/sars_train.fasta"
 			cat "$TEMPROOT"/sars_cov2/test/*.fasta  > "$TEMPROOT/sars_cov2/test/sars_test.fasta"
 			;;
 		denv)
-			[ -d "$TEMPROOT/dengue" ] || cp -r "$DATASETS/dengue/data" "$TEMPROOT/dengue"
+			[ -d "$TEMPROOT/dengue" ] || cp -r "$DATASETS/dengue/data_clean" "$TEMPROOT/dengue"
 			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/dengue" || return 1
 			rm -f "$TEMPROOT/dengue/train/denv_train.fasta" "$TEMPROOT/dengue/test/denv_test.fasta"
 			cat "$TEMPROOT"/dengue/train/*.fasta > "$TEMPROOT/dengue/train/denv_train.fasta"
 			cat "$TEMPROOT"/dengue/test/*.fasta  > "$TEMPROOT/dengue/test/denv_test.fasta"
 			;;
 		hbv)
-			[ -d "$TEMPROOT/hbv" ] || cp -r "$DATASETS/HBV/data" "$TEMPROOT/hbv"
+			[ -d "$TEMPROOT/hbv" ] || cp -r "$DATASETS/HBV/data_clean" "$TEMPROOT/hbv"
 			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/hbv" || return 1
 			rm -f "$TEMPROOT/hbv/train/hbv_train.fasta" "$TEMPROOT/hbv/test/hbv_test.fasta"
 			cat "$TEMPROOT"/hbv/train/*.fasta > "$TEMPROOT/hbv/train/hbv_train.fasta"
 			cat "$TEMPROOT"/hbv/test/*.fasta  > "$TEMPROOT/hbv/test/hbv_test.fasta"
 			;;
 		hiv)
-			[ -d "$TEMPROOT/hiv" ] || cp -r "$DATASETS/hiv/data" "$TEMPROOT/hiv"
+			[ -d "$TEMPROOT/hiv" ] || cp -r "$DATASETS/hiv/data_clean" "$TEMPROOT/hiv"
 			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/hiv" || return 1
 			rm -f "$TEMPROOT/hiv/train/hiv_train.fasta" "$TEMPROOT/hiv/test/hiv_test.fasta"
 			cat "$TEMPROOT"/hiv/train/*.fasta > "$TEMPROOT/hiv/train/hiv_train.fasta"
 			cat "$TEMPROOT"/hiv/test/*.fasta  > "$TEMPROOT/hiv/test/hiv_test.fasta"
 			;;
 		mkpx)
-			[ -d "$TEMPROOT/mkpx" ] || cp -r "$DATASETS/mkpx/data" "$TEMPROOT/mkpx"
+			[ -d "$TEMPROOT/mkpx" ] || cp -r "$DATASETS/mkpx/data_clean" "$TEMPROOT/mkpx"
 			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/mkpx" || return 1
 			rm -f "$TEMPROOT/mkpx/train/mkpx_train.fasta" "$TEMPROOT/mkpx/test/mkpx_test.fasta"
 			cat "$TEMPROOT"/mkpx/train/*.fasta > "$TEMPROOT/mkpx/train/mkpx_train.fasta"

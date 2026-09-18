@@ -23,7 +23,11 @@ to outputs/reports.csv (one row per class/average), which is what
 aggregate_reports.py summarises into mean and standard deviation.
 
 Failures of one organism/k combination are logged to logs/errors.log and the
-loop continues. Completed combinations are marked with a .done file, so the
+loop continues. A run exceeding --timeout is killed (with every process it
+spawned), marked with a .timeout file and the sweep moves to the next one; it
+is simply missing from the reports, so n in the summary shows how many
+repetitions of each k actually finished.
+Completed combinations are marked with a .done file, so the
 script can be interrupted and resumed without reprocessing them.
 """
 
@@ -33,6 +37,7 @@ import csv
 import datetime
 import os
 import shutil
+import signal
 import subprocess
 import sys
 import time
@@ -144,12 +149,19 @@ def runCombination(organism, k, configPath, runDir, timeout):
 	with open(logPath, "w") as logFile:
 		logFile.write("command: " + " ".join(command) + "\n\n")
 		logFile.flush()
-		process = subprocess.Popen(command, cwd = BASE_DIR, stdout = logFile, stderr = subprocess.STDOUT)
+		# Own session, so a timeout kills the whole process group and not only the
+		# python child (workers spawned by the solution search would survive)
+		process = subprocess.Popen(command, cwd = BASE_DIR, stdout = logFile,
+			stderr = subprocess.STDOUT, start_new_session = True)
 		try:
 			returnCode = process.wait(timeout = timeout)
 		except subprocess.TimeoutExpired:
-			process.kill()
+			os.killpg(process.pid, signal.SIGKILL)
 			process.wait()
+			logFile.write("\n\nKILLED: timeout after " + str(timeout) + "s\n")
+			# Marker so a resumed job moves on instead of burning the timeout again
+			with open(os.path.join(runDir, ".timeout"), "w") as f:
+				f.write(datetime.datetime.now().isoformat() + "\ttimeout_s=" + str(timeout) + "\n")
 			raise RuntimeError("timeout after " + str(timeout) + "s (see " + logPath + ")")
 	if returnCode != 0:
 		raise RuntimeError("exit code " + str(returnCode) + " (see " + logPath + ")")
@@ -176,7 +188,8 @@ def main():
 	argumentParser.add_argument("--logs", default = os.path.join(BASE_DIR, "logs"),
 		help = "directory of the error log (default: ./logs)")
 	argumentParser.add_argument("--timeout", type = int, default = 0,
-		help = "per run timeout in seconds, 0 to disable (default: 0)")
+		help = "per run timeout in seconds, 0 to disable (default: 0); timed out runs "
+		       "are skipped on resume unless --force is given")
 	argumentParser.add_argument("--repeat", type = int, default = None,
 		help = "index of the repetition; outputs go to outputs/{organism}/k{k}/rep{R} "
 		       "(default: none, flat outputs/{organism}/k{k})")
@@ -205,12 +218,17 @@ def main():
 		for k in range(arguments.k_min, arguments.k_max + 1):
 			runDir = runDirectory(arguments.outputs, organism, k, repeat)
 			doneMarker = os.path.join(runDir, ".done")
+			timeoutMarker = os.path.join(runDir, ".timeout")
 			configPath = configurationPath(arguments.configs, organism, k, repeat)
 			label = organism + " | k=" + str(k)
 			if repeat is not None: label += " | rep=" + str(repeat)
 
 			if os.path.isfile(doneMarker) and not arguments.force:
 				log(label + " | SKIPPED (already completed)")
+				nSkipped += 1
+				continue
+			if os.path.isfile(timeoutMarker) and not arguments.force:
+				log(label + " | SKIPPED (timed out in a previous attempt)")
 				nSkipped += 1
 				continue
 

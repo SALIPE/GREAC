@@ -501,11 +501,20 @@ function fitParameters(
     csv_filename = "$(output_dir)/parameter_sweep_$(groupName).csv"
     summary_filename = "$(output_dir)/parameter_summary_$(groupName).csv"
 
-    while window <= window_max
-        @info ">> Window " window
-        threshold::Float16 = threshold_min
+    # contador inteiro em vez de acumular o passo: somar 0.0005f0 duas vezes a
+    # 0.002f0 passa ligeiramente de 0.003f0 e a última janela era ignorada
+    # (limites arredondados a decimal antes: Float16(0.8) é 0.7998, ~3 casas úteis)
+    w0, w1, wstep = round.(Float64.((window, window_max, window_step)), digits=6)
+    t0, t1, tstep = round.(Float64.((threshold_min, threshold_max, threshold_step)), digits=3)
+    n_windows = floor(Int, round((w1 - w0) / wstep, digits=6)) + 1
+    n_thresholds = floor(Int, round((t1 - t0) / tstep, digits=6)) + 1
 
-        while threshold <= threshold_max
+    for wi in 0:n_windows-1
+        window = Float32(round(w0 + wi * wstep, digits=6))
+        @info ">> Window " window
+
+        for ti in 0:n_thresholds-1
+            threshold = Float16(round(t0 + ti * tstep, digits=3))
             for kmer in k_list
                 # cache é indexado só por grupo/janela: precisa limpar a cada
                 # combinação, senão k e threshold novos reusam regiões antigas
@@ -576,11 +585,7 @@ function fitParameters(
                     @error "Error during iteraction" exception = (e, catch_backtrace())
                 end
             end
-
-            threshold += threshold_step
         end
-
-        window += window_step
     end
 
     @info "Best of this rep:" best
