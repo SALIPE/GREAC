@@ -82,7 +82,7 @@ fi
 
 # Diretório local exclusivo deste job/tarefa: jobs paralelos no mesmo nó não
 # pisam no split uns dos outros
-JOBTEMP="$TEMPROOT/${JOB_ID:-$$}_${SGE_TASK_ID:-0}"
+JOBTEMP="$TEMPROOT/${JOB_ID:-$$}"
 cleanup() {
     rm -rf "$JOBTEMP"
     echo "[$(date '+%F %T')] 🧹 $JOBTEMP removido"
@@ -92,13 +92,13 @@ mkdir -p "$JOBTEMP"
 # O GREAC grava o cache (kmerset, outmasks, modelo) em $HOME/.project_cache.
 # Apontar o HOME do Julia para o disco local do nó mantém esse I/O fora do NFS
 # e isola jobs paralelos do mesmo organismo.
-JULIA_HOME_LOCAL="$JOBTEMP/home"
-mkdir -p "$JULIA_HOME_LOCAL"
+# JULIA_HOME_LOCAL="$JOBTEMP/home"
+# mkdir -p "$JULIA_HOME_LOCAL"
 
 REPEAT_END=$((REPEAT_START + REPEATS - 1))
 echo "[$(date '+%F %T')] reps $REPEAT_START..$REPEAT_END | organismos: ${ORGANISMS[*]} | k: $K_LIST"
 echo "   window $WINDOW..$WINDOW_MAX (passo $WINDOW_STEP) | threshold $THRESHOLD_MIN..$THRESHOLD_MAX (passo $THRESHOLD_STEP)"
-echo "   nó $(hostname) | threads $JULIA_NUM_THREADS | temp $JOBTEMP | julia $JULIA_BIN"
+echo "   nó $(hostname) | threads $JULIA_NUM_THREADS | temp $JOBTEMP "
 
 # Sweep novo (REPEAT_START=1) arquiva o CSV anterior; uma continuação acrescenta
 if [ "$REPEAT_START" = "1" ]; then
@@ -140,7 +140,7 @@ for REP in $(seq "$REPEAT_START" "$REPEAT_END"); do
         fi
 
         echo "[$(date '+%F %T')] 🔄 $ORGANISM: sweep da repetição $REP"
-        ( cd "$PROJECTHOME" && HOME="$JULIA_HOME_LOCAL" "$JULIA_BIN" --project src/GREAC.jl --no-cache \
+        ( cd "$PROJECTHOME" && julia --project src/GREAC.jl --no-cache \
             --group-name "$ORGANISM" \
             -w "$WINDOW" fit-parameters \
             --train-dir "$TEMP_DATA/train" \
