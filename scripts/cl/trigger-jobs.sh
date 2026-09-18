@@ -1,5 +1,4 @@
 #!/bin/bash
 
-ORGANISM=$1
-
-qsub -q node17.q -v ORGANISMS="$ORGANISM",REPEATS=50 ./kmer_sweep.sh
+echo "Trigger $1"
+qsub -q node17.q -v ORGANISMS=$1,REPEATS=50 ./kmer_sweep.sh

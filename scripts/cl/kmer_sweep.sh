@@ -29,11 +29,11 @@
 # ATENÇÃO: o custo é REPEATS x |K_LIST| x |windows| x |thresholds| por organismo.
 # Com os defaults: 10 x 6 x 3 x 7 = 1260 combinações de treino+classificação.
 
-set -u
-
 source /home/a61491/.bashrc
 
-FEHOME=home/a61491
+set -u
+
+FEHOME=/home/a61491
 PROJECTHOME=$FEHOME/GREAC/GREAC
 DATASETS=$FEHOME/datasets/original
 BALANCEDATASET=$FEHOME/Fasta-splitter/FastaSplitter
@@ -48,7 +48,8 @@ WINDOW_STEP=${WINDOW_STEP:-0.0005}
 THRESHOLD_MIN=${THRESHOLD_MIN:-0.5}
 THRESHOLD_MAX=${THRESHOLD_MAX:-0.8}
 THRESHOLD_STEP=${THRESHOLD_STEP:-0.05}
-K_LIST="5 6 7 8 9 10"
+K_LIST=${K_LIST:-"5 6 7 8 9 10"}
+
 
 ALL_ORGANISMS=(denv hbv hiv mkpx sars)
 
@@ -62,6 +63,13 @@ dataset_of() {
         *) return 1 ;;
     esac
 }
+
+
+if [ "${1:-}" = "-v" ]; then
+    echo "❌ -v é opção do qsub. Execução direta: $0 [organismo...]," >&2
+    echo "   com os parâmetros pelo ambiente: REPEATS=2 $0 sars" >&2
+    exit 1
+fi
 
 # Organismos: linha de comando, depois array job do SGE, depois todos
 if [ "$#" -gt 0 ]; then
