@@ -425,8 +425,16 @@ end
 
 # Agrega todas as repetições já gravadas: média e desvio padrão por combinação.
 # std de uma única repetição é NaN por definição.
-function summarizeSweep(csv_filename::String, summary_filename::String)
-    all_runs = CSV.read(csv_filename, DataFrame)
+# Shards de um sweep: o arquivo base mais os .part-<run-id> de jobs paralelos.
+# Os arquivados (parameter_sweep_<grupo>_<timestamp>.csv) ficam de fora.
+function sweepShards(output_dir::String, groupName::String)
+    base = "parameter_sweep_$(groupName)"
+    return [joinpath(output_dir, f) for f in readdir(output_dir)
+            if f == "$base.csv" || startswith(f, "$base.part-") && endswith(f, ".csv")]
+end
+
+function summarizeSweep(shards::Vector{String}, summary_filename::String)
+    all_runs = reduce(vcat, CSV.read(f, DataFrame) for f in shards)
 
     summary = combine(
         groupby(all_runs, [:window, :threshold, :kmer, :metric]),
@@ -498,7 +506,12 @@ function fitParameters(
     output_dir = "./output-sweep-$groupName"
     mkpath(output_dir)
     # nome fixo: as repetições acumulam no mesmo arquivo para a agregação
-    csv_filename = "$(output_dir)/parameter_sweep_$(groupName).csv"
+    # Um shard por job: dois jobs em nós diferentes não podem acrescentar ao mesmo
+    # arquivo (append concorrente sobre NFS não é atômico). O summary junta todos.
+    run_id::String = args["run-id"]
+    csv_filename = isempty(run_id) ?
+                   "$(output_dir)/parameter_sweep_$(groupName).csv" :
+                   "$(output_dir)/parameter_sweep_$(groupName).part-$(run_id).csv"
     summary_filename = "$(output_dir)/parameter_summary_$(groupName).csv"
 
     # contador inteiro em vez de acumular o passo: somar 0.0005f0 duas vezes a
@@ -590,7 +603,7 @@ function fitParameters(
 
     @info "Best of this rep:" best
 
-    summary = summarizeSweep(csv_filename, summary_filename)
+    summary = summarizeSweep(sweepShards(output_dir, groupName), summary_filename)
     @info "Reports:" csv_filename summary_filename
     @info "Top combinations (mean over reps):" first(summary, min(5, nrow(summary)))
 
@@ -712,6 +725,10 @@ function add_fit_parameters_args!(settings)
         help = "Repetition id, written to the CSV so reps can be aggregated"
         arg_type = Int
         default = 1
+        "--run-id"
+        help = "Job id: writes to its own parameter_sweep_<group>.part-<run-id>.csv"
+        arg_type = String
+        default = ""
         "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true

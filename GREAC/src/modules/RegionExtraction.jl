@@ -225,7 +225,7 @@ function max_entropy(kmers::Dict{String,Int32})
     end
 
     # Calcular curva de entropia 
-    entropy_curve = map(1:length(normalized_data)-1) do s
+    entropy_curve = map(1:(length(normalized_data)-1)) do s
         # Região A: probs[1:s], probabilidade total P_A
         p_a = sum(normalized_data[1:s])
         h_a = if p_a > 0.0
@@ -236,9 +236,9 @@ function max_entropy(kmers::Dict{String,Int32})
         end
 
         # Região B: probs[s+1:end], probabilidade total P_B
-        p_b = sum(normalized_data[s+1:end])
+        p_b = sum(normalized_data[(s+1):end])
         h_b = if p_b > 0.0
-            p_b_data = normalized_data[s+1:end] ./ p_b
+            p_b_data = normalized_data[(s+1):end] ./ p_b
             entropy(p_b_data)
         else
             0.0
@@ -287,7 +287,7 @@ function get_exclusive_kmers(
             var_hash = rolling_hash_kmers(seq, var_hash, k_len)
         end
 
-        # A busca das mais informativas tem que ser aqui em comparação com a referencia
+        # A busca das mais informativas tem que ser aqui em comparação com a referencia - na implementar o gramep
         kmer_dict = Dict{String,Int32}()
         for kmer_freq in values(var_hash)
             kmer_dict[kmer_freq[1]] = kmer_freq[2]
@@ -650,7 +650,7 @@ function occursinKmerBit(
     @inbounds for i in 1:(wlen-klen+1)
         match = true
         for j in 1:klen
-            (windowBuffer[i+j-1] ≠ kmer[j]) && (match = false; break)
+            (windowBuffer[i+j-1] ≠ kmer[j]) && (match=false; break)
         end
         match && return true
     end

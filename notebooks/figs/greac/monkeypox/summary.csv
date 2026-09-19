@@ -1,0 +1,4 @@
+window,threshold,kmer,n,f1_score_mean,precision_mean,recall_mean,coverage_mean,extract_time_mean,fit_time_mean,train_time_mean,classify_time_mean,f1_score_std,precision_std,recall_std,coverage_std,extract_time_std,fit_time_std,train_time_std,classify_time_std,coverage_min,eligible
+0.0005,0.5,7,1,0.9989,0.998,0.9998,1.0,29.612419,2166.702353,2196.314772,3811.49259,,,,,,,,,1.0,True
+0.0005,0.5,6,1,0.9966,0.994,0.9992,1.0,19.765084,1945.917887,1965.682971,3810.23673,,,,,,,,,1.0,True
+0.0005,0.5,5,1,0.9921,0.9861,0.9982,1.0,20.245129,1938.878139,1959.123268,3790.773714,,,,,,,,,1.0,True
