@@ -45,3 +45,6 @@ scripts/HBV_tutorial
 **/__pycache__
 
 **/figs
+
+/paper
+CLAUDE.md
