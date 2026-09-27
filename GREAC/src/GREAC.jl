@@ -124,7 +124,8 @@ function greacClassification(
     extract_time::Float64=NaN,
     fit_time::Float64=NaN,
     rep::Int=0,
-    write_memberships::Bool=true
+    write_memberships::Bool=true,
+    run_id::String=""
 )
 
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass"
@@ -207,9 +208,11 @@ function greacClassification(
     @info "f1 = " results[:macro][:f1]
 
     if !isnothing(outputdir)
-        RESULTS_CSV = "$outputdir/benchmark_results_$groupName.csv"
-        MEMBERSHIPS = "$outputdir/classifications_$groupName.csv"
         mkpath(outputdir)
+        # Um shard por job: dois jobs em nós diferentes não podem acrescentar ao
+        # mesmo arquivo (append concorrente sobre NFS não é atômico)
+        RESULTS_CSV = shardPath(outputdir, "benchmark_results_$groupName", run_id)
+        MEMBERSHIPS = shardPath(outputdir, "classifications_$groupName", run_id)
 
         write_memberships && open(MEMBERSHIPS, "a") do io
 
@@ -434,11 +437,17 @@ end
 # std de uma única repetição é NaN por definição.
 # Shards de um sweep: o arquivo base mais os .part-<run-id> de jobs paralelos.
 # Os arquivados (parameter_sweep_<grupo>_<timestamp>.csv) ficam de fora.
-function sweepShards(output_dir::String, groupName::String)
-    base = "parameter_sweep_$(groupName)"
+function shardFiles(output_dir::String, base::String)
     return [joinpath(output_dir, f) for f in readdir(output_dir)
-                                        if f == "$base.csv" || startswith(f, "$base.part-") && endswith(f, ".csv")]
+            if f == "$base.csv" || (startswith(f, "$base.part-") && endswith(f, ".csv"))]
 end
+
+sweepShards(output_dir::String, groupName::String) =
+    shardFiles(output_dir, "parameter_sweep_$(groupName)")
+
+# Nome do arquivo deste job: com run-id, cada job escreve seu próprio shard
+shardPath(output_dir::String, base::String, run_id::String) =
+    isempty(run_id) ? "$(output_dir)/$(base).csv" : "$(output_dir)/$(base).part-$(run_id).csv"
 
 function summarizeSweep(shards::Vector{String}, summary_filename::String)
     all_runs = reduce(vcat, CSV.read(f, DataFrame) for f in shards)
@@ -468,8 +477,8 @@ formatMatrix(m) = replace(string(m), "\n" => " | ")
 
 # Agrega as execuções do benchmark: média e desvio de cada métrica e de cada
 # tempo, e as matrizes de confusão somadas (soma e média por execução).
-function summarizeBenchmark(results_csv::String, summary_csv::String)
-    runs = CSV.read(results_csv, DataFrame)
+function summarizeBenchmark(shards::Vector{String}, summary_csv::String)
+    runs = reduce(vcat, CSV.read(f, DataFrame) for f in shards)
 
     group_cols = intersect(["wndwPercent", "metric", "k"], names(runs))
     num_cols = [n for n in names(runs)
@@ -690,6 +699,10 @@ function add_benchmark_args!(settings)
         "--no-memberships"
         help = "Skip classifications_<group>.csv (one line per sequence per run)"
         action = :store_true
+        "--run-id"
+        help = "Job id: writes to its own benchmark_results_<group>.part-<run-id>.csv"
+        arg_type = String
+        default = ""
     end
 end
 
@@ -838,13 +851,14 @@ function handle_benchmark(args,
         extract_time=extract_time,
         fit_time=fit_time,
         rep=args["rep"],
-        write_memberships=(!args["no-memberships"])
+        write_memberships=(!args["no-memberships"]),
+        run_id=args["run-id"]
     )
 
     if !isnothing(args["output-directory"])
         outputdir = args["output-directory"]
         summary = summarizeBenchmark(
-            "$outputdir/benchmark_results_$groupName.csv",
+            shardFiles(outputdir, "benchmark_results_$groupName"),
             "$outputdir/benchmark_summary_$groupName.csv")
         @info "Benchmark summary:" first(summary, 1)
     end
