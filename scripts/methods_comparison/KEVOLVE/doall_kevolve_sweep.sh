@@ -12,6 +12,10 @@
 # Options through the environment, e.g.:
 #   qsub -v ORGANISMS="sars hbv",K_MIN=4,K_MAX=8,REPEATS=100 doall_kevolve_sweep.sh
 #
+# Each job stages the datasets in /tmp2/felipe/job$JOB_ID, so several jobs can
+# share a node. Give concurrent jobs on the same organism distinct REPEAT_START
+# ranges, otherwise they fight over the same outputs/{organism}/k{k}/rep{R}.
+#
 # The repetition is the OUTER loop: each repetition re-splits the datasets, so
 # a repetition is an independent train/test partition and an independent run of
 # the stochastic solution search, while every k inside one repetition still
@@ -28,18 +32,25 @@
 # the repetitions over several jobs with REPEAT_START/REPEATS.
 
 KEVOLVE=/home/a61491/KEVOLVE
-TEMPROOT=/tmp2/felipe
-TEMPDIR=$TEMPROOT/kevolve
+# Identifier of this job: the SGE job id (plus the task id on an array job), or
+# the PID when the script is run by hand outside the queue.
+JOB_TAG=${JOB_ID:-$$}
+if [ -n "${SGE_TASK_ID:-}" ] && [ "${SGE_TASK_ID}" != "undefined" ]; then
+	JOB_TAG=$JOB_TAG.$SGE_TASK_ID
+fi
+# Scratch directory private to this job, so several jobs can run on the same
+# node without overwriting each other's copy of the datasets and their split.
+TEMPROOT=${TEMPROOT:-/tmp2/felipe/kevolve/job$JOB_TAG}
 DATASETS=/home/a61491/datasets/original
 BALANCEDATASET=/home/a61491/Fasta-splitter/FastaSplitter
 
 #ORGANISMS=${ORGANISMS:-"sars denv hbv hiv mkpx"}
-ORGANISMS=${ORGANISMS:-"hbv"}
-K_MIN=${K_MIN:-2}
+ORGANISMS=${ORGANISMS:-"denv"}
+K_MIN=${K_MIN:-1}
 K_MAX=${K_MAX:-10}
 # Number of repetitions of the whole sweep, and index of the first one
 # (REPEAT_START lets a second job continue where a first one stopped)
-REPEATS=${REPEATS:-100}
+REPEATS=${REPEATS:-50}
 REPEAT_START=${REPEAT_START:-1}
 OUTPUTS=${OUTPUTS:-$KEVOLVE/outputs}
 REPORTS=${REPORTS:-$OUTPUTS/reports.csv}
@@ -52,7 +63,13 @@ TIMEOUT=${TIMEOUT:-3600}
 FORCE_FLAG=""
 [ "${FORCE:-0}" = "1" ] && FORCE_FLAG="--force"
 
-mkdir -p "$TEMPROOT" "$TEMPDIR" "$OUTPUTS" "$KEVOLVE/logs"
+mkdir -p "$TEMPROOT" "$OUTPUTS" "$KEVOLVE/logs"
+
+# Remove the scratch of this job on the way out, including a wall clock kill;
+# only this job's directory is touched, never another job's.
+trap 'rm -rf "$TEMPROOT"' EXIT INT TERM
+
+echo "=== [$(date '+%F %T')] job $JOB_TAG, scratch: $TEMPROOT ==="
 
 source /home/a61491/.venv/bin/activate
 
@@ -60,7 +77,7 @@ source /home/a61491/.venv/bin/activate
 temp_dataset_dir() {
 	case $1 in
 		sars) echo "$TEMPROOT/sars_cov2" ;;
-		denv) echo "$TEMPROOT/dengue" ;;
+		denv) echo "$TEMPROOT/denv" ;;
 		*)    echo "$TEMPROOT/$1" ;;
 	esac
 }
@@ -81,11 +98,11 @@ prepare_dataset() {
 			cat "$TEMPROOT"/sars_cov2/test/*.fasta  > "$TEMPROOT/sars_cov2/test/sars_test.fasta"
 			;;
 		denv)
-			[ -d "$TEMPROOT/dengue" ] || cp -r "$DATASETS/dengue/data_clean" "$TEMPROOT/dengue"
-			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/dengue" || return 1
-			rm -f "$TEMPROOT/dengue/train/denv_train.fasta" "$TEMPROOT/dengue/test/denv_test.fasta"
-			cat "$TEMPROOT"/dengue/train/*.fasta > "$TEMPROOT/dengue/train/denv_train.fasta"
-			cat "$TEMPROOT"/dengue/test/*.fasta  > "$TEMPROOT/dengue/test/denv_test.fasta"
+			[ -d "$TEMPROOT/denv" ] || cp -r "$DATASETS/denv/data_clean" "$TEMPROOT/denv"
+			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/denv" || return 1
+			rm -f "$TEMPROOT/denv/train/denv_train.fasta" "$TEMPROOT/denv/test/denv_test.fasta"
+			cat "$TEMPROOT"/denv/train/*.fasta > "$TEMPROOT/denv/train/denv_train.fasta"
+			cat "$TEMPROOT"/denv/test/*.fasta  > "$TEMPROOT/denv/test/denv_test.fasta"
 			;;
 		hbv)
 			[ -d "$TEMPROOT/hbv" ] || cp -r "$DATASETS/HBV/data_clean" "$TEMPROOT/hbv"
@@ -148,6 +165,5 @@ done
 
 echo "=== [$(date '+%F %T')] sweep finished, outputs in $OUTPUTS ==="
 echo "=== raw tables: $REPORTS | summary: $OUTPUTS/reports_summary.csv ==="
-# The datasets in /tmp2 are kept so an interrupted job can be resumed cheaply.
-# Uncomment to clean the node:
-rm -r $TEMPROOT
+# $TEMPROOT is removed by the trap above. Nothing is kept between jobs: every
+# repetition re-splits the dataset anyway.

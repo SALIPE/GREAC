@@ -43,3 +43,5 @@ study-cases/castor_hiv_data/variants/train
 scripts/HBV_tutorial
 
 **/__pycache__
+
+**/figs

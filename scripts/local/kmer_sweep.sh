@@ -48,7 +48,7 @@ case $GROUPNAME in
     hbv)       SOURCE=$DATASETS/HBV/data_clean ;;
     hiv)       SOURCE=$DATASETS/hiv/data_clean ;;
     sars)      SOURCE=$DATASETS/sars_cov2/data_clean ;;
-    monkeypox) SOURCE=$DATASETS/mkpx/data_clean ;;
+    mkpx) SOURCE=$DATASETS/mkpx/data_clean ;;
     bees[0-9]*)
         chr=${GROUPNAME#bees}
         if (( chr >= 1 && chr <= 16 )); then
@@ -116,7 +116,10 @@ for REP in $(seq "$START" "$END"); do
     # Dentro de uma repetição o split é fixo, então as combinações continuam
     # comparáveis entre si.
     if [ -x "$BALANCEDATASET/test.sh" ]; then
-        $BALANCEDATASET/test.sh $SOURCE
+        case $GROUPNAME in
+            mkpx)  $BALANCEDATASET/run_subset.sh $SOURCE ;;
+            *)     $BALANCEDATASET/test.sh $SOURCE ;;
+        esac
     else
         echo "⚠️  $BALANCEDATASET/test.sh não encontrado, usando o split atual"
     fi

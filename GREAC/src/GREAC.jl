@@ -122,7 +122,9 @@ function greacClassification(
     use_xg::Bool;
     k_len::Int=0,
     extract_time::Float64=NaN,
-    fit_time::Float64=NaN
+    fit_time::Float64=NaN,
+    rep::Int=0,
+    write_memberships::Bool=true
 )
 
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass"
@@ -209,19 +211,21 @@ function greacClassification(
         MEMBERSHIPS = "$outputdir/classifications_$groupName.csv"
         mkpath(outputdir)
 
-        open(MEMBERSHIPS, "a") do io
+        write_memberships && open(MEMBERSHIPS, "a") do io
 
             if filesize(MEMBERSHIPS) == 0
                 types = join(model.classes, ",")
-                write(io, "id," * types * ",predicted_label,true_label")
+                write(io, "rep,id," * types * ",predicted_label,true_label")
             end
             for (key, value) in classification_probs
                 for i in eachindex(value)
                     try
                         id, cl, classification = value[i]
-                        line = "\n$id,"
-                        for (_, probability) in classification
-                            line = line * "$(round(probability, digits=4)),"
+                        line = "\n$rep,$id,"
+                        # na ordem de model.classes, a mesma do cabeçalho: iterar o
+                        # Dict punha cada membership sob a classe errada (ordem do hash)
+                        for c in model.classes
+                            line = line * "$(round(classification[c], digits=4)),"
                         end
                         line = line * "$cl,$key"
                         write(io, line)
@@ -237,31 +241,34 @@ function greacClassification(
             # Write header if file is empty/new
             if filesize(RESULTS_CSV) == 0
                 types = join(model.classes, ",")
-                write(io, "wndwPercent,metric,windows,kmerset,final_len," * types * ",macro_f1,macro_precision,macro_recall,cm,k,extract_time,fit_time,classify_time,n_test,classify_time_per_seq\n")
+                write(io, "rep,wndwPercent,metric,windows,kmerset,final_len," * types * ",macro_f1,macro_precision,macro_recall,cm,k,extract_time,fit_time,classify_time,n_test,classify_time_per_seq\n")
             end
 
             # Format data components
             cm = replace(string(results[:confusion_matrix]), "\n" => " | ")
-            perclass = join([v[:f1] for (k, v) in results[:per_class]], ",")
+            # indexado por model.classes, a mesma ordem do cabeçalho e da matriz de
+            # confusão: iterar o Dict deixava o alinhamento por conta do hash
+            perclass = join([results[:per_class][c][:f1] for c in model.classes], ",")
             # Create CSV line
             line = join([
-                    escape_string(string(wnwPercent)),
-                    escape_string(string(metric)),
-                    length(model.regions),
-                    length(model.kmerset),
-                    escape_string(string(count_region_length(model.regions))),
-                    perclass,
-                    results[:macro][:f1],
-                    results[:macro][:precision],
-                    results[:macro][:recall],
-                    cm,
-                    k_len,
-                    extract_time,
-                    fit_time,
-                    classify_time,
-                    n_test,
-                    n_test == 0 ? NaN : classify_time / n_test
-                ], ",")
+                rep,
+                escape_string(string(wnwPercent)),
+                escape_string(string(metric)),
+                length(model.regions),
+                length(model.kmerset),
+                escape_string(string(count_region_length(model.regions))),
+                perclass,
+                results[:macro][:f1],
+                results[:macro][:precision],
+                results[:macro][:recall],
+                cm,
+                k_len,
+                extract_time,
+                fit_time,
+                classify_time,
+                n_test,
+                n_test == 0 ? NaN : classify_time / n_test
+            ], ",")
 
             write(io, line * "\n")
         end
@@ -430,7 +437,7 @@ end
 function sweepShards(output_dir::String, groupName::String)
     base = "parameter_sweep_$(groupName)"
     return [joinpath(output_dir, f) for f in readdir(output_dir)
-            if f == "$base.csv" || startswith(f, "$base.part-") && endswith(f, ".csv")]
+                                        if f == "$base.csv" || startswith(f, "$base.part-") && endswith(f, ".csv")]
 end
 
 function summarizeSweep(shards::Vector{String}, summary_filename::String)
@@ -447,6 +454,37 @@ function summarizeSweep(shards::Vector{String}, summary_filename::String)
 
     sort!(summary, :f1_score_mean, rev=true)
     CSV.write(summary_filename, summary)
+    return summary
+end
+
+# "[1 2; 3 4]" (como o benchmark grava) de volta para matriz
+function parseConfusionMatrix(text::AbstractString)::Matrix{Int}
+    rows = split(strip(String(text), ['[', ']', ' ']), r";|\|")
+    rows = [r for r in rows if !isempty(strip(r))]
+    return reduce(vcat, [permutedims(parse.(Int, split(strip(r)))) for r in rows])
+end
+
+formatMatrix(m) = replace(string(m), "\n" => " | ")
+
+# Agrega as execuções do benchmark: média e desvio de cada métrica e de cada
+# tempo, e as matrizes de confusão somadas (soma e média por execução).
+function summarizeBenchmark(results_csv::String, summary_csv::String)
+    runs = CSV.read(results_csv, DataFrame)
+
+    group_cols = intersect(["wndwPercent", "metric", "k"], names(runs))
+    num_cols = [n for n in names(runs)
+                      if n ∉ group_cols && n != "rep" && eltype(runs[!, n]) <: Union{Missing,Real}]
+
+    summary = combine(
+        groupby(runs, group_cols),
+        nrow => :runs,
+        ([c => mean => "$(c)_mean" for c in num_cols])...,
+        ([c => std => "$(c)_std" for c in num_cols])...,
+        :cm => (v -> formatMatrix(sum(parseConfusionMatrix.(v)))) => :cm_sum,
+        :cm => (v -> formatMatrix(round.(sum(parseConfusionMatrix.(v)) ./ length(v), digits=2))) => :cm_mean,
+    )
+
+    CSV.write(summary_csv, summary)
     return summary
 end
 
@@ -522,11 +560,11 @@ function fitParameters(
     n_windows = floor(Int, round((w1 - w0) / wstep, digits=6)) + 1
     n_thresholds = floor(Int, round((t1 - t0) / tstep, digits=6)) + 1
 
-    for wi in 0:n_windows-1
+    for wi in 0:(n_windows-1)
         window = Float32(round(w0 + wi * wstep, digits=6))
         @info ">> Window " window
 
-        for ti in 0:n_thresholds-1
+        for ti in 0:(n_thresholds-1)
             threshold = Float16(round(t0 + ti * tstep, digits=3))
             for kmer in k_list
                 # cache é indexado só por grupo/janela: precisa limpar a cada
@@ -644,6 +682,13 @@ function add_benchmark_args!(settings)
         required = false
         "--classifier"
         help = "Classify sequences using XGBoost"
+        action = :store_true
+        "--rep"
+        help = "Repetition id, written to the results CSV"
+        arg_type = Int
+        default = 1
+        "--no-memberships"
+        help = "Skip classifications_<group>.csv (one line per sequence per run)"
         action = :store_true
     end
 end
@@ -791,8 +836,18 @@ function handle_benchmark(args,
         args["classifier"];
         k_len=args["k-len"],
         extract_time=extract_time,
-        fit_time=fit_time
+        fit_time=fit_time,
+        rep=args["rep"],
+        write_memberships=(!args["no-memberships"])
     )
+
+    if !isnothing(args["output-directory"])
+        outputdir = args["output-directory"]
+        summary = summarizeBenchmark(
+            "$outputdir/benchmark_results_$groupName.csv",
+            "$outputdir/benchmark_summary_$groupName.csv")
+        @info "Benchmark summary:" first(summary, 1)
+    end
 end
 
 function extract_features(args,
@@ -919,4 +974,4 @@ function julia_main()::Cint
 end
 end
 
-GREAC.julia_main()
+# GREAC.julia_main()

@@ -130,6 +130,15 @@ function regionsConjuction(
         push!(extracted_regions, (init_pos, length(hit_region)))
     end
 
+    function count_region_length(regions)::Int
+        total_length = 0
+        for (i, e) in regions
+            total_length += e - i
+        end
+        return total_length
+    end
+
+    @info count_region_length(extracted_regions)
     return extracted_regions
 
 end
@@ -169,7 +178,7 @@ function rolling_hash_kmers(
         error("0 k-mers found!")
     end
 
-    base = UInt64(5)
+    base = UInt64(64)
 
     power = UInt64(1)
     for i in 1:(k_len-1)
@@ -469,7 +478,7 @@ end
 function compute_hash(s::String)::UInt64
     h = UInt64(0)
     # base = UInt64(4^length(s))
-    base = UInt64(5)
+    base = UInt64(64)
 
     for char in s
         h = h * base + UInt64(char)
@@ -490,7 +499,7 @@ function getOccursin_rolling_hash(
         return positions
     end
 
-    base = UInt64(5)
+    base = UInt64(64)
 
     # Calculate base^(k_len-1) for rolling hash
     power = UInt64(1)
@@ -580,8 +589,8 @@ function _wndwExlcusiveKmersHistogram_bytes(
     end
 
     histogram_u16 = UInt16.(min.(histogram, typemax(UInt16)))
-    threshold_count = UInt32(ceil(length(sequences) * histogramThreshold))
-    threshold_mincount = UInt32(ceil(length(sequences) * 0.15))
+    threshold_count = ceil(length(sequences) * Float64(histogramThreshold))
+    # threshold_mincount = UInt64(ceil(length(sequences) * 0.15))
 
     marked = falses(maxSeqLen)
     h_len = length(histogram)
