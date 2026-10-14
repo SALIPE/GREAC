@@ -88,6 +88,91 @@ mkdir -p "$OUTPUTS" "$CONFIGS_TMP" "$LOGS" "$TEMPROOT"
 
 source $FEHOME/.venv/bin/activate
 
+# Cronometragem com o `time` do bash, so da chamada do metodo: e esse o tempo
+# comparavel entre GREAC, KEVOLVE e CASTOR-KRFE, sem a copia/split do dataset.
+# A linha vai para o log de saida do cluster (-o) prefixada com TIME (filtre com
+# `grep '^TIME' <log>`) e os mesmos numeros sao gravados no shard de tempos.
+# fd 3 = saida original, fd 4 = erro original: a saida e os erros do comando
+# cronometrado continuam indo para os logs de sempre, e so o que o `time`
+# escreve e capturado aqui.
+exec 3>&1 4>&2
+cronometrar_metodo() {
+	local organism=$1
+	local rep=$2
+	shift 2
+	local TIMEFORMAT='%3R %3U %3S'
+	local TEMPOS STATUS REAL USER SYS RESULTADO
+
+	TEMPOS=$( { time "$@" 1>&3 2>&4 ; } 2>&1 )
+	STATUS=$?
+	read -r REAL USER SYS <<< "$TEMPOS"
+
+	RESULTADO=ok
+	[ "$STATUS" -eq 0 ] || RESULTADO=falha
+
+	echo "TIME method=$METHOD org=$organism rep=$rep status=$RESULTADO real=$REAL user=$USER sys=$SYS"
+	printf '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n' \
+		"$(date '+%F %T')" "$METHOD" "$organism" "$rep" "$RESULTADO" \
+		"$REAL" "$USER" "$SYS" "${K_MIN:-}" "${K_MAX:-}" "$(hostname)" >> "$TIMES_SHARD"
+
+	return "$STATUS"
+}
+
+# Resumo dos tempos: media e desvio padrao amostral (ddof=1) por organismo,
+# sobre TODOS os shards, contando so as execucoes que terminaram bem. Uma
+# passada (Welford), para nao perder precisao somando quadrados de valores
+# grandes.
+resumir_tempos() {
+	local SHARDS
+	SHARDS=$(ls "$TIMES_DIR"/times.part-*.csv 2>/dev/null)
+	[ -n "$SHARDS" ] || return 1
+
+	# shellcheck disable=SC2086
+	awk -F, -v agora="$(date '+%F %T')" '
+		FNR == 1 { next }                      # cabecalho de cada shard
+		$5 != "ok" { falhas[$3]++; next }
+		{
+			o = $3
+			metodo[o] = $2
+			n[o]++
+			for (c = 6; c <= 8; c++) {
+				x = $c + 0
+				chave = o SUBSEP c
+				d = x - media[chave]
+				media[chave] += d / n[o]
+				sq[chave] += d * (x - media[chave])
+			}
+			total[o] += $6 + 0
+			if (n[o] == 1 || $6 + 0 < minimo[o]) minimo[o] = $6 + 0
+			if (n[o] == 1 || $6 + 0 > maximo[o]) maximo[o] = $6 + 0
+		}
+		END {
+			if (length(n) == 0) exit 1
+			print "method,organism,n,failures,real_mean_s,real_std_s,real_min_s,real_max_s," \
+			      "real_total_s,user_mean_s,user_std_s,sys_mean_s,sys_std_s,generated_at"
+			for (o in n) {
+				for (c = 6; c <= 8; c++) {
+					chave = o SUBSEP c
+					dp[c] = (n[o] > 1) ? sprintf("%.3f", sqrt(sq[chave] / (n[o] - 1))) : ""
+				}
+				printf "%s,%s,%d,%d,%.3f,%s,%.3f,%.3f,%.3f,%.3f,%s,%.3f,%s,%s\n",
+					metodo[o], o, n[o], falhas[o] + 0,
+					media[o SUBSEP 6], dp[6], minimo[o], maximo[o], total[o],
+					media[o SUBSEP 7], dp[7], media[o SUBSEP 8], dp[8], agora | "sort"
+			}
+			close("sort")
+		}
+	' $SHARDS > "$TIMES_SUMMARY.tmp" && mv "$TIMES_SUMMARY.tmp" "$TIMES_SUMMARY"
+}
+METHOD=castor
+# Tempos de execucao do metodo: um shard por job, mais o resumo com media e
+# desvio padrao de TODOS os shards.
+TIMES_DIR=$OUTPUTS
+TIMES_SHARD=$TIMES_DIR/times.part-${JOB_ID:-$$}${SGE_TASK_ID:+-$SGE_TASK_ID}.csv
+TIMES_SUMMARY=$TIMES_DIR/times_summary.csv
+mkdir -p "$TIMES_DIR"
+[ -s "$TIMES_SHARD" ] || echo "timestamp,method,organism,rep,status,real_s,user_s,sys_s,k_min,k_max,host" > "$TIMES_SHARD"
+
 export MPLBACKEND=Agg
 export PYTHONUNBUFFERED=1
 
@@ -100,20 +185,22 @@ K_RANGE=()
 
 echo "[$(date '+%F %T')] $REPEATS repetitions over: ${ORGANISMS[*]} (k range: ${K_MIN:-config}..${K_MAX:-config})"
 
-for REP in $(seq "$REPEAT_START" "$((REPEAT_START + REPEATS - 1))"); do
-echo "########## [$(date '+%F %T')] repetition $REP ##########"
-
-for ORGANISM in "${ORGANISMS[@]}"; do
+# Unidade de trabalho do ponto de vista do usuario: preparar/dividir o dataset e
+# rodar uma repeticao do CASTOR-KRFE para um organismo. E uma funcao porque o
+# `time` cronometra um comando so.
+sweep_organism() {
+	local ORGANISM=$1
+	local REP=$2
 	# Get the description of the organism
 	if ! describe_organism "$ORGANISM"; then
 		echo "[$(date '+%F %T')] $ORGANISM: unknown organism, skipped" >&2
-		continue
+		return 1
 	fi
 
 	echo "[$(date '+%F %T')] $ORGANISM: staging $DATASET -> $TEMPDATASET"
 	# Copy the dataset to the local scratch of the node (only once)
 	if [ ! -d "$TEMPDATASET" ]; then
-		cp -r "$DATASET" "$TEMPDATASET" || { echo "[$(date '+%F %T')] $ORGANISM: copy failed" >&2; continue; }
+		cp -r "$DATASET" "$TEMPDATASET" || { echo "[$(date '+%F %T')] $ORGANISM: copy failed" >&2; return 1; }
 	fi
 
 	TRAIN=$SPLITROOT/train/${PREFIX}_train.fasta
@@ -126,11 +213,11 @@ for ORGANISM in "${ORGANISMS[@]}"; do
 		if ! $BALANCEDATASET/testcl.sh "$SPLITROOT"; then
 			echo "[$(date '+%F %T')] $ORGANISM: split failed, skipped" >&2
 			echo -e "$(date '+%F %T')\t$ORGANISM\tk=-\tsplit failed" >> "$LOGS/errors.log"
-			continue
+			return 1
 		fi
 		# Concatenate the per variant fasta files produced by the splitter
-		( cd "$SPLITROOT/train" && cat *.fasta > "$TRAIN" ) || continue
-		( cd "$SPLITROOT/test"  && cat *.fasta > "$TEST" )  || continue
+		( cd "$SPLITROOT/train" && cat *.fasta > "$TRAIN" ) || return 1
+		( cd "$SPLITROOT/test"  && cat *.fasta > "$TEST" )  || return 1
 	else
 		echo "[$(date '+%F %T')] $ORGANISM: reusing the existing split ($TRAIN)"
 	fi
@@ -142,6 +229,14 @@ for ORGANISM in "${ORGANISMS[@]}"; do
 
 	# Run the sweep of this organism: one temporary .ini and one output
 	# directory per length of k, failures logged and never fatal
+	cronometrar_metodo "$ORGANISM" "$REP" \
+		rodar_sweep "$ORGANISM" "$REP"
+}
+
+# So a chamada do metodo: e isto que o `time` mede.
+rodar_sweep() {
+	local ORGANISM=$1
+	local REP=$2
 	python3 "$CASTOR/kmer_sweep.py" \
 		--organisms "$ORGANISM" \
 		--repeats 1 --repeat-start "$REP" \
@@ -154,14 +249,29 @@ for ORGANISM in "${ORGANISMS[@]}"; do
 		--override "$ORGANISM:testing_fasta=$TEST" \
 		${K_RANGE[@]+"${K_RANGE[@]}"} \
 		${EXTRA[@]+"${EXTRA[@]}"}
+}
 
+# Todas as repeticoes numa funcao, para o time total do job
+run_all_repetitions() {
+for REP in $(seq "$REPEAT_START" "$((REPEAT_START + REPEATS - 1))"); do
+echo "########## [$(date '+%F %T')] repetition $REP ##########"
+
+for ORGANISM in "${ORGANISMS[@]}"; do
+	sweep_organism "$ORGANISM" "$REP"
 	echo "[$(date '+%F %T')] $ORGANISM: done"
 done
 
 # Refresh the mean/std summary after every repetition, so partial results stay
 # usable if the job is killed before the last one
 python3 "$CASTOR/aggregate_reports.py" --outputs "$OUTPUTS" --reports "$REPORTS"
+# Resumo dos tempos a cada repeticao, para o parcial servir se o job morrer
+resumir_tempos || true
 done
+}
+
+run_all_repetitions
 
 echo "[$(date '+%F %T')] sweep finished, results in $OUTPUTS (errors in $LOGS/errors.log)"
+echo "[$(date '+%F %T')] times: $TIMES_SHARD | summary: $TIMES_SUMMARY"
+[ -s "$TIMES_SUMMARY" ] && { column -s, -t "$TIMES_SUMMARY" 2>/dev/null || cat "$TIMES_SUMMARY"; }
 echo "[$(date '+%F %T')] raw tables: $REPORTS | summary: $OUTPUTS/reports_summary.csv"

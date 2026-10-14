@@ -40,7 +40,8 @@ if [ -n "${SGE_TASK_ID:-}" ] && [ "${SGE_TASK_ID}" != "undefined" ]; then
 fi
 # Scratch directory private to this job, so several jobs can run on the same
 # node without overwriting each other's copy of the datasets and their split.
-TEMPROOT=${TEMPROOT:-/tmp2/felipe/kevolve/job$JOB_TAG}
+# TEMPROOT=${TEMPROOT:-/tmp2/felipe/kevolve/job$JOB_TAG}
+TEMPROOT=${TEMPROOT:-/tmp2/felipe/kevolve}
 DATASETS=/home/a61491/datasets/original
 BALANCEDATASET=/home/a61491/Fasta-splitter/FastaSplitter
 
@@ -72,6 +73,91 @@ trap 'rm -rf "$TEMPROOT"' EXIT INT TERM
 echo "=== [$(date '+%F %T')] job $JOB_TAG, scratch: $TEMPROOT ==="
 
 source /home/a61491/.venv/bin/activate
+
+# Cronometragem com o `time` do bash, so da chamada do metodo: e esse o tempo
+# comparavel entre GREAC, KEVOLVE e CASTOR-KRFE, sem a copia/split do dataset.
+# A linha vai para o log de saida do cluster (-o) prefixada com TIME (filtre com
+# `grep '^TIME' <log>`) e os mesmos numeros sao gravados no shard de tempos.
+# fd 3 = saida original, fd 4 = erro original: a saida e os erros do comando
+# cronometrado continuam indo para os logs de sempre, e so o que o `time`
+# escreve e capturado aqui.
+exec 3>&1 4>&2
+cronometrar_metodo() {
+	local organism=$1
+	local rep=$2
+	shift 2
+	local TIMEFORMAT='%3R %3U %3S'
+	local TEMPOS STATUS REAL USER SYS RESULTADO
+
+	TEMPOS=$( { time "$@" 1>&3 2>&4 ; } 2>&1 )
+	STATUS=$?
+	read -r REAL USER SYS <<< "$TEMPOS"
+
+	RESULTADO=ok
+	[ "$STATUS" -eq 0 ] || RESULTADO=falha
+
+	echo "TIME method=$METHOD org=$organism rep=$rep status=$RESULTADO real=$REAL user=$USER sys=$SYS"
+	printf '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n' \
+		"$(date '+%F %T')" "$METHOD" "$organism" "$rep" "$RESULTADO" \
+		"$REAL" "$USER" "$SYS" "${K_MIN:-}" "${K_MAX:-}" "$(hostname)" >> "$TIMES_SHARD"
+
+	return "$STATUS"
+}
+
+# Resumo dos tempos: media e desvio padrao amostral (ddof=1) por organismo,
+# sobre TODOS os shards, contando so as execucoes que terminaram bem. Uma
+# passada (Welford), para nao perder precisao somando quadrados de valores
+# grandes.
+resumir_tempos() {
+	local SHARDS
+	SHARDS=$(ls "$TIMES_DIR"/times.part-*.csv 2>/dev/null)
+	[ -n "$SHARDS" ] || return 1
+
+	# shellcheck disable=SC2086
+	awk -F, -v agora="$(date '+%F %T')" '
+		FNR == 1 { next }                      # cabecalho de cada shard
+		$5 != "ok" { falhas[$3]++; next }
+		{
+			o = $3
+			metodo[o] = $2
+			n[o]++
+			for (c = 6; c <= 8; c++) {
+				x = $c + 0
+				chave = o SUBSEP c
+				d = x - media[chave]
+				media[chave] += d / n[o]
+				sq[chave] += d * (x - media[chave])
+			}
+			total[o] += $6 + 0
+			if (n[o] == 1 || $6 + 0 < minimo[o]) minimo[o] = $6 + 0
+			if (n[o] == 1 || $6 + 0 > maximo[o]) maximo[o] = $6 + 0
+		}
+		END {
+			if (length(n) == 0) exit 1
+			print "method,organism,n,failures,real_mean_s,real_std_s,real_min_s,real_max_s," \
+			      "real_total_s,user_mean_s,user_std_s,sys_mean_s,sys_std_s,generated_at"
+			for (o in n) {
+				for (c = 6; c <= 8; c++) {
+					chave = o SUBSEP c
+					dp[c] = (n[o] > 1) ? sprintf("%.3f", sqrt(sq[chave] / (n[o] - 1))) : ""
+				}
+				printf "%s,%s,%d,%d,%.3f,%s,%.3f,%.3f,%.3f,%.3f,%s,%.3f,%s,%s\n",
+					metodo[o], o, n[o], falhas[o] + 0,
+					media[o SUBSEP 6], dp[6], minimo[o], maximo[o], total[o],
+					media[o SUBSEP 7], dp[7], media[o SUBSEP 8], dp[8], agora | "sort"
+			}
+			close("sort")
+		}
+	' $SHARDS > "$TIMES_SUMMARY.tmp" && mv "$TIMES_SUMMARY.tmp" "$TIMES_SUMMARY"
+}
+METHOD=kevolve
+# Tempos de execucao do metodo: um shard por job, mais o resumo com media e
+# desvio padrao de TODOS os shards.
+TIMES_DIR=$OUTPUTS
+TIMES_SHARD=$TIMES_DIR/times.part-$JOB_TAG.csv
+TIMES_SUMMARY=$TIMES_DIR/times_summary.csv
+mkdir -p "$TIMES_DIR"
+[ -s "$TIMES_SHARD" ] || echo "timestamp,method,organism,rep,status,real_s,user_s,sys_s,k_min,k_max,host" > "$TIMES_SHARD"
 
 # Working directory under /tmp2 holding the split of one organism.
 temp_dataset_dir() {
@@ -132,38 +218,65 @@ prepare_dataset() {
 	esac
 }
 
+# Unidade de trabalho do ponto de vista do usuario: preparar o dataset e rodar o
+# sweep de k de um organismo numa repeticao. E uma funcao porque o `time`
+# cronometra um comando so.
+sweep_organism() {
+	local organism=$1
+	local rep=$2
+
+	echo "=== [$(date '+%F %T')] rep $rep | preparing dataset: $organism ==="
+	if ! prepare_dataset "$organism"; then
+		echo "$(date '+%F %T')	organism=$organism	k=-	rep=$rep	dataset preparation failed" >> "$KEVOLVE/logs/errors.log"
+		echo "!!! dataset preparation failed for $organism, skipping it"
+		return 1
+	fi
+
+	echo "=== [$(date '+%F %T')] rep $rep | k-mer sweep: $organism (k=$K_MIN..$K_MAX) ==="
+	cronometrar_metodo "$organism" "$rep" \
+		rodar_sweep "$organism" "$rep"
+}
+
+# So a chamada do metodo: e isto que o `time` mede.
+rodar_sweep() {
+	local organism=$1
+	local rep=$2
+	python3 -u "$KEVOLVE/run_kmer_sweep.py" \
+		--organisms "$organism" \
+		--k-min "$K_MIN" --k-max "$K_MAX" \
+		--outputs "$OUTPUTS" \
+		--configs "$KEVOLVE/configs_tmp" \
+		--logs "$KEVOLVE/logs" \
+		--timeout "$TIMEOUT" \
+		--repeat "$rep" \
+		--reports "$REPORTS" \
+		$FORCE_FLAG
+}
+
 REPEAT_END=$((REPEAT_START + REPEATS - 1))
 
+# Todas as repeticoes numa funcao, para o time total do job
+run_all_repetitions() {
 for rep in $(seq "$REPEAT_START" "$REPEAT_END"); do
 	echo "########## [$(date '+%F %T')] repetition $rep / $REPEAT_END ##########"
 
 	for organism in $ORGANISMS; do
-		echo "=== [$(date '+%F %T')] rep $rep | preparing dataset: $organism ==="
-		if ! prepare_dataset "$organism"; then
-			echo "$(date '+%F %T')	organism=$organism	k=-	rep=$rep	dataset preparation failed" >> "$KEVOLVE/logs/errors.log"
-			echo "!!! dataset preparation failed for $organism, skipping it"
-			continue
-		fi
-
-		echo "=== [$(date '+%F %T')] rep $rep | k-mer sweep: $organism (k=$K_MIN..$K_MAX) ==="
-		python3 -u "$KEVOLVE/run_kmer_sweep.py" \
-			--organisms "$organism" \
-			--k-min "$K_MIN" --k-max "$K_MAX" \
-			--outputs "$OUTPUTS" \
-			--configs "$KEVOLVE/configs_tmp" \
-			--logs "$KEVOLVE/logs" \
-			--timeout "$TIMEOUT" \
-			--repeat "$rep" \
-			--reports "$REPORTS" \
-			$FORCE_FLAG
+		sweep_organism "$organism" "$rep"
 	done
 
 	# Refresh the mean/std summary after every repetition, so partial results
 	# are usable even if the job is killed before the last one.
 	python3 -u "$KEVOLVE/aggregate_reports.py" --outputs "$OUTPUTS" --reports "$REPORTS"
+	# Resumo dos tempos a cada repeticao, para o parcial servir se o job morrer
+	resumir_tempos || true
 done
+}
+
+run_all_repetitions
 
 echo "=== [$(date '+%F %T')] sweep finished, outputs in $OUTPUTS ==="
 echo "=== raw tables: $REPORTS | summary: $OUTPUTS/reports_summary.csv ==="
+echo "=== times: $TIMES_SHARD | summary: $TIMES_SUMMARY ==="
+[ -s "$TIMES_SUMMARY" ] && { column -s, -t "$TIMES_SUMMARY" 2>/dev/null || cat "$TIMES_SUMMARY"; }
 # $TEMPROOT is removed by the trap above. Nothing is kept between jobs: every
 # repetition re-splits the dataset anyway.

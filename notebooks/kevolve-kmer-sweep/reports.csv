@@ -34,6 +34,55 @@ denv,10,102,type2,class,0.87,0.8,0.83,1373.0,1829.3062965869904,/home/a61491/KEV
 denv,10,102,type3,class,0.46,0.87,0.6,908.0,1829.3062965869904,/home/a61491/KEVOLVE/outputs/denv/k10/rep102/run.log
 denv,10,102,type4,class,0.09,0.96,0.16,134.0,1829.3062965869904,/home/a61491/KEVOLVE/outputs/denv/k10/rep102/run.log
 denv,10,102,weighted avg,average,0.41,0.45,0.38,4508.0,1829.3062965869904,/home/a61491/KEVOLVE/outputs/denv/k10/rep102/run.log
+denv,10,103,accuracy,overall,,,0.78,4508.0,1753.2225663661957,/home/a61491/KEVOLVE/outputs/denv/k10/rep103/run.log
+denv,10,103,macro avg,average,0.72,0.75,0.68,4508.0,1753.2225663661957,/home/a61491/KEVOLVE/outputs/denv/k10/rep103/run.log
+denv,10,103,type1,class,0.72,0.96,0.83,2093.0,1753.2225663661957,/home/a61491/KEVOLVE/outputs/denv/k10/rep103/run.log
+denv,10,103,type2,class,0.99,0.92,0.95,1373.0,1753.2225663661957,/home/a61491/KEVOLVE/outputs/denv/k10/rep103/run.log
+denv,10,103,type3,class,0.57,0.13,0.21,908.0,1753.2225663661957,/home/a61491/KEVOLVE/outputs/denv/k10/rep103/run.log
+denv,10,103,type4,class,0.6,0.99,0.75,134.0,1753.2225663661957,/home/a61491/KEVOLVE/outputs/denv/k10/rep103/run.log
+denv,10,103,weighted avg,average,0.77,0.78,0.74,4508.0,1753.2225663661957,/home/a61491/KEVOLVE/outputs/denv/k10/rep103/run.log
+denv,10,104,accuracy,overall,,,0.21,4508.0,1801.6810653209686,/home/a61491/KEVOLVE/outputs/denv/k10/rep104/run.log
+denv,10,104,macro avg,average,0.14,0.26,0.15,4508.0,1801.6810653209686,/home/a61491/KEVOLVE/outputs/denv/k10/rep104/run.log
+denv,10,104,type1,class,0.17,0.01,0.02,2093.0,1801.6810653209686,/home/a61491/KEVOLVE/outputs/denv/k10/rep104/run.log
+denv,10,104,type2,class,0.0,0.0,0.0,1373.0,1801.6810653209686,/home/a61491/KEVOLVE/outputs/denv/k10/rep104/run.log
+denv,10,104,type3,class,0.4,1.0,0.57,908.0,1801.6810653209686,/home/a61491/KEVOLVE/outputs/denv/k10/rep104/run.log
+denv,10,104,type4,class,0.0,0.02,0.0,134.0,1801.6810653209686,/home/a61491/KEVOLVE/outputs/denv/k10/rep104/run.log
+denv,10,104,weighted avg,average,0.16,0.21,0.13,4508.0,1801.6810653209686,/home/a61491/KEVOLVE/outputs/denv/k10/rep104/run.log
+denv,10,105,accuracy,overall,,,0.84,4508.0,2002.4116342067719,/home/a61491/KEVOLVE/outputs/denv/k10/rep105/run.log
+denv,10,105,macro avg,average,0.71,0.6,0.64,4508.0,2002.4116342067719,/home/a61491/KEVOLVE/outputs/denv/k10/rep105/run.log
+denv,10,105,type1,class,0.91,0.99,0.95,2093.0,2002.4116342067719,/home/a61491/KEVOLVE/outputs/denv/k10/rep105/run.log
+denv,10,105,type2,class,0.95,0.89,0.92,1373.0,2002.4116342067719,/home/a61491/KEVOLVE/outputs/denv/k10/rep105/run.log
+denv,10,105,type3,class,0.98,0.53,0.69,908.0,2002.4116342067719,/home/a61491/KEVOLVE/outputs/denv/k10/rep105/run.log
+denv,10,105,type4,class,0.0,0.0,0.0,134.0,2002.4116342067719,/home/a61491/KEVOLVE/outputs/denv/k10/rep105/run.log
+denv,10,105,weighted avg,average,0.91,0.84,0.86,4508.0,2002.4116342067719,/home/a61491/KEVOLVE/outputs/denv/k10/rep105/run.log
+denv,10,106,accuracy,overall,,,0.76,4508.0,1772.166791677475,/home/a61491/KEVOLVE/outputs/denv/k10/rep106/run.log
+denv,10,106,macro avg,average,0.45,0.51,0.47,4508.0,1772.166791677475,/home/a61491/KEVOLVE/outputs/denv/k10/rep106/run.log
+denv,10,106,type1,class,0.75,0.98,0.85,2093.0,1772.166791677475,/home/a61491/KEVOLVE/outputs/denv/k10/rep106/run.log
+denv,10,106,type2,class,1.0,0.98,0.99,1373.0,1772.166791677475,/home/a61491/KEVOLVE/outputs/denv/k10/rep106/run.log
+denv,10,106,type3,class,0.03,0.0,0.0,908.0,1772.166791677475,/home/a61491/KEVOLVE/outputs/denv/k10/rep106/run.log
+denv,10,106,type4,class,0.03,0.07,0.04,134.0,1772.166791677475,/home/a61491/KEVOLVE/outputs/denv/k10/rep106/run.log
+denv,10,106,weighted avg,average,0.66,0.76,0.7,4508.0,1772.166791677475,/home/a61491/KEVOLVE/outputs/denv/k10/rep106/run.log
+denv,10,107,accuracy,overall,,,0.8,4508.0,1749.0685994625092,/home/a61491/KEVOLVE/outputs/denv/k10/rep107/run.log
+denv,10,107,macro avg,average,0.63,0.57,0.59,4508.0,1749.0685994625092,/home/a61491/KEVOLVE/outputs/denv/k10/rep107/run.log
+denv,10,107,type1,class,0.78,0.89,0.83,2093.0,1749.0685994625092,/home/a61491/KEVOLVE/outputs/denv/k10/rep107/run.log
+denv,10,107,type2,class,0.99,1.0,0.99,1373.0,1749.0685994625092,/home/a61491/KEVOLVE/outputs/denv/k10/rep107/run.log
+denv,10,107,type3,class,0.74,0.4,0.52,908.0,1749.0685994625092,/home/a61491/KEVOLVE/outputs/denv/k10/rep107/run.log
+denv,10,107,type4,class,0.0,0.0,0.0,134.0,1749.0685994625092,/home/a61491/KEVOLVE/outputs/denv/k10/rep107/run.log
+denv,10,107,weighted avg,average,0.81,0.8,0.79,4508.0,1749.0685994625092,/home/a61491/KEVOLVE/outputs/denv/k10/rep107/run.log
+denv,10,108,accuracy,overall,,,0.81,4508.0,2012.4081292152405,/home/a61491/KEVOLVE/outputs/denv/k10/rep108/run.log
+denv,10,108,macro avg,average,0.87,0.77,0.71,4508.0,2012.4081292152405,/home/a61491/KEVOLVE/outputs/denv/k10/rep108/run.log
+denv,10,108,type1,class,1.0,1.0,1.0,2093.0,2012.4081292152405,/home/a61491/KEVOLVE/outputs/denv/k10/rep108/run.log
+denv,10,108,type2,class,0.62,0.99,0.76,1373.0,2012.4081292152405,/home/a61491/KEVOLVE/outputs/denv/k10/rep108/run.log
+denv,10,108,type3,class,0.94,0.07,0.13,908.0,2012.4081292152405,/home/a61491/KEVOLVE/outputs/denv/k10/rep108/run.log
+denv,10,108,type4,class,0.93,1.0,0.96,134.0,2012.4081292152405,/home/a61491/KEVOLVE/outputs/denv/k10/rep108/run.log
+denv,10,108,weighted avg,average,0.87,0.81,0.75,4508.0,2012.4081292152405,/home/a61491/KEVOLVE/outputs/denv/k10/rep108/run.log
+denv,10,109,accuracy,overall,,,0.33,4508.0,1864.1178786754608,/home/a61491/KEVOLVE/outputs/denv/k10/rep109/run.log
+denv,10,109,macro avg,average,0.3,0.29,0.29,4508.0,1864.1178786754608,/home/a61491/KEVOLVE/outputs/denv/k10/rep109/run.log
+denv,10,109,type1,class,0.15,0.07,0.1,2093.0,1864.1178786754608,/home/a61491/KEVOLVE/outputs/denv/k10/rep109/run.log
+denv,10,109,type2,class,0.91,0.96,0.94,1373.0,1864.1178786754608,/home/a61491/KEVOLVE/outputs/denv/k10/rep109/run.log
+denv,10,109,type3,class,0.0,0.0,0.0,908.0,1864.1178786754608,/home/a61491/KEVOLVE/outputs/denv/k10/rep109/run.log
+denv,10,109,type4,class,0.15,0.11,0.13,134.0,1864.1178786754608,/home/a61491/KEVOLVE/outputs/denv/k10/rep109/run.log
+denv,10,109,weighted avg,average,0.35,0.33,0.34,4508.0,1864.1178786754608,/home/a61491/KEVOLVE/outputs/denv/k10/rep109/run.log
 denv,10,11,accuracy,overall,,,0.06,4508.0,2586.1156113147736,/home/a61491/KEVOLVE/outputs/denv/k10/rep11/run.log
 denv,10,11,macro avg,average,0.44,0.23,0.22,4508.0,2586.1156113147736,/home/a61491/KEVOLVE/outputs/denv/k10/rep11/run.log
 denv,10,11,type1,class,0.03,0.03,0.03,2093.0,2586.1156113147736,/home/a61491/KEVOLVE/outputs/denv/k10/rep11/run.log
@@ -41,6 +90,13 @@ denv,10,11,type2,class,0.97,0.02,0.05,1373.0,2586.1156113147736,/home/a61491/KEV
 denv,10,11,type3,class,0.04,0.1,0.06,908.0,2586.1156113147736,/home/a61491/KEVOLVE/outputs/denv/k10/rep11/run.log
 denv,10,11,type4,class,0.74,0.75,0.75,134.0,2586.1156113147736,/home/a61491/KEVOLVE/outputs/denv/k10/rep11/run.log
 denv,10,11,weighted avg,average,0.34,0.06,0.06,4508.0,2586.1156113147736,/home/a61491/KEVOLVE/outputs/denv/k10/rep11/run.log
+denv,10,110,accuracy,overall,,,0.93,4508.0,1720.9670913219452,/home/a61491/KEVOLVE/outputs/denv/k10/rep110/run.log
+denv,10,110,macro avg,average,0.83,0.94,0.84,4508.0,1720.9670913219452,/home/a61491/KEVOLVE/outputs/denv/k10/rep110/run.log
+denv,10,110,type1,class,1.0,1.0,1.0,2093.0,1720.9670913219452,/home/a61491/KEVOLVE/outputs/denv/k10/rep110/run.log
+denv,10,110,type2,class,1.0,0.79,0.88,1373.0,1720.9670913219452,/home/a61491/KEVOLVE/outputs/denv/k10/rep110/run.log
+denv,10,110,type3,class,0.99,1.0,1.0,908.0,1720.9670913219452,/home/a61491/KEVOLVE/outputs/denv/k10/rep110/run.log
+denv,10,110,type4,class,0.32,0.99,0.48,134.0,1720.9670913219452,/home/a61491/KEVOLVE/outputs/denv/k10/rep110/run.log
+denv,10,110,weighted avg,average,0.98,0.93,0.95,4508.0,1720.9670913219452,/home/a61491/KEVOLVE/outputs/denv/k10/rep110/run.log
 denv,10,13,accuracy,overall,,,0.74,4508.0,3039.0985639095306,/home/a61491/KEVOLVE/outputs/denv/k10/rep13/run.log
 denv,10,13,macro avg,average,0.72,0.77,0.62,4508.0,3039.0985639095306,/home/a61491/KEVOLVE/outputs/denv/k10/rep13/run.log
 denv,10,13,type1,class,0.98,0.97,0.98,2093.0,3039.0985639095306,/home/a61491/KEVOLVE/outputs/denv/k10/rep13/run.log
@@ -650,6 +706,48 @@ denv,2,102,type2,class,0.0,0.0,0.0,1373.0,187.18177938461304,/home/a61491/KEVOLV
 denv,2,102,type3,class,0.0,0.0,0.0,908.0,187.18177938461304,/home/a61491/KEVOLVE/outputs/denv/k2/rep102/run.log
 denv,2,102,type4,class,0.03,1.0,0.06,134.0,187.18177938461304,/home/a61491/KEVOLVE/outputs/denv/k2/rep102/run.log
 denv,2,102,weighted avg,average,0.0,0.03,0.0,4508.0,187.18177938461304,/home/a61491/KEVOLVE/outputs/denv/k2/rep102/run.log
+denv,2,104,accuracy,overall,,,0.03,4508.0,60.25267481803894,/home/a61491/KEVOLVE/outputs/denv/k2/rep104/run.log
+denv,2,104,macro avg,average,0.01,0.25,0.01,4508.0,60.25267481803894,/home/a61491/KEVOLVE/outputs/denv/k2/rep104/run.log
+denv,2,104,type1,class,0.0,0.0,0.0,2093.0,60.25267481803894,/home/a61491/KEVOLVE/outputs/denv/k2/rep104/run.log
+denv,2,104,type2,class,0.0,0.0,0.0,1373.0,60.25267481803894,/home/a61491/KEVOLVE/outputs/denv/k2/rep104/run.log
+denv,2,104,type3,class,0.0,0.0,0.0,908.0,60.25267481803894,/home/a61491/KEVOLVE/outputs/denv/k2/rep104/run.log
+denv,2,104,type4,class,0.03,1.0,0.06,134.0,60.25267481803894,/home/a61491/KEVOLVE/outputs/denv/k2/rep104/run.log
+denv,2,104,weighted avg,average,0.0,0.03,0.0,4508.0,60.25267481803894,/home/a61491/KEVOLVE/outputs/denv/k2/rep104/run.log
+denv,2,105,accuracy,overall,,,0.03,4508.0,55.52217698097229,/home/a61491/KEVOLVE/outputs/denv/k2/rep105/run.log
+denv,2,105,macro avg,average,0.01,0.25,0.01,4508.0,55.52217698097229,/home/a61491/KEVOLVE/outputs/denv/k2/rep105/run.log
+denv,2,105,type1,class,0.0,0.0,0.0,2093.0,55.52217698097229,/home/a61491/KEVOLVE/outputs/denv/k2/rep105/run.log
+denv,2,105,type2,class,0.0,0.0,0.0,1373.0,55.52217698097229,/home/a61491/KEVOLVE/outputs/denv/k2/rep105/run.log
+denv,2,105,type3,class,0.0,0.0,0.0,908.0,55.52217698097229,/home/a61491/KEVOLVE/outputs/denv/k2/rep105/run.log
+denv,2,105,type4,class,0.03,1.0,0.06,134.0,55.52217698097229,/home/a61491/KEVOLVE/outputs/denv/k2/rep105/run.log
+denv,2,105,weighted avg,average,0.0,0.03,0.0,4508.0,55.52217698097229,/home/a61491/KEVOLVE/outputs/denv/k2/rep105/run.log
+denv,2,106,accuracy,overall,,,0.24,4508.0,161.08302474021912,/home/a61491/KEVOLVE/outputs/denv/k2/rep106/run.log
+denv,2,106,macro avg,average,0.26,0.42,0.22,4508.0,161.08302474021912,/home/a61491/KEVOLVE/outputs/denv/k2/rep106/run.log
+denv,2,106,type1,class,0.0,0.0,0.0,2093.0,161.08302474021912,/home/a61491/KEVOLVE/outputs/denv/k2/rep106/run.log
+denv,2,106,type2,class,0.99,0.69,0.82,1373.0,161.08302474021912,/home/a61491/KEVOLVE/outputs/denv/k2/rep106/run.log
+denv,2,106,type3,class,0.0,0.0,0.0,908.0,161.08302474021912,/home/a61491/KEVOLVE/outputs/denv/k2/rep106/run.log
+denv,2,106,type4,class,0.04,1.0,0.07,134.0,161.08302474021912,/home/a61491/KEVOLVE/outputs/denv/k2/rep106/run.log
+denv,2,106,weighted avg,average,0.3,0.24,0.25,4508.0,161.08302474021912,/home/a61491/KEVOLVE/outputs/denv/k2/rep106/run.log
+denv,2,107,accuracy,overall,,,0.03,4508.0,305.2629659175873,/home/a61491/KEVOLVE/outputs/denv/k2/rep107/run.log
+denv,2,107,macro avg,average,0.01,0.25,0.01,4508.0,305.2629659175873,/home/a61491/KEVOLVE/outputs/denv/k2/rep107/run.log
+denv,2,107,type1,class,0.0,0.0,0.0,2093.0,305.2629659175873,/home/a61491/KEVOLVE/outputs/denv/k2/rep107/run.log
+denv,2,107,type2,class,0.0,0.0,0.0,1373.0,305.2629659175873,/home/a61491/KEVOLVE/outputs/denv/k2/rep107/run.log
+denv,2,107,type3,class,0.0,0.0,0.0,908.0,305.2629659175873,/home/a61491/KEVOLVE/outputs/denv/k2/rep107/run.log
+denv,2,107,type4,class,0.03,1.0,0.06,134.0,305.2629659175873,/home/a61491/KEVOLVE/outputs/denv/k2/rep107/run.log
+denv,2,107,weighted avg,average,0.0,0.03,0.0,4508.0,305.2629659175873,/home/a61491/KEVOLVE/outputs/denv/k2/rep107/run.log
+denv,2,108,accuracy,overall,,,0.97,4508.0,128.58589339256287,/home/a61491/KEVOLVE/outputs/denv/k2/rep108/run.log
+denv,2,108,macro avg,average,0.88,0.98,0.92,4508.0,128.58589339256287,/home/a61491/KEVOLVE/outputs/denv/k2/rep108/run.log
+denv,2,108,type1,class,0.99,0.95,0.97,2093.0,128.58589339256287,/home/a61491/KEVOLVE/outputs/denv/k2/rep108/run.log
+denv,2,108,type2,class,0.99,0.99,0.99,1373.0,128.58589339256287,/home/a61491/KEVOLVE/outputs/denv/k2/rep108/run.log
+denv,2,108,type3,class,0.99,0.99,0.99,908.0,128.58589339256287,/home/a61491/KEVOLVE/outputs/denv/k2/rep108/run.log
+denv,2,108,type4,class,0.55,1.0,0.71,134.0,128.58589339256287,/home/a61491/KEVOLVE/outputs/denv/k2/rep108/run.log
+denv,2,108,weighted avg,average,0.98,0.97,0.97,4508.0,128.58589339256287,/home/a61491/KEVOLVE/outputs/denv/k2/rep108/run.log
+denv,2,109,accuracy,overall,,,0.25,4508.0,132.43052101135254,/home/a61491/KEVOLVE/outputs/denv/k2/rep109/run.log
+denv,2,109,macro avg,average,0.26,0.43,0.23,4508.0,132.43052101135254,/home/a61491/KEVOLVE/outputs/denv/k2/rep109/run.log
+denv,2,109,type1,class,0.0,0.0,0.0,2093.0,132.43052101135254,/home/a61491/KEVOLVE/outputs/denv/k2/rep109/run.log
+denv,2,109,type2,class,1.0,0.71,0.83,1373.0,132.43052101135254,/home/a61491/KEVOLVE/outputs/denv/k2/rep109/run.log
+denv,2,109,type3,class,0.0,0.0,0.0,908.0,132.43052101135254,/home/a61491/KEVOLVE/outputs/denv/k2/rep109/run.log
+denv,2,109,type4,class,0.04,1.0,0.07,134.0,132.43052101135254,/home/a61491/KEVOLVE/outputs/denv/k2/rep109/run.log
+denv,2,109,weighted avg,average,0.31,0.25,0.26,4508.0,132.43052101135254,/home/a61491/KEVOLVE/outputs/denv/k2/rep109/run.log
 denv,2,11,accuracy,overall,,,0.03,4508.0,224.68598127365112,/home/a61491/KEVOLVE/outputs/denv/k2/rep11/run.log
 denv,2,11,macro avg,average,0.01,0.25,0.01,4508.0,224.68598127365112,/home/a61491/KEVOLVE/outputs/denv/k2/rep11/run.log
 denv,2,11,type1,class,0.0,0.0,0.0,2093.0,224.68598127365112,/home/a61491/KEVOLVE/outputs/denv/k2/rep11/run.log
@@ -657,6 +755,13 @@ denv,2,11,type2,class,0.0,0.0,0.0,1373.0,224.68598127365112,/home/a61491/KEVOLVE
 denv,2,11,type3,class,0.0,0.0,0.0,908.0,224.68598127365112,/home/a61491/KEVOLVE/outputs/denv/k2/rep11/run.log
 denv,2,11,type4,class,0.03,1.0,0.06,134.0,224.68598127365112,/home/a61491/KEVOLVE/outputs/denv/k2/rep11/run.log
 denv,2,11,weighted avg,average,0.0,0.03,0.0,4508.0,224.68598127365112,/home/a61491/KEVOLVE/outputs/denv/k2/rep11/run.log
+denv,2,110,accuracy,overall,,,0.03,4508.0,281.8088233470917,/home/a61491/KEVOLVE/outputs/denv/k2/rep110/run.log
+denv,2,110,macro avg,average,0.01,0.25,0.01,4508.0,281.8088233470917,/home/a61491/KEVOLVE/outputs/denv/k2/rep110/run.log
+denv,2,110,type1,class,0.0,0.0,0.0,2093.0,281.8088233470917,/home/a61491/KEVOLVE/outputs/denv/k2/rep110/run.log
+denv,2,110,type2,class,0.0,0.0,0.0,1373.0,281.8088233470917,/home/a61491/KEVOLVE/outputs/denv/k2/rep110/run.log
+denv,2,110,type3,class,0.0,0.0,0.0,908.0,281.8088233470917,/home/a61491/KEVOLVE/outputs/denv/k2/rep110/run.log
+denv,2,110,type4,class,0.03,1.0,0.06,134.0,281.8088233470917,/home/a61491/KEVOLVE/outputs/denv/k2/rep110/run.log
+denv,2,110,weighted avg,average,0.0,0.03,0.0,4508.0,281.8088233470917,/home/a61491/KEVOLVE/outputs/denv/k2/rep110/run.log
 denv,2,12,accuracy,overall,,,0.03,4508.0,99.18772649765015,/home/a61491/KEVOLVE/outputs/denv/k2/rep12/run.log
 denv,2,12,macro avg,average,0.01,0.25,0.01,4508.0,99.18772649765015,/home/a61491/KEVOLVE/outputs/denv/k2/rep12/run.log
 denv,2,12,type1,class,0.0,0.0,0.0,2093.0,99.18772649765015,/home/a61491/KEVOLVE/outputs/denv/k2/rep12/run.log
@@ -1364,6 +1469,55 @@ denv,3,102,type2,class,0.67,0.0,0.0,1373.0,62.34467148780823,/home/a61491/KEVOLV
 denv,3,102,type3,class,0.0,0.0,0.0,908.0,62.34467148780823,/home/a61491/KEVOLVE/outputs/denv/k3/rep102/run.log
 denv,3,102,type4,class,0.03,1.0,0.06,134.0,62.34467148780823,/home/a61491/KEVOLVE/outputs/denv/k3/rep102/run.log
 denv,3,102,weighted avg,average,0.2,0.03,0.0,4508.0,62.34467148780823,/home/a61491/KEVOLVE/outputs/denv/k3/rep102/run.log
+denv,3,103,accuracy,overall,,,0.43,4508.0,36.35037183761597,/home/a61491/KEVOLVE/outputs/denv/k3/rep103/run.log
+denv,3,103,macro avg,average,0.26,0.32,0.21,4508.0,36.35037183761597,/home/a61491/KEVOLVE/outputs/denv/k3/rep103/run.log
+denv,3,103,type1,class,0.67,0.91,0.77,2093.0,36.35037183761597,/home/a61491/KEVOLVE/outputs/denv/k3/rep103/run.log
+denv,3,103,type2,class,0.0,0.0,0.0,1373.0,36.35037183761597,/home/a61491/KEVOLVE/outputs/denv/k3/rep103/run.log
+denv,3,103,type3,class,0.33,0.0,0.0,908.0,36.35037183761597,/home/a61491/KEVOLVE/outputs/denv/k3/rep103/run.log
+denv,3,103,type4,class,0.03,0.38,0.06,134.0,36.35037183761597,/home/a61491/KEVOLVE/outputs/denv/k3/rep103/run.log
+denv,3,103,weighted avg,average,0.38,0.43,0.36,4508.0,36.35037183761597,/home/a61491/KEVOLVE/outputs/denv/k3/rep103/run.log
+denv,3,104,accuracy,overall,,,0.03,4508.0,28.60991406440735,/home/a61491/KEVOLVE/outputs/denv/k3/rep104/run.log
+denv,3,104,macro avg,average,0.01,0.25,0.01,4508.0,28.60991406440735,/home/a61491/KEVOLVE/outputs/denv/k3/rep104/run.log
+denv,3,104,type1,class,0.0,0.0,0.0,2093.0,28.60991406440735,/home/a61491/KEVOLVE/outputs/denv/k3/rep104/run.log
+denv,3,104,type2,class,0.0,0.0,0.0,1373.0,28.60991406440735,/home/a61491/KEVOLVE/outputs/denv/k3/rep104/run.log
+denv,3,104,type3,class,0.0,0.0,0.0,908.0,28.60991406440735,/home/a61491/KEVOLVE/outputs/denv/k3/rep104/run.log
+denv,3,104,type4,class,0.03,1.0,0.06,134.0,28.60991406440735,/home/a61491/KEVOLVE/outputs/denv/k3/rep104/run.log
+denv,3,104,weighted avg,average,0.0,0.03,0.0,4508.0,28.60991406440735,/home/a61491/KEVOLVE/outputs/denv/k3/rep104/run.log
+denv,3,105,accuracy,overall,,,0.03,4508.0,30.897996187210083,/home/a61491/KEVOLVE/outputs/denv/k3/rep105/run.log
+denv,3,105,macro avg,average,0.36,0.24,0.02,4508.0,30.897996187210083,/home/a61491/KEVOLVE/outputs/denv/k3/rep105/run.log
+denv,3,105,type1,class,1.0,0.0,0.0,2093.0,30.897996187210083,/home/a61491/KEVOLVE/outputs/denv/k3/rep105/run.log
+denv,3,105,type2,class,0.0,0.0,0.0,1373.0,30.897996187210083,/home/a61491/KEVOLVE/outputs/denv/k3/rep105/run.log
+denv,3,105,type3,class,0.4,0.0,0.0,908.0,30.897996187210083,/home/a61491/KEVOLVE/outputs/denv/k3/rep105/run.log
+denv,3,105,type4,class,0.03,0.95,0.05,134.0,30.897996187210083,/home/a61491/KEVOLVE/outputs/denv/k3/rep105/run.log
+denv,3,105,weighted avg,average,0.55,0.03,0.0,4508.0,30.897996187210083,/home/a61491/KEVOLVE/outputs/denv/k3/rep105/run.log
+denv,3,106,accuracy,overall,,,0.03,4508.0,57.90010118484497,/home/a61491/KEVOLVE/outputs/denv/k3/rep106/run.log
+denv,3,106,macro avg,average,0.01,0.25,0.01,4508.0,57.90010118484497,/home/a61491/KEVOLVE/outputs/denv/k3/rep106/run.log
+denv,3,106,type1,class,0.0,0.0,0.0,2093.0,57.90010118484497,/home/a61491/KEVOLVE/outputs/denv/k3/rep106/run.log
+denv,3,106,type2,class,0.0,0.0,0.0,1373.0,57.90010118484497,/home/a61491/KEVOLVE/outputs/denv/k3/rep106/run.log
+denv,3,106,type3,class,0.0,0.0,0.0,908.0,57.90010118484497,/home/a61491/KEVOLVE/outputs/denv/k3/rep106/run.log
+denv,3,106,type4,class,0.03,1.0,0.06,134.0,57.90010118484497,/home/a61491/KEVOLVE/outputs/denv/k3/rep106/run.log
+denv,3,106,weighted avg,average,0.0,0.03,0.0,4508.0,57.90010118484497,/home/a61491/KEVOLVE/outputs/denv/k3/rep106/run.log
+denv,3,107,accuracy,overall,,,0.03,4508.0,65.7267279624939,/home/a61491/KEVOLVE/outputs/denv/k3/rep107/run.log
+denv,3,107,macro avg,average,0.01,0.25,0.01,4508.0,65.7267279624939,/home/a61491/KEVOLVE/outputs/denv/k3/rep107/run.log
+denv,3,107,type1,class,0.0,0.0,0.0,2093.0,65.7267279624939,/home/a61491/KEVOLVE/outputs/denv/k3/rep107/run.log
+denv,3,107,type2,class,0.0,0.0,0.0,1373.0,65.7267279624939,/home/a61491/KEVOLVE/outputs/denv/k3/rep107/run.log
+denv,3,107,type3,class,0.0,0.0,0.0,908.0,65.7267279624939,/home/a61491/KEVOLVE/outputs/denv/k3/rep107/run.log
+denv,3,107,type4,class,0.03,1.0,0.06,134.0,65.7267279624939,/home/a61491/KEVOLVE/outputs/denv/k3/rep107/run.log
+denv,3,107,weighted avg,average,0.0,0.03,0.0,4508.0,65.7267279624939,/home/a61491/KEVOLVE/outputs/denv/k3/rep107/run.log
+denv,3,108,accuracy,overall,,,0.33,4508.0,59.97392129898071,/home/a61491/KEVOLVE/outputs/denv/k3/rep108/run.log
+denv,3,108,macro avg,average,0.14,0.5,0.2,4508.0,59.97392129898071,/home/a61491/KEVOLVE/outputs/denv/k3/rep108/run.log
+denv,3,108,type1,class,0.0,0.0,0.0,2093.0,59.97392129898071,/home/a61491/KEVOLVE/outputs/denv/k3/rep108/run.log
+denv,3,108,type2,class,0.47,1.0,0.64,1373.0,59.97392129898071,/home/a61491/KEVOLVE/outputs/denv/k3/rep108/run.log
+denv,3,108,type3,class,0.0,0.0,0.0,908.0,59.97392129898071,/home/a61491/KEVOLVE/outputs/denv/k3/rep108/run.log
+denv,3,108,type4,class,0.08,1.0,0.15,134.0,59.97392129898071,/home/a61491/KEVOLVE/outputs/denv/k3/rep108/run.log
+denv,3,108,weighted avg,average,0.15,0.33,0.2,4508.0,59.97392129898071,/home/a61491/KEVOLVE/outputs/denv/k3/rep108/run.log
+denv,3,109,accuracy,overall,,,0.46,4508.0,48.96162295341492,/home/a61491/KEVOLVE/outputs/denv/k3/rep109/run.log
+denv,3,109,macro avg,average,0.12,0.25,0.16,4508.0,48.96162295341492,/home/a61491/KEVOLVE/outputs/denv/k3/rep109/run.log
+denv,3,109,type1,class,0.46,1.0,0.63,2093.0,48.96162295341492,/home/a61491/KEVOLVE/outputs/denv/k3/rep109/run.log
+denv,3,109,type2,class,0.0,0.0,0.0,1373.0,48.96162295341492,/home/a61491/KEVOLVE/outputs/denv/k3/rep109/run.log
+denv,3,109,type3,class,0.0,0.0,0.0,908.0,48.96162295341492,/home/a61491/KEVOLVE/outputs/denv/k3/rep109/run.log
+denv,3,109,type4,class,0.0,0.0,0.0,134.0,48.96162295341492,/home/a61491/KEVOLVE/outputs/denv/k3/rep109/run.log
+denv,3,109,weighted avg,average,0.22,0.46,0.29,4508.0,48.96162295341492,/home/a61491/KEVOLVE/outputs/denv/k3/rep109/run.log
 denv,3,11,accuracy,overall,,,0.03,4508.0,129.13674640655518,/home/a61491/KEVOLVE/outputs/denv/k3/rep11/run.log
 denv,3,11,macro avg,average,0.01,0.25,0.01,4508.0,129.13674640655518,/home/a61491/KEVOLVE/outputs/denv/k3/rep11/run.log
 denv,3,11,type1,class,0.0,0.0,0.0,2093.0,129.13674640655518,/home/a61491/KEVOLVE/outputs/denv/k3/rep11/run.log
@@ -1371,6 +1525,13 @@ denv,3,11,type2,class,0.0,0.0,0.0,1373.0,129.13674640655518,/home/a61491/KEVOLVE
 denv,3,11,type3,class,0.0,0.0,0.0,908.0,129.13674640655518,/home/a61491/KEVOLVE/outputs/denv/k3/rep11/run.log
 denv,3,11,type4,class,0.03,1.0,0.06,134.0,129.13674640655518,/home/a61491/KEVOLVE/outputs/denv/k3/rep11/run.log
 denv,3,11,weighted avg,average,0.0,0.03,0.0,4508.0,129.13674640655518,/home/a61491/KEVOLVE/outputs/denv/k3/rep11/run.log
+denv,3,110,accuracy,overall,,,0.03,4508.0,55.946741819381714,/home/a61491/KEVOLVE/outputs/denv/k3/rep110/run.log
+denv,3,110,macro avg,average,0.26,0.25,0.02,4508.0,55.946741819381714,/home/a61491/KEVOLVE/outputs/denv/k3/rep110/run.log
+denv,3,110,type1,class,0.02,0.0,0.01,2093.0,55.946741819381714,/home/a61491/KEVOLVE/outputs/denv/k3/rep110/run.log
+denv,3,110,type2,class,1.0,0.0,0.0,1373.0,55.946741819381714,/home/a61491/KEVOLVE/outputs/denv/k3/rep110/run.log
+denv,3,110,type3,class,0.0,0.0,0.0,908.0,55.946741819381714,/home/a61491/KEVOLVE/outputs/denv/k3/rep110/run.log
+denv,3,110,type4,class,0.03,1.0,0.06,134.0,55.946741819381714,/home/a61491/KEVOLVE/outputs/denv/k3/rep110/run.log
+denv,3,110,weighted avg,average,0.31,0.03,0.01,4508.0,55.946741819381714,/home/a61491/KEVOLVE/outputs/denv/k3/rep110/run.log
 denv,3,12,accuracy,overall,,,0.03,4508.0,46.140340089797974,/home/a61491/KEVOLVE/outputs/denv/k3/rep12/run.log
 denv,3,12,macro avg,average,0.01,0.25,0.01,4508.0,46.140340089797974,/home/a61491/KEVOLVE/outputs/denv/k3/rep12/run.log
 denv,3,12,type1,class,0.0,0.0,0.0,2093.0,46.140340089797974,/home/a61491/KEVOLVE/outputs/denv/k3/rep12/run.log
@@ -2078,6 +2239,55 @@ denv,4,102,type2,class,0.0,0.0,0.0,1373.0,34.79487872123718,/home/a61491/KEVOLVE
 denv,4,102,type3,class,0.0,0.0,0.0,908.0,34.79487872123718,/home/a61491/KEVOLVE/outputs/denv/k4/rep102/run.log
 denv,4,102,type4,class,0.86,0.09,0.16,134.0,34.79487872123718,/home/a61491/KEVOLVE/outputs/denv/k4/rep102/run.log
 denv,4,102,weighted avg,average,0.24,0.47,0.3,4508.0,34.79487872123718,/home/a61491/KEVOLVE/outputs/denv/k4/rep102/run.log
+denv,4,103,accuracy,overall,,,0.01,4508.0,80.51990413665771,/home/a61491/KEVOLVE/outputs/denv/k4/rep103/run.log
+denv,4,103,macro avg,average,0.0,0.1,0.01,4508.0,80.51990413665771,/home/a61491/KEVOLVE/outputs/denv/k4/rep103/run.log
+denv,4,103,type1,class,0.0,0.0,0.0,2093.0,80.51990413665771,/home/a61491/KEVOLVE/outputs/denv/k4/rep103/run.log
+denv,4,103,type2,class,0.0,0.0,0.0,1373.0,80.51990413665771,/home/a61491/KEVOLVE/outputs/denv/k4/rep103/run.log
+denv,4,103,type3,class,0.0,0.0,0.0,908.0,80.51990413665771,/home/a61491/KEVOLVE/outputs/denv/k4/rep103/run.log
+denv,4,103,type4,class,0.02,0.41,0.03,134.0,80.51990413665771,/home/a61491/KEVOLVE/outputs/denv/k4/rep103/run.log
+denv,4,103,weighted avg,average,0.0,0.01,0.0,4508.0,80.51990413665771,/home/a61491/KEVOLVE/outputs/denv/k4/rep103/run.log
+denv,4,104,accuracy,overall,,,0.91,4508.0,71.28612017631531,/home/a61491/KEVOLVE/outputs/denv/k4/rep104/run.log
+denv,4,104,macro avg,average,0.94,0.74,0.78,4508.0,71.28612017631531,/home/a61491/KEVOLVE/outputs/denv/k4/rep104/run.log
+denv,4,104,type1,class,0.83,1.0,0.91,2093.0,71.28612017631531,/home/a61491/KEVOLVE/outputs/denv/k4/rep104/run.log
+denv,4,104,type2,class,1.0,0.89,0.94,1373.0,71.28612017631531,/home/a61491/KEVOLVE/outputs/denv/k4/rep104/run.log
+denv,4,104,type3,class,0.99,0.82,0.9,908.0,71.28612017631531,/home/a61491/KEVOLVE/outputs/denv/k4/rep104/run.log
+denv,4,104,type4,class,0.92,0.25,0.39,134.0,71.28612017631531,/home/a61491/KEVOLVE/outputs/denv/k4/rep104/run.log
+denv,4,104,weighted avg,average,0.92,0.91,0.9,4508.0,71.28612017631531,/home/a61491/KEVOLVE/outputs/denv/k4/rep104/run.log
+denv,4,105,accuracy,overall,,,0.03,4508.0,39.43324899673462,/home/a61491/KEVOLVE/outputs/denv/k4/rep105/run.log
+denv,4,105,macro avg,average,0.08,0.25,0.01,4508.0,39.43324899673462,/home/a61491/KEVOLVE/outputs/denv/k4/rep105/run.log
+denv,4,105,type1,class,0.29,0.0,0.0,2093.0,39.43324899673462,/home/a61491/KEVOLVE/outputs/denv/k4/rep105/run.log
+denv,4,105,type2,class,0.0,0.0,0.0,1373.0,39.43324899673462,/home/a61491/KEVOLVE/outputs/denv/k4/rep105/run.log
+denv,4,105,type3,class,0.0,0.0,0.0,908.0,39.43324899673462,/home/a61491/KEVOLVE/outputs/denv/k4/rep105/run.log
+denv,4,105,type4,class,0.03,0.99,0.06,134.0,39.43324899673462,/home/a61491/KEVOLVE/outputs/denv/k4/rep105/run.log
+denv,4,105,weighted avg,average,0.13,0.03,0.0,4508.0,39.43324899673462,/home/a61491/KEVOLVE/outputs/denv/k4/rep105/run.log
+denv,4,106,accuracy,overall,,,0.34,4508.0,2353.5347850322723,/home/a61491/KEVOLVE/outputs/denv/k4/rep106/run.log
+denv,4,106,macro avg,average,0.45,0.35,0.33,4508.0,2353.5347850322723,/home/a61491/KEVOLVE/outputs/denv/k4/rep106/run.log
+denv,4,106,type1,class,0.79,0.42,0.55,2093.0,2353.5347850322723,/home/a61491/KEVOLVE/outputs/denv/k4/rep106/run.log
+denv,4,106,type2,class,0.0,0.0,0.0,1373.0,2353.5347850322723,/home/a61491/KEVOLVE/outputs/denv/k4/rep106/run.log
+denv,4,106,type3,class,0.19,0.68,0.3,908.0,2353.5347850322723,/home/a61491/KEVOLVE/outputs/denv/k4/rep106/run.log
+denv,4,106,type4,class,0.81,0.31,0.45,134.0,2353.5347850322723,/home/a61491/KEVOLVE/outputs/denv/k4/rep106/run.log
+denv,4,106,weighted avg,average,0.43,0.34,0.33,4508.0,2353.5347850322723,/home/a61491/KEVOLVE/outputs/denv/k4/rep106/run.log
+denv,4,107,accuracy,overall,,,0.77,4508.0,2565.2184290885925,/home/a61491/KEVOLVE/outputs/denv/k4/rep107/run.log
+denv,4,107,macro avg,average,0.58,0.5,0.43,4508.0,2565.2184290885925,/home/a61491/KEVOLVE/outputs/denv/k4/rep107/run.log
+denv,4,107,type1,class,0.89,1.0,0.94,2093.0,2565.2184290885925,/home/a61491/KEVOLVE/outputs/denv/k4/rep107/run.log
+denv,4,107,type2,class,0.64,1.0,0.78,1373.0,2565.2184290885925,/home/a61491/KEVOLVE/outputs/denv/k4/rep107/run.log
+denv,4,107,type3,class,0.8,0.0,0.01,908.0,2565.2184290885925,/home/a61491/KEVOLVE/outputs/denv/k4/rep107/run.log
+denv,4,107,type4,class,0.0,0.0,0.0,134.0,2565.2184290885925,/home/a61491/KEVOLVE/outputs/denv/k4/rep107/run.log
+denv,4,107,weighted avg,average,0.77,0.77,0.68,4508.0,2565.2184290885925,/home/a61491/KEVOLVE/outputs/denv/k4/rep107/run.log
+denv,4,108,accuracy,overall,,,0.49,4508.0,1963.7139658927917,/home/a61491/KEVOLVE/outputs/denv/k4/rep108/run.log
+denv,4,108,macro avg,average,0.35,0.49,0.4,4508.0,1963.7139658927917,/home/a61491/KEVOLVE/outputs/denv/k4/rep108/run.log
+denv,4,108,type1,class,0.48,1.0,0.65,2093.0,1963.7139658927917,/home/a61491/KEVOLVE/outputs/denv/k4/rep108/run.log
+denv,4,108,type2,class,0.0,0.0,0.0,1373.0,1963.7139658927917,/home/a61491/KEVOLVE/outputs/denv/k4/rep108/run.log
+denv,4,108,type3,class,0.0,0.0,0.0,908.0,1963.7139658927917,/home/a61491/KEVOLVE/outputs/denv/k4/rep108/run.log
+denv,4,108,type4,class,0.93,0.95,0.94,134.0,1963.7139658927917,/home/a61491/KEVOLVE/outputs/denv/k4/rep108/run.log
+denv,4,108,weighted avg,average,0.25,0.49,0.33,4508.0,1963.7139658927917,/home/a61491/KEVOLVE/outputs/denv/k4/rep108/run.log
+denv,4,109,accuracy,overall,,,0.71,4508.0,93.82359623908997,/home/a61491/KEVOLVE/outputs/denv/k4/rep109/run.log
+denv,4,109,macro avg,average,0.71,0.81,0.69,4508.0,93.82359623908997,/home/a61491/KEVOLVE/outputs/denv/k4/rep109/run.log
+denv,4,109,type1,class,1.0,0.4,0.57,2093.0,93.82359623908997,/home/a61491/KEVOLVE/outputs/denv/k4/rep109/run.log
+denv,4,109,type2,class,0.58,1.0,0.73,1373.0,93.82359623908997,/home/a61491/KEVOLVE/outputs/denv/k4/rep109/run.log
+denv,4,109,type3,class,0.91,0.98,0.94,908.0,93.82359623908997,/home/a61491/KEVOLVE/outputs/denv/k4/rep109/run.log
+denv,4,109,type4,class,0.37,0.88,0.52,134.0,93.82359623908997,/home/a61491/KEVOLVE/outputs/denv/k4/rep109/run.log
+denv,4,109,weighted avg,average,0.83,0.71,0.69,4508.0,93.82359623908997,/home/a61491/KEVOLVE/outputs/denv/k4/rep109/run.log
 denv,4,11,accuracy,overall,,,0.03,4508.0,500.17736887931824,/home/a61491/KEVOLVE/outputs/denv/k4/rep11/run.log
 denv,4,11,macro avg,average,0.01,0.25,0.01,4508.0,500.17736887931824,/home/a61491/KEVOLVE/outputs/denv/k4/rep11/run.log
 denv,4,11,type1,class,0.0,0.0,0.0,2093.0,500.17736887931824,/home/a61491/KEVOLVE/outputs/denv/k4/rep11/run.log
@@ -2085,6 +2295,13 @@ denv,4,11,type2,class,0.0,0.0,0.0,1373.0,500.17736887931824,/home/a61491/KEVOLVE
 denv,4,11,type3,class,0.0,0.0,0.0,908.0,500.17736887931824,/home/a61491/KEVOLVE/outputs/denv/k4/rep11/run.log
 denv,4,11,type4,class,0.03,1.0,0.06,134.0,500.17736887931824,/home/a61491/KEVOLVE/outputs/denv/k4/rep11/run.log
 denv,4,11,weighted avg,average,0.0,0.03,0.0,4508.0,500.17736887931824,/home/a61491/KEVOLVE/outputs/denv/k4/rep11/run.log
+denv,4,110,accuracy,overall,,,0.03,4508.0,1815.5913965702057,/home/a61491/KEVOLVE/outputs/denv/k4/rep110/run.log
+denv,4,110,macro avg,average,0.01,0.25,0.01,4508.0,1815.5913965702057,/home/a61491/KEVOLVE/outputs/denv/k4/rep110/run.log
+denv,4,110,type1,class,0.0,0.0,0.0,2093.0,1815.5913965702057,/home/a61491/KEVOLVE/outputs/denv/k4/rep110/run.log
+denv,4,110,type2,class,0.0,0.0,0.0,1373.0,1815.5913965702057,/home/a61491/KEVOLVE/outputs/denv/k4/rep110/run.log
+denv,4,110,type3,class,0.0,0.0,0.0,908.0,1815.5913965702057,/home/a61491/KEVOLVE/outputs/denv/k4/rep110/run.log
+denv,4,110,type4,class,0.03,1.0,0.06,134.0,1815.5913965702057,/home/a61491/KEVOLVE/outputs/denv/k4/rep110/run.log
+denv,4,110,weighted avg,average,0.0,0.03,0.0,4508.0,1815.5913965702057,/home/a61491/KEVOLVE/outputs/denv/k4/rep110/run.log
 denv,4,12,accuracy,overall,,,0.5,4508.0,250.86387872695923,/home/a61491/KEVOLVE/outputs/denv/k4/rep12/run.log
 denv,4,12,macro avg,average,0.72,0.5,0.34,4508.0,250.86387872695923,/home/a61491/KEVOLVE/outputs/denv/k4/rep12/run.log
 denv,4,12,type1,class,0.49,1.0,0.66,2093.0,250.86387872695923,/home/a61491/KEVOLVE/outputs/denv/k4/rep12/run.log
@@ -2792,6 +3009,55 @@ denv,5,102,type2,class,0.98,0.06,0.11,1373.0,39.284892082214355,/home/a61491/KEV
 denv,5,102,type3,class,0.0,0.0,0.0,908.0,39.284892082214355,/home/a61491/KEVOLVE/outputs/denv/k5/rep102/run.log
 denv,5,102,type4,class,0.03,0.99,0.06,134.0,39.284892082214355,/home/a61491/KEVOLVE/outputs/denv/k5/rep102/run.log
 denv,5,102,weighted avg,average,0.48,0.07,0.07,4508.0,39.284892082214355,/home/a61491/KEVOLVE/outputs/denv/k5/rep102/run.log
+denv,5,103,accuracy,overall,,,0.17,4508.0,38.2984983921051,/home/a61491/KEVOLVE/outputs/denv/k5/rep103/run.log
+denv,5,103,macro avg,average,0.33,0.39,0.21,4508.0,38.2984983921051,/home/a61491/KEVOLVE/outputs/denv/k5/rep103/run.log
+denv,5,103,type1,class,0.06,0.02,0.02,2093.0,38.2984983921051,/home/a61491/KEVOLVE/outputs/denv/k5/rep103/run.log
+denv,5,103,type2,class,0.16,0.28,0.2,1373.0,38.2984983921051,/home/a61491/KEVOLVE/outputs/denv/k5/rep103/run.log
+denv,5,103,type3,class,1.0,0.26,0.41,908.0,38.2984983921051,/home/a61491/KEVOLVE/outputs/denv/k5/rep103/run.log
+denv,5,103,type4,class,0.11,1.0,0.19,134.0,38.2984983921051,/home/a61491/KEVOLVE/outputs/denv/k5/rep103/run.log
+denv,5,103,weighted avg,average,0.28,0.17,0.16,4508.0,38.2984983921051,/home/a61491/KEVOLVE/outputs/denv/k5/rep103/run.log
+denv,5,104,accuracy,overall,,,0.63,4508.0,31.10875940322876,/home/a61491/KEVOLVE/outputs/denv/k5/rep104/run.log
+denv,5,104,macro avg,average,0.51,0.61,0.44,4508.0,31.10875940322876,/home/a61491/KEVOLVE/outputs/denv/k5/rep104/run.log
+denv,5,104,type1,class,0.99,1.0,1.0,2093.0,31.10875940322876,/home/a61491/KEVOLVE/outputs/denv/k5/rep104/run.log
+denv,5,104,type2,class,0.99,0.45,0.61,1373.0,31.10875940322876,/home/a61491/KEVOLVE/outputs/denv/k5/rep104/run.log
+denv,5,104,type3,class,0.0,0.0,0.0,908.0,31.10875940322876,/home/a61491/KEVOLVE/outputs/denv/k5/rep104/run.log
+denv,5,104,type4,class,0.07,0.98,0.14,134.0,31.10875940322876,/home/a61491/KEVOLVE/outputs/denv/k5/rep104/run.log
+denv,5,104,weighted avg,average,0.76,0.63,0.65,4508.0,31.10875940322876,/home/a61491/KEVOLVE/outputs/denv/k5/rep104/run.log
+denv,5,105,accuracy,overall,,,0.81,4508.0,36.163188219070435,/home/a61491/KEVOLVE/outputs/denv/k5/rep105/run.log
+denv,5,105,macro avg,average,0.91,0.84,0.83,4508.0,36.163188219070435,/home/a61491/KEVOLVE/outputs/denv/k5/rep105/run.log
+denv,5,105,type1,class,0.72,1.0,0.83,2093.0,36.163188219070435,/home/a61491/KEVOLVE/outputs/denv/k5/rep105/run.log
+denv,5,105,type2,class,0.99,0.39,0.56,1373.0,36.163188219070435,/home/a61491/KEVOLVE/outputs/denv/k5/rep105/run.log
+denv,5,105,type3,class,0.98,1.0,0.99,908.0,36.163188219070435,/home/a61491/KEVOLVE/outputs/denv/k5/rep105/run.log
+denv,5,105,type4,class,0.95,0.96,0.96,134.0,36.163188219070435,/home/a61491/KEVOLVE/outputs/denv/k5/rep105/run.log
+denv,5,105,weighted avg,average,0.86,0.81,0.78,4508.0,36.163188219070435,/home/a61491/KEVOLVE/outputs/denv/k5/rep105/run.log
+denv,5,106,accuracy,overall,,,0.27,4508.0,48.79182457923889,/home/a61491/KEVOLVE/outputs/denv/k5/rep106/run.log
+denv,5,106,macro avg,average,0.4,0.4,0.23,4508.0,48.79182457923889,/home/a61491/KEVOLVE/outputs/denv/k5/rep106/run.log
+denv,5,106,type1,class,0.62,0.36,0.46,2093.0,48.79182457923889,/home/a61491/KEVOLVE/outputs/denv/k5/rep106/run.log
+denv,5,106,type2,class,0.94,0.25,0.39,1373.0,48.79182457923889,/home/a61491/KEVOLVE/outputs/denv/k5/rep106/run.log
+denv,5,106,type3,class,0.0,0.0,0.0,908.0,48.79182457923889,/home/a61491/KEVOLVE/outputs/denv/k5/rep106/run.log
+denv,5,106,type4,class,0.05,1.0,0.09,134.0,48.79182457923889,/home/a61491/KEVOLVE/outputs/denv/k5/rep106/run.log
+denv,5,106,weighted avg,average,0.58,0.27,0.33,4508.0,48.79182457923889,/home/a61491/KEVOLVE/outputs/denv/k5/rep106/run.log
+denv,5,107,accuracy,overall,,,0.44,4508.0,30.137221097946167,/home/a61491/KEVOLVE/outputs/denv/k5/rep107/run.log
+denv,5,107,macro avg,average,0.35,0.28,0.31,4508.0,30.137221097946167,/home/a61491/KEVOLVE/outputs/denv/k5/rep107/run.log
+denv,5,107,type1,class,1.0,0.65,0.79,2093.0,30.137221097946167,/home/a61491/KEVOLVE/outputs/denv/k5/rep107/run.log
+denv,5,107,type2,class,0.41,0.48,0.44,1373.0,30.137221097946167,/home/a61491/KEVOLVE/outputs/denv/k5/rep107/run.log
+denv,5,107,type3,class,0.0,0.0,0.0,908.0,30.137221097946167,/home/a61491/KEVOLVE/outputs/denv/k5/rep107/run.log
+denv,5,107,type4,class,0.0,0.0,0.0,134.0,30.137221097946167,/home/a61491/KEVOLVE/outputs/denv/k5/rep107/run.log
+denv,5,107,weighted avg,average,0.59,0.44,0.5,4508.0,30.137221097946167,/home/a61491/KEVOLVE/outputs/denv/k5/rep107/run.log
+denv,5,108,accuracy,overall,,,0.3,4508.0,73.38125848770142,/home/a61491/KEVOLVE/outputs/denv/k5/rep108/run.log
+denv,5,108,macro avg,average,0.15,0.25,0.12,4508.0,73.38125848770142,/home/a61491/KEVOLVE/outputs/denv/k5/rep108/run.log
+denv,5,108,type1,class,0.0,0.0,0.0,2093.0,73.38125848770142,/home/a61491/KEVOLVE/outputs/denv/k5/rep108/run.log
+denv,5,108,type2,class,0.31,1.0,0.47,1373.0,73.38125848770142,/home/a61491/KEVOLVE/outputs/denv/k5/rep108/run.log
+denv,5,108,type3,class,0.0,0.0,0.0,908.0,73.38125848770142,/home/a61491/KEVOLVE/outputs/denv/k5/rep108/run.log
+denv,5,108,type4,class,0.29,0.01,0.03,134.0,73.38125848770142,/home/a61491/KEVOLVE/outputs/denv/k5/rep108/run.log
+denv,5,108,weighted avg,average,0.1,0.3,0.14,4508.0,73.38125848770142,/home/a61491/KEVOLVE/outputs/denv/k5/rep108/run.log
+denv,5,109,accuracy,overall,,,0.25,4508.0,32.65342855453491,/home/a61491/KEVOLVE/outputs/denv/k5/rep109/run.log
+denv,5,109,macro avg,average,0.23,0.25,0.17,4508.0,32.65342855453491,/home/a61491/KEVOLVE/outputs/denv/k5/rep109/run.log
+denv,5,109,type1,class,0.21,0.2,0.2,2093.0,32.65342855453491,/home/a61491/KEVOLVE/outputs/denv/k5/rep109/run.log
+denv,5,109,type2,class,0.0,0.0,0.0,1373.0,32.65342855453491,/home/a61491/KEVOLVE/outputs/denv/k5/rep109/run.log
+denv,5,109,type3,class,0.28,0.75,0.41,908.0,32.65342855453491,/home/a61491/KEVOLVE/outputs/denv/k5/rep109/run.log
+denv,5,109,type4,class,0.44,0.03,0.06,134.0,32.65342855453491,/home/a61491/KEVOLVE/outputs/denv/k5/rep109/run.log
+denv,5,109,weighted avg,average,0.17,0.25,0.18,4508.0,32.65342855453491,/home/a61491/KEVOLVE/outputs/denv/k5/rep109/run.log
 denv,5,11,accuracy,overall,,,0.9,4508.0,214.21380925178528,/home/a61491/KEVOLVE/outputs/denv/k5/rep11/run.log
 denv,5,11,macro avg,average,0.87,0.92,0.88,4508.0,214.21380925178528,/home/a61491/KEVOLVE/outputs/denv/k5/rep11/run.log
 denv,5,11,type1,class,1.0,0.99,0.99,2093.0,214.21380925178528,/home/a61491/KEVOLVE/outputs/denv/k5/rep11/run.log
@@ -2799,6 +3065,13 @@ denv,5,11,type2,class,1.0,0.7,0.82,1373.0,214.21380925178528,/home/a61491/KEVOLV
 denv,5,11,type3,class,0.69,1.0,0.81,908.0,214.21380925178528,/home/a61491/KEVOLVE/outputs/denv/k5/rep11/run.log
 denv,5,11,type4,class,0.8,0.99,0.89,134.0,214.21380925178528,/home/a61491/KEVOLVE/outputs/denv/k5/rep11/run.log
 denv,5,11,weighted avg,average,0.93,0.9,0.9,4508.0,214.21380925178528,/home/a61491/KEVOLVE/outputs/denv/k5/rep11/run.log
+denv,5,110,accuracy,overall,,,0.68,4508.0,38.95335125923157,/home/a61491/KEVOLVE/outputs/denv/k5/rep110/run.log
+denv,5,110,macro avg,average,0.58,0.74,0.53,4508.0,38.95335125923157,/home/a61491/KEVOLVE/outputs/denv/k5/rep110/run.log
+denv,5,110,type1,class,1.0,0.98,0.99,2093.0,38.95335125923157,/home/a61491/KEVOLVE/outputs/denv/k5/rep110/run.log
+denv,5,110,type2,class,0.25,0.0,0.0,1373.0,38.95335125923157,/home/a61491/KEVOLVE/outputs/denv/k5/rep110/run.log
+denv,5,110,type3,class,1.0,0.98,0.99,908.0,38.95335125923157,/home/a61491/KEVOLVE/outputs/denv/k5/rep110/run.log
+denv,5,110,type4,class,0.08,0.99,0.16,134.0,38.95335125923157,/home/a61491/KEVOLVE/outputs/denv/k5/rep110/run.log
+denv,5,110,weighted avg,average,0.74,0.68,0.66,4508.0,38.95335125923157,/home/a61491/KEVOLVE/outputs/denv/k5/rep110/run.log
 denv,5,12,accuracy,overall,,,0.98,4508.0,96.66486763954163,/home/a61491/KEVOLVE/outputs/denv/k5/rep12/run.log
 denv,5,12,macro avg,average,0.93,0.98,0.95,4508.0,96.66486763954163,/home/a61491/KEVOLVE/outputs/denv/k5/rep12/run.log
 denv,5,12,type1,class,0.98,0.98,0.98,2093.0,96.66486763954163,/home/a61491/KEVOLVE/outputs/denv/k5/rep12/run.log
@@ -3506,6 +3779,55 @@ denv,6,102,type2,class,0.87,0.5,0.64,1373.0,49.2127320766449,/home/a61491/KEVOLV
 denv,6,102,type3,class,0.0,0.0,0.0,908.0,49.2127320766449,/home/a61491/KEVOLVE/outputs/denv/k6/rep102/run.log
 denv,6,102,type4,class,0.05,0.99,0.09,134.0,49.2127320766449,/home/a61491/KEVOLVE/outputs/denv/k6/rep102/run.log
 denv,6,102,weighted avg,average,0.27,0.18,0.2,4508.0,49.2127320766449,/home/a61491/KEVOLVE/outputs/denv/k6/rep102/run.log
+denv,6,103,accuracy,overall,,,0.01,4508.0,40.90622806549072,/home/a61491/KEVOLVE/outputs/denv/k6/rep103/run.log
+denv,6,103,macro avg,average,0.0,0.05,0.01,4508.0,40.90622806549072,/home/a61491/KEVOLVE/outputs/denv/k6/rep103/run.log
+denv,6,103,type1,class,0.0,0.0,0.0,2093.0,40.90622806549072,/home/a61491/KEVOLVE/outputs/denv/k6/rep103/run.log
+denv,6,103,type2,class,0.0,0.01,0.01,1373.0,40.90622806549072,/home/a61491/KEVOLVE/outputs/denv/k6/rep103/run.log
+denv,6,103,type3,class,0.0,0.0,0.0,908.0,40.90622806549072,/home/a61491/KEVOLVE/outputs/denv/k6/rep103/run.log
+denv,6,103,type4,class,0.01,0.19,0.03,134.0,40.90622806549072,/home/a61491/KEVOLVE/outputs/denv/k6/rep103/run.log
+denv,6,103,weighted avg,average,0.0,0.01,0.0,4508.0,40.90622806549072,/home/a61491/KEVOLVE/outputs/denv/k6/rep103/run.log
+denv,6,104,accuracy,overall,,,0.6,4508.0,70.0236291885376,/home/a61491/KEVOLVE/outputs/denv/k6/rep104/run.log
+denv,6,104,macro avg,average,0.4,0.47,0.38,4508.0,70.0236291885376,/home/a61491/KEVOLVE/outputs/denv/k6/rep104/run.log
+denv,6,104,type1,class,0.93,0.87,0.9,2093.0,70.0236291885376,/home/a61491/KEVOLVE/outputs/denv/k6/rep104/run.log
+denv,6,104,type2,class,0.25,0.01,0.01,1373.0,70.0236291885376,/home/a61491/KEVOLVE/outputs/denv/k6/rep104/run.log
+denv,6,104,type3,class,0.39,0.98,0.56,908.0,70.0236291885376,/home/a61491/KEVOLVE/outputs/denv/k6/rep104/run.log
+denv,6,104,type4,class,0.02,0.04,0.03,134.0,70.0236291885376,/home/a61491/KEVOLVE/outputs/denv/k6/rep104/run.log
+denv,6,104,weighted avg,average,0.59,0.6,0.53,4508.0,70.0236291885376,/home/a61491/KEVOLVE/outputs/denv/k6/rep104/run.log
+denv,6,105,accuracy,overall,,,0.56,4508.0,51.643085956573486,/home/a61491/KEVOLVE/outputs/denv/k6/rep105/run.log
+denv,6,105,macro avg,average,0.56,0.62,0.5,4508.0,51.643085956573486,/home/a61491/KEVOLVE/outputs/denv/k6/rep105/run.log
+denv,6,105,type1,class,0.97,0.41,0.58,2093.0,51.643085956573486,/home/a61491/KEVOLVE/outputs/denv/k6/rep105/run.log
+denv,6,105,type2,class,0.7,0.51,0.59,1373.0,51.643085956573486,/home/a61491/KEVOLVE/outputs/denv/k6/rep105/run.log
+denv,6,105,type3,class,0.44,0.99,0.61,908.0,51.643085956573486,/home/a61491/KEVOLVE/outputs/denv/k6/rep105/run.log
+denv,6,105,type4,class,0.14,0.57,0.22,134.0,51.643085956573486,/home/a61491/KEVOLVE/outputs/denv/k6/rep105/run.log
+denv,6,105,weighted avg,average,0.76,0.56,0.58,4508.0,51.643085956573486,/home/a61491/KEVOLVE/outputs/denv/k6/rep105/run.log
+denv,6,106,accuracy,overall,,,0.94,4508.0,45.63635969161987,/home/a61491/KEVOLVE/outputs/denv/k6/rep106/run.log
+denv,6,106,macro avg,average,0.92,0.9,0.91,4508.0,45.63635969161987,/home/a61491/KEVOLVE/outputs/denv/k6/rep106/run.log
+denv,6,106,type1,class,0.9,1.0,0.95,2093.0,45.63635969161987,/home/a61491/KEVOLVE/outputs/denv/k6/rep106/run.log
+denv,6,106,type2,class,1.0,0.87,0.93,1373.0,45.63635969161987,/home/a61491/KEVOLVE/outputs/denv/k6/rep106/run.log
+denv,6,106,type3,class,0.97,0.91,0.94,908.0,45.63635969161987,/home/a61491/KEVOLVE/outputs/denv/k6/rep106/run.log
+denv,6,106,type4,class,0.83,0.82,0.82,134.0,45.63635969161987,/home/a61491/KEVOLVE/outputs/denv/k6/rep106/run.log
+denv,6,106,weighted avg,average,0.94,0.94,0.94,4508.0,45.63635969161987,/home/a61491/KEVOLVE/outputs/denv/k6/rep106/run.log
+denv,6,107,accuracy,overall,,,0.88,4508.0,145.51160264015198,/home/a61491/KEVOLVE/outputs/denv/k6/rep107/run.log
+denv,6,107,macro avg,average,0.91,0.81,0.85,4508.0,145.51160264015198,/home/a61491/KEVOLVE/outputs/denv/k6/rep107/run.log
+denv,6,107,type1,class,0.89,0.98,0.94,2093.0,145.51160264015198,/home/a61491/KEVOLVE/outputs/denv/k6/rep107/run.log
+denv,6,107,type2,class,0.81,0.84,0.83,1373.0,145.51160264015198,/home/a61491/KEVOLVE/outputs/denv/k6/rep107/run.log
+denv,6,107,type3,class,1.0,0.74,0.85,908.0,145.51160264015198,/home/a61491/KEVOLVE/outputs/denv/k6/rep107/run.log
+denv,6,107,type4,class,0.94,0.68,0.79,134.0,145.51160264015198,/home/a61491/KEVOLVE/outputs/denv/k6/rep107/run.log
+denv,6,107,weighted avg,average,0.89,0.88,0.88,4508.0,145.51160264015198,/home/a61491/KEVOLVE/outputs/denv/k6/rep107/run.log
+denv,6,108,accuracy,overall,,,0.65,4508.0,45.90537881851196,/home/a61491/KEVOLVE/outputs/denv/k6/rep108/run.log
+denv,6,108,macro avg,average,0.5,0.48,0.47,4508.0,45.90537881851196,/home/a61491/KEVOLVE/outputs/denv/k6/rep108/run.log
+denv,6,108,type1,class,0.79,0.96,0.87,2093.0,45.90537881851196,/home/a61491/KEVOLVE/outputs/denv/k6/rep108/run.log
+denv,6,108,type2,class,0.4,0.12,0.19,1373.0,45.90537881851196,/home/a61491/KEVOLVE/outputs/denv/k6/rep108/run.log
+denv,6,108,type3,class,0.8,0.84,0.82,908.0,45.90537881851196,/home/a61491/KEVOLVE/outputs/denv/k6/rep108/run.log
+denv,6,108,type4,class,0.0,0.0,0.0,134.0,45.90537881851196,/home/a61491/KEVOLVE/outputs/denv/k6/rep108/run.log
+denv,6,108,weighted avg,average,0.65,0.65,0.62,4508.0,45.90537881851196,/home/a61491/KEVOLVE/outputs/denv/k6/rep108/run.log
+denv,6,109,accuracy,overall,,,0.71,4508.0,46.962663888931274,/home/a61491/KEVOLVE/outputs/denv/k6/rep109/run.log
+denv,6,109,macro avg,average,0.67,0.5,0.54,4508.0,46.962663888931274,/home/a61491/KEVOLVE/outputs/denv/k6/rep109/run.log
+denv,6,109,type1,class,0.71,0.97,0.82,2093.0,46.962663888931274,/home/a61491/KEVOLVE/outputs/denv/k6/rep109/run.log
+denv,6,109,type2,class,1.0,0.49,0.66,1373.0,46.962663888931274,/home/a61491/KEVOLVE/outputs/denv/k6/rep109/run.log
+denv,6,109,type3,class,0.96,0.53,0.68,908.0,46.962663888931274,/home/a61491/KEVOLVE/outputs/denv/k6/rep109/run.log
+denv,6,109,type4,class,0.0,0.0,0.0,134.0,46.962663888931274,/home/a61491/KEVOLVE/outputs/denv/k6/rep109/run.log
+denv,6,109,weighted avg,average,0.83,0.71,0.72,4508.0,46.962663888931274,/home/a61491/KEVOLVE/outputs/denv/k6/rep109/run.log
 denv,6,11,accuracy,overall,,,0.05,4508.0,109.54550194740295,/home/a61491/KEVOLVE/outputs/denv/k6/rep11/run.log
 denv,6,11,macro avg,average,0.26,0.27,0.06,4508.0,109.54550194740295,/home/a61491/KEVOLVE/outputs/denv/k6/rep11/run.log
 denv,6,11,type1,class,0.03,0.01,0.02,2093.0,109.54550194740295,/home/a61491/KEVOLVE/outputs/denv/k6/rep11/run.log
@@ -3513,6 +3835,13 @@ denv,6,11,type2,class,0.03,0.03,0.03,1373.0,109.54550194740295,/home/a61491/KEVO
 denv,6,11,type3,class,0.92,0.05,0.1,908.0,109.54550194740295,/home/a61491/KEVOLVE/outputs/denv/k6/rep11/run.log
 denv,6,11,type4,class,0.06,0.99,0.11,134.0,109.54550194740295,/home/a61491/KEVOLVE/outputs/denv/k6/rep11/run.log
 denv,6,11,weighted avg,average,0.21,0.05,0.04,4508.0,109.54550194740295,/home/a61491/KEVOLVE/outputs/denv/k6/rep11/run.log
+denv,6,110,accuracy,overall,,,0.78,4508.0,43.222190141677856,/home/a61491/KEVOLVE/outputs/denv/k6/rep110/run.log
+denv,6,110,macro avg,average,0.78,0.74,0.66,4508.0,43.222190141677856,/home/a61491/KEVOLVE/outputs/denv/k6/rep110/run.log
+denv,6,110,type1,class,0.73,1.0,0.84,2093.0,43.222190141677856,/home/a61491/KEVOLVE/outputs/denv/k6/rep110/run.log
+denv,6,110,type2,class,0.99,0.82,0.9,1373.0,43.222190141677856,/home/a61491/KEVOLVE/outputs/denv/k6/rep110/run.log
+denv,6,110,type3,class,1.0,0.21,0.35,908.0,43.222190141677856,/home/a61491/KEVOLVE/outputs/denv/k6/rep110/run.log
+denv,6,110,type4,class,0.39,0.94,0.56,134.0,43.222190141677856,/home/a61491/KEVOLVE/outputs/denv/k6/rep110/run.log
+denv,6,110,weighted avg,average,0.86,0.78,0.75,4508.0,43.222190141677856,/home/a61491/KEVOLVE/outputs/denv/k6/rep110/run.log
 denv,6,12,accuracy,overall,,,0.47,4508.0,272.90781712532043,/home/a61491/KEVOLVE/outputs/denv/k6/rep12/run.log
 denv,6,12,macro avg,average,0.63,0.65,0.45,4508.0,272.90781712532043,/home/a61491/KEVOLVE/outputs/denv/k6/rep12/run.log
 denv,6,12,type1,class,0.9,0.05,0.1,2093.0,272.90781712532043,/home/a61491/KEVOLVE/outputs/denv/k6/rep12/run.log
@@ -4220,6 +4549,55 @@ denv,7,102,type2,class,0.98,0.68,0.8,1373.0,136.46044778823853,/home/a61491/KEVO
 denv,7,102,type3,class,0.47,0.77,0.59,908.0,136.46044778823853,/home/a61491/KEVOLVE/outputs/denv/k7/rep102/run.log
 denv,7,102,type4,class,0.5,0.01,0.01,134.0,136.46044778823853,/home/a61491/KEVOLVE/outputs/denv/k7/rep102/run.log
 denv,7,102,weighted avg,average,0.83,0.78,0.78,4508.0,136.46044778823853,/home/a61491/KEVOLVE/outputs/denv/k7/rep102/run.log
+denv,7,103,accuracy,overall,,,0.5,4508.0,124.68058776855469,/home/a61491/KEVOLVE/outputs/denv/k7/rep103/run.log
+denv,7,103,macro avg,average,0.47,0.43,0.34,4508.0,124.68058776855469,/home/a61491/KEVOLVE/outputs/denv/k7/rep103/run.log
+denv,7,103,type1,class,0.93,0.93,0.93,2093.0,124.68058776855469,/home/a61491/KEVOLVE/outputs/denv/k7/rep103/run.log
+denv,7,103,type2,class,0.32,0.03,0.05,1373.0,124.68058776855469,/home/a61491/KEVOLVE/outputs/denv/k7/rep103/run.log
+denv,7,103,type3,class,0.6,0.22,0.32,908.0,124.68058776855469,/home/a61491/KEVOLVE/outputs/denv/k7/rep103/run.log
+denv,7,103,type4,class,0.04,0.54,0.07,134.0,124.68058776855469,/home/a61491/KEVOLVE/outputs/denv/k7/rep103/run.log
+denv,7,103,weighted avg,average,0.65,0.5,0.51,4508.0,124.68058776855469,/home/a61491/KEVOLVE/outputs/denv/k7/rep103/run.log
+denv,7,104,accuracy,overall,,,0.49,4508.0,190.38471961021423,/home/a61491/KEVOLVE/outputs/denv/k7/rep104/run.log
+denv,7,104,macro avg,average,0.28,0.49,0.29,4508.0,190.38471961021423,/home/a61491/KEVOLVE/outputs/denv/k7/rep104/run.log
+denv,7,104,type1,class,0.99,0.99,0.99,2093.0,190.38471961021423,/home/a61491/KEVOLVE/outputs/denv/k7/rep104/run.log
+denv,7,104,type2,class,0.0,0.0,0.0,1373.0,190.38471961021423,/home/a61491/KEVOLVE/outputs/denv/k7/rep104/run.log
+denv,7,104,type3,class,0.02,0.0,0.0,908.0,190.38471961021423,/home/a61491/KEVOLVE/outputs/denv/k7/rep104/run.log
+denv,7,104,type4,class,0.09,0.96,0.16,134.0,190.38471961021423,/home/a61491/KEVOLVE/outputs/denv/k7/rep104/run.log
+denv,7,104,weighted avg,average,0.47,0.49,0.47,4508.0,190.38471961021423,/home/a61491/KEVOLVE/outputs/denv/k7/rep104/run.log
+denv,7,105,accuracy,overall,,,0.64,4508.0,131.12246751785278,/home/a61491/KEVOLVE/outputs/denv/k7/rep105/run.log
+denv,7,105,macro avg,average,0.61,0.51,0.47,4508.0,131.12246751785278,/home/a61491/KEVOLVE/outputs/denv/k7/rep105/run.log
+denv,7,105,type1,class,0.61,0.87,0.72,2093.0,131.12246751785278,/home/a61491/KEVOLVE/outputs/denv/k7/rep105/run.log
+denv,7,105,type2,class,0.98,0.13,0.23,1373.0,131.12246751785278,/home/a61491/KEVOLVE/outputs/denv/k7/rep105/run.log
+denv,7,105,type3,class,0.74,0.93,0.82,908.0,131.12246751785278,/home/a61491/KEVOLVE/outputs/denv/k7/rep105/run.log
+denv,7,105,type4,class,0.1,0.12,0.11,134.0,131.12246751785278,/home/a61491/KEVOLVE/outputs/denv/k7/rep105/run.log
+denv,7,105,weighted avg,average,0.73,0.64,0.57,4508.0,131.12246751785278,/home/a61491/KEVOLVE/outputs/denv/k7/rep105/run.log
+denv,7,106,accuracy,overall,,,0.21,4508.0,138.1165270805359,/home/a61491/KEVOLVE/outputs/denv/k7/rep106/run.log
+denv,7,106,macro avg,average,0.29,0.2,0.18,4508.0,138.1165270805359,/home/a61491/KEVOLVE/outputs/denv/k7/rep106/run.log
+denv,7,106,type1,class,0.85,0.19,0.31,2093.0,138.1165270805359,/home/a61491/KEVOLVE/outputs/denv/k7/rep106/run.log
+denv,7,106,type2,class,0.03,0.05,0.04,1373.0,138.1165270805359,/home/a61491/KEVOLVE/outputs/denv/k7/rep106/run.log
+denv,7,106,type3,class,0.29,0.55,0.38,908.0,138.1165270805359,/home/a61491/KEVOLVE/outputs/denv/k7/rep106/run.log
+denv,7,106,type4,class,0.0,0.0,0.0,134.0,138.1165270805359,/home/a61491/KEVOLVE/outputs/denv/k7/rep106/run.log
+denv,7,106,weighted avg,average,0.46,0.21,0.23,4508.0,138.1165270805359,/home/a61491/KEVOLVE/outputs/denv/k7/rep106/run.log
+denv,7,107,accuracy,overall,,,0.69,4508.0,148.43000531196594,/home/a61491/KEVOLVE/outputs/denv/k7/rep107/run.log
+denv,7,107,macro avg,average,0.73,0.81,0.71,4508.0,148.43000531196594,/home/a61491/KEVOLVE/outputs/denv/k7/rep107/run.log
+denv,7,107,type1,class,0.98,0.34,0.5,2093.0,148.43000531196594,/home/a61491/KEVOLVE/outputs/denv/k7/rep107/run.log
+denv,7,107,type2,class,0.68,1.0,0.81,1373.0,148.43000531196594,/home/a61491/KEVOLVE/outputs/denv/k7/rep107/run.log
+denv,7,107,type3,class,0.57,1.0,0.72,908.0,148.43000531196594,/home/a61491/KEVOLVE/outputs/denv/k7/rep107/run.log
+denv,7,107,type4,class,0.7,0.9,0.79,134.0,148.43000531196594,/home/a61491/KEVOLVE/outputs/denv/k7/rep107/run.log
+denv,7,107,weighted avg,average,0.8,0.69,0.65,4508.0,148.43000531196594,/home/a61491/KEVOLVE/outputs/denv/k7/rep107/run.log
+denv,7,108,accuracy,overall,,,0.41,4508.0,148.77397632598877,/home/a61491/KEVOLVE/outputs/denv/k7/rep108/run.log
+denv,7,108,macro avg,average,0.11,0.22,0.15,4508.0,148.77397632598877,/home/a61491/KEVOLVE/outputs/denv/k7/rep108/run.log
+denv,7,108,type1,class,0.43,0.89,0.58,2093.0,148.77397632598877,/home/a61491/KEVOLVE/outputs/denv/k7/rep108/run.log
+denv,7,108,type2,class,0.0,0.0,0.0,1373.0,148.77397632598877,/home/a61491/KEVOLVE/outputs/denv/k7/rep108/run.log
+denv,7,108,type3,class,0.0,0.0,0.0,908.0,148.77397632598877,/home/a61491/KEVOLVE/outputs/denv/k7/rep108/run.log
+denv,7,108,type4,class,0.0,0.0,0.0,134.0,148.77397632598877,/home/a61491/KEVOLVE/outputs/denv/k7/rep108/run.log
+denv,7,108,weighted avg,average,0.2,0.41,0.27,4508.0,148.77397632598877,/home/a61491/KEVOLVE/outputs/denv/k7/rep108/run.log
+denv,7,109,accuracy,overall,,,0.42,4508.0,128.65220832824707,/home/a61491/KEVOLVE/outputs/denv/k7/rep109/run.log
+denv,7,109,macro avg,average,0.35,0.38,0.32,4508.0,128.65220832824707,/home/a61491/KEVOLVE/outputs/denv/k7/rep109/run.log
+denv,7,109,type1,class,0.56,0.59,0.58,2093.0,128.65220832824707,/home/a61491/KEVOLVE/outputs/denv/k7/rep109/run.log
+denv,7,109,type2,class,0.73,0.42,0.53,1373.0,128.65220832824707,/home/a61491/KEVOLVE/outputs/denv/k7/rep109/run.log
+denv,7,109,type3,class,0.0,0.0,0.0,908.0,128.65220832824707,/home/a61491/KEVOLVE/outputs/denv/k7/rep109/run.log
+denv,7,109,type4,class,0.1,0.51,0.16,134.0,128.65220832824707,/home/a61491/KEVOLVE/outputs/denv/k7/rep109/run.log
+denv,7,109,weighted avg,average,0.48,0.42,0.43,4508.0,128.65220832824707,/home/a61491/KEVOLVE/outputs/denv/k7/rep109/run.log
 denv,7,11,accuracy,overall,,,0.92,4508.0,470.64129757881165,/home/a61491/KEVOLVE/outputs/denv/k7/rep11/run.log
 denv,7,11,macro avg,average,0.94,0.94,0.94,4508.0,470.64129757881165,/home/a61491/KEVOLVE/outputs/denv/k7/rep11/run.log
 denv,7,11,type1,class,0.89,0.94,0.91,2093.0,470.64129757881165,/home/a61491/KEVOLVE/outputs/denv/k7/rep11/run.log
@@ -4227,6 +4605,13 @@ denv,7,11,type2,class,0.9,0.82,0.86,1373.0,470.64129757881165,/home/a61491/KEVOL
 denv,7,11,type3,class,1.0,1.0,1.0,908.0,470.64129757881165,/home/a61491/KEVOLVE/outputs/denv/k7/rep11/run.log
 denv,7,11,type4,class,0.98,1.0,0.99,134.0,470.64129757881165,/home/a61491/KEVOLVE/outputs/denv/k7/rep11/run.log
 denv,7,11,weighted avg,average,0.92,0.92,0.92,4508.0,470.64129757881165,/home/a61491/KEVOLVE/outputs/denv/k7/rep11/run.log
+denv,7,110,accuracy,overall,,,0.58,4508.0,133.82153701782227,/home/a61491/KEVOLVE/outputs/denv/k7/rep110/run.log
+denv,7,110,macro avg,average,0.66,0.55,0.46,4508.0,133.82153701782227,/home/a61491/KEVOLVE/outputs/denv/k7/rep110/run.log
+denv,7,110,type1,class,0.88,0.19,0.32,2093.0,133.82153701782227,/home/a61491/KEVOLVE/outputs/denv/k7/rep110/run.log
+denv,7,110,type2,class,0.94,0.99,0.97,1373.0,133.82153701782227,/home/a61491/KEVOLVE/outputs/denv/k7/rep110/run.log
+denv,7,110,type3,class,0.33,0.95,0.49,908.0,133.82153701782227,/home/a61491/KEVOLVE/outputs/denv/k7/rep110/run.log
+denv,7,110,type4,class,0.5,0.04,0.08,134.0,133.82153701782227,/home/a61491/KEVOLVE/outputs/denv/k7/rep110/run.log
+denv,7,110,weighted avg,average,0.78,0.58,0.54,4508.0,133.82153701782227,/home/a61491/KEVOLVE/outputs/denv/k7/rep110/run.log
 denv,7,12,accuracy,overall,,,0.3,4508.0,1313.274715423584,/home/a61491/KEVOLVE/outputs/denv/k7/rep12/run.log
 denv,7,12,macro avg,average,0.22,0.29,0.23,4508.0,1313.274715423584,/home/a61491/KEVOLVE/outputs/denv/k7/rep12/run.log
 denv,7,12,type1,class,0.02,0.0,0.01,2093.0,1313.274715423584,/home/a61491/KEVOLVE/outputs/denv/k7/rep12/run.log
@@ -4927,6 +5312,55 @@ denv,8,102,type2,class,1.0,0.91,0.95,1373.0,534.8658525943756,/home/a61491/KEVOL
 denv,8,102,type3,class,0.89,1.0,0.94,908.0,534.8658525943756,/home/a61491/KEVOLVE/outputs/denv/k8/rep102/run.log
 denv,8,102,type4,class,0.94,0.98,0.96,134.0,534.8658525943756,/home/a61491/KEVOLVE/outputs/denv/k8/rep102/run.log
 denv,8,102,weighted avg,average,0.97,0.97,0.97,4508.0,534.8658525943756,/home/a61491/KEVOLVE/outputs/denv/k8/rep102/run.log
+denv,8,103,accuracy,overall,,,0.94,4508.0,425.4541714191437,/home/a61491/KEVOLVE/outputs/denv/k8/rep103/run.log
+denv,8,103,macro avg,average,0.83,0.92,0.83,4508.0,425.4541714191437,/home/a61491/KEVOLVE/outputs/denv/k8/rep103/run.log
+denv,8,103,type1,class,0.99,0.99,0.99,2093.0,425.4541714191437,/home/a61491/KEVOLVE/outputs/denv/k8/rep103/run.log
+denv,8,103,type2,class,0.99,0.99,0.99,1373.0,425.4541714191437,/home/a61491/KEVOLVE/outputs/denv/k8/rep103/run.log
+denv,8,103,type3,class,1.0,0.72,0.84,908.0,425.4541714191437,/home/a61491/KEVOLVE/outputs/denv/k8/rep103/run.log
+denv,8,103,type4,class,0.34,0.98,0.5,134.0,425.4541714191437,/home/a61491/KEVOLVE/outputs/denv/k8/rep103/run.log
+denv,8,103,weighted avg,average,0.97,0.94,0.95,4508.0,425.4541714191437,/home/a61491/KEVOLVE/outputs/denv/k8/rep103/run.log
+denv,8,104,accuracy,overall,,,0.02,4508.0,421.13973355293274,/home/a61491/KEVOLVE/outputs/denv/k8/rep104/run.log
+denv,8,104,macro avg,average,0.12,0.02,0.02,4508.0,421.13973355293274,/home/a61491/KEVOLVE/outputs/denv/k8/rep104/run.log
+denv,8,104,type1,class,0.01,0.0,0.0,2093.0,421.13973355293274,/home/a61491/KEVOLVE/outputs/denv/k8/rep104/run.log
+denv,8,104,type2,class,0.05,0.06,0.05,1373.0,421.13973355293274,/home/a61491/KEVOLVE/outputs/denv/k8/rep104/run.log
+denv,8,104,type3,class,0.43,0.01,0.01,908.0,421.13973355293274,/home/a61491/KEVOLVE/outputs/denv/k8/rep104/run.log
+denv,8,104,type4,class,0.0,0.01,0.0,134.0,421.13973355293274,/home/a61491/KEVOLVE/outputs/denv/k8/rep104/run.log
+denv,8,104,weighted avg,average,0.1,0.02,0.02,4508.0,421.13973355293274,/home/a61491/KEVOLVE/outputs/denv/k8/rep104/run.log
+denv,8,105,accuracy,overall,,,0.94,4508.0,409.01452016830444,/home/a61491/KEVOLVE/outputs/denv/k8/rep105/run.log
+denv,8,105,macro avg,average,0.88,0.96,0.91,4508.0,409.01452016830444,/home/a61491/KEVOLVE/outputs/denv/k8/rep105/run.log
+denv,8,105,type1,class,1.0,0.89,0.94,2093.0,409.01452016830444,/home/a61491/KEVOLVE/outputs/denv/k8/rep105/run.log
+denv,8,105,type2,class,0.88,1.0,0.94,1373.0,409.01452016830444,/home/a61491/KEVOLVE/outputs/denv/k8/rep105/run.log
+denv,8,105,type3,class,1.0,0.97,0.98,908.0,409.01452016830444,/home/a61491/KEVOLVE/outputs/denv/k8/rep105/run.log
+denv,8,105,type4,class,0.64,0.99,0.78,134.0,409.01452016830444,/home/a61491/KEVOLVE/outputs/denv/k8/rep105/run.log
+denv,8,105,weighted avg,average,0.95,0.94,0.94,4508.0,409.01452016830444,/home/a61491/KEVOLVE/outputs/denv/k8/rep105/run.log
+denv,8,106,accuracy,overall,,,0.5,4508.0,416.6105670928955,/home/a61491/KEVOLVE/outputs/denv/k8/rep106/run.log
+denv,8,106,macro avg,average,0.43,0.48,0.37,4508.0,416.6105670928955,/home/a61491/KEVOLVE/outputs/denv/k8/rep106/run.log
+denv,8,106,type1,class,0.49,0.04,0.08,2093.0,416.6105670928955,/home/a61491/KEVOLVE/outputs/denv/k8/rep106/run.log
+denv,8,106,type2,class,0.96,0.99,0.98,1373.0,416.6105670928955,/home/a61491/KEVOLVE/outputs/denv/k8/rep106/run.log
+denv,8,106,type3,class,0.27,0.88,0.42,908.0,416.6105670928955,/home/a61491/KEVOLVE/outputs/denv/k8/rep106/run.log
+denv,8,106,type4,class,0.0,0.0,0.0,134.0,416.6105670928955,/home/a61491/KEVOLVE/outputs/denv/k8/rep106/run.log
+denv,8,106,weighted avg,average,0.58,0.5,0.42,4508.0,416.6105670928955,/home/a61491/KEVOLVE/outputs/denv/k8/rep106/run.log
+denv,8,107,accuracy,overall,,,0.57,4508.0,482.7182915210724,/home/a61491/KEVOLVE/outputs/denv/k8/rep107/run.log
+denv,8,107,macro avg,average,0.65,0.72,0.56,4508.0,482.7182915210724,/home/a61491/KEVOLVE/outputs/denv/k8/rep107/run.log
+denv,8,107,type1,class,1.0,0.14,0.25,2093.0,482.7182915210724,/home/a61491/KEVOLVE/outputs/denv/k8/rep107/run.log
+denv,8,107,type2,class,0.74,1.0,0.85,1373.0,482.7182915210724,/home/a61491/KEVOLVE/outputs/denv/k8/rep107/run.log
+denv,8,107,type3,class,0.37,0.87,0.52,908.0,482.7182915210724,/home/a61491/KEVOLVE/outputs/denv/k8/rep107/run.log
+denv,8,107,type4,class,0.49,0.85,0.62,134.0,482.7182915210724,/home/a61491/KEVOLVE/outputs/denv/k8/rep107/run.log
+denv,8,107,weighted avg,average,0.78,0.57,0.5,4508.0,482.7182915210724,/home/a61491/KEVOLVE/outputs/denv/k8/rep107/run.log
+denv,8,108,accuracy,overall,,,0.76,4508.0,465.52149629592896,/home/a61491/KEVOLVE/outputs/denv/k8/rep108/run.log
+denv,8,108,macro avg,average,0.47,0.69,0.52,4508.0,465.52149629592896,/home/a61491/KEVOLVE/outputs/denv/k8/rep108/run.log
+denv,8,108,type1,class,0.97,0.93,0.95,2093.0,465.52149629592896,/home/a61491/KEVOLVE/outputs/denv/k8/rep108/run.log
+denv,8,108,type2,class,0.77,0.99,0.87,1373.0,465.52149629592896,/home/a61491/KEVOLVE/outputs/denv/k8/rep108/run.log
+denv,8,108,type3,class,0.0,0.0,0.0,908.0,465.52149629592896,/home/a61491/KEVOLVE/outputs/denv/k8/rep108/run.log
+denv,8,108,type4,class,0.16,0.84,0.26,134.0,465.52149629592896,/home/a61491/KEVOLVE/outputs/denv/k8/rep108/run.log
+denv,8,108,weighted avg,average,0.69,0.76,0.71,4508.0,465.52149629592896,/home/a61491/KEVOLVE/outputs/denv/k8/rep108/run.log
+denv,8,109,accuracy,overall,,,0.49,4508.0,504.61657333374023,/home/a61491/KEVOLVE/outputs/denv/k8/rep109/run.log
+denv,8,109,macro avg,average,0.42,0.5,0.45,4508.0,504.61657333374023,/home/a61491/KEVOLVE/outputs/denv/k8/rep109/run.log
+denv,8,109,type1,class,0.65,0.97,0.78,2093.0,504.61657333374023,/home/a61491/KEVOLVE/outputs/denv/k8/rep109/run.log
+denv,8,109,type2,class,0.0,0.0,0.0,1373.0,504.61657333374023,/home/a61491/KEVOLVE/outputs/denv/k8/rep109/run.log
+denv,8,109,type3,class,0.05,0.06,0.06,908.0,504.61657333374023,/home/a61491/KEVOLVE/outputs/denv/k8/rep109/run.log
+denv,8,109,type4,class,0.98,0.97,0.97,134.0,504.61657333374023,/home/a61491/KEVOLVE/outputs/denv/k8/rep109/run.log
+denv,8,109,weighted avg,average,0.34,0.49,0.4,4508.0,504.61657333374023,/home/a61491/KEVOLVE/outputs/denv/k8/rep109/run.log
 denv,8,11,accuracy,overall,,,0.8,4508.0,1063.1184477806091,/home/a61491/KEVOLVE/outputs/denv/k8/rep11/run.log
 denv,8,11,macro avg,average,0.73,0.71,0.56,4508.0,1063.1184477806091,/home/a61491/KEVOLVE/outputs/denv/k8/rep11/run.log
 denv,8,11,type1,class,0.99,1.0,0.99,2093.0,1063.1184477806091,/home/a61491/KEVOLVE/outputs/denv/k8/rep11/run.log
@@ -4934,6 +5368,13 @@ denv,8,11,type2,class,0.88,0.98,0.93,1373.0,1063.1184477806091,/home/a61491/KEVO
 denv,8,11,type3,class,0.92,0.05,0.1,908.0,1063.1184477806091,/home/a61491/KEVOLVE/outputs/denv/k8/rep11/run.log
 denv,8,11,type4,class,0.13,0.81,0.23,134.0,1063.1184477806091,/home/a61491/KEVOLVE/outputs/denv/k8/rep11/run.log
 denv,8,11,weighted avg,average,0.92,0.8,0.77,4508.0,1063.1184477806091,/home/a61491/KEVOLVE/outputs/denv/k8/rep11/run.log
+denv,8,110,accuracy,overall,,,0.84,4508.0,440.75116896629333,/home/a61491/KEVOLVE/outputs/denv/k8/rep110/run.log
+denv,8,110,macro avg,average,0.81,0.82,0.8,4508.0,440.75116896629333,/home/a61491/KEVOLVE/outputs/denv/k8/rep110/run.log
+denv,8,110,type1,class,1.0,0.7,0.83,2093.0,440.75116896629333,/home/a61491/KEVOLVE/outputs/denv/k8/rep110/run.log
+denv,8,110,type2,class,0.68,0.96,0.8,1373.0,440.75116896629333,/home/a61491/KEVOLVE/outputs/denv/k8/rep110/run.log
+denv,8,110,type3,class,0.93,1.0,0.96,908.0,440.75116896629333,/home/a61491/KEVOLVE/outputs/denv/k8/rep110/run.log
+denv,8,110,type4,class,0.62,0.61,0.62,134.0,440.75116896629333,/home/a61491/KEVOLVE/outputs/denv/k8/rep110/run.log
+denv,8,110,weighted avg,average,0.88,0.84,0.84,4508.0,440.75116896629333,/home/a61491/KEVOLVE/outputs/denv/k8/rep110/run.log
 denv,8,13,accuracy,overall,,,0.42,4508.0,1105.0460805892944,/home/a61491/KEVOLVE/outputs/denv/k8/rep13/run.log
 denv,8,13,macro avg,average,0.59,0.64,0.44,4508.0,1105.0460805892944,/home/a61491/KEVOLVE/outputs/denv/k8/rep13/run.log
 denv,8,13,type1,class,0.98,0.1,0.19,2093.0,1105.0460805892944,/home/a61491/KEVOLVE/outputs/denv/k8/rep13/run.log
@@ -5599,6 +6040,55 @@ denv,9,102,type2,class,1.0,0.64,0.78,1373.0,1086.737680196762,/home/a61491/KEVOL
 denv,9,102,type3,class,1.0,0.94,0.97,908.0,1086.737680196762,/home/a61491/KEVOLVE/outputs/denv/k9/rep102/run.log
 denv,9,102,type4,class,0.28,0.98,0.43,134.0,1086.737680196762,/home/a61491/KEVOLVE/outputs/denv/k9/rep102/run.log
 denv,9,102,weighted avg,average,0.92,0.86,0.87,4508.0,1086.737680196762,/home/a61491/KEVOLVE/outputs/denv/k9/rep102/run.log
+denv,9,103,accuracy,overall,,,0.64,4508.0,1006.8230903148651,/home/a61491/KEVOLVE/outputs/denv/k9/rep103/run.log
+denv,9,103,macro avg,average,0.46,0.69,0.47,4508.0,1006.8230903148651,/home/a61491/KEVOLVE/outputs/denv/k9/rep103/run.log
+denv,9,103,type1,class,0.77,0.96,0.86,2093.0,1006.8230903148651,/home/a61491/KEVOLVE/outputs/denv/k9/rep103/run.log
+denv,9,103,type2,class,0.27,0.0,0.01,1373.0,1006.8230903148651,/home/a61491/KEVOLVE/outputs/denv/k9/rep103/run.log
+denv,9,103,type3,class,0.53,0.8,0.64,908.0,1006.8230903148651,/home/a61491/KEVOLVE/outputs/denv/k9/rep103/run.log
+denv,9,103,type4,class,0.25,0.99,0.4,134.0,1006.8230903148651,/home/a61491/KEVOLVE/outputs/denv/k9/rep103/run.log
+denv,9,103,weighted avg,average,0.55,0.64,0.54,4508.0,1006.8230903148651,/home/a61491/KEVOLVE/outputs/denv/k9/rep103/run.log
+denv,9,104,accuracy,overall,,,0.81,4508.0,960.3283801078796,/home/a61491/KEVOLVE/outputs/denv/k9/rep104/run.log
+denv,9,104,macro avg,average,0.77,0.83,0.69,4508.0,960.3283801078796,/home/a61491/KEVOLVE/outputs/denv/k9/rep104/run.log
+denv,9,104,type1,class,0.99,1.0,0.99,2093.0,960.3283801078796,/home/a61491/KEVOLVE/outputs/denv/k9/rep104/run.log
+denv,9,104,type2,class,0.98,0.39,0.56,1373.0,960.3283801078796,/home/a61491/KEVOLVE/outputs/denv/k9/rep104/run.log
+denv,9,104,type3,class,0.96,0.97,0.96,908.0,960.3283801078796,/home/a61491/KEVOLVE/outputs/denv/k9/rep104/run.log
+denv,9,104,type4,class,0.14,0.94,0.24,134.0,960.3283801078796,/home/a61491/KEVOLVE/outputs/denv/k9/rep104/run.log
+denv,9,104,weighted avg,average,0.95,0.81,0.83,4508.0,960.3283801078796,/home/a61491/KEVOLVE/outputs/denv/k9/rep104/run.log
+denv,9,105,accuracy,overall,,,0.95,4508.0,1104.8388078212738,/home/a61491/KEVOLVE/outputs/denv/k9/rep105/run.log
+denv,9,105,macro avg,average,0.91,0.97,0.93,4508.0,1104.8388078212738,/home/a61491/KEVOLVE/outputs/denv/k9/rep105/run.log
+denv,9,105,type1,class,1.0,0.92,0.96,2093.0,1104.8388078212738,/home/a61491/KEVOLVE/outputs/denv/k9/rep105/run.log
+denv,9,105,type2,class,0.9,0.97,0.93,1373.0,1104.8388078212738,/home/a61491/KEVOLVE/outputs/denv/k9/rep105/run.log
+denv,9,105,type3,class,1.0,1.0,1.0,908.0,1104.8388078212738,/home/a61491/KEVOLVE/outputs/denv/k9/rep105/run.log
+denv,9,105,type4,class,0.74,0.99,0.85,134.0,1104.8388078212738,/home/a61491/KEVOLVE/outputs/denv/k9/rep105/run.log
+denv,9,105,weighted avg,average,0.96,0.95,0.96,4508.0,1104.8388078212738,/home/a61491/KEVOLVE/outputs/denv/k9/rep105/run.log
+denv,9,106,accuracy,overall,,,0.57,4508.0,1027.5361297130585,/home/a61491/KEVOLVE/outputs/denv/k9/rep106/run.log
+denv,9,106,macro avg,average,0.73,0.76,0.63,4508.0,1027.5361297130585,/home/a61491/KEVOLVE/outputs/denv/k9/rep106/run.log
+denv,9,106,type1,class,0.86,0.12,0.21,2093.0,1027.5361297130585,/home/a61491/KEVOLVE/outputs/denv/k9/rep106/run.log
+denv,9,106,type2,class,0.99,0.97,0.98,1373.0,1027.5361297130585,/home/a61491/KEVOLVE/outputs/denv/k9/rep106/run.log
+denv,9,106,type3,class,0.32,0.95,0.48,908.0,1027.5361297130585,/home/a61491/KEVOLVE/outputs/denv/k9/rep106/run.log
+denv,9,106,type4,class,0.77,1.0,0.87,134.0,1027.5361297130585,/home/a61491/KEVOLVE/outputs/denv/k9/rep106/run.log
+denv,9,106,weighted avg,average,0.79,0.57,0.52,4508.0,1027.5361297130585,/home/a61491/KEVOLVE/outputs/denv/k9/rep106/run.log
+denv,9,107,accuracy,overall,,,0.95,4508.0,1111.7967653274536,/home/a61491/KEVOLVE/outputs/denv/k9/rep107/run.log
+denv,9,107,macro avg,average,0.95,0.96,0.95,4508.0,1111.7967653274536,/home/a61491/KEVOLVE/outputs/denv/k9/rep107/run.log
+denv,9,107,type1,class,1.0,0.98,0.99,2093.0,1111.7967653274536,/home/a61491/KEVOLVE/outputs/denv/k9/rep107/run.log
+denv,9,107,type2,class,0.96,0.89,0.92,1373.0,1111.7967653274536,/home/a61491/KEVOLVE/outputs/denv/k9/rep107/run.log
+denv,9,107,type3,class,0.86,0.99,0.92,908.0,1111.7967653274536,/home/a61491/KEVOLVE/outputs/denv/k9/rep107/run.log
+denv,9,107,type4,class,0.96,0.99,0.97,134.0,1111.7967653274536,/home/a61491/KEVOLVE/outputs/denv/k9/rep107/run.log
+denv,9,107,weighted avg,average,0.96,0.95,0.95,4508.0,1111.7967653274536,/home/a61491/KEVOLVE/outputs/denv/k9/rep107/run.log
+denv,9,108,accuracy,overall,,,0.96,4508.0,1060.5665957927704,/home/a61491/KEVOLVE/outputs/denv/k9/rep108/run.log
+denv,9,108,macro avg,average,0.93,0.97,0.95,4508.0,1060.5665957927704,/home/a61491/KEVOLVE/outputs/denv/k9/rep108/run.log
+denv,9,108,type1,class,0.98,1.0,0.99,2093.0,1060.5665957927704,/home/a61491/KEVOLVE/outputs/denv/k9/rep108/run.log
+denv,9,108,type2,class,1.0,0.92,0.96,1373.0,1060.5665957927704,/home/a61491/KEVOLVE/outputs/denv/k9/rep108/run.log
+denv,9,108,type3,class,0.9,0.95,0.93,908.0,1060.5665957927704,/home/a61491/KEVOLVE/outputs/denv/k9/rep108/run.log
+denv,9,108,type4,class,0.85,0.99,0.92,134.0,1060.5665957927704,/home/a61491/KEVOLVE/outputs/denv/k9/rep108/run.log
+denv,9,108,weighted avg,average,0.97,0.96,0.97,4508.0,1060.5665957927704,/home/a61491/KEVOLVE/outputs/denv/k9/rep108/run.log
+denv,9,109,accuracy,overall,,,0.33,4508.0,1081.651954650879,/home/a61491/KEVOLVE/outputs/denv/k9/rep109/run.log
+denv,9,109,macro avg,average,0.42,0.5,0.26,4508.0,1081.651954650879,/home/a61491/KEVOLVE/outputs/denv/k9/rep109/run.log
+denv,9,109,type1,class,1.0,0.0,0.0,2093.0,1081.651954650879,/home/a61491/KEVOLVE/outputs/denv/k9/rep109/run.log
+denv,9,109,type2,class,0.33,1.0,0.5,1373.0,1081.651954650879,/home/a61491/KEVOLVE/outputs/denv/k9/rep109/run.log
+denv,9,109,type3,class,0.0,0.0,0.0,908.0,1081.651954650879,/home/a61491/KEVOLVE/outputs/denv/k9/rep109/run.log
+denv,9,109,type4,class,0.37,1.0,0.54,134.0,1081.651954650879,/home/a61491/KEVOLVE/outputs/denv/k9/rep109/run.log
+denv,9,109,weighted avg,average,0.58,0.33,0.17,4508.0,1081.651954650879,/home/a61491/KEVOLVE/outputs/denv/k9/rep109/run.log
 denv,9,11,accuracy,overall,,,0.06,4508.0,1788.103394985199,/home/a61491/KEVOLVE/outputs/denv/k9/rep11/run.log
 denv,9,11,macro avg,average,0.1,0.29,0.13,4508.0,1788.103394985199,/home/a61491/KEVOLVE/outputs/denv/k9/rep11/run.log
 denv,9,11,type1,class,0.03,0.0,0.0,2093.0,1788.103394985199,/home/a61491/KEVOLVE/outputs/denv/k9/rep11/run.log
@@ -5606,6 +6096,13 @@ denv,9,11,type2,class,0.01,0.01,0.01,1373.0,1788.103394985199,/home/a61491/KEVOL
 denv,9,11,type3,class,0.05,0.15,0.08,908.0,1788.103394985199,/home/a61491/KEVOLVE/outputs/denv/k9/rep11/run.log
 denv,9,11,type4,class,0.29,0.98,0.45,134.0,1788.103394985199,/home/a61491/KEVOLVE/outputs/denv/k9/rep11/run.log
 denv,9,11,weighted avg,average,0.04,0.06,0.03,4508.0,1788.103394985199,/home/a61491/KEVOLVE/outputs/denv/k9/rep11/run.log
+denv,9,110,accuracy,overall,,,0.58,4508.0,1036.9806756973267,/home/a61491/KEVOLVE/outputs/denv/k9/rep110/run.log
+denv,9,110,macro avg,average,0.55,0.7,0.53,4508.0,1036.9806756973267,/home/a61491/KEVOLVE/outputs/denv/k9/rep110/run.log
+denv,9,110,type1,class,0.86,0.32,0.47,2093.0,1036.9806756973267,/home/a61491/KEVOLVE/outputs/denv/k9/rep110/run.log
+denv,9,110,type2,class,0.66,0.98,0.79,1373.0,1036.9806756973267,/home/a61491/KEVOLVE/outputs/denv/k9/rep110/run.log
+denv,9,110,type3,class,0.43,0.53,0.48,908.0,1036.9806756973267,/home/a61491/KEVOLVE/outputs/denv/k9/rep110/run.log
+denv,9,110,type4,class,0.23,0.97,0.37,134.0,1036.9806756973267,/home/a61491/KEVOLVE/outputs/denv/k9/rep110/run.log
+denv,9,110,weighted avg,average,0.7,0.58,0.57,4508.0,1036.9806756973267,/home/a61491/KEVOLVE/outputs/denv/k9/rep110/run.log
 denv,9,12,accuracy,overall,,,0.93,4508.0,1820.6534526348114,/home/a61491/KEVOLVE/outputs/denv/k9/rep12/run.log
 denv,9,12,macro avg,average,0.74,0.72,0.73,4508.0,1820.6534526348114,/home/a61491/KEVOLVE/outputs/denv/k9/rep12/run.log
 denv,9,12,type1,class,0.93,1.0,0.96,2093.0,1820.6534526348114,/home/a61491/KEVOLVE/outputs/denv/k9/rep12/run.log
@@ -13650,6 +14147,87 @@ hiv,3,60,HIV1_G,class,0.0,0.0,0.0,33.0,3321.902461051941,/home/a61491/KEVOLVE/ou
 hiv,3,60,accuracy,overall,,,0.2,295.0,3321.902461051941,/home/a61491/KEVOLVE/outputs/hiv/k3/rep60/run.log
 hiv,3,60,macro avg,average,0.06,0.16,0.08,295.0,3321.902461051941,/home/a61491/KEVOLVE/outputs/hiv/k3/rep60/run.log
 hiv,3,60,weighted avg,average,0.07,0.2,0.1,295.0,3321.902461051941,/home/a61491/KEVOLVE/outputs/hiv/k3/rep60/run.log
+hiv,4,100,HIV1_A,class,0.0,0.0,0.0,72.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,HIV1_B,class,0.0,0.0,0.0,67.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,HIV1_C,class,0.36,0.3,0.33,69.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,HIV1_D,class,0.0,0.0,0.0,25.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,HIV1_F,class,0.12,1.0,0.22,29.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,HIV1_G,class,0.0,0.0,0.0,33.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,accuracy,overall,,,0.17,295.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,macro avg,average,0.08,0.22,0.09,295.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,100,weighted avg,average,0.1,0.17,0.1,295.0,2881.5536317825317,/home/a61491/KEVOLVE/outputs/hiv/k4/rep100/run.log
+hiv,4,101,HIV1_A,class,1.0,0.46,0.63,72.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,HIV1_B,class,0.0,0.0,0.0,67.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,HIV1_C,class,0.0,0.0,0.0,69.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,HIV1_D,class,0.0,0.0,0.0,25.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,HIV1_F,class,0.11,1.0,0.2,29.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,HIV1_G,class,0.0,0.0,0.0,33.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,accuracy,overall,,,0.21,295.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,macro avg,average,0.19,0.24,0.14,295.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,101,weighted avg,average,0.25,0.21,0.17,295.0,1484.8338594436646,/home/a61491/KEVOLVE/outputs/hiv/k4/rep101/run.log
+hiv,4,102,HIV1_A,class,0.0,0.0,0.0,72.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,HIV1_B,class,0.0,0.0,0.0,67.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,HIV1_C,class,0.02,0.03,0.02,69.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,HIV1_D,class,0.0,0.0,0.0,25.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,HIV1_F,class,0.07,0.41,0.12,29.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,HIV1_G,class,0.0,0.0,0.0,33.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,accuracy,overall,,,0.05,295.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,macro avg,average,0.01,0.07,0.02,295.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,102,weighted avg,average,0.01,0.05,0.02,295.0,2821.0754294395447,/home/a61491/KEVOLVE/outputs/hiv/k4/rep102/run.log
+hiv,4,103,HIV1_A,class,1.0,0.06,0.11,72.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,HIV1_B,class,0.67,0.18,0.28,67.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,HIV1_C,class,0.0,0.0,0.0,69.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,HIV1_D,class,0.0,0.0,0.0,25.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,HIV1_F,class,0.11,1.0,0.19,29.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,HIV1_G,class,0.0,0.0,0.0,33.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,accuracy,overall,,,0.15,295.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,macro avg,average,0.3,0.21,0.1,295.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,103,weighted avg,average,0.41,0.15,0.11,295.0,2547.4607722759247,/home/a61491/KEVOLVE/outputs/hiv/k4/rep103/run.log
+hiv,4,104,HIV1_A,class,0.34,0.56,0.42,72.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,HIV1_B,class,0.0,0.0,0.0,67.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,HIV1_C,class,0.0,0.0,0.0,69.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,HIV1_D,class,0.0,0.0,0.0,25.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,HIV1_F,class,0.03,0.17,0.05,29.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,HIV1_G,class,0.0,0.0,0.0,33.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,accuracy,overall,,,0.15,295.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,macro avg,average,0.06,0.12,0.08,295.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,104,weighted avg,average,0.09,0.15,0.11,295.0,2741.3595016002655,/home/a61491/KEVOLVE/outputs/hiv/k4/rep104/run.log
+hiv,4,105,HIV1_A,class,0.0,0.0,0.0,72.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,HIV1_B,class,0.0,0.0,0.0,67.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,HIV1_C,class,0.23,1.0,0.38,69.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,HIV1_D,class,0.0,0.0,0.0,25.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,HIV1_F,class,0.0,0.0,0.0,29.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,HIV1_G,class,0.0,0.0,0.0,33.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,accuracy,overall,,,0.23,295.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,macro avg,average,0.04,0.17,0.06,295.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,105,weighted avg,average,0.05,0.23,0.09,295.0,1601.9916005134583,/home/a61491/KEVOLVE/outputs/hiv/k4/rep105/run.log
+hiv,4,106,HIV1_A,class,0.0,0.0,0.0,72.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,HIV1_B,class,0.0,0.0,0.0,67.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,HIV1_C,class,0.96,0.77,0.85,69.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,HIV1_D,class,0.0,0.0,0.0,25.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,HIV1_F,class,0.13,1.0,0.23,29.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,HIV1_G,class,0.68,0.39,0.5,33.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,accuracy,overall,,,0.32,295.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,macro avg,average,0.3,0.36,0.26,295.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,106,weighted avg,average,0.31,0.32,0.28,295.0,2014.6493594646454,/home/a61491/KEVOLVE/outputs/hiv/k4/rep106/run.log
+hiv,4,107,HIV1_A,class,1.0,0.97,0.99,72.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,HIV1_B,class,0.98,0.96,0.97,67.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,HIV1_C,class,0.99,0.99,0.99,69.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,HIV1_D,class,0.89,0.96,0.92,25.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,HIV1_F,class,0.91,1.0,0.95,29.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,HIV1_G,class,0.91,0.88,0.89,33.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,accuracy,overall,,,0.96,295.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,macro avg,average,0.95,0.96,0.95,295.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,107,weighted avg,average,0.96,0.96,0.96,295.0,2220.846290588379,/home/a61491/KEVOLVE/outputs/hiv/k4/rep107/run.log
+hiv,4,108,HIV1_A,class,1.0,0.08,0.15,72.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,HIV1_B,class,1.0,0.07,0.14,67.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,HIV1_C,class,0.38,0.97,0.54,69.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,HIV1_D,class,1.0,0.04,0.08,25.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,HIV1_F,class,0.96,0.79,0.87,29.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,HIV1_G,class,0.4,0.97,0.56,33.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,accuracy,overall,,,0.45,295.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,macro avg,average,0.79,0.49,0.39,295.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
+hiv,4,108,weighted avg,average,0.78,0.45,0.35,295.0,1939.3091855049133,/home/a61491/KEVOLVE/outputs/hiv/k4/rep108/run.log
 hiv,4,11,HIV1_A,class,0.0,0.0,0.0,72.0,2924.039582014084,/home/a61491/KEVOLVE/outputs/hiv/k4/rep11/run.log
 hiv,4,11,HIV1_B,class,0.0,0.0,0.0,67.0,2924.039582014084,/home/a61491/KEVOLVE/outputs/hiv/k4/rep11/run.log
 hiv,4,11,HIV1_C,class,0.0,0.0,0.0,69.0,2924.039582014084,/home/a61491/KEVOLVE/outputs/hiv/k4/rep11/run.log
@@ -14181,6 +14759,15 @@ hiv,4,98,HIV1_G,class,0.0,0.0,0.0,33.0,1991.551968574524,/home/a61491/KEVOLVE/ou
 hiv,4,98,accuracy,overall,,,0.28,295.0,1991.551968574524,/home/a61491/KEVOLVE/outputs/hiv/k4/rep98/run.log
 hiv,4,98,macro avg,average,0.13,0.19,0.11,295.0,1991.551968574524,/home/a61491/KEVOLVE/outputs/hiv/k4/rep98/run.log
 hiv,4,98,weighted avg,average,0.18,0.28,0.16,295.0,1991.551968574524,/home/a61491/KEVOLVE/outputs/hiv/k4/rep98/run.log
+hiv,4,99,HIV1_A,class,0.0,0.0,0.0,72.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,HIV1_B,class,0.0,0.0,0.0,67.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,HIV1_C,class,0.0,0.0,0.0,69.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,HIV1_D,class,0.0,0.0,0.0,25.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,HIV1_F,class,0.1,1.0,0.18,29.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,HIV1_G,class,0.0,0.0,0.0,33.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,accuracy,overall,,,0.1,295.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,macro avg,average,0.02,0.17,0.03,295.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
+hiv,4,99,weighted avg,average,0.01,0.1,0.02,295.0,2761.5193614959717,/home/a61491/KEVOLVE/outputs/hiv/k4/rep99/run.log
 hiv,5,10,HIV1_A,class,0.0,0.0,0.0,72.0,1024.6262550354004,/home/a61491/KEVOLVE/outputs/hiv/k5/rep10/run.log
 hiv,5,10,HIV1_B,class,0.23,1.0,0.37,67.0,1024.6262550354004,/home/a61491/KEVOLVE/outputs/hiv/k5/rep10/run.log
 hiv,5,10,HIV1_C,class,0.0,0.0,0.0,69.0,1024.6262550354004,/home/a61491/KEVOLVE/outputs/hiv/k5/rep10/run.log
@@ -14190,6 +14777,87 @@ hiv,5,10,HIV1_G,class,0.0,0.0,0.0,33.0,1024.6262550354004,/home/a61491/KEVOLVE/o
 hiv,5,10,accuracy,overall,,,0.23,295.0,1024.6262550354004,/home/a61491/KEVOLVE/outputs/hiv/k5/rep10/run.log
 hiv,5,10,macro avg,average,0.04,0.17,0.06,295.0,1024.6262550354004,/home/a61491/KEVOLVE/outputs/hiv/k5/rep10/run.log
 hiv,5,10,weighted avg,average,0.05,0.23,0.08,295.0,1024.6262550354004,/home/a61491/KEVOLVE/outputs/hiv/k5/rep10/run.log
+hiv,5,100,HIV1_A,class,0.0,0.0,0.0,72.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,HIV1_B,class,0.0,0.0,0.0,67.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,HIV1_C,class,1.0,0.03,0.06,69.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,HIV1_D,class,0.17,1.0,0.29,25.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,HIV1_F,class,0.17,0.86,0.29,29.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,HIV1_G,class,0.0,0.0,0.0,33.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,accuracy,overall,,,0.18,295.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,macro avg,average,0.22,0.32,0.11,295.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,100,weighted avg,average,0.27,0.18,0.07,295.0,1534.87264752388,/home/a61491/KEVOLVE/outputs/hiv/k5/rep100/run.log
+hiv,5,101,HIV1_A,class,1.0,0.18,0.31,72.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,HIV1_B,class,0.24,1.0,0.38,67.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,HIV1_C,class,0.0,0.0,0.0,69.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,HIV1_D,class,0.0,0.0,0.0,25.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,HIV1_F,class,0.0,0.0,0.0,29.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,HIV1_G,class,0.0,0.0,0.0,33.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,accuracy,overall,,,0.27,295.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,macro avg,average,0.21,0.2,0.11,295.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,101,weighted avg,average,0.3,0.27,0.16,295.0,1036.468712568283,/home/a61491/KEVOLVE/outputs/hiv/k5/rep101/run.log
+hiv,5,102,HIV1_A,class,0.47,0.54,0.5,72.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,HIV1_B,class,0.73,0.12,0.21,67.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,HIV1_C,class,0.0,0.0,0.0,69.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,HIV1_D,class,0.14,0.96,0.25,25.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,HIV1_F,class,0.61,0.66,0.63,29.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,HIV1_G,class,0.75,0.09,0.16,33.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,accuracy,overall,,,0.32,295.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,macro avg,average,0.45,0.39,0.29,295.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,102,weighted avg,average,0.44,0.32,0.27,295.0,1052.9458887577057,/home/a61491/KEVOLVE/outputs/hiv/k5/rep102/run.log
+hiv,5,103,HIV1_A,class,0.0,0.0,0.0,72.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,HIV1_B,class,0.0,0.0,0.0,67.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,HIV1_C,class,0.0,0.0,0.0,69.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,HIV1_D,class,0.0,0.0,0.0,25.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,HIV1_F,class,0.1,1.0,0.18,29.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,HIV1_G,class,0.0,0.0,0.0,33.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,accuracy,overall,,,0.1,295.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,macro avg,average,0.02,0.17,0.03,295.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,103,weighted avg,average,0.01,0.1,0.02,295.0,1357.3611314296722,/home/a61491/KEVOLVE/outputs/hiv/k5/rep103/run.log
+hiv,5,104,HIV1_A,class,1.0,0.22,0.36,72.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,HIV1_B,class,1.0,0.09,0.16,67.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,HIV1_C,class,0.0,0.0,0.0,69.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,HIV1_D,class,1.0,0.2,0.33,25.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,HIV1_F,class,0.11,1.0,0.2,29.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,HIV1_G,class,0.0,0.0,0.0,33.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,accuracy,overall,,,0.19,295.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,macro avg,average,0.52,0.25,0.18,295.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,104,weighted avg,average,0.57,0.19,0.17,295.0,910.3884537220001,/home/a61491/KEVOLVE/outputs/hiv/k5/rep104/run.log
+hiv,5,105,HIV1_A,class,1.0,0.03,0.05,72.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,HIV1_B,class,0.74,0.93,0.82,67.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,HIV1_C,class,0.0,0.0,0.0,69.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,HIV1_D,class,1.0,0.04,0.08,25.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,HIV1_F,class,0.17,0.86,0.29,29.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,HIV1_G,class,0.5,0.94,0.65,33.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,accuracy,overall,,,0.41,295.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,macro avg,average,0.57,0.47,0.32,295.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,105,weighted avg,average,0.57,0.41,0.31,295.0,1206.8398823738098,/home/a61491/KEVOLVE/outputs/hiv/k5/rep105/run.log
+hiv,5,106,HIV1_A,class,0.37,0.18,0.24,72.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,HIV1_B,class,0.29,0.64,0.4,67.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,HIV1_C,class,1.0,0.13,0.23,69.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,HIV1_D,class,0.0,0.0,0.0,25.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,HIV1_F,class,0.22,0.66,0.32,29.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,HIV1_G,class,0.15,0.06,0.09,33.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,accuracy,overall,,,0.29,295.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,macro avg,average,0.34,0.28,0.21,295.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,106,weighted avg,average,0.43,0.29,0.24,295.0,1336.12007522583,/home/a61491/KEVOLVE/outputs/hiv/k5/rep106/run.log
+hiv,5,107,HIV1_A,class,0.87,0.74,0.8,72.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,HIV1_B,class,0.44,0.99,0.61,67.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,HIV1_C,class,0.0,0.0,0.0,69.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,HIV1_D,class,1.0,0.16,0.28,25.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,HIV1_F,class,0.57,1.0,0.72,29.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,HIV1_G,class,1.0,0.91,0.95,33.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,accuracy,overall,,,0.62,295.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,macro avg,average,0.65,0.63,0.56,295.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,107,weighted avg,average,0.57,0.62,0.53,295.0,902.5864026546478,/home/a61491/KEVOLVE/outputs/hiv/k5/rep107/run.log
+hiv,5,108,HIV1_A,class,0.83,0.96,0.89,72.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,HIV1_B,class,0.0,0.0,0.0,67.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,HIV1_C,class,0.0,0.0,0.0,69.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,HIV1_D,class,1.0,0.24,0.39,25.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,HIV1_F,class,0.15,0.97,0.26,29.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,HIV1_G,class,1.0,0.64,0.78,33.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,accuracy,overall,,,0.42,295.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,macro avg,average,0.5,0.47,0.39,295.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
+hiv,5,108,weighted avg,average,0.41,0.42,0.36,295.0,2217.9660065174103,/home/a61491/KEVOLVE/outputs/hiv/k5/rep108/run.log
 hiv,5,11,HIV1_A,class,1.0,0.61,0.76,72.0,1090.2988364696503,/home/a61491/KEVOLVE/outputs/hiv/k5/rep11/run.log
 hiv,5,11,HIV1_B,class,0.0,0.0,0.0,67.0,1090.2988364696503,/home/a61491/KEVOLVE/outputs/hiv/k5/rep11/run.log
 hiv,5,11,HIV1_C,class,0.0,0.0,0.0,69.0,1090.2988364696503,/home/a61491/KEVOLVE/outputs/hiv/k5/rep11/run.log
@@ -14748,6 +15416,15 @@ hiv,5,98,HIV1_G,class,0.19,1.0,0.32,33.0,1000.311624288559,/home/a61491/KEVOLVE/
 hiv,5,98,accuracy,overall,,,0.42,295.0,1000.311624288559,/home/a61491/KEVOLVE/outputs/hiv/k5/rep98/run.log
 hiv,5,98,macro avg,average,0.4,0.42,0.33,295.0,1000.311624288559,/home/a61491/KEVOLVE/outputs/hiv/k5/rep98/run.log
 hiv,5,98,weighted avg,average,0.47,0.42,0.36,295.0,1000.311624288559,/home/a61491/KEVOLVE/outputs/hiv/k5/rep98/run.log
+hiv,5,99,HIV1_A,class,0.0,0.0,0.0,72.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,HIV1_B,class,0.0,0.0,0.0,67.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,HIV1_C,class,0.0,0.0,0.0,69.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,HIV1_D,class,0.0,0.0,0.0,25.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,HIV1_F,class,0.1,1.0,0.18,29.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,HIV1_G,class,0.0,0.0,0.0,33.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,accuracy,overall,,,0.1,295.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,macro avg,average,0.02,0.17,0.03,295.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
+hiv,5,99,weighted avg,average,0.01,0.1,0.02,295.0,1443.4877409934998,/home/a61491/KEVOLVE/outputs/hiv/k5/rep99/run.log
 hiv,6,1,HIV1_A,class,0.0,0.0,0.0,72.0,1543.2864365577698,/home/a61491/KEVOLVE/outputs/hiv/k6/rep1/run.log
 hiv,6,1,HIV1_B,class,1.0,0.06,0.11,67.0,1543.2864365577698,/home/a61491/KEVOLVE/outputs/hiv/k6/rep1/run.log
 hiv,6,1,HIV1_C,class,0.0,0.0,0.0,69.0,1543.2864365577698,/home/a61491/KEVOLVE/outputs/hiv/k6/rep1/run.log
@@ -14757,6 +15434,87 @@ hiv,6,1,HIV1_G,class,0.0,0.0,0.0,33.0,1543.2864365577698,/home/a61491/KEVOLVE/ou
 hiv,6,1,accuracy,overall,,,0.11,295.0,1543.2864365577698,/home/a61491/KEVOLVE/outputs/hiv/k6/rep1/run.log
 hiv,6,1,macro avg,average,0.18,0.18,0.05,295.0,1543.2864365577698,/home/a61491/KEVOLVE/outputs/hiv/k6/rep1/run.log
 hiv,6,1,weighted avg,average,0.24,0.11,0.04,295.0,1543.2864365577698,/home/a61491/KEVOLVE/outputs/hiv/k6/rep1/run.log
+hiv,6,100,HIV1_A,class,0.94,0.93,0.94,72.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,HIV1_B,class,1.0,0.04,0.09,67.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,HIV1_C,class,0.0,0.0,0.0,69.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,HIV1_D,class,0.07,0.28,0.11,25.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,HIV1_F,class,0.25,0.97,0.39,29.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,HIV1_G,class,1.0,0.12,0.22,33.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,accuracy,overall,,,0.37,295.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,macro avg,average,0.54,0.39,0.29,295.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,100,weighted avg,average,0.6,0.37,0.32,295.0,1672.6610627174377,/home/a61491/KEVOLVE/outputs/hiv/k6/rep100/run.log
+hiv,6,101,HIV1_A,class,0.74,0.99,0.85,72.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,HIV1_B,class,0.68,0.79,0.73,67.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,HIV1_C,class,1.0,0.94,0.97,69.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,HIV1_D,class,0.95,0.72,0.82,25.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,HIV1_F,class,0.86,0.21,0.33,29.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,HIV1_G,class,1.0,0.91,0.95,33.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,accuracy,overall,,,0.82,295.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,macro avg,average,0.87,0.76,0.78,295.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,101,weighted avg,average,0.85,0.82,0.81,295.0,681.422566652298,/home/a61491/KEVOLVE/outputs/hiv/k6/rep101/run.log
+hiv,6,102,HIV1_A,class,0.94,0.64,0.76,72.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,HIV1_B,class,1.0,0.06,0.11,67.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,HIV1_C,class,0.03,0.03,0.03,69.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,HIV1_D,class,0.92,0.44,0.59,25.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,HIV1_F,class,0.17,0.93,0.28,29.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,HIV1_G,class,0.67,0.18,0.29,33.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,accuracy,overall,,,0.33,295.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,macro avg,average,0.62,0.38,0.34,295.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,102,weighted avg,average,0.63,0.33,0.33,295.0,962.5799984931946,/home/a61491/KEVOLVE/outputs/hiv/k6/rep102/run.log
+hiv,6,103,HIV1_A,class,0.0,0.0,0.0,72.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,HIV1_B,class,1.0,0.12,0.21,67.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,HIV1_C,class,0.46,0.16,0.24,69.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,HIV1_D,class,0.09,0.68,0.16,25.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,HIV1_F,class,0.33,0.07,0.11,29.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,HIV1_G,class,0.07,0.15,0.1,33.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,accuracy,overall,,,0.15,295.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,macro avg,average,0.33,0.2,0.14,295.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,103,weighted avg,average,0.38,0.15,0.14,295.0,1354.3991186618805,/home/a61491/KEVOLVE/outputs/hiv/k6/rep103/run.log
+hiv,6,104,HIV1_A,class,0.0,0.0,0.0,72.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,HIV1_B,class,0.0,0.0,0.0,67.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,HIV1_C,class,0.31,0.2,0.25,69.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,HIV1_D,class,0.0,0.0,0.0,25.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,HIV1_F,class,0.12,0.97,0.21,29.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,HIV1_G,class,0.0,0.0,0.0,33.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,accuracy,overall,,,0.14,295.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,macro avg,average,0.07,0.19,0.08,295.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,104,weighted avg,average,0.08,0.14,0.08,295.0,1260.0914287567139,/home/a61491/KEVOLVE/outputs/hiv/k6/rep104/run.log
+hiv,6,105,HIV1_A,class,0.69,0.97,0.81,72.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,HIV1_B,class,1.0,0.33,0.49,67.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,HIV1_C,class,0.95,0.78,0.86,69.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,HIV1_D,class,0.48,0.88,0.62,25.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,HIV1_F,class,0.57,0.86,0.68,29.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,HIV1_G,class,0.84,0.64,0.72,33.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,accuracy,overall,,,0.73,295.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,macro avg,average,0.75,0.74,0.7,295.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,105,weighted avg,average,0.81,0.73,0.71,295.0,823.4477541446686,/home/a61491/KEVOLVE/outputs/hiv/k6/rep105/run.log
+hiv,6,106,HIV1_A,class,0.0,0.0,0.0,72.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,HIV1_B,class,0.35,0.67,0.46,67.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,HIV1_C,class,0.45,0.96,0.61,69.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,HIV1_D,class,1.0,0.04,0.08,25.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,HIV1_F,class,0.0,0.0,0.0,29.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,HIV1_G,class,0.24,0.12,0.16,33.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,accuracy,overall,,,0.39,295.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,macro avg,average,0.34,0.3,0.22,295.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,106,weighted avg,average,0.29,0.39,0.27,295.0,1113.163940668106,/home/a61491/KEVOLVE/outputs/hiv/k6/rep106/run.log
+hiv,6,107,HIV1_A,class,0.19,0.57,0.29,72.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,HIV1_B,class,0.27,0.12,0.16,67.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,HIV1_C,class,0.25,0.03,0.05,69.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,HIV1_D,class,0.08,0.08,0.08,25.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,HIV1_F,class,0.0,0.0,0.0,29.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,HIV1_G,class,0.07,0.03,0.04,33.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,accuracy,overall,,,0.18,295.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,macro avg,average,0.14,0.14,0.1,295.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,107,weighted avg,average,0.18,0.18,0.13,295.0,1260.3193898200989,/home/a61491/KEVOLVE/outputs/hiv/k6/rep107/run.log
+hiv,6,108,HIV1_A,class,1.0,0.97,0.99,72.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,HIV1_B,class,0.98,0.97,0.98,67.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,HIV1_C,class,0.96,0.99,0.97,69.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,HIV1_D,class,0.96,0.96,0.96,25.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,HIV1_F,class,1.0,0.93,0.96,29.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,HIV1_G,class,0.92,1.0,0.96,33.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,accuracy,overall,,,0.97,295.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,macro avg,average,0.97,0.97,0.97,295.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
+hiv,6,108,weighted avg,average,0.97,0.97,0.97,295.0,2388.9893028736115,/home/a61491/KEVOLVE/outputs/hiv/k6/rep108/run.log
 hiv,6,11,HIV1_A,class,1.0,0.07,0.13,72.0,1556.8888640403748,/home/a61491/KEVOLVE/outputs/hiv/k6/rep11/run.log
 hiv,6,11,HIV1_B,class,0.9,0.52,0.66,67.0,1556.8888640403748,/home/a61491/KEVOLVE/outputs/hiv/k6/rep11/run.log
 hiv,6,11,HIV1_C,class,0.0,0.0,0.0,69.0,1556.8888640403748,/home/a61491/KEVOLVE/outputs/hiv/k6/rep11/run.log
@@ -15342,6 +16100,15 @@ hiv,6,98,HIV1_G,class,0.13,0.94,0.23,33.0,783.954253911972,/home/a61491/KEVOLVE/
 hiv,6,98,accuracy,overall,,,0.23,295.0,783.954253911972,/home/a61491/KEVOLVE/outputs/hiv/k6/rep98/run.log
 hiv,6,98,macro avg,average,0.35,0.24,0.15,295.0,783.954253911972,/home/a61491/KEVOLVE/outputs/hiv/k6/rep98/run.log
 hiv,6,98,weighted avg,average,0.47,0.23,0.18,295.0,783.954253911972,/home/a61491/KEVOLVE/outputs/hiv/k6/rep98/run.log
+hiv,6,99,HIV1_A,class,0.0,0.0,0.0,72.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,HIV1_B,class,0.21,0.04,0.07,67.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,HIV1_C,class,0.17,0.64,0.27,69.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,HIV1_D,class,0.0,0.0,0.0,25.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,HIV1_F,class,0.05,0.03,0.04,29.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,HIV1_G,class,0.0,0.0,0.0,33.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,accuracy,overall,,,0.16,295.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,macro avg,average,0.07,0.12,0.06,295.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
+hiv,6,99,weighted avg,average,0.09,0.16,0.08,295.0,1096.3023054599762,/home/a61491/KEVOLVE/outputs/hiv/k6/rep99/run.log
 hiv,7,1,HIV1_A,class,0.44,0.61,0.51,72.0,2909.7624599933624,/home/a61491/KEVOLVE/outputs/hiv/k7/rep1/run.log
 hiv,7,1,HIV1_B,class,0.45,0.75,0.56,67.0,2909.7624599933624,/home/a61491/KEVOLVE/outputs/hiv/k7/rep1/run.log
 hiv,7,1,HIV1_C,class,0.98,0.8,0.88,69.0,2909.7624599933624,/home/a61491/KEVOLVE/outputs/hiv/k7/rep1/run.log
@@ -15360,6 +16127,87 @@ hiv,7,10,HIV1_G,class,0.6,0.85,0.7,33.0,2573.932510614395,/home/a61491/KEVOLVE/o
 hiv,7,10,accuracy,overall,,,0.7,295.0,2573.932510614395,/home/a61491/KEVOLVE/outputs/hiv/k7/rep10/run.log
 hiv,7,10,macro avg,average,0.77,0.73,0.7,295.0,2573.932510614395,/home/a61491/KEVOLVE/outputs/hiv/k7/rep10/run.log
 hiv,7,10,weighted avg,average,0.85,0.7,0.72,295.0,2573.932510614395,/home/a61491/KEVOLVE/outputs/hiv/k7/rep10/run.log
+hiv,7,100,HIV1_A,class,0.41,0.17,0.24,72.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,HIV1_B,class,0.0,0.0,0.0,67.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,HIV1_C,class,0.0,0.0,0.0,69.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,HIV1_D,class,0.1,0.88,0.17,25.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,HIV1_F,class,0.0,0.0,0.0,29.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,HIV1_G,class,0.31,0.27,0.29,33.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,accuracy,overall,,,0.15,295.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,macro avg,average,0.14,0.22,0.12,295.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,100,weighted avg,average,0.14,0.15,0.11,295.0,782.0548703670502,/home/a61491/KEVOLVE/outputs/hiv/k7/rep100/run.log
+hiv,7,101,HIV1_A,class,0.23,0.43,0.3,72.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,HIV1_B,class,0.37,0.57,0.45,67.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,HIV1_C,class,0.03,0.01,0.02,69.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,HIV1_D,class,0.21,0.12,0.15,25.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,HIV1_F,class,0.0,0.0,0.0,29.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,HIV1_G,class,0.0,0.0,0.0,33.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,accuracy,overall,,,0.25,295.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,macro avg,average,0.14,0.19,0.15,295.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,101,weighted avg,average,0.17,0.25,0.19,295.0,1064.1881444454193,/home/a61491/KEVOLVE/outputs/hiv/k7/rep101/run.log
+hiv,7,102,HIV1_A,class,0.33,0.51,0.4,72.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,HIV1_B,class,0.0,0.0,0.0,67.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,HIV1_C,class,0.0,0.0,0.0,69.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,HIV1_D,class,0.03,0.04,0.03,25.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,HIV1_F,class,0.29,0.34,0.31,29.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,HIV1_G,class,0.12,0.42,0.19,33.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,accuracy,overall,,,0.21,295.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,macro avg,average,0.13,0.22,0.16,295.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,102,weighted avg,average,0.12,0.21,0.15,295.0,650.1899559497833,/home/a61491/KEVOLVE/outputs/hiv/k7/rep102/run.log
+hiv,7,103,HIV1_A,class,0.9,0.99,0.94,72.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,HIV1_B,class,1.0,0.99,0.99,67.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,HIV1_C,class,1.0,0.99,0.99,69.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,HIV1_D,class,0.92,0.96,0.94,25.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,HIV1_F,class,1.0,0.76,0.86,29.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,HIV1_G,class,0.97,1.0,0.99,33.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,accuracy,overall,,,0.96,295.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,macro avg,average,0.97,0.95,0.95,295.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,103,weighted avg,average,0.97,0.96,0.96,295.0,1066.4403474330902,/home/a61491/KEVOLVE/outputs/hiv/k7/rep103/run.log
+hiv,7,104,HIV1_A,class,0.62,0.35,0.45,72.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,HIV1_B,class,0.63,0.64,0.64,67.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,HIV1_C,class,0.6,0.04,0.08,69.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,HIV1_D,class,0.0,0.0,0.0,25.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,HIV1_F,class,0.17,1.0,0.29,29.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,HIV1_G,class,0.0,0.0,0.0,33.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,accuracy,overall,,,0.34,295.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,macro avg,average,0.34,0.34,0.24,295.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,104,weighted avg,average,0.45,0.34,0.3,295.0,758.202751159668,/home/a61491/KEVOLVE/outputs/hiv/k7/rep104/run.log
+hiv,7,105,HIV1_A,class,0.18,0.46,0.26,72.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,HIV1_B,class,0.0,0.0,0.0,67.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,HIV1_C,class,0.56,0.48,0.52,69.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,HIV1_D,class,0.62,0.4,0.49,25.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,HIV1_F,class,0.0,0.0,0.0,29.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,HIV1_G,class,0.0,0.0,0.0,33.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,accuracy,overall,,,0.26,295.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,macro avg,average,0.23,0.22,0.21,295.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,105,weighted avg,average,0.23,0.26,0.23,295.0,936.5223803520203,/home/a61491/KEVOLVE/outputs/hiv/k7/rep105/run.log
+hiv,7,106,HIV1_A,class,0.22,0.74,0.33,72.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,HIV1_B,class,0.0,0.0,0.0,67.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,HIV1_C,class,0.0,0.0,0.0,69.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,HIV1_D,class,0.11,0.08,0.09,25.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,HIV1_F,class,0.22,0.14,0.17,29.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,HIV1_G,class,0.0,0.0,0.0,33.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,accuracy,overall,,,0.2,295.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,macro avg,average,0.09,0.16,0.1,295.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,106,weighted avg,average,0.08,0.2,0.11,295.0,1079.159389257431,/home/a61491/KEVOLVE/outputs/hiv/k7/rep106/run.log
+hiv,7,107,HIV1_A,class,0.98,0.56,0.71,72.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,HIV1_B,class,0.68,0.79,0.73,67.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,HIV1_C,class,0.96,0.97,0.96,69.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,HIV1_D,class,0.53,0.96,0.69,25.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,HIV1_F,class,0.84,0.9,0.87,29.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,HIV1_G,class,0.97,0.88,0.92,33.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,accuracy,overall,,,0.81,295.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,macro avg,average,0.83,0.84,0.81,295.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,107,weighted avg,average,0.85,0.81,0.81,295.0,2198.9371342658997,/home/a61491/KEVOLVE/outputs/hiv/k7/rep107/run.log
+hiv,7,108,HIV1_A,class,1.0,0.99,0.99,72.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,HIV1_B,class,0.99,0.99,0.99,67.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,HIV1_C,class,1.0,1.0,1.0,69.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,HIV1_D,class,0.93,1.0,0.96,25.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,HIV1_F,class,1.0,0.97,0.98,29.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,HIV1_G,class,1.0,1.0,1.0,33.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,accuracy,overall,,,0.99,295.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,macro avg,average,0.99,0.99,0.99,295.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
+hiv,7,108,weighted avg,average,0.99,0.99,0.99,295.0,1417.6315257549286,/home/a61491/KEVOLVE/outputs/hiv/k7/rep108/run.log
 hiv,7,11,HIV1_A,class,0.33,0.01,0.03,72.0,1514.5233013629913,/home/a61491/KEVOLVE/outputs/hiv/k7/rep11/run.log
 hiv,7,11,HIV1_B,class,0.04,0.04,0.04,67.0,1514.5233013629913,/home/a61491/KEVOLVE/outputs/hiv/k7/rep11/run.log
 hiv,7,11,HIV1_C,class,0.0,0.0,0.0,69.0,1514.5233013629913,/home/a61491/KEVOLVE/outputs/hiv/k7/rep11/run.log
@@ -15945,6 +16793,15 @@ hiv,7,98,HIV1_G,class,0.37,0.45,0.41,33.0,756.5318915843964,/home/a61491/KEVOLVE
 hiv,7,98,accuracy,overall,,,0.4,295.0,756.5318915843964,/home/a61491/KEVOLVE/outputs/hiv/k7/rep98/run.log
 hiv,7,98,macro avg,average,0.62,0.39,0.39,295.0,756.5318915843964,/home/a61491/KEVOLVE/outputs/hiv/k7/rep98/run.log
 hiv,7,98,weighted avg,average,0.58,0.4,0.38,295.0,756.5318915843964,/home/a61491/KEVOLVE/outputs/hiv/k7/rep98/run.log
+hiv,7,99,HIV1_A,class,1.0,0.43,0.6,72.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,HIV1_B,class,0.95,0.31,0.47,67.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,HIV1_C,class,1.0,0.54,0.7,69.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,HIV1_D,class,0.49,1.0,0.66,25.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,HIV1_F,class,0.63,0.76,0.69,29.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,HIV1_G,class,0.28,1.0,0.43,33.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,accuracy,overall,,,0.57,295.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,macro avg,average,0.73,0.67,0.59,295.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
+hiv,7,99,weighted avg,average,0.83,0.57,0.59,295.0,1251.742651462555,/home/a61491/KEVOLVE/outputs/hiv/k7/rep99/run.log
 hiv,8,1,HIV1_A,class,0.5,0.06,0.1,72.0,3097.926249742508,/home/a61491/KEVOLVE/outputs/hiv/k8/rep1/run.log
 hiv,8,1,HIV1_B,class,0.28,0.34,0.31,67.0,3097.926249742508,/home/a61491/KEVOLVE/outputs/hiv/k8/rep1/run.log
 hiv,8,1,HIV1_C,class,0.0,0.0,0.0,69.0,3097.926249742508,/home/a61491/KEVOLVE/outputs/hiv/k8/rep1/run.log
@@ -15963,6 +16820,78 @@ hiv,8,10,HIV1_G,class,0.42,0.42,0.42,33.0,2229.9738733768463,/home/a61491/KEVOLV
 hiv,8,10,accuracy,overall,,,0.35,295.0,2229.9738733768463,/home/a61491/KEVOLVE/outputs/hiv/k8/rep10/run.log
 hiv,8,10,macro avg,average,0.38,0.37,0.34,295.0,2229.9738733768463,/home/a61491/KEVOLVE/outputs/hiv/k8/rep10/run.log
 hiv,8,10,weighted avg,average,0.42,0.35,0.36,295.0,2229.9738733768463,/home/a61491/KEVOLVE/outputs/hiv/k8/rep10/run.log
+hiv,8,100,HIV1_A,class,0.99,0.94,0.96,72.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,HIV1_B,class,1.0,0.63,0.77,67.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,HIV1_C,class,0.98,0.9,0.94,69.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,HIV1_D,class,0.45,0.4,0.43,25.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,HIV1_F,class,0.42,0.97,0.59,29.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,HIV1_G,class,1.0,1.0,1.0,33.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,accuracy,overall,,,0.82,295.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,macro avg,average,0.81,0.81,0.78,295.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,100,weighted avg,average,0.89,0.82,0.84,295.0,1258.5369884967804,/home/a61491/KEVOLVE/outputs/hiv/k8/rep100/run.log
+hiv,8,102,HIV1_A,class,0.37,0.72,0.49,72.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,HIV1_B,class,0.85,0.6,0.7,67.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,HIV1_C,class,0.14,0.09,0.11,69.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,HIV1_D,class,0.0,0.0,0.0,25.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,HIV1_F,class,0.48,0.83,0.61,29.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,HIV1_G,class,0.13,0.06,0.08,33.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,accuracy,overall,,,0.42,295.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,macro avg,average,0.33,0.38,0.33,295.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,102,weighted avg,average,0.38,0.42,0.37,295.0,2373.0734527111053,/home/a61491/KEVOLVE/outputs/hiv/k8/rep102/run.log
+hiv,8,103,HIV1_A,class,0.44,0.71,0.54,72.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,HIV1_B,class,0.0,0.0,0.0,67.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,HIV1_C,class,0.33,0.22,0.26,69.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,HIV1_D,class,0.01,0.04,0.02,25.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,HIV1_F,class,0.2,0.41,0.27,29.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,HIV1_G,class,0.33,0.03,0.06,33.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,accuracy,overall,,,0.27,295.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,macro avg,average,0.22,0.23,0.19,295.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,103,weighted avg,average,0.24,0.27,0.23,295.0,3078.5168714523315,/home/a61491/KEVOLVE/outputs/hiv/k8/rep103/run.log
+hiv,8,104,HIV1_A,class,0.9,1.0,0.95,72.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,HIV1_B,class,0.98,0.81,0.89,67.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,HIV1_C,class,0.99,1.0,0.99,69.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,HIV1_D,class,0.89,0.96,0.92,25.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,HIV1_F,class,0.62,0.9,0.73,29.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,HIV1_G,class,1.0,0.64,0.78,33.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,accuracy,overall,,,0.9,295.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,macro avg,average,0.9,0.88,0.88,295.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,104,weighted avg,average,0.92,0.9,0.9,295.0,1727.988638162613,/home/a61491/KEVOLVE/outputs/hiv/k8/rep104/run.log
+hiv,8,105,HIV1_A,class,0.95,0.82,0.88,72.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,HIV1_B,class,0.89,1.0,0.94,67.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,HIV1_C,class,0.66,0.86,0.74,69.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,HIV1_D,class,0.89,0.96,0.92,25.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,HIV1_F,class,0.72,0.9,0.8,29.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,HIV1_G,class,1.0,0.15,0.26,33.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,accuracy,overall,,,0.81,295.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,macro avg,average,0.85,0.78,0.76,295.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,105,weighted avg,average,0.85,0.81,0.79,295.0,1570.328562259674,/home/a61491/KEVOLVE/outputs/hiv/k8/rep105/run.log
+hiv,8,106,HIV1_A,class,0.51,0.62,0.56,72.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,HIV1_B,class,0.68,0.37,0.48,67.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,HIV1_C,class,0.44,0.35,0.39,69.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,HIV1_D,class,0.0,0.0,0.0,25.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,HIV1_F,class,0.07,0.07,0.07,29.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,HIV1_G,class,0.47,0.73,0.57,33.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,accuracy,overall,,,0.41,295.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,macro avg,average,0.36,0.36,0.35,295.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,106,weighted avg,average,0.44,0.41,0.41,295.0,1605.9448699951172,/home/a61491/KEVOLVE/outputs/hiv/k8/rep106/run.log
+hiv,8,107,HIV1_A,class,1.0,0.14,0.24,72.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,HIV1_B,class,0.98,0.73,0.84,67.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,HIV1_C,class,0.98,0.75,0.85,69.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,HIV1_D,class,0.64,0.56,0.6,25.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,HIV1_F,class,0.23,0.93,0.36,29.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,HIV1_G,class,0.8,0.97,0.88,33.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,accuracy,overall,,,0.62,295.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,macro avg,average,0.77,0.68,0.63,295.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,107,weighted avg,average,0.86,0.62,0.63,295.0,2070.0996973514557,/home/a61491/KEVOLVE/outputs/hiv/k8/rep107/run.log
+hiv,8,108,HIV1_A,class,0.98,0.64,0.77,72.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,HIV1_B,class,0.98,0.93,0.95,67.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,HIV1_C,class,0.89,0.25,0.39,69.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,HIV1_D,class,0.22,1.0,0.36,25.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,HIV1_F,class,1.0,0.72,0.84,29.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,HIV1_G,class,0.9,0.85,0.88,33.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,accuracy,overall,,,0.67,295.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,macro avg,average,0.83,0.73,0.7,295.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
+hiv,8,108,weighted avg,average,0.89,0.67,0.71,295.0,1498.5958843231201,/home/a61491/KEVOLVE/outputs/hiv/k8/rep108/run.log
 hiv,8,11,HIV1_A,class,0.81,0.78,0.79,72.0,3137.8357741832733,/home/a61491/KEVOLVE/outputs/hiv/k8/rep11/run.log
 hiv,8,11,HIV1_B,class,0.69,0.57,0.62,67.0,3137.8357741832733,/home/a61491/KEVOLVE/outputs/hiv/k8/rep11/run.log
 hiv,8,11,HIV1_C,class,1.0,0.16,0.27,69.0,3137.8357741832733,/home/a61491/KEVOLVE/outputs/hiv/k8/rep11/run.log
@@ -16512,6 +17441,15 @@ hiv,8,98,HIV1_G,class,0.5,0.27,0.35,33.0,2577.1697473526,/home/a61491/KEVOLVE/ou
 hiv,8,98,accuracy,overall,,,0.53,295.0,2577.1697473526,/home/a61491/KEVOLVE/outputs/hiv/k8/rep98/run.log
 hiv,8,98,macro avg,average,0.57,0.5,0.46,295.0,2577.1697473526,/home/a61491/KEVOLVE/outputs/hiv/k8/rep98/run.log
 hiv,8,98,weighted avg,average,0.61,0.53,0.49,295.0,2577.1697473526,/home/a61491/KEVOLVE/outputs/hiv/k8/rep98/run.log
+hiv,8,99,HIV1_A,class,0.81,0.81,0.81,72.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,HIV1_B,class,0.0,0.0,0.0,67.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,HIV1_C,class,0.0,0.0,0.0,69.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,HIV1_D,class,0.14,0.68,0.23,25.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,HIV1_F,class,0.5,0.55,0.52,29.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,HIV1_G,class,0.28,0.52,0.37,33.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,accuracy,overall,,,0.37,295.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,macro avg,average,0.29,0.43,0.32,295.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
+hiv,8,99,weighted avg,average,0.29,0.37,0.31,295.0,2190.403480529785,/home/a61491/KEVOLVE/outputs/hiv/k8/rep99/run.log
 hiv,9,10,HIV1_A,class,0.57,0.94,0.71,72.0,2893.825783967972,/home/a61491/KEVOLVE/outputs/hiv/k9/rep10/run.log
 hiv,9,10,HIV1_B,class,0.8,0.94,0.86,67.0,2893.825783967972,/home/a61491/KEVOLVE/outputs/hiv/k9/rep10/run.log
 hiv,9,10,HIV1_C,class,1.0,0.28,0.43,69.0,2893.825783967972,/home/a61491/KEVOLVE/outputs/hiv/k9/rep10/run.log
@@ -16521,6 +17459,42 @@ hiv,9,10,HIV1_G,class,0.75,0.91,0.82,33.0,2893.825783967972,/home/a61491/KEVOLVE
 hiv,9,10,accuracy,overall,,,0.67,295.0,2893.825783967972,/home/a61491/KEVOLVE/outputs/hiv/k9/rep10/run.log
 hiv,9,10,macro avg,average,0.67,0.62,0.59,295.0,2893.825783967972,/home/a61491/KEVOLVE/outputs/hiv/k9/rep10/run.log
 hiv,9,10,weighted avg,average,0.72,0.67,0.63,295.0,2893.825783967972,/home/a61491/KEVOLVE/outputs/hiv/k9/rep10/run.log
+hiv,9,100,HIV1_A,class,0.65,1.0,0.79,72.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,HIV1_B,class,1.0,0.88,0.94,67.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,HIV1_C,class,0.96,0.8,0.87,69.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,HIV1_D,class,0.71,0.96,0.81,25.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,HIV1_F,class,1.0,0.1,0.19,29.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,HIV1_G,class,1.0,0.97,0.98,33.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,accuracy,overall,,,0.83,295.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,macro avg,average,0.89,0.79,0.76,295.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,100,weighted avg,average,0.88,0.83,0.81,295.0,2825.727044582367,/home/a61491/KEVOLVE/outputs/hiv/k9/rep100/run.log
+hiv,9,101,HIV1_A,class,0.96,0.92,0.94,72.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,HIV1_B,class,1.0,0.27,0.42,67.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,HIV1_C,class,0.98,0.78,0.87,69.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,HIV1_D,class,0.36,1.0,0.53,25.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,HIV1_F,class,0.69,0.86,0.77,29.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,HIV1_G,class,0.7,1.0,0.82,33.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,accuracy,overall,,,0.75,295.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,macro avg,average,0.78,0.81,0.73,295.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,101,weighted avg,average,0.87,0.75,0.74,295.0,3362.851776599884,/home/a61491/KEVOLVE/outputs/hiv/k9/rep101/run.log
+hiv,9,104,HIV1_A,class,0.58,0.9,0.7,72.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,HIV1_B,class,0.0,0.0,0.0,67.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,HIV1_C,class,0.06,0.01,0.02,69.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,HIV1_D,class,0.07,0.48,0.13,25.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,HIV1_F,class,0.0,0.0,0.0,29.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,HIV1_G,class,0.33,0.03,0.06,33.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,accuracy,overall,,,0.27,295.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,macro avg,average,0.17,0.24,0.15,295.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,104,weighted avg,average,0.2,0.27,0.19,295.0,2569.0794286727905,/home/a61491/KEVOLVE/outputs/hiv/k9/rep104/run.log
+hiv,9,105,HIV1_A,class,0.45,0.88,0.59,72.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,HIV1_B,class,0.86,0.18,0.3,67.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,HIV1_C,class,0.74,0.41,0.52,69.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,HIV1_D,class,0.0,0.0,0.0,25.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,HIV1_F,class,0.16,0.38,0.22,29.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,HIV1_G,class,0.04,0.03,0.03,33.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,accuracy,overall,,,0.39,295.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,macro avg,average,0.37,0.31,0.28,295.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
+hiv,9,105,weighted avg,average,0.5,0.39,0.36,295.0,2922.653606891632,/home/a61491/KEVOLVE/outputs/hiv/k9/rep105/run.log
 hiv,9,11,HIV1_A,class,0.78,0.39,0.52,72.0,3260.5873985290527,/home/a61491/KEVOLVE/outputs/hiv/k9/rep11/run.log
 hiv,9,11,HIV1_B,class,0.0,0.0,0.0,67.0,3260.5873985290527,/home/a61491/KEVOLVE/outputs/hiv/k9/rep11/run.log
 hiv,9,11,HIV1_C,class,0.92,0.7,0.79,69.0,3260.5873985290527,/home/a61491/KEVOLVE/outputs/hiv/k9/rep11/run.log
@@ -16971,6 +17945,15 @@ hiv,9,95,HIV1_G,class,0.24,0.64,0.34,33.0,3376.3826234340668,/home/a61491/KEVOLV
 hiv,9,95,accuracy,overall,,,0.38,295.0,3376.3826234340668,/home/a61491/KEVOLVE/outputs/hiv/k9/rep95/run.log
 hiv,9,95,macro avg,average,0.5,0.35,0.33,295.0,3376.3826234340668,/home/a61491/KEVOLVE/outputs/hiv/k9/rep95/run.log
 hiv,9,95,weighted avg,average,0.6,0.38,0.39,295.0,3376.3826234340668,/home/a61491/KEVOLVE/outputs/hiv/k9/rep95/run.log
+hiv,9,99,HIV1_A,class,0.73,0.97,0.83,72.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,HIV1_B,class,1.0,0.03,0.06,67.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,HIV1_C,class,0.8,0.71,0.75,69.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,HIV1_D,class,0.15,0.44,0.22,25.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,HIV1_F,class,0.2,0.41,0.27,29.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,HIV1_G,class,0.0,0.0,0.0,33.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,accuracy,overall,,,0.49,295.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,macro avg,average,0.48,0.43,0.36,295.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
+hiv,9,99,weighted avg,average,0.62,0.49,0.44,295.0,3368.749577999115,/home/a61491/KEVOLVE/outputs/hiv/k9/rep99/run.log
 mkpx,10,1,I,class,0.98,1.0,0.99,245.0,950.731938123703,/home/a61491/KEVOLVE/outputs/mkpx/k10/rep1/run.log
 mkpx,10,1,II,class,1.0,1.0,1.0,2011.0,950.731938123703,/home/a61491/KEVOLVE/outputs/mkpx/k10/rep1/run.log
 mkpx,10,1,accuracy,overall,,,1.0,2256.0,950.731938123703,/home/a61491/KEVOLVE/outputs/mkpx/k10/rep1/run.log

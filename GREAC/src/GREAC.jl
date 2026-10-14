@@ -439,7 +439,7 @@ end
 # Os arquivados (parameter_sweep_<grupo>_<timestamp>.csv) ficam de fora.
 function shardFiles(output_dir::String, base::String)
     return [joinpath(output_dir, f) for f in readdir(output_dir)
-            if f == "$base.csv" || (startswith(f, "$base.part-") && endswith(f, ".csv"))]
+                                        if f == "$base.csv" || (startswith(f, "$base.part-") && endswith(f, ".csv"))]
 end
 
 sweepShards(output_dir::String, groupName::String) =

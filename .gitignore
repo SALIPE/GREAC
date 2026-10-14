@@ -45,6 +45,9 @@ scripts/HBV_tutorial
 **/__pycache__
 
 **/figs
-
+**/predictions
+**/graphs
+**/runtimes_log
+**/backup*
 /paper
 CLAUDE.md

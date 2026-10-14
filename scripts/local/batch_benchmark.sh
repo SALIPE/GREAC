@@ -48,13 +48,13 @@ fi
 
 case $GROUPNAME in
     denv) 
-        SOURCE=$DATASETS/denv/data_clean
+        SOURCE=$DATASETS_ncbi/denv_ncbi_clean/train
         SOURCE_TESTE=$DATASETS_ncbi/denv_ncbi_clean ;;
 
     hbv)  SOURCE=$DATASETS/HBV/data_clean ;;
     hiv)  SOURCE=$DATASETS/hiv/data_clean ;;
     sars) 
-        SOURCE=$DATASETS/sars_cov2/data_clean 
+        SOURCE=$DATASETS_ncbi/sars_ncbi_clean/train 
         SOURCE_TESTE=$DATASETS_ncbi/sars_ncbi_clean;;
 
     mkpx) SOURCE=$DATASETS/mkpx/data_clean ;;
@@ -80,7 +80,7 @@ fi
 
 TRAIN=$SOURCE/train
 TESTDIR=$SOURCE/test
-#TESTDIR=$SOURCE_TESTE/test
+# TESTDIR=$SOURCE_TESTE/test
 OUTDIR=./output-benchmark-$GROUPNAME
 RESULTS_CSV=$PROJECTHOME/output-benchmark-$GROUPNAME/benchmark_results_$GROUPNAME.csv
 
@@ -128,7 +128,7 @@ for REP in $(seq "$START" "$END"); do
     echo "=== [$(date '+%F %T')] Repetição $REP ($START..$END)"
 
     if [ -x "$BALANCEDATASET/run_maxtrain.sh" ]; then
-       # $BALANCEDATASET/run_maxtrain.sh $SOURCE
+    #    $BALANCEDATASET/run_maxtrain.sh $SOURCE
         $BALANCEDATASET/test.sh $SOURCE
     else
         echo "⚠️  $BALANCEDATASET/run_maxtrain.sh não encontrado, usando o split atual"

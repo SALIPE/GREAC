@@ -39,6 +39,36 @@ source /home/a61491/.bashrc
 
 set -u
 
+# Cronometragem com o `time` do bash, só da execução do GREAC: é esse o tempo do
+# método, sem a cópia do dataset nem o split. A linha vai para o log de saída do
+# cluster (-o) prefixada com TIME (filtre com `grep '^TIME' <log>`) e os mesmos
+# números são gravados no shard de tempos, para a média e o desvio.
+# fd 3 = saída original, fd 4 = erro original: a saída e os erros do comando
+# cronometrado continuam indo para os logs de sempre, e só o que o `time`
+# escreve é capturado aqui.
+exec 3>&1 4>&2
+cronometrar_benchmark() {
+    local REP=$1
+    shift
+    local TIMEFORMAT='%3R %3U %3S'
+    local TEMPOS STATUS REAL USER SYS
+
+    TEMPOS=$( { time "$@" 1>&3 2>&4 ; } 2>&1 )
+    STATUS=$?
+    read -r REAL USER SYS <<< "$TEMPOS"
+
+    local RESULTADO=ok
+    [ "$STATUS" -eq 0 ] || RESULTADO=falha
+
+    echo "TIME script=batch_benchmark org=$ORGANISM rep=$REP k=$KMER w=$WINDOW t=$THRESHOLD status=$RESULTADO real=$REAL user=$USER sys=$SYS"
+    printf '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n' \
+        "$(date '+%F %T')" "$ORGANISM" "$REP" "$RUN_ID" "$RESULTADO" \
+        "$REAL" "$USER" "$SYS" "$KMER" "$WINDOW" "$THRESHOLD" "$METRIC" \
+        "$JULIA_NUM_THREADS" "$(hostname)" >> "$TIMES_SHARD"
+
+    return "$STATUS"
+}
+
 FEHOME=/home/a61491
 PROJECTHOME=$FEHOME/GREAC/GREAC
 DATASETS=$FEHOME/datasets/original
@@ -116,6 +146,17 @@ export JULIA_NUM_THREADS=${JULIA_NUM_THREADS:-${NSLOTS:-1}}
 
 OUTDIR_REL=./output-benchmark-$ORGANISM
 OUTDIR=$PROJECTHOME/output-benchmark-$ORGANISM
+mkdir -p "$OUTDIR"
+
+# Tempos de execução do GREAC: um shard por job, mais o resumo com média e
+# desvio padrão de TODOS os shards do lote.
+TIMES_SHARD=$OUTDIR/benchmark_times_$ORGANISM.part-$RUN_ID.csv
+TIMES_SUMMARY=$OUTDIR/benchmark_times_summary_$ORGANISM.csv
+
+# Shards de tempo do lote (os arquivados não entram)
+times_shards() {
+    ls "$OUTDIR/benchmark_times_$ORGANISM".part-*.csv 2>/dev/null
+}
 
 # Shards do lote: o arquivo base e os .part-<run-id> dos jobs. Os arquivados
 # (em arquivados/) não entram.
@@ -138,7 +179,8 @@ case "$REPEAT_START" in
         START=1
         STAMP=$(date +%Y%m%d%H%M%S)
         ARCHIVE=$OUTDIR/arquivados
-        for OLD in $(bench_shards) "$OUTDIR/benchmark_summary_$ORGANISM.csv"; do
+        for OLD in $(bench_shards) $(times_shards) \
+                   "$OUTDIR/benchmark_summary_$ORGANISM.csv" "$TIMES_SUMMARY"; do
             [ -f "$OLD" ] || continue
             mkdir -p "$ARCHIVE"
             mv "$OLD" "$ARCHIVE/${STAMP}_$(basename "$OLD")"
@@ -164,26 +206,12 @@ MEMBERSHIPS_FLAG=--no-memberships
 
 echo "[$(date '+%F %T')] benchmark $ORGANISM | repetições $START..$END"
 echo "   k=$KMER janela=$WINDOW threshold=$THRESHOLD métrica=$METRIC"
-echo "   nó $(hostname) | threads $JULIA_NUM_THREADS | temp $JOBTEMP | cache local: $LOCAL_CACHE"
+echo "   nó $(hostname) | threads $JULIA_NUM_THREADS | temp $JOBTEMP"
 echo "   shard: benchmark_results_$ORGANISM.part-$RUN_ID.csv"
 
-for REP in $(seq "$START" "$END"); do
-    echo "########## [$(date '+%F %T')] repetição $REP / $END ##########"
-
-    # Cópia nova a cada repetição: garante uma partição realmente nova em vez de
-    # o splitter reaproveitar o train/test da repetição anterior
-    TEMP_DATA="$JOBTEMP/$ORGANISM"
-    rm -rf "$TEMP_DATA"
-    if ! cp -r "$SOURCE" "$TEMP_DATA"; then
-        echo "[$(date '+%F %T')] ❌ cópia falhou, repetição $REP ignorada" >&2
-        continue
-    fi
-
-    if ! "$BALANCEDATASET/testcl.sh" "$TEMP_DATA"; then
-        echo "[$(date '+%F %T')] ❌ split falhou, repetição $REP ignorada" >&2
-        continue
-    fi
-
+# Só a execução do GREAC: é isto que o `time` mede, sem a cópia nem o split.
+rodar_greac() {
+    local REP=$1
     ( cd "$PROJECTHOME" && julia --project src/GREAC.jl --no-cache \
         --group-name "$ORGANISM" \
         -w "$WINDOW" benchmark \
@@ -196,12 +224,82 @@ for REP in $(seq "$START" "$END"); do
         --rep "$REP" \
         --run-id "$RUN_ID" \
         $MEMBERSHIPS_FLAG \
-        --classifier ) \
+        --classifier )
+}
+
+[ -s "$TIMES_SHARD" ] || echo "timestamp,organism,rep,run_id,status,real_s,user_s,sys_s,k,window,threshold,metric,threads,host" > "$TIMES_SHARD"
+
+for REP in $(seq "$START" "$END"); do
+    echo "########## [$(date '+%F %T')] repetição $REP / $END ##########"
+
+    # Cópia nova a cada repetição: garante uma partição realmente nova em vez de
+    # o splitter reaproveitar o train/test da repetição anterior. Fora do `time`:
+    # não faz parte do método.
+    TEMP_DATA="$JOBTEMP/$ORGANISM"
+    rm -rf "$TEMP_DATA"
+    if ! cp -r "$SOURCE" "$TEMP_DATA"; then
+        echo "[$(date '+%F %T')] ❌ cópia falhou, repetição $REP ignorada" >&2
+        continue
+    fi
+
+    if ! "$BALANCEDATASET/testcl.sh" "$TEMP_DATA"; then
+        echo "[$(date '+%F %T')] ❌ split falhou, repetição $REP ignorada" >&2
+        continue
+    fi
+
+    cronometrar_benchmark "$REP" rodar_greac "$REP" \
         || echo "[$(date '+%F %T')] ❌ repetição $REP falhou, seguindo" >&2
 
     rm -rf "$TEMP_DATA"
 done
 
+# Resumo dos tempos: média e desvio padrão amostral (ddof=1) sobre TODOS os
+# shards do lote, contando só as execuções que terminaram bem. Média e desvio
+# são calculados em uma passada (Welford), para não perder precisão somando
+# quadrados de valores grandes.
+resumir_tempos() {
+    local SHARDS
+    SHARDS=$(times_shards)
+    [ -n "$SHARDS" ] || { echo "[$(date '+%F %T')] sem shards de tempo para resumir" >&2; return 1; }
+
+    # shellcheck disable=SC2086
+    awk -F, -v org="$ORGANISM" -v k="$KMER" -v w="$WINDOW" -v t="$THRESHOLD" \
+            -v metric="$METRIC" -v agora="$(date '+%F %T')" '
+        FNR == 1 { next }                      # cabeçalho de cada shard
+        $5 != "ok" { falhas++; next }
+        {
+            n++
+            for (c = 6; c <= 8; c++) {
+                x = $c + 0
+                d = x - media[c]
+                media[c] += d / n
+                sq[c] += d * (x - media[c])
+            }
+            total += $6 + 0
+            if (n == 1 || $6 + 0 < minimo) minimo = $6 + 0
+            if (n == 1 || $6 + 0 > maximo) maximo = $6 + 0
+        }
+        END {
+            if (n == 0) { print "sem execuções bem sucedidas" > "/dev/stderr"; exit 1 }
+            for (c = 6; c <= 8; c++) dp[c] = (n > 1) ? sprintf("%.3f", sqrt(sq[c] / (n - 1))) : ""
+            print "organism,n,failures,real_mean_s,real_std_s,real_min_s,real_max_s,real_total_s," \
+                  "user_mean_s,user_std_s,sys_mean_s,sys_std_s,k,window,threshold,metric,generated_at"
+            printf "%s,%d,%d,%.3f,%s,%.3f,%.3f,%.3f,%.3f,%s,%.3f,%s,%s,%s,%s,%s,%s\n",
+                org, n, falhas + 0, media[6], dp[6], minimo, maximo, total,
+                media[7], dp[7], media[8], dp[8], k, w, t, metric, agora
+        }
+    ' $SHARDS > "$TIMES_SUMMARY.tmp" && mv "$TIMES_SUMMARY.tmp" "$TIMES_SUMMARY"
+}
+
+if resumir_tempos; then
+    echo "[$(date '+%F %T')] ⏱  tempos do GREAC (média ± dp das execuções bem sucedidas):"
+    column -s, -t "$TIMES_SUMMARY" 2>/dev/null || cat "$TIMES_SUMMARY"
+else
+    rm -f "$TIMES_SUMMARY.tmp"
+fi
+
 echo "[$(date '+%F %T')] 🎉 lote concluído"
 echo "   $OUTDIR/benchmark_results_$ORGANISM.part-$RUN_ID.csv"
 echo "   $OUTDIR/benchmark_summary_$ORGANISM.csv"
+echo "   $TIMES_SHARD"
+echo "   $TIMES_SUMMARY"
