@@ -119,7 +119,13 @@ function greacClassification(
     wnwPercent::Float32,
     groupName::String,
     metric::Union{Nothing,String},
-    use_xg::Bool
+    use_xg::Bool;
+    k_len::Int=0,
+    extract_time::Float64=NaN,
+    fit_time::Float64=NaN,
+    rep::Int=0,
+    write_memberships::Bool=true,
+    run_id::String=""
 )
 
     model_name::String = "$(homedir())/.project_cache/$groupName/$wnwPercent/$groupName-multiclass"
@@ -135,7 +141,7 @@ function greacClassification(
     # predict_raw predict_membership (model, metric)
     classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name))
 
-    for class in model.classes
+    classify_time = @elapsed for class in model.classes
         file_path::String = "$folderPath/$class"
         total = DataIO.countSequences(file_path)
 
@@ -193,29 +199,36 @@ function greacClassification(
 
     end
 
+    n_test = length(y_pred)
+    @info "Timing (s)" extract_time fit_time classify_time n_test
+
     results = compute_variant_metrics(model.classes, y_true, y_pred)
 
 
     @info "f1 = " results[:macro][:f1]
 
     if !isnothing(outputdir)
-        RESULTS_CSV = "$outputdir/benchmark_results_$groupName.csv"
-        MEMBERSHIPS = "$outputdir/classifications_$groupName.csv"
         mkpath(outputdir)
+        # Um shard por job: dois jobs em nós diferentes não podem acrescentar ao
+        # mesmo arquivo (append concorrente sobre NFS não é atômico)
+        RESULTS_CSV = shardPath(outputdir, "benchmark_results_$groupName", run_id)
+        MEMBERSHIPS = shardPath(outputdir, "classifications_$groupName", run_id)
 
-        open(MEMBERSHIPS, "a") do io
+        write_memberships && open(MEMBERSHIPS, "a") do io
 
             if filesize(MEMBERSHIPS) == 0
                 types = join(model.classes, ",")
-                write(io, "id," * types * ",predicted_label,true_label")
+                write(io, "rep,id," * types * ",predicted_label,true_label")
             end
             for (key, value) in classification_probs
                 for i in eachindex(value)
                     try
                         id, cl, classification = value[i]
-                        line = "\n$id,"
-                        for (_, probability) in classification
-                            line = line * "$(round(probability, digits=4)),"
+                        line = "\n$rep,$id,"
+                        # na ordem de model.classes, a mesma do cabeçalho: iterar o
+                        # Dict punha cada membership sob a classe errada (ordem do hash)
+                        for c in model.classes
+                            line = line * "$(round(classification[c], digits=4)),"
                         end
                         line = line * "$cl,$key"
                         write(io, line)
@@ -231,25 +244,34 @@ function greacClassification(
             # Write header if file is empty/new
             if filesize(RESULTS_CSV) == 0
                 types = join(model.classes, ",")
-                write(io, "wndwPercent,metric,windows,kmerset,final_len," * types * ",macro_f1,macro_precision,macro_recall,cm\n")
+                write(io, "rep,wndwPercent,metric,windows,kmerset,final_len," * types * ",macro_f1,macro_precision,macro_recall,cm,k,extract_time,fit_time,classify_time,n_test,classify_time_per_seq\n")
             end
 
             # Format data components
             cm = replace(string(results[:confusion_matrix]), "\n" => " | ")
-            perclass = join([v[:f1] for (k, v) in results[:per_class]], ",")
+            # indexado por model.classes, a mesma ordem do cabeçalho e da matriz de
+            # confusão: iterar o Dict deixava o alinhamento por conta do hash
+            perclass = join([results[:per_class][c][:f1] for c in model.classes], ",")
             # Create CSV line
             line = join([
-                    escape_string(string(wnwPercent)),
-                    escape_string(string(metric)),
-                    length(model.regions),
-                    length(model.kmerset),
-                    escape_string(string(count_region_length(model.regions))),
-                    perclass,
-                    results[:macro][:f1],
-                    results[:macro][:precision],
-                    results[:macro][:recall],
-                    cm
-                ], ",")
+                rep,
+                escape_string(string(wnwPercent)),
+                escape_string(string(metric)),
+                length(model.regions),
+                length(model.kmerset),
+                escape_string(string(count_region_length(model.regions))),
+                perclass,
+                results[:macro][:f1],
+                results[:macro][:precision],
+                results[:macro][:recall],
+                cm,
+                k_len,
+                extract_time,
+                fit_time,
+                classify_time,
+                n_test,
+                n_test == 0 ? NaN : classify_time / n_test
+            ], ",")
 
             write(io, line * "\n")
         end
@@ -261,7 +283,16 @@ function greacClassification(
         #     outputdir,
         #     results)
     end
-    return results[:macro][:f1]
+    return (
+        f1=results[:macro][:f1],
+        precision=results[:macro][:precision],
+        recall=results[:macro][:recall],
+        classify_time=classify_time,
+        n_test=n_test,
+        windows=length(model.regions),
+        kmerset=length(model.kmerset),
+        final_len=count_region_length(model.regions)
+    )
 end
 
 function compute_variant_metrics(
@@ -402,6 +433,70 @@ function getKmersDistributionPerClass(
 end
 
 
+# Agrega todas as repetições já gravadas: média e desvio padrão por combinação.
+# std de uma única repetição é NaN por definição.
+# Shards de um sweep: o arquivo base mais os .part-<run-id> de jobs paralelos.
+# Os arquivados (parameter_sweep_<grupo>_<timestamp>.csv) ficam de fora.
+function shardFiles(output_dir::String, base::String)
+    return [joinpath(output_dir, f) for f in readdir(output_dir)
+                                        if f == "$base.csv" || (startswith(f, "$base.part-") && endswith(f, ".csv"))]
+end
+
+sweepShards(output_dir::String, groupName::String) =
+    shardFiles(output_dir, "parameter_sweep_$(groupName)")
+
+# Nome do arquivo deste job: com run-id, cada job escreve seu próprio shard
+shardPath(output_dir::String, base::String, run_id::String) =
+    isempty(run_id) ? "$(output_dir)/$(base).csv" : "$(output_dir)/$(base).part-$(run_id).csv"
+
+function summarizeSweep(shards::Vector{String}, summary_filename::String)
+    all_runs = reduce(vcat, CSV.read(f, DataFrame) for f in shards)
+
+    summary = combine(
+        groupby(all_runs, [:window, :threshold, :kmer, :metric]),
+        nrow => :reps,
+        [:f1_score, :precision, :recall,
+            :extract_time, :fit_time, :classify_time] .=> mean,
+        [:f1_score, :precision, :recall,
+            :extract_time, :fit_time, :classify_time] .=> std
+    )
+
+    sort!(summary, :f1_score_mean, rev=true)
+    CSV.write(summary_filename, summary)
+    return summary
+end
+
+# "[1 2; 3 4]" (como o benchmark grava) de volta para matriz
+function parseConfusionMatrix(text::AbstractString)::Matrix{Int}
+    rows = split(strip(String(text), ['[', ']', ' ']), r";|\|")
+    rows = [r for r in rows if !isempty(strip(r))]
+    return reduce(vcat, [permutedims(parse.(Int, split(strip(r)))) for r in rows])
+end
+
+formatMatrix(m) = replace(string(m), "\n" => " | ")
+
+# Agrega as execuções do benchmark: média e desvio de cada métrica e de cada
+# tempo, e as matrizes de confusão somadas (soma e média por execução).
+function summarizeBenchmark(shards::Vector{String}, summary_csv::String)
+    runs = reduce(vcat, CSV.read(f, DataFrame) for f in shards)
+
+    group_cols = intersect(["wndwPercent", "metric", "k"], names(runs))
+    num_cols = [n for n in names(runs)
+                      if n ∉ group_cols && n != "rep" && eltype(runs[!, n]) <: Union{Missing,Real}]
+
+    summary = combine(
+        groupby(runs, group_cols),
+        nrow => :runs,
+        ([c => mean => "$(c)_mean" for c in num_cols])...,
+        ([c => std => "$(c)_std" for c in num_cols])...,
+        :cm => (v -> formatMatrix(sum(parseConfusionMatrix.(v)))) => :cm_sum,
+        :cm => (v -> formatMatrix(round.(sum(parseConfusionMatrix.(v)) ./ length(v), digits=2))) => :cm_mean,
+    )
+
+    CSV.write(summary_csv, summary)
+    return summary
+end
+
 function count_region_length(regions)::Int
     total_length = 0
     for (i, e) in regions
@@ -425,107 +520,145 @@ function fitParameters(
     groupName::String,
     window::Float32,
 )
-    kmer::Int = args["k-len"]
-    current_f1 = 0.0
-    current_w = window
+    k_list::Vector{Int} = args["k-list"]
+    window_max::Float32 = args["window-max"]
+    window_step::Float32 = args["window-step"]
+    threshold_min::Float16 = args["threshold-min"]
+    threshold_max::Float16 = args["threshold-max"]
+    threshold_step::Float16 = args["threshold-step"]
+
     current_metric = "manhattan"
-    current_threshold = 0.5
+    best = (f1=-1.0, window=window, threshold=threshold_min, kmer=first(k_list))
 
     results = DataFrame(
         timestamp=DateTime[],
+        rep=Int[],
         window=Float32[],
         threshold=Float16[],
         kmer=Int[],
         metric=String[],
-        f1_score=Float64[]
+        f1_score=Float64[],
+        precision=Float64[],
+        recall=Float64[],
+        windows=Int[],
+        kmerset=Int[],
+        final_len=Int[],
+        extract_time=Float64[],
+        fit_time=Float64[],
+        classify_time=Float64[],
+        n_test=Int[]
     )
 
-    while window <= 0.003
+    rep::Int = args["rep"]
+    output_dir = "./output-sweep-$groupName"
+    mkpath(output_dir)
+    # nome fixo: as repetições acumulam no mesmo arquivo para a agregação
+    # Um shard por job: dois jobs em nós diferentes não podem acrescentar ao mesmo
+    # arquivo (append concorrente sobre NFS não é atômico). O summary junta todos.
+    run_id::String = args["run-id"]
+    csv_filename = isempty(run_id) ?
+                   "$(output_dir)/parameter_sweep_$(groupName).csv" :
+                   "$(output_dir)/parameter_sweep_$(groupName).part-$(run_id).csv"
+    summary_filename = "$(output_dir)/parameter_summary_$(groupName).csv"
+
+    # contador inteiro em vez de acumular o passo: somar 0.0005f0 duas vezes a
+    # 0.002f0 passa ligeiramente de 0.003f0 e a última janela era ignorada
+    # (limites arredondados a decimal antes: Float16(0.8) é 0.7998, ~3 casas úteis)
+    w0, w1, wstep = round.(Float64.((window, window_max, window_step)), digits=6)
+    t0, t1, tstep = round.(Float64.((threshold_min, threshold_max, threshold_step)), digits=3)
+    n_windows = floor(Int, round((w1 - w0) / wstep, digits=6)) + 1
+    n_thresholds = floor(Int, round((t1 - t0) / tstep, digits=6)) + 1
+
+    for wi in 0:(n_windows-1)
+        window = Float32(round(w0 + wi * wstep, digits=6))
         @info ">> Window " window
-        threshold::Float16 = 0.5
 
-        while threshold <= 0.8
-            rm("$(homedir())/.project_cache/$(groupName)/$window";
-                recursive=true, force=true)
+        for ti in 0:(n_thresholds-1)
+            threshold = Float16(round(t0 + ti * tstep, digits=3))
+            for kmer in k_list
+                # cache é indexado só por grupo/janela: precisa limpar a cada
+                # combinação, senão k e threshold novos reusam regiões antigas
+                rm("$(homedir())/.project_cache/$(groupName)/$window";
+                    recursive=true, force=true)
 
-            try
-                RegionExtraction.extractFeaturesTemplate(
-                    window,
-                    groupName,
-                    args["train-dir"],
-                    kmer,
-                    threshold
-                )
+                @info ">> Iteration" window threshold kmer
 
-                getKmersDistributionPerClass(
-                    window,
-                    groupName,
-                    args["train-dir"],
-                    args["classifier"],
-                    kmer,
-                )
+                try
+                    extract_time = @elapsed RegionExtraction.extractFeaturesTemplate(
+                        window,
+                        groupName,
+                        args["train-dir"],
+                        kmer,
+                        threshold
+                    )
 
-                f1 = greacClassification(
-                    args["test-dir"],
-                    nothing,
-                    window,
-                    groupName,
-                    current_metric,
-                    args["classifier"]
-                )
+                    fit_time = @elapsed getKmersDistributionPerClass(
+                        window,
+                        groupName,
+                        args["train-dir"],
+                        args["classifier"],
+                        kmer,
+                    )
 
-                push!(results, (
-                    now(),
-                    window,
-                    threshold,
-                    kmer,
-                    current_metric,
-                    f1
-                ))
+                    r = greacClassification(
+                        args["test-dir"],
+                        nothing,
+                        window,
+                        groupName,
+                        current_metric,
+                        args["classifier"];
+                        k_len=kmer,
+                        extract_time=extract_time,
+                        fit_time=fit_time
+                    )
 
-                if f1 > current_f1
-                    current_f1 = f1
-                    current_w = window
-                    current_threshold = threshold
-                    @info "New Best:" current_f1 current_w current_threshold kmer
+                    push!(results, (
+                        now(),
+                        rep,
+                        window,
+                        threshold,
+                        kmer,
+                        current_metric,
+                        r.f1,
+                        r.precision,
+                        r.recall,
+                        r.windows,
+                        r.kmerset,
+                        r.final_len,
+                        extract_time,
+                        fit_time,
+                        r.classify_time,
+                        r.n_test
+                    ))
+
+                    # grava a cada iteração: o sweep é longo, uma falha no meio
+                    # não pode levar junto as combinações já medidas
+                    CSV.write(csv_filename, DataFrame(last(results));
+                        append=isfile(csv_filename) && filesize(csv_filename) > 0)
+
+                    if r.f1 > best.f1
+                        best = (f1=r.f1, window=window, threshold=threshold, kmer=kmer)
+                        @info "New Best:" best
+                    end
+
+                catch e
+                    @error "Error during iteraction" exception = (e, catch_backtrace())
                 end
-
-            catch e
-                @error "Error during iteraction" exception = (e, catch_backtrace())
             end
-
-            threshold += Float16(0.05)
         end
-
-        window += Float32(0.0005)
     end
 
-    @info "Best Parameters:" current_f1 current_w current_threshold kmer
+    @info "Best of this rep:" best
 
-
-    timestamp_str = Dates.format(now(), "yyyymmdd")
-    output_dir = "./output-$kmer/reports-$groupName"
-    mkpath(output_dir)
-
-    csv_filename = "$(output_dir)/parameter_optimization_$(timestamp_str).csv"
-    CSV.write(csv_filename, results)
-
-    best_result = DataFrame(
-        parameter=["window", "threshold", "kmer", "metric", "f1_score"],
-        value=[string(current_w), string(current_threshold),
-            string(kmer), current_metric, string(current_f1)]
-    )
-
-    best_filename = "$(output_dir)/best_parameters_$(timestamp_str).csv"
-    CSV.write(best_filename, best_result)
-
-    @info "Reports:" csv_filename best_filename
+    summary = summarizeSweep(sweepShards(output_dir, groupName), summary_filename)
+    @info "Reports:" csv_filename summary_filename
+    @info "Top combinations (mean over reps):" first(summary, min(5, nrow(summary)))
 
     return (
-        f1=current_f1,
-        window=current_w,
-        threshold=current_threshold,
-        kmer=kmer,
+        f1=best.f1,
+        window=best.window,
+        threshold=best.threshold,
+        kmer=best.kmer,
         metric=current_metric,
         all_results=results
     )
@@ -556,12 +689,20 @@ function add_benchmark_args!(settings)
         "-o", "--output-directory"
         help = "Where the files go"
         required = false
-        "--use-gramep"
-        help = "Use K-mer set from GRAMEP"
-        action = :store_true
         "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
+        "--rep"
+        help = "Repetition id, written to the results CSV"
+        arg_type = Int
+        default = 1
+        "--no-memberships"
+        help = "Skip classifications_<group>.csv (one line per sequence per run)"
+        action = :store_true
+        "--run-id"
+        help = "Job id: writes to its own benchmark_results_<group>.part-<run-id>.csv"
+        arg_type = String
+        default = ""
     end
 end
 
@@ -617,10 +758,35 @@ function add_fit_parameters_args!(settings)
         "--test-dir"
         help = "Test dataset path"
         required = true
-        "-k", "--k-len"
-        help = "K-mer K value"
-        required = false
+        "-k", "--k-list"
+        help = "K-mer K values to sweep"
+        required = true
         arg_type = Int
+        nargs = '+'
+        "--window-max"
+        help = "Sweep window upper bound (start comes from -w)"
+        arg_type = Float32
+        default = Float32(0.003)
+        "--window-step"
+        arg_type = Float32
+        default = Float32(0.0005)
+        "--threshold-min"
+        arg_type = Float16
+        default = Float16(0.5)
+        "--threshold-max"
+        arg_type = Float16
+        default = Float16(0.8)
+        "--threshold-step"
+        arg_type = Float16
+        default = Float16(0.05)
+        "--rep"
+        help = "Repetition id, written to the CSV so reps can be aggregated"
+        arg_type = Int
+        default = 1
+        "--run-id"
+        help = "Job id: writes to its own parameter_sweep_<group>.part-<run-id>.csv"
+        arg_type = String
+        default = ""
         "--classifier"
         help = "Classify sequences using XGBoost"
         action = :store_true
@@ -657,22 +823,21 @@ function handle_benchmark(args,
     window::Float32)
     @info "Starting benchmark" args window groupName
     @info "Starting model extraction"
-    RegionExtraction.extractFeaturesTemplate(
+    extract_time = @elapsed RegionExtraction.extractFeaturesTemplate(
         window,
         groupName,
         args["train-dir"],
         args["k-len"],
         args["threshold"],
-        args["reference"],
-        args["use-gramep"],
     )
-    distribution = getKmersDistributionPerClass(
+    fit_time = @elapsed getKmersDistributionPerClass(
         window,
         groupName,
         args["train-dir"],
         args["classifier"],
         args["k-len"],
     )
+    @info "Training time (s)" extract_time fit_time
 
     @info "Starting classification evaluation"
     greacClassification(
@@ -681,8 +846,22 @@ function handle_benchmark(args,
         window,
         groupName,
         args["metric"],
-        args["classifier"]
+        args["classifier"];
+        k_len=args["k-len"],
+        extract_time=extract_time,
+        fit_time=fit_time,
+        rep=args["rep"],
+        write_memberships=(!args["no-memberships"]),
+        run_id=args["run-id"]
     )
+
+    if !isnothing(args["output-directory"])
+        outputdir = args["output-directory"]
+        summary = summarizeBenchmark(
+            shardFiles(outputdir, "benchmark_results_$groupName"),
+            "$outputdir/benchmark_summary_$groupName.csv")
+        @info "Benchmark summary:" first(summary, 1)
+    end
 end
 
 function extract_features(args,

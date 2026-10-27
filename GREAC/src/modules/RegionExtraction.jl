@@ -130,6 +130,15 @@ function regionsConjuction(
         push!(extracted_regions, (init_pos, length(hit_region)))
     end
 
+    function count_region_length(regions)::Int
+        total_length = 0
+        for (i, e) in regions
+            total_length += e - i
+        end
+        return total_length
+    end
+
+    @info count_region_length(extracted_regions)
     return extracted_regions
 
 end
@@ -169,7 +178,7 @@ function rolling_hash_kmers(
         error("0 k-mers found!")
     end
 
-    base = UInt64(5)
+    base = UInt64(64)
 
     power = UInt64(1)
     for i in 1:(k_len-1)
@@ -225,7 +234,7 @@ function max_entropy(kmers::Dict{String,Int32})
     end
 
     # Calcular curva de entropia 
-    entropy_curve = map(1:length(normalized_data)-1) do s
+    entropy_curve = map(1:(length(normalized_data)-1)) do s
         # Região A: probs[1:s], probabilidade total P_A
         p_a = sum(normalized_data[1:s])
         h_a = if p_a > 0.0
@@ -236,9 +245,9 @@ function max_entropy(kmers::Dict{String,Int32})
         end
 
         # Região B: probs[s+1:end], probabilidade total P_B
-        p_b = sum(normalized_data[s+1:end])
+        p_b = sum(normalized_data[(s+1):end])
         h_b = if p_b > 0.0
-            p_b_data = normalized_data[s+1:end] ./ p_b
+            p_b_data = normalized_data[(s+1):end] ./ p_b
             entropy(p_b_data)
         else
             0.0
@@ -287,7 +296,7 @@ function get_exclusive_kmers(
             var_hash = rolling_hash_kmers(seq, var_hash, k_len)
         end
 
-        # A busca das mais informativas tem que ser aqui em comparação com a referencia
+        # A busca das mais informativas tem que ser aqui em comparação com a referencia - na implementar o gramep
         kmer_dict = Dict{String,Int32}()
         for kmer_freq in values(var_hash)
             kmer_dict[kmer_freq[1]] = kmer_freq[2]
@@ -410,8 +419,6 @@ function extractFeaturesTemplate(
     groupName::String,
     variantDirPath::String,
     k_len::Int,
-    useGramep::Bool,
-    reference::Union{},
     histogramThreshold::Float16=Float16(0.8))
 
     @info "Threads:" Threads.nthreads()
@@ -427,10 +434,7 @@ function extractFeaturesTemplate(
 
     outputs = Vector{Tuple{String,Tuple{Vector{UInt16},BitArray}}}(undef, length(variantDirs))
 
-    if useGramep
-    else
-        kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
-    end
+    kmerset::Set{String} = get_exclusive_kmers(k_len, variantDirPath)
 
 
     DataIO.save_cache("$cachdir/kmerset.dat", kmerset)
@@ -474,7 +478,7 @@ end
 function compute_hash(s::String)::UInt64
     h = UInt64(0)
     # base = UInt64(4^length(s))
-    base = UInt64(5)
+    base = UInt64(64)
 
     for char in s
         h = h * base + UInt64(char)
@@ -495,7 +499,7 @@ function getOccursin_rolling_hash(
         return positions
     end
 
-    base = UInt64(5)
+    base = UInt64(64)
 
     # Calculate base^(k_len-1) for rolling hash
     power = UInt64(1)
@@ -585,8 +589,8 @@ function _wndwExlcusiveKmersHistogram_bytes(
     end
 
     histogram_u16 = UInt16.(min.(histogram, typemax(UInt16)))
-    threshold_count = UInt32(ceil(length(sequences) * histogramThreshold))
-    threshold_mincount = UInt32(ceil(length(sequences) * 0.15))
+    threshold_count = ceil(length(sequences) * Float64(histogramThreshold))
+    # threshold_mincount = UInt64(ceil(length(sequences) * 0.15))
 
     marked = falses(maxSeqLen)
     h_len = length(histogram)
@@ -655,7 +659,7 @@ function occursinKmerBit(
     @inbounds for i in 1:(wlen-klen+1)
         match = true
         for j in 1:klen
-            (windowBuffer[i+j-1] ≠ kmer[j]) && (match = false; break)
+            (windowBuffer[i+j-1] ≠ kmer[j]) && (match=false; break)
         end
         match && return true
     end

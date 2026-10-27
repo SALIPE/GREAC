@@ -12,6 +12,10 @@
 # Options through the environment, e.g.:
 #   qsub -v ORGANISMS="sars hbv",K_MIN=4,K_MAX=8,REPEATS=100 doall_kevolve_sweep.sh
 #
+# Each job stages the datasets in /tmp2/felipe/job$JOB_ID, so several jobs can
+# share a node. Give concurrent jobs on the same organism distinct REPEAT_START
+# ranges, otherwise they fight over the same outputs/{organism}/k{k}/rep{R}.
+#
 # The repetition is the OUTER loop: each repetition re-splits the datasets, so
 # a repetition is an independent train/test partition and an independent run of
 # the stochastic solution search, while every k inside one repetition still
@@ -28,36 +32,138 @@
 # the repetitions over several jobs with REPEAT_START/REPEATS.
 
 KEVOLVE=/home/a61491/KEVOLVE
-TEMPROOT=/tmp2/felipe
-TEMPDIR=$TEMPROOT/kevolve
+# Identifier of this job: the SGE job id (plus the task id on an array job), or
+# the PID when the script is run by hand outside the queue.
+JOB_TAG=${JOB_ID:-$$}
+if [ -n "${SGE_TASK_ID:-}" ] && [ "${SGE_TASK_ID}" != "undefined" ]; then
+	JOB_TAG=$JOB_TAG.$SGE_TASK_ID
+fi
+# Scratch directory private to this job, so several jobs can run on the same
+# node without overwriting each other's copy of the datasets and their split.
+# TEMPROOT=${TEMPROOT:-/tmp2/felipe/kevolve/job$JOB_TAG}
+TEMPROOT=${TEMPROOT:-/tmp2/felipe/kevolve}
 DATASETS=/home/a61491/datasets/original
 BALANCEDATASET=/home/a61491/Fasta-splitter/FastaSplitter
 
 #ORGANISMS=${ORGANISMS:-"sars denv hbv hiv mkpx"}
-ORGANISMS=${ORGANISMS:-"hbv"}
-K_MIN=${K_MIN:-2}
+ORGANISMS=${ORGANISMS:-"denv"}
+K_MIN=${K_MIN:-1}
 K_MAX=${K_MAX:-10}
 # Number of repetitions of the whole sweep, and index of the first one
 # (REPEAT_START lets a second job continue where a first one stopped)
-REPEATS=${REPEATS:-100}
+REPEATS=${REPEATS:-50}
 REPEAT_START=${REPEAT_START:-1}
 OUTPUTS=${OUTPUTS:-$KEVOLVE/outputs}
 REPORTS=${REPORTS:-$OUTPUTS/reports.csv}
-# Per organism/k timeout in seconds (0 = no limit)
-TIMEOUT=${TIMEOUT:-0}
+# Per organism/k/repetition time limit in seconds (0 = no limit). A run that
+# exceeds it is killed and the sweep continues with the next one - needed when
+# the solution search cannot find solutions and would otherwise never end.
+# Tune it per organism, e.g. qsub -v TIMEOUT=7200 ...
+TIMEOUT=${TIMEOUT:-3600}
 # Set FORCE=1 to reprocess organism/k combinations already completed
 FORCE_FLAG=""
 [ "${FORCE:-0}" = "1" ] && FORCE_FLAG="--force"
 
-mkdir -p "$TEMPROOT" "$TEMPDIR" "$OUTPUTS" "$KEVOLVE/logs"
+mkdir -p "$TEMPROOT" "$OUTPUTS" "$KEVOLVE/logs"
+
+# Remove the scratch of this job on the way out, including a wall clock kill;
+# only this job's directory is touched, never another job's.
+trap 'rm -rf "$TEMPROOT"' EXIT INT TERM
+
+echo "=== [$(date '+%F %T')] job $JOB_TAG, scratch: $TEMPROOT ==="
 
 source /home/a61491/.venv/bin/activate
+
+# Cronometragem com o `time` do bash, so da chamada do metodo: e esse o tempo
+# comparavel entre GREAC, KEVOLVE e CASTOR-KRFE, sem a copia/split do dataset.
+# A linha vai para o log de saida do cluster (-o) prefixada com TIME (filtre com
+# `grep '^TIME' <log>`) e os mesmos numeros sao gravados no shard de tempos.
+# fd 3 = saida original, fd 4 = erro original: a saida e os erros do comando
+# cronometrado continuam indo para os logs de sempre, e so o que o `time`
+# escreve e capturado aqui.
+exec 3>&1 4>&2
+cronometrar_metodo() {
+	local organism=$1
+	local rep=$2
+	shift 2
+	local TIMEFORMAT='%3R %3U %3S'
+	local TEMPOS STATUS REAL USER SYS RESULTADO
+
+	TEMPOS=$( { time "$@" 1>&3 2>&4 ; } 2>&1 )
+	STATUS=$?
+	read -r REAL USER SYS <<< "$TEMPOS"
+
+	RESULTADO=ok
+	[ "$STATUS" -eq 0 ] || RESULTADO=falha
+
+	echo "TIME method=$METHOD org=$organism rep=$rep status=$RESULTADO real=$REAL user=$USER sys=$SYS"
+	printf '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n' \
+		"$(date '+%F %T')" "$METHOD" "$organism" "$rep" "$RESULTADO" \
+		"$REAL" "$USER" "$SYS" "${K_MIN:-}" "${K_MAX:-}" "$(hostname)" >> "$TIMES_SHARD"
+
+	return "$STATUS"
+}
+
+# Resumo dos tempos: media e desvio padrao amostral (ddof=1) por organismo,
+# sobre TODOS os shards, contando so as execucoes que terminaram bem. Uma
+# passada (Welford), para nao perder precisao somando quadrados de valores
+# grandes.
+resumir_tempos() {
+	local SHARDS
+	SHARDS=$(ls "$TIMES_DIR"/times.part-*.csv 2>/dev/null)
+	[ -n "$SHARDS" ] || return 1
+
+	# shellcheck disable=SC2086
+	awk -F, -v agora="$(date '+%F %T')" '
+		FNR == 1 { next }                      # cabecalho de cada shard
+		$5 != "ok" { falhas[$3]++; next }
+		{
+			o = $3
+			metodo[o] = $2
+			n[o]++
+			for (c = 6; c <= 8; c++) {
+				x = $c + 0
+				chave = o SUBSEP c
+				d = x - media[chave]
+				media[chave] += d / n[o]
+				sq[chave] += d * (x - media[chave])
+			}
+			total[o] += $6 + 0
+			if (n[o] == 1 || $6 + 0 < minimo[o]) minimo[o] = $6 + 0
+			if (n[o] == 1 || $6 + 0 > maximo[o]) maximo[o] = $6 + 0
+		}
+		END {
+			if (length(n) == 0) exit 1
+			print "method,organism,n,failures,real_mean_s,real_std_s,real_min_s,real_max_s," \
+			      "real_total_s,user_mean_s,user_std_s,sys_mean_s,sys_std_s,generated_at"
+			for (o in n) {
+				for (c = 6; c <= 8; c++) {
+					chave = o SUBSEP c
+					dp[c] = (n[o] > 1) ? sprintf("%.3f", sqrt(sq[chave] / (n[o] - 1))) : ""
+				}
+				printf "%s,%s,%d,%d,%.3f,%s,%.3f,%.3f,%.3f,%.3f,%s,%.3f,%s,%s\n",
+					metodo[o], o, n[o], falhas[o] + 0,
+					media[o SUBSEP 6], dp[6], minimo[o], maximo[o], total[o],
+					media[o SUBSEP 7], dp[7], media[o SUBSEP 8], dp[8], agora | "sort"
+			}
+			close("sort")
+		}
+	' $SHARDS > "$TIMES_SUMMARY.tmp" && mv "$TIMES_SUMMARY.tmp" "$TIMES_SUMMARY"
+}
+METHOD=kevolve
+# Tempos de execucao do metodo: um shard por job, mais o resumo com media e
+# desvio padrao de TODOS os shards.
+TIMES_DIR=$OUTPUTS
+TIMES_SHARD=$TIMES_DIR/times.part-$JOB_TAG.csv
+TIMES_SUMMARY=$TIMES_DIR/times_summary.csv
+mkdir -p "$TIMES_DIR"
+[ -s "$TIMES_SHARD" ] || echo "timestamp,method,organism,rep,status,real_s,user_s,sys_s,k_min,k_max,host" > "$TIMES_SHARD"
 
 # Working directory under /tmp2 holding the split of one organism.
 temp_dataset_dir() {
 	case $1 in
 		sars) echo "$TEMPROOT/sars_cov2" ;;
-		denv) echo "$TEMPROOT/dengue" ;;
+		denv) echo "$TEMPROOT/denv" ;;
 		*)    echo "$TEMPROOT/$1" ;;
 	esac
 }
@@ -71,35 +177,35 @@ prepare_dataset() {
 	rm -rf "$(temp_dataset_dir "$organism")"
 	case $organism in
 		sars)
-			[ -d "$TEMPROOT/sars_cov2" ] || cp -r "$DATASETS/sars_cov2/data" "$TEMPROOT/sars_cov2"
-			"$BALANCEDATASET/testcl_sars.sh" || return 1
+			[ -d "$TEMPROOT/sars_cov2" ] || cp -r "$DATASETS/sars_cov2/data_clean" "$TEMPROOT/sars_cov2"
+			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/sars_cov2" || return 1
 			rm -f "$TEMPROOT/sars_cov2/train/sars_train.fasta" "$TEMPROOT/sars_cov2/test/sars_test.fasta"
 			cat "$TEMPROOT"/sars_cov2/train/*.fasta > "$TEMPROOT/sars_cov2/train/sars_train.fasta"
 			cat "$TEMPROOT"/sars_cov2/test/*.fasta  > "$TEMPROOT/sars_cov2/test/sars_test.fasta"
 			;;
 		denv)
-			[ -d "$TEMPROOT/dengue" ] || cp -r "$DATASETS/dengue/data" "$TEMPROOT/dengue"
-			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/dengue" || return 1
-			rm -f "$TEMPROOT/dengue/train/denv_train.fasta" "$TEMPROOT/dengue/test/denv_test.fasta"
-			cat "$TEMPROOT"/dengue/train/*.fasta > "$TEMPROOT/dengue/train/denv_train.fasta"
-			cat "$TEMPROOT"/dengue/test/*.fasta  > "$TEMPROOT/dengue/test/denv_test.fasta"
+			[ -d "$TEMPROOT/denv" ] || cp -r "$DATASETS/denv/data_clean" "$TEMPROOT/denv"
+			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/denv" || return 1
+			rm -f "$TEMPROOT/denv/train/denv_train.fasta" "$TEMPROOT/denv/test/denv_test.fasta"
+			cat "$TEMPROOT"/denv/train/*.fasta > "$TEMPROOT/denv/train/denv_train.fasta"
+			cat "$TEMPROOT"/denv/test/*.fasta  > "$TEMPROOT/denv/test/denv_test.fasta"
 			;;
 		hbv)
-			[ -d "$TEMPROOT/hbv" ] || cp -r "$DATASETS/HBV/data" "$TEMPROOT/hbv"
+			[ -d "$TEMPROOT/hbv" ] || cp -r "$DATASETS/HBV/data_clean" "$TEMPROOT/hbv"
 			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/hbv" || return 1
 			rm -f "$TEMPROOT/hbv/train/hbv_train.fasta" "$TEMPROOT/hbv/test/hbv_test.fasta"
 			cat "$TEMPROOT"/hbv/train/*.fasta > "$TEMPROOT/hbv/train/hbv_train.fasta"
 			cat "$TEMPROOT"/hbv/test/*.fasta  > "$TEMPROOT/hbv/test/hbv_test.fasta"
 			;;
 		hiv)
-			[ -d "$TEMPROOT/hiv" ] || cp -r "$DATASETS/hiv/data" "$TEMPROOT/hiv"
+			[ -d "$TEMPROOT/hiv" ] || cp -r "$DATASETS/hiv/data_clean" "$TEMPROOT/hiv"
 			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/hiv" || return 1
 			rm -f "$TEMPROOT/hiv/train/hiv_train.fasta" "$TEMPROOT/hiv/test/hiv_test.fasta"
 			cat "$TEMPROOT"/hiv/train/*.fasta > "$TEMPROOT/hiv/train/hiv_train.fasta"
 			cat "$TEMPROOT"/hiv/test/*.fasta  > "$TEMPROOT/hiv/test/hiv_test.fasta"
 			;;
 		mkpx)
-			[ -d "$TEMPROOT/mkpx" ] || cp -r "$DATASETS/mkpx/data" "$TEMPROOT/mkpx"
+			[ -d "$TEMPROOT/mkpx" ] || cp -r "$DATASETS/mkpx/data_clean" "$TEMPROOT/mkpx"
 			"$BALANCEDATASET/testcl.sh" "$TEMPROOT/mkpx" || return 1
 			rm -f "$TEMPROOT/mkpx/train/mkpx_train.fasta" "$TEMPROOT/mkpx/test/mkpx_test.fasta"
 			cat "$TEMPROOT"/mkpx/train/*.fasta > "$TEMPROOT/mkpx/train/mkpx_train.fasta"
@@ -112,39 +218,65 @@ prepare_dataset() {
 	esac
 }
 
+# Unidade de trabalho do ponto de vista do usuario: preparar o dataset e rodar o
+# sweep de k de um organismo numa repeticao. E uma funcao porque o `time`
+# cronometra um comando so.
+sweep_organism() {
+	local organism=$1
+	local rep=$2
+
+	echo "=== [$(date '+%F %T')] rep $rep | preparing dataset: $organism ==="
+	if ! prepare_dataset "$organism"; then
+		echo "$(date '+%F %T')	organism=$organism	k=-	rep=$rep	dataset preparation failed" >> "$KEVOLVE/logs/errors.log"
+		echo "!!! dataset preparation failed for $organism, skipping it"
+		return 1
+	fi
+
+	echo "=== [$(date '+%F %T')] rep $rep | k-mer sweep: $organism (k=$K_MIN..$K_MAX) ==="
+	cronometrar_metodo "$organism" "$rep" \
+		rodar_sweep "$organism" "$rep"
+}
+
+# So a chamada do metodo: e isto que o `time` mede.
+rodar_sweep() {
+	local organism=$1
+	local rep=$2
+	python3 -u "$KEVOLVE/run_kmer_sweep.py" \
+		--organisms "$organism" \
+		--k-min "$K_MIN" --k-max "$K_MAX" \
+		--outputs "$OUTPUTS" \
+		--configs "$KEVOLVE/configs_tmp" \
+		--logs "$KEVOLVE/logs" \
+		--timeout "$TIMEOUT" \
+		--repeat "$rep" \
+		--reports "$REPORTS" \
+		$FORCE_FLAG
+}
+
 REPEAT_END=$((REPEAT_START + REPEATS - 1))
 
+# Todas as repeticoes numa funcao, para o time total do job
+run_all_repetitions() {
 for rep in $(seq "$REPEAT_START" "$REPEAT_END"); do
 	echo "########## [$(date '+%F %T')] repetition $rep / $REPEAT_END ##########"
 
 	for organism in $ORGANISMS; do
-		echo "=== [$(date '+%F %T')] rep $rep | preparing dataset: $organism ==="
-		if ! prepare_dataset "$organism"; then
-			echo "$(date '+%F %T')	organism=$organism	k=-	rep=$rep	dataset preparation failed" >> "$KEVOLVE/logs/errors.log"
-			echo "!!! dataset preparation failed for $organism, skipping it"
-			continue
-		fi
-
-		echo "=== [$(date '+%F %T')] rep $rep | k-mer sweep: $organism (k=$K_MIN..$K_MAX) ==="
-		python3 -u "$KEVOLVE/run_kmer_sweep.py" \
-			--organisms "$organism" \
-			--k-min "$K_MIN" --k-max "$K_MAX" \
-			--outputs "$OUTPUTS" \
-			--configs "$KEVOLVE/configs_tmp" \
-			--logs "$KEVOLVE/logs" \
-			--timeout "$TIMEOUT" \
-			--repeat "$rep" \
-			--reports "$REPORTS" \
-			$FORCE_FLAG
+		sweep_organism "$organism" "$rep"
 	done
 
 	# Refresh the mean/std summary after every repetition, so partial results
 	# are usable even if the job is killed before the last one.
 	python3 -u "$KEVOLVE/aggregate_reports.py" --outputs "$OUTPUTS" --reports "$REPORTS"
+	# Resumo dos tempos a cada repeticao, para o parcial servir se o job morrer
+	resumir_tempos || true
 done
+}
+
+run_all_repetitions
 
 echo "=== [$(date '+%F %T')] sweep finished, outputs in $OUTPUTS ==="
 echo "=== raw tables: $REPORTS | summary: $OUTPUTS/reports_summary.csv ==="
-# The datasets in /tmp2 are kept so an interrupted job can be resumed cheaply.
-# Uncomment to clean the node:
-rm -r $TEMPROOT
+echo "=== times: $TIMES_SHARD | summary: $TIMES_SUMMARY ==="
+[ -s "$TIMES_SUMMARY" ] && { column -s, -t "$TIMES_SUMMARY" 2>/dev/null || cat "$TIMES_SUMMARY"; }
+# $TEMPROOT is removed by the trap above. Nothing is kept between jobs: every
+# repetition re-splits the dataset anyway.

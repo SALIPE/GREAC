@@ -9,6 +9,7 @@ WINDOW=$4
 METRIC=$5
 KMER=$6
 THRESHOLD=$7
+OUTDIR=${8:-./output-$KMER}
 
 
 cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNAME \
@@ -18,5 +19,5 @@ cd $PROJECTHOME && julia --project src/GREAC.jl --no-cache --group-name $GROUPNA
    -m $METRIC \
    -k $KMER \
    --threshold $THRESHOLD \
-   -o ./output-$KMER \
+   -o $OUTDIR \
    --classifier
