@@ -77,7 +77,7 @@ function fitMulticlass(
 
     class_string_probs = Dict{String,Vector{Float64}}()
     variant_stats = Dict{String,Dict{Symbol,Float64}}()
-    regions_len = length(regions)
+    kmer_vector::Vector{String} = collect(kmerset)
 
     X = Vector{Vector{Float64}}()
     y_str = String[]
@@ -87,19 +87,17 @@ function fitMulticlass(
 
         class_seqs::Vector{Base.CodeUnits} = byte_seqs[class]
         println("Calculating $class probabilities")
-        get_class_appearences = Base.Fix1(def_kmer_classes_probs, (regions, class_seqs))
 
-        # Analyze the n behaviour based on all the data from the set
-        @floop for kmer in collect(kmerset)
-            kmer_seq_histogram = get_class_appearences(kmer)
+        seq_distributions = Vector{Vector{Float64}}(undef, length(class_seqs))
+        seq_kmer_counts = Vector{Vector{Int32}}(undef, length(class_seqs))
 
-            @reduce(
-                kmer_distribution = zeros(UInt64, regions_len) .+ kmer_seq_histogram
-            )
+        @floop for s in eachindex(class_seqs)
+            seq_distributions[s], seq_kmer_counts[s] = sequence_kmer_distribution_optimized(regions, class_seqs[s], kmer_vector)
         end
 
-        # Process F_wr
-        class_freq = kmer_distribution ./ (length(kmerset) * length(class_seqs))
+        # Process F_wr: Σ_kmers Σ_seqs [kmer ∈ região] / (|K|·n) é a média de
+        # (k-mers distintos na região / |K|) entre as sequências
+        class_freq = mean(seq_distributions)
         class_string_probs[class] = class_freq
 
         in_group::Vector{Float64} = zeros(Float64, length(class_seqs))
@@ -109,11 +107,8 @@ function fitMulticlass(
 
         # Analyze each sequence in the variant set
         @floop for s in eachindex(class_seqs)
-            seq::Base.CodeUnits = class_seqs[s]
-
-
-            seq_distribution, kmer_counts = sequence_kmer_distribution_optimized(regions, seq, collect(kmerset))
-            # seq_distribution = kmer_distribution ./ length(kmerset)
+            seq_distribution = seq_distributions[s]
+            kmer_counts = seq_kmer_counts[s]
 
             diverg::Vector{Float64} = zeros(length(seq_distribution) - 1)
             @inbounds for i in 1:(length(seq_distribution)-1)
@@ -199,26 +194,24 @@ function gaussian_membership(
 end
 
 
+# Carrega o random forest uma única vez, antes do loop de classificação
+function load_forest(xg_model_name::String)::Dict
+    if !isfile(xg_model_name)
+        error("Arquivo de modelo não encontrado: $xg_model_name")
+    end
+    return deserialize(xg_model_name)
+end
+
 function predict_membership(
     parameters::Tuple{MultiClassModel,
         Union{Nothing,String},
         Bool,
-        String},
+        Union{Nothing,Dict}},
     input::Tuple{Vector{Float64},Base.CodeUnits,Vector{Int32}})::Tuple{String,Dict{String,Float64}}
 
-    model, metric, use_xg, xg_model_name = parameters
+    model, metric, use_xg, modelo_carregado = parameters
     X, seq, kmer_counts = input
     classification = Dict{String,Float64}()
-
-    if (use_xg)
-        # modelo_carregado = Booster(DMatrix[])
-        # XGBoost.load!(modelo_carregado, xg_model_name)
-        if !isfile(xg_model_name)
-            error("Arquivo de modelo não encontrado: $xg_model_name")
-        end
-
-        modelo_carregado = deserialize(xg_model_name)
-    end
 
     diverg::Vector{Float64} = zeros(length(X) - 1)
     @inbounds for i in 1:(length(X)-1)
@@ -267,42 +260,6 @@ function entropy(frequencias::Vector{Float64})::Float64
     return entropia
 end
 
-
-function def_kmer_classes_probs(
-    seq_data::Tuple{Vector{Tuple{Int,Int}},Vector{Base.CodeUnits}},
-    kmer::String)::Vector{UInt64}
-
-    regions, sequences = seq_data
-
-    regions_len = length(regions)
-    fn_occursin = Base.Fix1(RegionExtraction.occursinKmerBit, codeunits(kmer))
-
-    @floop for seq in sequences
-        local_seq_histogram = zeros(UInt64, regions_len)
-        seq_len = length(seq)
-
-        for i in eachindex(regions)
-            init_pos, end_pos = regions[i]
-
-            if (end_pos > seq_len)
-                end_pos = seq_len
-            end
-
-            wndw_buffer = @view seq[init_pos:end_pos]
-
-            if fn_occursin(wndw_buffer)
-                local_seq_histogram[i] += 1
-            end
-        end
-
-        @reduce(
-            seq_histogram = zeros(UInt64, regions_len) .+ local_seq_histogram
-        )
-
-    end
-
-    return seq_histogram
-end
 
 function sequence_kmer_distribution_optimized(
     regions::Vector{Tuple{Int,Int}},

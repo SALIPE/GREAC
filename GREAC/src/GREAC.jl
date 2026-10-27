@@ -40,7 +40,8 @@ function greacClassificationFile(
 
     classification_probs = Dict{String,Vector{Tuple{String,String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name))
+    forest = use_xg ? ClassificationModel.load_forest(model_name) : nothing
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, forest))
 
     total = DataIO.countSequences(file_path)
 
@@ -139,7 +140,8 @@ function greacClassification(
 
     classification_probs = Dict{String,Vector{Tuple{String,String,Dict{String,Float64}}}}()
     # predict_raw predict_membership (model, metric)
-    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, model_name))
+    forest = use_xg ? ClassificationModel.load_forest(model_name) : nothing
+    classify = Base.Fix1(ClassificationModel.predict_membership, (model, metric, use_xg, forest))
 
     classify_time = @elapsed for class in model.classes
         file_path::String = "$folderPath/$class"

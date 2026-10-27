@@ -219,6 +219,42 @@ function rolling_hash_kmers(
 
 end
 
+function seed_kmers(
+    sequence::String,
+    k_len::Int)::Dict{UInt64,Tuple{String,Int32}}
+
+    seq_len = length(sequence)
+    if seq_len < k_len
+        error("K-mer size must be greater than the inputed sequence")
+    end
+
+    base = UInt64(64)
+    power = base^(k_len - 1)
+
+    hashmap = Dict{UInt64,Tuple{String,Int32}}()
+    current_hash = UInt64(0)
+    last_invalid = 0 # última posição com caractere fora de ACGT
+
+    @inbounds for i in 1:seq_len
+        c = sequence[i]
+        c in ('A', 'C', 'G', 'T') || (last_invalid = i)
+
+        if i > k_len
+            current_hash -= UInt64(sequence[i-k_len]) * power
+        end
+        current_hash = current_hash * base + UInt64(c)
+
+        if i >= k_len && last_invalid <= i - k_len
+            entry = get(hashmap, current_hash, nothing)
+            hashmap[current_hash] = entry === nothing ?
+                                    (sequence[(i-k_len+1):i], Int32(1)) :
+                                    (entry[1], entry[2] + Int32(1))
+        end
+    end
+
+    return hashmap
+end
+
 function max_entropy(kmers::Dict{String,Int32})
     # Extrair valores e ordenar
     data = collect(values(kmers))
@@ -269,32 +305,57 @@ function get_exclusive_kmers(
     k_len::Int,
     variantDirPath::String)::Set{String}
 
-    sketch::Dict{String,Int} = generate_kmers(k_len)
-
-    kmer_hash_map = Dict{UInt64,Tuple{String,Int32}}() # 4^klen
-
-    for kmer in keys(sketch)
-        h = compute_hash(kmer)
-        if !haskey(kmer_hash_map, h)
-            kmer_hash_map[h] = (kmer, Int32(0))
-        end
-    end
-
     all_exclusive_kmers = Set{String}()
 
     variantDirs::Vector{String} = readdir(variantDirPath)
     variant_kmers = Dict{String,Set{String}}()
 
+    # Interseção dos k-mers presentes nos dois conjuntos, somando as aparições
+    function intersect_sum(
+        a::Dict{UInt64,Tuple{String,Int32}},
+        b::Dict{UInt64,Tuple{String,Int32}})::Dict{UInt64,Tuple{String,Int32}}
+        small, large = length(a) <= length(b) ? (a, b) : (b, a)
+        out = Dict{UInt64,Tuple{String,Int32}}()
+        sizehint!(out, length(small))
+        for (h, (kmer, count)) in small
+            other = get(large, h, nothing)
+            other === nothing || (out[h] = (kmer, count + other[2]))
+        end
+        return out
+    end
+
+    function divide_conquer_select_kmers(
+        sequences::AbstractVector{String},
+        cutoff::Int)::Dict{UInt64,Tuple{String,Int32}}
+        seq_amount = length(sequences)
+        if seq_amount <= cutoff
+            # O conjunto inicial vem da primeira sequência da folha
+            var_hash = seed_kmers(sequences[1], k_len)
+            for seq in view(sequences, 2:seq_amount)
+                isempty(var_hash) && break
+                var_hash = rolling_hash_kmers(seq, var_hash, k_len)
+            end
+            return var_hash
+        end
+        mid = seq_amount ÷ 2
+        left = Threads.@spawn divide_conquer_select_kmers(view(sequences, 1:mid), cutoff)
+        right = divide_conquer_select_kmers(view(sequences, (mid+1):seq_amount), cutoff)
+        left_hash = fetch(left)
+        (isempty(left_hash) || isempty(right)) && return Dict{UInt64,Tuple{String,Int32}}()
+        return intersect_sum(left_hash, right)
+    end
+
 
     @inbounds for v in eachindex(variantDirs)
         variant::String = variantDirs[v]
         println("Getting $variant k-mers")
-        var_hash = kmer_hash_map
 
         sequences::Vector{String} = DataIO.loadStringSequences("$variantDirPath/$variant")
-        for seq in sequences
-            var_hash = rolling_hash_kmers(seq, var_hash, k_len)
-        end
+        isempty(sequences) && error("No sequences found for $variant")
+        # ponytail: ~2 folhas por thread; se a memória apertar com k grande, aumente o cutoff
+        cutoff = max(1, cld(length(sequences), 2 * Threads.nthreads()))
+        @info "Cutoff = $cutoff"
+        var_hash = divide_conquer_select_kmers(sequences, cutoff)
 
         # A busca das mais informativas tem que ser aqui em comparação com a referencia - na implementar o gramep
         kmer_dict = Dict{String,Int32}()
@@ -574,40 +635,43 @@ function _wndwExlcusiveKmersHistogram_bytes(
     @floop for seq in sequences
         positions = getOccursin_rolling_hash(seq, kmer_hash_map, k_len)
 
-        window_coverage = falses(total_windows)
+        # Array de diferenças: +1 no início e -1 após o fim de cada intervalo de janelas,
+        # a soma acumulada > 0 indica janela coberta (O(L) em vez de O(L·W))
+        coverage_diff = zeros(Int32, total_windows + 1)
 
         @inbounds for pos in positions
             start_window = max(1, pos - Int(wndwSize) + k_len)
             end_window = min(total_windows, pos)
 
             if start_window <= end_window
-                window_coverage[start_window:end_window] .= true
+                coverage_diff[start_window] += 1
+                coverage_diff[end_window+1] -= 1
             end
         end
 
-        @reduce(histogram = zeros(UInt32, total_windows) .+ UInt32.(window_coverage))
+        window_coverage = UInt32.(view(cumsum(coverage_diff), 1:total_windows) .> 0)
+
+        @reduce(histogram = zeros(UInt32, total_windows) .+ window_coverage)
     end
 
     histogram_u16 = UInt16.(min.(histogram, typemax(UInt16)))
     threshold_count = ceil(length(sequences) * Float64(histogramThreshold))
     # threshold_mincount = UInt64(ceil(length(sequences) * 0.15))
 
-    marked = falses(maxSeqLen)
     h_len = length(histogram)
     # hist = lowpass_filter(histogram_u16)
+    # As janelas i-2..i+2 de cada pico formam um único intervalo contíguo,
+    # marcado com array de diferenças
+    marked_diff = zeros(Int, maxSeqLen + 1)
     @inbounds for i in eachindex(histogram)
         if (histogram[i] >= threshold_count)
-            # end_pos = min(maxSeqLen, i + Int(wndwSize) - 1)
-            # marked[i:end_pos] .= true
             init = max(1, i - 2)
-            endi = min(h_len, i + 2)
-            while (init <= endi)
-                end_pos = min(maxSeqLen, init + Int(wndwSize) - 1)
-                marked[init:end_pos] .= true
-                init += 1
-            end
+            end_pos = min(maxSeqLen, min(h_len, i + 2) + Int(wndwSize) - 1)
+            marked_diff[init] += 1
+            marked_diff[end_pos+1] -= 1
         end
     end
+    marked = BitVector(view(cumsum(marked_diff), 1:maxSeqLen) .> 0)
     return histogram_u16, marked
 end
 
