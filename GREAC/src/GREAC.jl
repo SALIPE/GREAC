@@ -566,13 +566,14 @@ function fitParameters(
     # contador inteiro em vez de acumular o passo: somar 0.0005f0 duas vezes a
     # 0.002f0 passa ligeiramente de 0.003f0 e a última janela era ignorada
     # (limites arredondados a decimal antes: Float16(0.8) é 0.7998, ~3 casas úteis)
-    w0, w1, wstep = round.(Float64.((window, window_max, window_step)), digits=6)
+    w0, w1, wstep = round.(Float64.((window, window_max, window_step)), digits=10)
+    @info w0, w1, wstep
     t0, t1, tstep = round.(Float64.((threshold_min, threshold_max, threshold_step)), digits=3)
-    n_windows = floor(Int, round((w1 - w0) / wstep, digits=6)) + 1
-    n_thresholds = floor(Int, round((t1 - t0) / tstep, digits=6)) + 1
+    n_windows = floor(Int, round((w1 - w0) / wstep, digits=10)) + 1
+    n_thresholds = floor(Int, round((t1 - t0) / tstep, digits=10)) + 1
 
     for wi in 0:(n_windows-1)
-        window = Float32(round(w0 + wi * wstep, digits=6))
+        window = Float32(round(w0 + wi * wstep, digits=10))
         @info ">> Window " window
 
         for ti in 0:(n_thresholds-1)
